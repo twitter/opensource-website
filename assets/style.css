@@ -1,0 +1,115 @@
+html {
+  background: url("bg.png") repeat;
+}
+
+body {
+  font: 13px "Helvetica Neue", Helvetica, Arial, sans-serif;
+  line-height: 1.4;
+  color: #666;
+}
+
+h1 {
+  font-weight: bold;
+  font-size: 20px;
+  color: #333;
+}
+
+a:link, a:visited {
+  color: #2984b4;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+#wrapper {
+  width: 960px;
+  margin: 0 auto;
+  padding: 20px 0;
+}
+
+#main {
+  height: 400px;
+  text-align: center;
+}
+
+#main, div.header, div.project {
+  background: white;
+  background: rgba(255, 255, 255, 0.7);
+  /*
+  -moz-box-shadow:    0px 0px 5px 0px #ccc;
+  -webkit-box-shadow: 0px 0px 5px 0px #ccc;
+  box-shadow:         0px 0px 5px 0px #ccc;
+  */
+}
+
+#main h1 {
+  margin: 30px 0;
+}
+
+#main h1, #main p {
+  margin-left: 15px;
+  margin-right: 15px;
+}
+
+#main p {
+  font-size: 11px;
+  line-height: 2;
+}
+
+#logo {
+  width: 190px;
+  height: 64px;
+  margin: 15px 0 0 15px;
+  background: url("logo.png");
+  text-indent: -99999px;
+}
+
+#logo h1 {
+  margin: 0;
+}
+
+#statistics input {
+  border: none;
+  width: 33px;
+  display: inline-block;
+  font-weight: bold;
+  font-size: 20px;
+  color: #2984b4;
+}
+
+#statistics label {
+  font-size: 20px;
+}
+
+#recently-updated-repos {
+  margin-left: 15px;
+}
+
+#recently-updated-repos li span {
+  display: inline-block;
+  padding: 0 2px;
+}
+
+#recently-updated-repos li span.name {
+  padding: 0 6px 0 0;
+}
+
+div.header {
+  height: 130px;
+}
+
+div.header h1, div.header p {
+  margin: 10px 15px 0;
+}
+
+div.project {
+  height: 250px;
+}
+
+div.project-title {
+  height: 30px;
+}
+
+.project-description {}

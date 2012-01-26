@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <title>Twitter &hearts; Open Source</title>
+    <link rel="stylesheet" type="text/css" href="assets/reset.css">
+    <link rel="stylesheet" type="text/css" href="assets/grid.css">
+    <link rel="stylesheet" type="text/css" href="assets/style.css">
+    <script type="text/javascript" src="assets/jquery-1.7.1.min.js"></script>
+    <script type="text/javascript" src="assets/strftime.js"></script>
+    <script type="text/javascript">
+    function addRecentlyUpdatedRepo(repo) {
+      var $item = $("<li>");
+      $item.append('<span class="name"><a href="' + repo.html_url + '">' + repo.name + '</a></span>');
+      $item.append('<span class="time">' + strftime("%h %e, %Y", repo.pushed_at) + '</span>');
+      $item.append('<span class="bullet">&sdot;</span>');
+      $item.append('<span class="watchers">' + repo.watchers + ' watchers</span>');
+      $item.append('<span class="bullet">&sdot;</span>');
+      $item.append('<span class="forks">' + repo.forks + ' forks</span>');
+      $item.appendTo("#recently-updated-repos");
+    }
+
+    $.getJSON("https://api.github.com/users/twitter/repos", function (repos) {
+      $(function () {
+        $("#num-repos").val(repos.length);
+
+        $.each(repos, function (i, repo) {
+          repo.pushed_at = new Date(repo.pushed_at);
+        });
+
+        // Sort by most-recently pushed to.
+        repos.sort(function (a, b) {
+          if (a.pushed_at < b.pushed_at) return 1;
+          if (b.pushed_at < a.pushed_at) return -1;
+          return 0;
+        });
+
+        $.each(repos.slice(0, 3), function (i, repo) {
+          addRecentlyUpdatedRepo(repo);
+        });
+      });
+    });
+
+    // $.getJSON("https://api.github.com/orgs/twitter", function (data) {
+    //   $(function () {
+    //     $("#num-repos").val(data.public_repos);
+    //   });
+    // });
+
+    $.getJSON("https://api.github.com/orgs/twitter/members", function (members) {
+      $(function () {
+        $("#num-members").val(members.length);
+      });
+    });
+    </script>
+  </head>
+  <body>
+    <div id="wrapper" class="grid clearfix">
+      <div id="main" class="grid-1">
+        <div id="logo"><h1>Twitter Open Source</h1></div>
+        <h1>Twitter is built on open source software.</h1>
+        <p>Want to help? <a href="#">Join the Flock</a></p>
+        <p>Visit <a href="#">dev.twitter.com</a></p>
+        <p><a href="#">Logos and other goodies</a></p>
+      </div>
+      <div class="grid grid-3">
+        <div id="statistics" class="grid-1 alpha header">
+          <h1>Statistics</h1>
+          <p>
+            <input type="text" id="num-repos" disabled="disabled">
+            <label for="num-repos">public repos</label>
+            <br>
+            <input type="text" id="num-members" disabled="disabled">
+            <label for="num-members">members</label>
+          </p>
+          <p><a href="mailto:opensource@twitter.com">opensource@twitter.com</a></p>
+        </div>
+        <div id="recently-updated" class="grid-2 omega header">
+          <h1>Recently updated</h1>
+          <ol id="recently-updated-repos"></ol>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

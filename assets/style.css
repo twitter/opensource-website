@@ -222,17 +222,17 @@ li.repo h3 {
 @-ms-keyframes large-swing { 0% { margin-top: 0px } 50% { margin-top: -40px } 100% { margin-top: 0px } }
 
 .larry.size-smaller, .larry.size-small {
-  animation: small-swing 1.5s infinite ease-in-out;
-  -moz-animation: small-swing 1.5s infinite ease-in-out;
-  -webkit-animation: small-swing 1.5s infinite ease-in-out;
-  -ms-animation: small-swing 1.5s infinite ease-in-out;
+  animation: small-swing 0.5s infinite ease-in-out;
+  -moz-animation: small-swing 0.5s infinite ease-in-out;
+  -webkit-animation: small-swing 0.5s infinite ease-in-out;
+  -ms-animation: small-swing 0.5s infinite ease-in-out;
 }
 
 .larry.size-medium, .larry.size-large {
-  animation: medium-swing 1.5s infinite ease-in-out;
-  -moz-animation: medium-swing 1.5s infinite ease-in-out;
-  -webkit-animation: medium-swing 1.5s infinite ease-in-out;
-  -ms-animation: medium-swing 1.5s infinite ease-in-out;
+  animation: medium-swing 1.25s infinite ease-in-out;
+  -moz-animation: medium-swing 1.25s infinite ease-in-out;
+  -webkit-animation: medium-swing 1.25s infinite ease-in-out;
+  -ms-animation: medium-swing 1.25s infinite ease-in-out;
 }
 
 .larry.size-medium, .larry.size-fat {

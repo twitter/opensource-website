@@ -33,7 +33,7 @@
   function addRecentlyUpdatedRepo(repo) {
     var $item = $("<li>");
 
-    var $name = $("<a>").attr("href", repoUrl(repo)).text(repo.name);
+    var $name = $("<a>").attr("href", repo.html_url).text(repo.name);
     $item.append($("<span>").addClass("name").append($name));
 
     var $time = $("<a>").attr("href", repo.html_url + "/commits").text(strftime("%h %e, %Y", repo.pushed_at));
@@ -132,22 +132,24 @@
   var sizes = ["smaller", "small", "medium", "large", "fat"];
 
   var sizeDimensions = {
-    "smaller": 20,
-    "small": 50,
-    "medium": 100,
+    "smaller": 50,
+    "small": 80,
+    "medium": 130,
     "large": 200,
     "fat": 300
   };
 
-  var speeds = ["slow", "medium", "fast"];
+  function randomOpacity(threshold) {
+    var opacity = Math.random();
 
-  var speedDurations = {
-    "slow": 45000,
-    "medium": 30000,
-    "fast": 20000
-  };
+    while (opacity < threshold) {
+      opacity = Math.random();
+    }
 
-  function makeLarry(sizeName, speedName) {
+    return opacity;
+  }
+
+  function makeLarry(sizeName, speed) {
     var size = sizeDimensions[sizeName];
     var top = Math.floor((flyzone().height() - size) * Math.random());
 
@@ -158,7 +160,7 @@
       .attr("height", size)
       .css({
         position: "absolute",
-        opacity: Math.random(),
+        opacity: randomOpacity(0.4),
         top: top,
         left: -size
       });
@@ -166,7 +168,6 @@
     $img.prependTo(flyzone());
 
     var left = flyzone().width() + size;
-    var speed = speedDurations[speedName];
 
     $img.animate({left: left}, speed, function () {
       $img.remove();
@@ -178,7 +179,7 @@
 
   function makeRandomLarry() {
     var size = randomItem(sizes);
-    var speed = randomItem(speeds);
+    var speed = Math.floor(Math.random() * 20000) + 15000;
     return makeLarry(size, speed);
   }
 

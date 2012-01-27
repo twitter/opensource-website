@@ -1,0 +1,56 @@
+(function($){
+  function addRecentlyUpdatedRepo(repo) {
+    var $item = $("<li>");
+      
+    $item.append('<span class="name"><a href="' + repo.html_url + '">' + repo.name + '</a></span>');
+    $item.append('<span class="time">' + strftime("%h %e, %Y", repo.pushed_at) + '</span>');
+    $item.append('<span class="bullet">&sdot;</span>');
+    $item.append('<span class="watchers">' + repo.watchers + ' watchers</span>');
+    $item.append('<span class="bullet">&sdot;</span>');
+    $item.append('<span class="forks">' + repo.forks + ' forks</span>');
+    
+    $item.appendTo("#recently-updated-repos");
+  }
+  
+  function addProject(project) {
+    var $project = $("<div />").addClass("project");
+    $project.addClass(project.language);
+    $project.append($("<h2 />").text(project.name));
+    $project.append($("<h3 />").text(project.language));
+    $project.append($("<p />").text(project.description));
+    $project.appendTo("#projects");
+  }
+  
+  $.getJSON("https://api.github.com/users/twitter/repos?callback=?", function (result) {
+    var repos = result.data;
+    
+    $(function () {      
+      $("#num-repos").val(repos.length);
+
+      $.each(repos, function (i, repo) {
+        repo.pushed_at = new Date(repo.pushed_at);
+      });
+
+      // Sort by most-recently pushed to.
+      repos.sort(function (a, b) {
+        if (a.pushed_at < b.pushed_at) return 1;
+        if (b.pushed_at < a.pushed_at) return -1;
+        return 0;
+      });
+      
+      $.each(repos, function(i, repo){
+        addProject(repo);
+      });
+
+      $.each(repos.slice(0, 3), function (i, repo) {
+        addRecentlyUpdatedRepo(repo);
+      });      
+    });
+  });
+  
+  $.getJSON("https://api.github.com/orgs/twitter/members?callback=?", function (members) {
+    $(function () {
+      $("#num-members").val(members.length);
+    });
+  });
+})(jQuery);

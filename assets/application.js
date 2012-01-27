@@ -1,4 +1,5 @@
 (function ($, undefined) {
+
   // Put custom repo URL's in this object, keyed by repo name.
   var repoUrls = {
     "bootstrap": "http://twitter.github.com/bootstrap/",
@@ -113,5 +114,90 @@
       $("#num-members").text(members.length);
     });
   });
+
+  function randomItem(array) {
+    return array[Math.floor(Math.random() * array.length)];
+  }
+
+  var $flyzone;
+
+  function flyzone() {
+    if (!$flyzone) {
+      $flyzone = $("<div>").attr("id", "flyzone").prependTo(document.body);
+    }
+
+    return $flyzone;
+  }
+
+  var sizes = ["smaller", "small", "medium", "large", "fat"];
+
+  var sizeDimensions = {
+    "smaller": 20,
+    "small": 50,
+    "medium": 100,
+    "large": 200,
+    "fat": 300
+  };
+
+  var speeds = ["slow", "medium", "fast"];
+
+  var speedDurations = {
+    "slow": 45000,
+    "medium": 30000,
+    "fast": 20000
+  };
+
+  function makeLarry(sizeName, speedName) {
+    var size = sizeDimensions[sizeName];
+    var top = Math.floor((flyzone().height() - size) * Math.random());
+
+    var $img = $("<img>")
+      .addClass("larry size-" + sizeName)
+      .attr("src", "assets/larry.png")
+      .attr("width", size)
+      .attr("height", size)
+      .css({
+        position: "absolute",
+        opacity: Math.random(),
+        top: top,
+        left: -size
+      });
+
+    $img.prependTo(flyzone());
+
+    var left = flyzone().width() + size;
+    var speed = speedDurations[speedName];
+
+    $img.animate({left: left}, speed, function () {
+      $img.remove();
+      makeRandomLarry();
+    });
+
+    return $img;
+  }
+
+  function makeRandomLarry() {
+    var size = randomItem(sizes);
+    var speed = randomItem(speeds);
+    return makeLarry(size, speed);
+  }
+
+  $(function () {
+    $("#logo").click(function () {
+      makeRandomLarry();
+    });
+  });
+
+  var match = (/\blarry(=(\d+))?\b/i).exec(window.location.search);
+
+  if (match) {
+    var n = parseInt(match[2]) || 20;
+
+    $(function () {
+      for (var i = 0; i < n; ++i) {
+        setTimeout(makeRandomLarry, Math.random() * n * 500);
+      }
+    });
+  }
 
 })(jQuery);

@@ -31,6 +31,7 @@ a:hover {
 }
 
 #wrapper {
+  position: relative;
   width: 960px;
   margin: 0 auto;
   padding: 20px 0;
@@ -203,4 +204,49 @@ li.repo h3 {
 
 .repo.python::after {
   border-right-color: #6aad2d;
+}
+
+@keyframes small-swing { 0% { margin-top: 0px } 50% { margin-top: -10px } 100% { margin-top: 0px } }
+@-moz-keyframes small-swing { 0% { margin-top: 0px } 50% { margin-top: -10px } 100% { margin-top: 0px } }
+@-webkit-keyframes small-swing { 0% { margin-top: 0px } 50% { margin-top: -10px } 100% { margin-top: 0px } }
+@-ms-keyframes small-swing { 0% { margin-top: 0px } 50% { margin-top: -10px } 100% { margin-top: 0px } }
+
+@keyframes medium-swing { 0% { margin-top: 0px } 50% { margin-top: -20px } 100% { margin-top: 0px } }
+@-moz-keyframes medium-swing { 0% { margin-top: 0px } 50% { margin-top: -20px } 100% { margin-top: 0px } }
+@-webkit-keyframes medium-swing { 0% { margin-top: 0px } 50% { margin-top: -20px } 100% { margin-top: 0px } }
+@-ms-keyframes medium-swing { 0% { margin-top: 0px } 50% { margin-top: -20px } 100% { margin-top: 0px } }
+
+@keyframes large-swing { 0% { margin-top: 0px } 50% { margin-top: -40px } 100% { margin-top: 0px } }
+@-moz-keyframes large-swing { 0% { margin-top: 0px } 50% { margin-top: -40px } 100% { margin-top: 0px } }
+@-webkit-keyframes large-swing { 0% { margin-top: 0px } 50% { margin-top: -40px } 100% { margin-top: 0px } }
+@-ms-keyframes large-swing { 0% { margin-top: 0px } 50% { margin-top: -40px } 100% { margin-top: 0px } }
+
+.larry.size-smaller, .larry.size-small {
+  animation: small-swing 1.5s infinite ease-in-out;
+  -moz-animation: small-swing 1.5s infinite ease-in-out;
+  -webkit-animation: small-swing 1.5s infinite ease-in-out;
+  -ms-animation: small-swing 1.5s infinite ease-in-out;
+}
+
+.larry.size-medium, .larry.size-large {
+  animation: medium-swing 1.5s infinite ease-in-out;
+  -moz-animation: medium-swing 1.5s infinite ease-in-out;
+  -webkit-animation: medium-swing 1.5s infinite ease-in-out;
+  -ms-animation: medium-swing 1.5s infinite ease-in-out;
+}
+
+.larry.size-medium, .larry.size-fat {
+  animation: large-swing 1.5s infinite ease-in-out;
+  -moz-animation: large-swing 1.5s infinite ease-in-out;
+  -webkit-animation: large-swing 1.5s infinite ease-in-out;
+  -ms-animation: large-swing 1.5s infinite ease-in-out;
+}
+
+#flyzone {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
 }

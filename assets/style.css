@@ -83,17 +83,41 @@ a:hover {
   font-size: 20px;
 }
 
+#recently-updated h1 {
+  margin-bottom: 10px;
+}
+
+#recently-updated h1 a {
+  font-weight: normal;
+  font-size: 11px;
+}
+
 #recently-updated-repos {
   margin-left: 15px;
 }
 
+#recently-updated-repos li {
+  line-height: 1.5;
+}
+
 #recently-updated-repos li span {
   display: inline-block;
-  padding: 0 2px;
+  padding: 0 1px;
+}
+
+#recently-updated-repos li span {
+  font-size: 11px;
 }
 
 #recently-updated-repos li span.name {
   padding: 0 6px 0 0;
+  font-size: 13px;
+}
+
+#recently-updated-repos li span.time a,
+#recently-updated-repos li span.watchers a,
+#recently-updated-repos li span.forks a {
+  color: #666;
 }
 
 div.header {

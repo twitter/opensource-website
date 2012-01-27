@@ -3,12 +3,12 @@
     var $item = $("<li>");
       
     $item.append('<span class="name"><a href="' + repo.html_url + '">' + repo.name + '</a></span>');
-    $item.append('<span class="time">' + strftime("%h %e, %Y", repo.pushed_at) + '</span>');
+    $item.append('<span class="time"><a href="' + repo.html_url + '/commits">' + strftime("%h %e, %Y", repo.pushed_at) + '</a></span>');
     $item.append('<span class="bullet">&sdot;</span>');
-    $item.append('<span class="watchers">' + repo.watchers + ' watchers</span>');
+    $item.append('<span class="watchers"><a href="' + repo.html_url + '/watchers">' + repo.watchers + ' watchers</a></span>');
     $item.append('<span class="bullet">&sdot;</span>');
-    $item.append('<span class="forks">' + repo.forks + ' forks</span>');
-    
+    $item.append('<span class="forks"><a href="' + repo.html_url + '/network">' + repo.forks + ' forks</a></span>');
+
     $item.appendTo("#recently-updated-repos");
   }
   

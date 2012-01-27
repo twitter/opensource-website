@@ -6,6 +6,7 @@ body {
   font: 13px "Helvetica Neue", Helvetica, Arial, sans-serif;
   line-height: 1.4;
   color: #666;
+  min-width: 960px;
 }
 
 h1 {
@@ -40,12 +41,12 @@ a:hover {
   text-align: center;
 }
 
-#main, div.header, div.project {
+#main, div.header, li.repo {
   background: white;
   background: rgba(255, 255, 255, 0.7);
-  -moz-box-shadow:    0px 0px 5px 0px #eee;
-  -webkit-box-shadow: 0px 0px 5px 0px #eee;
-  box-shadow:         0px 0px 5px 0px #eee;
+  -moz-box-shadow:    0px 0px 5px 1px rgba(0, 0, 0, 0.15);
+  -webkit-box-shadow: 0px 0px 5px 1px rgba(0, 0, 0, 0.15);
+  box-shadow:         0px 0px 5px 1px rgba(0, 0, 0, 0.15);
   margin-bottom: 20px;
 }
 
@@ -94,6 +95,10 @@ div.header h1 {
   line-height: 15px;
 }
 
+#statistics a:link, #statistics a:visited {
+  color: inherit;
+}
+
 #statistics p.email {
   margin-top: 6px;
   font-size: 11px;
@@ -132,36 +137,42 @@ div.header h1 {
   color: #999;
 }
 
-div.project {
+li.repo {
   height: 250px;
 }
 
-div.project h2, div.project h3, div.project p {
+li.repo > a {
+  display: block;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  text-decoration: none;
+  color: inherit;
+}
+
+li.repo a:hover {
+  background: #efefef;
+  background: rgba(0, 0, 0, 0.05);
+}
+
+li.repo h2, li.repo h3, li.repo p {
   margin: 10px 15px;
 }
 
-div.project h2 {
+li.repo h2 {
   margin-bottom: 2px;
   max-width: 160px;
   overflow: hidden;
 }
 
-div.project h3 {
+li.repo h3 {
   font-size: 11px;
   margin-top: 2px;
   margin-bottom: 15px;
   color: #999;
 }
 
-div.project-title {
-  height: 30px;
-}
-
-.project-description {
-
-}
-
-.project::after {
+.repo::after {
   content: '';
   position: absolute;
   right: 0;
@@ -171,24 +182,25 @@ div.project-title {
   border-bottom: 50px solid transparent;
   border-left: 50px solid transparent;
   border-right: 50px solid red;
+  pointer-events: none;
 }
 
-.project.javascript::after {
+.repo.javascript::after {
   border-right-color: #0080b0;
 }
 
-.project.scala::after {
+.repo.scala::after {
   border-right-color: #7ac9de;
 }
 
-.project.ruby::after {
+.repo.ruby::after {
   border-right-color: #b60202;
 }
 
-.project.java::after {
+.repo.java::after {
   border-right-color: brown;
 }
 
-.project.python::after {
+.repo.python::after {
   border-right-color: #6aad2d;
 }

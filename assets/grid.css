@@ -1,20 +1,9 @@
-body {
-  min-width: 960px;
-}
-
 .grid-1, .grid-2, .grid-3, .grid-4 {
   display:inline;
   float: left;
   position: relative;
   margin-left: 10px;
   margin-right: 10px;
-}
-
-.push-1, .pull-1,
-.push-2, .pull-2,
-.push-3, .pull-3,
-.push-4, .pull-4 {
-  position: relative;
 }
 
 /* Grid >> Children (Alpha ~ First, Omega ~ Last) */
@@ -43,62 +32,6 @@ body {
 
 .grid .grid-4 {
   width: 940px;
-}
-
-/* Prefix Extra Space >> 4 Columns */
-
-.grid .prefix-1 {
-  padding-left: 240px;
-}
-
-.grid .prefix-2 {
-  padding-left: 480px;
-}
-
-.grid .prefix-3 {
-  padding-left: 720px;
-}
-
-/* Suffix Extra Space >> 4 Columns */
-
-.grid .suffix-1 {
-  padding-right: 240px;
-}
-
-.grid .suffix-2 {
-  padding-right: 480px;
-}
-
-.grid .suffix-3 {
-  padding-right: 720px;
-}
-
-/* Push Space >> 4 Columns */
-
-.grid .push-1 {
-  left: 240px;
-}
-
-.grid .push-2 {
-  left: 480px;
-}
-
-.grid .push-3 {
-  left: 720px;
-}
-
-/* Pull Space >> 4 Columns */
-
-.grid .pull-1 {
-  left: -240px;
-}
-
-.grid .pull-2 {
-  left: -480px;
-}
-
-.grid .pull-3 {
-  left: -720px;
 }
 
 /* http://sonspring.com/journal/clearing-floats */

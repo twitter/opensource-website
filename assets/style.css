@@ -136,4 +136,43 @@ div.project-title {
   height: 30px;
 }
 
-.project-description {}
+.project-description {
+
+}
+
+.project {
+  position: relative;
+}
+
+.project::after {
+  content: '';
+  position: absolute;
+  right: 0;
+  top: 0;
+  
+  width: 0;
+  height: 0;
+  border-bottom: 50px solid transparent;
+  border-left: 50px solid transparent;
+  border-right: 50px solid red;
+}
+
+.project.JavaScript::after {
+  border-right-color: #0080B0;
+}
+
+.project.Scala::after {
+  border-right-color: #7AC9DE;
+}
+
+.project.Ruby::after {
+  border-right-color: #B60202;
+}
+
+.project.Java::after {
+  border-right-color: brown;
+}
+
+.project.Python::after {
+  border-right-color: #6AAD2D;
+}

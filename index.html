@@ -14,9 +14,9 @@
       $item.append('<span class="name"><a href="' + repo.html_url + '">' + repo.name + '</a></span>');
       $item.append('<span class="time">' + strftime("%h %e, %Y", repo.pushed_at) + '</span>');
       $item.append('<span class="bullet">&sdot;</span>');
-      $item.append('<span class="watchers">' + repo.watchers + ' watchers</span>');
+      $item.append('<span class="watchers"><a href="' + repo.html_url + '/watchers">' + repo.watchers + ' watchers</a></span>');
       $item.append('<span class="bullet">&sdot;</span>');
-      $item.append('<span class="forks">' + repo.forks + ' forks</span>');
+      $item.append('<span class="forks"><a href="' + repo.html_url + '/network">' + repo.forks + ' forks</a></span>');
       $item.appendTo("#recently-updated-repos");
     }
 
@@ -76,7 +76,7 @@
           <p><a href="mailto:opensource@twitter.com">opensource@twitter.com</a></p>
         </div>
         <div id="recently-updated" class="grid-2 omega header">
-          <h1>Recently updated</h1>
+          <h1>Recently updated <a href="#">View All on GitHub</a></h1>
           <ol id="recently-updated-repos"></ol>
         </div>
       </div>

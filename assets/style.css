@@ -14,6 +14,12 @@ h1 {
   color: #333;
 }
 
+h2 {
+  font-weight: bold;
+  font-size: 20px;
+  color: #0084b4;
+}
+
 a:link, a:visited {
   color: #0084b4;
   text-decoration: none;
@@ -37,9 +43,10 @@ a:hover {
 #main, div.header, div.project {
   background: white;
   background: rgba(255, 255, 255, 0.7);
-  -moz-box-shadow:    0px 0px 5px 0px rgba(0, 0, 0, 0.07);
-  -webkit-box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.07);
-  box-shadow:         0px 0px 5px 0px rgba(0, 0, 0, 0.07);
+  -moz-box-shadow:    0px 0px 5px 0px #eee;
+  -webkit-box-shadow: 0px 0px 5px 0px #eee;
+  box-shadow:         0px 0px 5px 0px #eee;
+  margin-bottom: 20px;
 }
 
 #main h1 {
@@ -122,11 +129,28 @@ div.header h1 {
 #recently-updated-repos li span.time a,
 #recently-updated-repos li span.watchers a,
 #recently-updated-repos li span.forks a {
-  color: #666;
+  color: #999;
 }
 
 div.project {
   height: 250px;
+}
+
+div.project h2, div.project h3, div.project p {
+  margin: 10px 15px;
+}
+
+div.project h2 {
+  margin-bottom: 2px;
+  max-width: 160px;
+  overflow: hidden;
+}
+
+div.project h3 {
+  font-size: 11px;
+  margin-top: 2px;
+  margin-bottom: 15px;
+  color: #999;
 }
 
 div.project-title {
@@ -137,16 +161,11 @@ div.project-title {
 
 }
 
-.project {
-  position: relative;
-}
-
 .project::after {
   content: '';
   position: absolute;
   right: 0;
   top: 0;
-  
   width: 0;
   height: 0;
   border-bottom: 50px solid transparent;
@@ -154,22 +173,22 @@ div.project-title {
   border-right: 50px solid red;
 }
 
-.project.JavaScript::after {
-  border-right-color: #0080B0;
+.project.javascript::after {
+  border-right-color: #0080b0;
 }
 
-.project.Scala::after {
-  border-right-color: #7AC9DE;
+.project.scala::after {
+  border-right-color: #7ac9de;
 }
 
-.project.Ruby::after {
-  border-right-color: #B60202;
+.project.ruby::after {
+  border-right-color: #b60202;
 }
 
-.project.Java::after {
+.project.java::after {
   border-right-color: brown;
 }
 
-.project.Python::after {
-  border-right-color: #6AAD2D;
+.project.python::after {
+  border-right-color: #6aad2d;
 }

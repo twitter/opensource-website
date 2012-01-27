@@ -11,11 +11,11 @@
   }
 
   function addProject(project) {
-    var $project = $("<div>").addClass("project");
-    $project.addClass(project.language);
-    $project.append($("<h2>").text(project.name));
-    $project.append($("<h3>").text(project.language));
-    $project.append($("<p>").text(project.description));
+    var $project = $("<div>").addClass("project grid-1");
+    $project.addClass(project.language.toLowerCase());
+    $project.append('<h2>' + project.name + '</h2>');
+    $project.append('<h3>' + project.language + '</h3>');
+    $project.append('<p>' + project.description + '</p>');
     $project.appendTo("#projects");
   }
 

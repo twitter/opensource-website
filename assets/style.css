@@ -114,6 +114,7 @@ a:hover {
   font-size: 13px;
 }
 
+#recently-updated-repos li span.time a,
 #recently-updated-repos li span.watchers a,
 #recently-updated-repos li span.forks a {
   color: #666;

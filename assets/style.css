@@ -37,11 +37,9 @@ a:hover {
 #main, div.header, div.project {
   background: white;
   background: rgba(255, 255, 255, 0.7);
-  /*
-  -moz-box-shadow:    0px 0px 5px 0px #ccc;
-  -webkit-box-shadow: 0px 0px 5px 0px #ccc;
-  box-shadow:         0px 0px 5px 0px #ccc;
-  */
+  -moz-box-shadow:    0px 0px 5px 0px #eee;
+  -webkit-box-shadow: 0px 0px 5px 0px #eee;
+  box-shadow:         0px 0px 5px 0px #eee;
 }
 
 #main h1 {
@@ -70,21 +68,22 @@ a:hover {
   margin: 0;
 }
 
-#statistics input {
-  border: none;
-  width: 33px;
-  display: inline-block;
-  font-weight: bold;
-  font-size: 20px;
-  color: #2984b4;
+div.header {
+  height: 130px;
 }
 
-#statistics label {
-  font-size: 20px;
+div.header h1, div.header p {
+  margin: 10px 15px 0;
 }
 
-#recently-updated h1 {
+div.header h1 {
   margin-bottom: 10px;
+}
+
+#num-repos, #num-members {
+  font-size: 15px;
+  font-weight: bold;
+  color: #2984b4;
 }
 
 #recently-updated h1 a {
@@ -118,14 +117,6 @@ a:hover {
 #recently-updated-repos li span.watchers a,
 #recently-updated-repos li span.forks a {
   color: #666;
-}
-
-div.header {
-  height: 130px;
-}
-
-div.header h1, div.header p {
-  margin: 10px 15px 0;
 }
 
 div.project {

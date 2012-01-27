@@ -15,7 +15,7 @@ h1 {
 }
 
 a:link, a:visited {
-  color: #2984b4;
+  color: #0084b4;
   text-decoration: none;
 }
 
@@ -81,9 +81,15 @@ div.header h1 {
 }
 
 #num-repos, #num-members {
-  font-size: 15px;
+  font-size: 14px;
   font-weight: bold;
-  color: #2984b4;
+  color: #0084b4;
+  line-height: 15px;
+}
+
+#statistics p.email {
+  margin-top: 6px;
+  font-size: 11px;
 }
 
 #recently-updated h1 a {

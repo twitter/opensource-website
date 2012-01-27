@@ -31,17 +31,28 @@
 
   function addRecentlyUpdatedRepo(repo) {
     var $item = $("<li>");
-    $item.append('<span class="name"><a href="' + repoUrl(repo) + '">' + repo.name + '</a></span>');
-    $item.append('<span class="time"><a href="' + repo.html_url + '/commits">' + strftime("%h %e, %Y", repo.pushed_at) + '</a></span>');
+
+    var $name = $("<a>").attr("href", repoUrl(repo)).text(repo.name);
+    $item.append($("<span>").addClass("name").append($name));
+
+    var $time = $("<a>").attr("href", repo.html_url + "/commits").text(strftime("%h %e, %Y", repo.pushed_at));
+    $item.append($("<span>").addClass("time").append($time));
+
     $item.append('<span class="bullet">&sdot;</span>');
-    $item.append('<span class="watchers"><a href="' + repo.html_url + '/watchers">' + repo.watchers + ' watchers</a></span>');
+
+    var $watchers = $("<a>").attr("href", repo.html_url + "/watchers").text(repo.watchers);
+    $item.append($("<span>").addClass("watchers").append($watchers));
+
     $item.append('<span class="bullet">&sdot;</span>');
-    $item.append('<span class="forks"><a href="' + repo.html_url + '/network">' + repo.forks + ' forks</a></span>');
+
+    var $forks = $("<a>").attr("href", repo.html_url + "/network").text(repo.forks + " forks");
+    $item.append($("<span>").append($forks));
+
     $item.appendTo("#recently-updated-repos");
   }
 
   function addRepo(repo) {
-    var $item = $("<li>").addClass("repo grid-1 " + repo.language.toLowerCase());
+    var $item = $("<li>").addClass("repo grid-1 " + (repo.language || '').toLowerCase());
     var $link = $("<a>").attr("href", repoUrl(repo)).appendTo($item);
     $link.append($("<h2>").text(repo.name));
     $link.append($("<h3>").text(repo.language));
@@ -49,7 +60,7 @@
     $item.appendTo("#repos");
   }
 
-  $.getJSON("https://api.github.com/users/twitter/repos?callback=?", function (result) {
+  $.getJSON("https://api.github.com/orgs/twitter/repos?callback=?", function (result) {
     var repos = result.data;
 
     $(function () {
@@ -58,12 +69,23 @@
       // Convert pushed_at to Date.
       $.each(repos, function (i, repo) {
         repo.pushed_at = new Date(repo.pushed_at);
+
+        var weekHalfLife  = 1.146 * Math.pow(10, -9);
+
+        var pushDelta    = (new Date) - Date.parse(repo.pushed_at);
+        var createdDelta = (new Date) - Date.parse(repo.created_at);
+
+        var weightForPush = 1;
+        var weightForWatchers = 1.314 * Math.pow(10, 7);
+
+        repo.hotness = weightForPush * Math.pow(Math.E, -1 * weekHalfLife * pushDelta);
+        repo.hotness += weightForWatchers * repo.watchers / createdDelta;
       });
 
       // Sort by highest # of watchers.
       repos.sort(function (a, b) {
-        if (a.watchers < b.watchers) return 1;
-        if (b.watchers < a.watchers) return -1;
+        if (a.hotness < b.hotness) return 1;
+        if (b.hotness < a.hotness) return -1;
         return 0;
       });
 

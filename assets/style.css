@@ -182,12 +182,12 @@ li.repo h3 {
   height: 0;
   border-bottom: 50px solid transparent;
   border-left: 50px solid transparent;
-  border-right: 50px solid red;
+  border-right: 50px solid #0080b0;
   pointer-events: none;
 }
 
 .repo.javascript::after {
-  border-right-color: #0080b0;
+  border-right-color: #333;
 }
 
 .repo.scala::after {
@@ -195,11 +195,11 @@ li.repo h3 {
 }
 
 .repo.ruby::after {
-  border-right-color: #b60202;
+  border-right-color: #cc1100;
 }
 
 .repo.java::after {
-  border-right-color: brown;
+  border-right-color: #cc8300;
 }
 
 .repo.python::after {

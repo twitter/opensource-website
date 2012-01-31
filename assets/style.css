@@ -173,7 +173,7 @@ li.repo h3 {
   color: #999;
 }
 
-.repo::after {
+.repo:after {
   content: '';
   position: absolute;
   right: 0;
@@ -186,23 +186,23 @@ li.repo h3 {
   pointer-events: none;
 }
 
-.repo.javascript::after {
+.repo.javascript:after {
   border-right-color: #333;
 }
 
-.repo.scala::after {
+.repo.scala:after {
   border-right-color: #7ac9de;
 }
 
-.repo.ruby::after {
+.repo.ruby:after {
   border-right-color: #cc1100;
 }
 
-.repo.java::after {
+.repo.java:after {
   border-right-color: #cc8300;
 }
 
-.repo.python::after {
+.repo.python:after {
   border-right-color: #6aad2d;
 }
 

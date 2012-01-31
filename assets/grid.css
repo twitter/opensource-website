@@ -34,34 +34,18 @@
   width: 940px;
 }
 
-/* http://sonspring.com/journal/clearing-floats */
+/* http://nicolasgallagher.com/micro-clearfix-hack/ */
 
-.clear {
-  clear: both;
-  display: block;
-  overflow: hidden;
-  visibility: hidden;
-  width: 0;
-  height: 0;
+.clearfix {
+  *zoom: 1;
 }
 
-/* http://www.yuiblog.com/blog/2010/09/27/clearfix-reloaded-overflowhidden-demystified */
-
-.clearfix:before, .clearfix:after {
-  content: '\0020';
-  display: block;
-  overflow: hidden;
-  visibility: hidden;
-  width: 0;
-  height: 0;
+.clearfix:before,
+.clearfix:after {
+  content: "";
+  display: table;
 }
 
 .clearfix:after {
   clear: both;
-}
-
-/* The following zoom:1 rule is specifically for IE6 + IE7. */
-
-.clearfix {
-  zoom: 1;
 }

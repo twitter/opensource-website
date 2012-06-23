@@ -67,9 +67,9 @@ a:hover {
 
 #logo {
   width: 190px;
-  height: 64px;
-  margin: 15px 0 0 15px;
-  background: url("logo.png");
+  height: 200px;
+  margin: 15px 0 -12px 15px;
+  background: url("self.png");
   text-indent: -99999px;
 }
 

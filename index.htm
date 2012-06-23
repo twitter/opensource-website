@@ -2,10 +2,16 @@
 
 <html>
   <head>
-    <title>Twitter &hearts; Open Source</title>
+    <title>Len's Open Source</title>
+    <link href='http://0xlen.github.com/favicon.ico' rel='icon' type='image/x-icon'/>
     <link rel="stylesheet" type="text/css" href="assets/reset.css">
     <link rel="stylesheet" type="text/css" href="assets/grid.css">
     <link rel="stylesheet" type="text/css" href="assets/style.css">
+    <link rel="stylesheet" type="text/css" href="assets/mobile.css" media="only screen and (min-device-width : 320px) 
+and (max-device-width : 480px)">
+    <link rel="stylesheet" type="text/css" href="assets/mobile.css" media="only screen and (-webkit-min-device-pixel-ratio : 1.5),
+only screen and (min-device-pixel-ratio : 1.5)">
+
     <script type="text/javascript" src="assets/jquery-1.7.1.min.js"></script>
     <script type="text/javascript" src="assets/strftime.js"></script>
     <script type="text/javascript">
@@ -63,7 +69,7 @@
         $item.appendTo("#repos");
       }
 
-      $.getJSON("https://api.github.com/orgs/twitter/repos?callback=?", function (result) {
+      $.getJSON("https://api.github.com/users/0xlen/repos?callback=?", function (result) {
         var repos = result.data;
 
         $(function () {
@@ -109,12 +115,13 @@
         });
       });
 
-      $.getJSON("https://api.github.com/orgs/twitter/members?callback=?", function (result) {
+      $.getJSON("https://api.github.com/users/0xlen/members?callback=?", function (result) {
         var members = result.data;
 
-        $(function () {
+/*        $(function () {
           $("#num-members").text(members.length);
         });
+*/
       });
 
       function randomItem(array) {
@@ -207,28 +214,32 @@
     </script>
   </head>
   <body>
+    <a href="index.htm">web</a>
+    <span> | </span>
+    <a href="mobile.htm">mobile</a>
     <div id="wrapper" class="grid clearfix">
       <div id="main" class="grid-1">
-        <div id="logo"><h1>Twitter Open Source</h1></div>
-        <h1>Twitter is built on open source software.</h1>
-        <p>Want to help? <a href="https://twitter.com/jobs">Join the Flock</a></p>
-        <p>Visit <a href="https://dev.twitter.com/">dev.twitter.com</a></p>
-        <p><a href="https://twitter.com/about/resources">Logos and other goodies</a></p>
+        <div id="logo"></div>
+        <h1>I'm Len</h1>
+        <p>Core member at Hack-stuff</p>
+        <p>Visit <a href="http://hack-stuff.com">Hack-stuff Technology</a></p>
+        <p><a href="http://len.hack-stuff.com">Blog</a></p>
       </div>
 
       <div class="grid grid-3">
         <div id="statistics" class="grid-1 alpha header">
           <h1>Statistics</h1>
           <p>
-            <a href="https://github.com/twitter/repositories"><span id="num-repos">&nbsp;</span> public repos</a>
+            <a href="https://github.com/0xlen/repositories"><span id="num-repos">&nbsp;</span> public repos</a>
             <br>
-            <a href="https://github.com/twitter"><span id="num-members">&nbsp;</span> members</a>
+<!--            <a href="https://github.com/0xlen"><span id="num-members">&nbsp;</span> members</a>
+-->
           </p>
-          <p class="email"><a href="mailto:opensource@twitter.com">opensource@twitter.com</a></p>
+          <p class="email"><a href="mailto:a78965@gmail.com">a78965@gmail.com</a></p>
         </div>
 
         <div id="recently-updated" class="grid-2 omega header">
-          <h1>Recently updated <a href="https://github.com/twitter/repositories">View All on GitHub</a></h1>
+          <h1>Recently updated <a href="https://github.com/0xlen/repositories">View All on GitHub</a></h1>
           <ol id="recently-updated-repos"></ol>
         </div>
       </div>

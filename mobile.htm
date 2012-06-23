@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <title>Len's Open Source</title>
+    <link href='http://0xlen.github.com/favicon.ico' rel='icon' type='image/x-icon'/>
+    <link rel="stylesheet" type="text/css" href="assets/reset.css">
+    <link rel="stylesheet" type="text/css" href="assets/grid.css">
+    <link rel="stylesheet" type="text/css" href="assets/style.css">
+    <link rel="stylesheet" type="text/css" href="assets/mobile.css">
+    <script type="text/javascript" src="assets/jquery-1.7.1.min.js"></script>
+    <script type="text/javascript" src="assets/strftime.js"></script>
+    <script type="text/javascript">
+    (function ($, undefined) {
+
+      // Put custom repo URL's in this object, keyed by repo name.
+      var repoUrls = {
+        "bootstrap": "http://twitter.github.com/bootstrap/",
+        "finagle": "http://twitter.github.com/finagle/",
+        "hogan.js": "http://twitter.github.com/hogan.js/"
+      };
+
+      function repoUrl(repo) {
+        return repoUrls[repo.name] || repo.html_url;
+      }
+
+      // Put custom repo descriptions in this object, keyed by repo name.
+      var repoDescriptions = {
+        "bootstrap": "An HTML, CSS, and JS toolkit designed to kickstart development of webapps and sites",
+        "naggati2": "A protocol builder for Netty using Scala 2.8"
+      };
+
+      function repoDescription(repo) {
+        return repoDescriptions[repo.name] || repo.description;
+      }
+
+      function addRecentlyUpdatedRepo(repo) {
+        var $item = $("<li>");
+
+        var $name = $("<a>").attr("href", repo.html_url).text(repo.name);
+        $item.append($("<span>").addClass("name").append($name));
+
+        var $time = $("<a>").attr("href", repo.html_url + "/commits").text(strftime("%h %e, %Y", repo.pushed_at));
+        $item.append($("<span>").addClass("time").append($time));
+
+        $item.append('<span class="bullet">&sdot;</span>');
+
+        var $watchers = $("<a>").attr("href", repo.html_url + "/watchers").text(repo.watchers + " watchers");
+        $item.append($("<span>").addClass("watchers").append($watchers));
+
+        $item.append('<span class="bullet">&sdot;</span>');
+
+        var $forks = $("<a>").attr("href", repo.html_url + "/network").text(repo.forks + " forks");
+        $item.append($("<span>").addClass("forks").append($forks));
+
+        $item.appendTo("#recently-updated-repos");
+      }
+
+      function addRepo(repo) {
+        var $item = $("<li>").addClass("repo grid-1 " + (repo.language || '').toLowerCase());
+        var $link = $("<a>").attr("href", repoUrl(repo)).appendTo($item);
+        $link.append($("<h2>").text(repo.name));
+        $link.append($("<h3>").text(repo.language));
+        $link.append($("<p>").text(repoDescription(repo)));
+        $item.appendTo("#repos");
+      }
+
+      $.getJSON("https://api.github.com/users/0xlen/repos?callback=?", function (result) {
+        var repos = result.data;
+
+        $(function () {
+          $("#num-repos").text(repos.length);
+
+          // Convert pushed_at to Date.
+          $.each(repos, function (i, repo) {
+            repo.pushed_at = new Date(repo.pushed_at);
+
+            var weekHalfLife  = 1.146 * Math.pow(10, -9);
+
+            var pushDelta    = (new Date) - Date.parse(repo.pushed_at);
+            var createdDelta = (new Date) - Date.parse(repo.created_at);
+
+            var weightForPush = 1;
+            var weightForWatchers = 1.314 * Math.pow(10, 7);
+
+            repo.hotness = weightForPush * Math.pow(Math.E, -1 * weekHalfLife * pushDelta);
+            repo.hotness += weightForWatchers * repo.watchers / createdDelta;
+          });
+
+          // Sort by highest # of watchers.
+          repos.sort(function (a, b) {
+            if (a.hotness < b.hotness) return 1;
+            if (b.hotness < a.hotness) return -1;
+            return 0;
+          });
+
+          $.each(repos, function (i, repo) {
+            addRepo(repo);
+          });
+
+          // Sort by most-recently pushed to.
+          repos.sort(function (a, b) {
+            if (a.pushed_at < b.pushed_at) return 1;
+            if (b.pushed_at < a.pushed_at) return -1;
+            return 0;
+          });
+
+          $.each(repos.slice(0, 3), function (i, repo) {
+            addRecentlyUpdatedRepo(repo);
+          });
+        });
+      });
+
+      $.getJSON("https://api.github.com/users/0xlen/members?callback=?", function (result) {
+        var members = result.data;
+
+/*        $(function () {
+          $("#num-members").text(members.length);
+        });
+*/
+      });
+
+      function randomItem(array) {
+        return array[Math.floor(Math.random() * array.length)];
+      }
+
+      var $flyzone;
+
+      function flyzone() {
+        if (!$flyzone) {
+          $flyzone = $("<div>").attr("id", "flyzone").prependTo(document.body);
+        }
+
+        return $flyzone;
+      }
+
+      var sizes = ["smaller", "small", "medium", "large", "fat"];
+
+      var sizeDimensions = {
+        "smaller": 50,
+        "small": 80,
+        "medium": 130,
+        "large": 200,
+        "fat": 300
+      };
+
+      function randomOpacity(threshold) {
+        var opacity = Math.random();
+
+        while (opacity < threshold) {
+          opacity = Math.random();
+        }
+
+        return opacity;
+      }
+
+      function makeLarry(sizeName, speed) {
+        var size = sizeDimensions[sizeName];
+        var top = Math.floor((flyzone().height() - size) * Math.random());
+
+        var $img = $("<img>")
+          .addClass("larry size-" + sizeName)
+          .attr("src", "assets/larry.png")
+          .attr("width", size)
+          .attr("height", size)
+          .css({
+            position: "absolute",
+            opacity: randomOpacity(0.4),
+            top: top,
+            left: -size
+          });
+
+        $img.prependTo(flyzone());
+
+        var left = flyzone().width() + size;
+
+        $img.animate({left: left}, speed, function () {
+          $img.remove();
+          makeRandomLarry();
+        });
+
+        return $img;
+      }
+
+      function makeRandomLarry() {
+        var size = randomItem(sizes);
+        var speed = Math.floor(Math.random() * 20000) + 15000;
+        return makeLarry(size, speed);
+      }
+
+      $(function () {
+        $("#logo").click(function () {
+          makeRandomLarry();
+        });
+      });
+
+      var match = (/\blarry(=(\d+))?\b/i).exec(window.location.search);
+
+      if (match) {
+        var n = parseInt(match[2]) || 20;
+
+        $(function () {
+          for (var i = 0; i < n; ++i) {
+            setTimeout(makeRandomLarry, Math.random() * n * 500);
+          }
+        });
+      }
+
+    })(jQuery);
+    </script>
+  </head>
+  <body>
+    <a href="index.htm">web</a>
+    <span> | </span>
+    <a href="mobile.htm">mobile</a>
+    <div id="wrapper" class="grid clearfix">
+      <div id="main" class="grid-1">
+        <div id="logo"></div>
+        <h1>I'm Len</h1>
+        <p>Core member at Hack-stuff</p>
+        <p>Visit <a href="http://hack-stuff.com">Hack-stuff Technology</a></p>
+        <p><a href="http://len.hack-stuff.com">Blog</a></p>
+      </div>
+
+      <div class="grid grid-3">
+        <div id="statistics" class="grid-1 alpha header">
+          <h1>Statistics</h1>
+          <p>
+            <a href="https://github.com/0xlen/repositories"><span id="num-repos">&nbsp;</span> public repos</a>
+            <br>
+<!--            <a href="https://github.com/0xlen"><span id="num-members">&nbsp;</span> members</a>
+-->
+          </p>
+          <p class="email"><a href="mailto:a78965@gmail.com">a78965@gmail.com</a></p>
+        </div>
+
+        <div id="recently-updated" class="grid-2 omega header">
+          <h1>Recently updated <a href="https://github.com/0xlen/repositories">View All on GitHub</a></h1>
+          <ol id="recently-updated-repos"></ol>
+        </div>
+      </div>
+
+      <ol id="repos"></ol>
+    </div>
+  </body>
+</html>

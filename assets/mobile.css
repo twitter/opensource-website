@@ -1,0 +1,69 @@
+
+    html {
+        width: 100%;
+    }
+    #logo {
+        margin: 20px auto;
+    }
+    #wrapper {
+        width: 100%;
+        text-align: center;
+    }
+    #main {
+        height: 100%;
+    }
+    div.header {
+        width: 95%;
+        height: 100%;
+    }
+    div, ol {
+        float: none;
+        height: 100%;
+    }
+    .grid {
+        width: 98%;
+    }
+	.grid-1, .grid-2, .grid-3, .grid-4 {
+	    float:left;
+	}
+	.grid .grid-1 {
+      width: 98%;
+      height: 100%;
+      margin-left: 1%;
+    }
+
+    .grid .grid-2 {
+      width: 98%;
+      height: 100%;
+      margin: 0 1% 20px;
+    }
+
+    .grid .grid-3 {
+      width: 98%;
+      height: 100%;
+    }
+
+    .grid .grid-4 {
+      width: 98%;
+      height: 100%;
+    }
+    #main p {
+        font-size: 200%;
+    }
+	h1,h2 {
+	    font-size: 800%;
+	    min-width: 100%;
+	}
+	a,p {
+	    min-width: 100%;
+	    font-size: 300%;
+	}
+	#num-repos,#num-members {
+	    font-size: 180%;
+	}
+	#recently-updated h1 a {
+	    font-size: 50%;
+	}
+	li.repo h2, li.repo h3, li.repo p{
+	    font-size: 100%;
+	}

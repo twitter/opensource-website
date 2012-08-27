@@ -43,7 +43,7 @@
 
         $item.append('<span class="bullet">&sdot;</span>');
 
-        var $watchers = $("<a>").attr("href", repo.html_url + "/watchers").text(repo.watchers + " watchers");
+        var $watchers = $("<a>").attr("href", repo.html_url + "/watchers").text(repo.watchers + " stargazers");
         $item.append($("<span>").addClass("watchers").append($watchers));
 
         $item.append('<span class="bullet">&sdot;</span>');

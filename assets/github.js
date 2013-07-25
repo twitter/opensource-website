@@ -192,7 +192,8 @@
 
   $(function () {
     $("#logo").click(function () {
-      makeRandomLarry();
+      //makeRandomLarry();
+      self.location.href = 'http://hasadna.org.il/';
     });
   });
 

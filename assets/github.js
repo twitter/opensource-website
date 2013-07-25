@@ -155,6 +155,8 @@
   }
 
   function makeLarry(sizeName, speed) {
+    return;
+    /*
     var size = sizeDimensions[sizeName];
     var top = Math.floor((flyzone().height() - size) * Math.random());
 
@@ -179,7 +181,7 @@
       makeRandomLarry();
     });
 
-    return $img;
+    return $img;*/
   }
 
   function makeRandomLarry() {

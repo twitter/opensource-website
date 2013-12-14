@@ -18,5 +18,14 @@
     "github_repo": "OpenCommunity",
     "leaders": ["BoazChen", "nonZero"],
     "tags": ["Django", "Python"]
+  },
+  {
+    "name": "רשות מקומית פתוחה",
+    "about": "עידוד רשויות מקומיות להתנהל לפי עקרונות של שקיפות ושיתוף הציבור והגברת מעורבותם של התושבים בהתנהלות הממשל המקומי",
+    "status": "דגירה",
+    "entry_level": "גיבורי-על",
+    "github_repo":"openmuni-budgets",
+    "leaders": [],
+    "tags": ["Django", "Backbone", "D3", "jQuery"]
   }
 ]

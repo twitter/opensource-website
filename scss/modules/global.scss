@@ -1,0 +1,42 @@
+.semantic { //bullet-less lists
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.app-header {
+  border-bottom: rem-calc(20px) solid darken($light-blue, 50%);
+  background-color: $light-orange;
+  height: rem-calc(220px);
+  margin-bottom: rem-calc(20px);
+  position: relative;
+
+  &:after {
+    content: '';
+    position: absolute;
+    right:0;
+    left:0;
+    bottom: rem-calc(-21px);
+    display: block;
+    height:1px;
+    background-color: #fff;
+  }
+
+  .row, .columns {
+    position: relative;
+    height: 100%;
+  }
+
+  h1 {
+    position: absolute;
+    right:rem-calc(15px);
+    bottom:rem-calc(5px);
+    color: darken($light-turquoise, 60%);
+    font-size: 3.5rem;
+
+    .subheader {
+      color: #fff;
+      font-size: 1.5rem;
+    }
+  }
+}

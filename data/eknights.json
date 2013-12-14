@@ -3,16 +3,20 @@
     "name": "כנסת פתוחה",
     "permalink": "http://oknesset.org",
     "about": "החשמביר הראשון והאמא של הסדנא.  משרת פעילים וחברי כנסת למעלה משלוש שנים",
-    "status": "flew the nest",
+    "status": "פרח מן הקן",
+    "entry_level": "מתקדמים",
     "discussion_board": "https://groups.google.com/forum/#!forum/open-knesset",
     "github_repo": "Open-Knesset",
-    "leaders": ["ofri", "MeirKriheli", "amirnissim"]
+    "leaders": ["ofri", "MeirKriheli", "amirnissim"],
+    "tags": ["Django", "Python", "Postgresql"]
   },
   {
     "name": "קהילה פתוחה",
     "about": "הגברת רמת המעורבות של הציבור בקהילה על ידי שיתופו באופן שיטתי בתהליך קבלת ההחלטות, ומימוש, הלכה למעשה, את היותו הריבון של הקהילה.",
-    "status": "hatchling",
+    "status": "בקע מן הביצה",
+    "entry_level": "מתחילים",
     "github_repo": "OpenCommunity",
-    "leaders": ["BoazChen", "nonZero"]
+    "leaders": ["BoazChen", "nonZero"],
+    "tags": ["Django", "Python"]
   }
 ]

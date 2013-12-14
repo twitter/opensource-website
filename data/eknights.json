@@ -1,0 +1,18 @@
+[
+  {
+    "name": "כנסת פתוחה",
+    "permalink": "http://oknesset.org",
+    "about": "החשמביר הראשון והאמא של הסדנא.  משרת פעילים וחברי כנסת למעלה משלוש שנים",
+    "status": "flew the nest",
+    "discussion_board": "https://groups.google.com/forum/#!forum/open-knesset",
+    "github_repo": "Open-Knesset",
+    "leaders": ["ofri", "MeirKriheli", "amirnissim"]
+  },
+  {
+    "name": "קהילה פתוחה",
+    "about": "הגברת רמת המעורבות של הציבור בקהילה על ידי שיתופו באופן שיטתי בתהליך קבלת ההחלטות, ומימוש, הלכה למעשה, את היותו הריבון של הקהילה.",
+    "status": "hatchling",
+    "github_repo": "OpenCommunity",
+    "leaders": ["BoazChen", "nonZero"]
+  }
+]

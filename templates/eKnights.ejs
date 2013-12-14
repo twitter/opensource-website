@@ -1,0 +1,50 @@
+<% list(eKnights, function(eKnight){ %>
+<article class="eKnight">
+  <header>
+    <h1><%= eKnight.attr('name') %></h1>
+    <p><%= eKnight.attr('about') %></p>
+  </header>
+  <div class="meta">
+    <ul>
+      <li>
+        <strong>Status: </strong> <%= eKnight.attr('status') %>
+      </li>
+      <% if(eKnight.attr('permalink')){ %>
+      <li>
+        <a href="<%= eKnight.attr('permalink') %>" target="_blank">Homepage</a>
+      </li>
+      <% } %>
+    </ul>
+  </div>
+  <div class="github-activity">
+    <ul>
+      <% if(eKnight.attr('repository')) { %>
+      <li>
+        <strong>Written In: </strong> <%= eKnight.attr('repository').attr('language') %>
+      </li>
+      <li>
+        <strong>Last Commit Date: </strong> <%= eKnight.attr('repository').attr('pushed_at') %>
+      </li>
+      <li>
+        <strong>Leaders: </strong>
+        <% can.each(eKnight.attr('repository').attr('leaders'), function(contributor, index) { %>
+        <a href="<%= contributor.url %>" target="_blank"><%= contributor.login %></a><% if(index + 1 < eKnight.attr('repository').attr('leaders').length) { %>,<% } %>
+        <% }) %>
+      </li>
+      <li>
+        <strong>Contributors: </strong> <%= eKnight.attr('repository').attr('contributors').length %>
+      </li>
+      <li>
+        <strong>Open Issues: </strong> <%= eKnight.attr('repository').attr('open_issues_count') %>
+      </li>
+      <li>
+        <strong>Forks: </strong> <%= eKnight.attr('repository').attr('forks_count') %>
+      </li>
+      <li>
+        <strong>Watchers: </strong> <%= eKnight.attr('repository').attr('watchers') %>
+      </li>
+      <% } %>
+    </ul>
+  </div>
+</article>
+<% }) %>

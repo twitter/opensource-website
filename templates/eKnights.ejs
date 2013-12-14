@@ -1,0 +1,98 @@
+<% eKnights.each(function(group){ %>
+  <div class="row">
+    <% group.each(function(eKnight){ %>
+    <article class="large-6 medium-6 small-12 columns">
+      <div class="eKnight">
+        <header>
+          <h1><%= eKnight.attr('name') %></h1>
+          <ul class="semantic inline">
+            <li>
+              <strong>סטטוס: </strong> <%= eKnight.attr('status') %>
+            </li>
+            <li>
+              <strong>רמת כניסה: </strong> <%= eKnight.attr('entry_level') %>
+            </li>
+            <% if(eKnight.attr('repository') && eKnight.attr('repository').attr('help_index')) { %>
+            <li>
+              <strong>מדד עזרה: </strong> <%= eKnight.attr('repository').attr('help_index') %>
+            </li>
+            <% } %>
+          </ul>
+        </header>
+        <p><%= eKnight.attr('about') %></p>
+        <p>
+          <strong>תגיות: </strong> <%= eKnight.attr('tags').join(', ') %>
+        </p>
+        <footer>
+          <% if(eKnight.attr('repository')) { %>
+          <div class="ribbon <%= eKnight.attr('repository').attr('language').toLowerCase() %>"><%= eKnight.attr('repository').attr('language') %></div>
+          <% } %>
+          <div class="button-bar">
+            <ul class="button-group">
+              <% if(eKnight.attr('permalink')){ %>
+              <li>
+                <a class="social-button" href="<%= eKnight.attr('permalink') %>" target="_blank"><i class="fa fa-home"></i> עמוד הבית</a>
+              </li>
+              <% } %>
+              <% if(eKnight.attr('discussion_board')){ %>
+              <li>
+                <a class="social-button" href="<%= eKnight.attr('discussion_board') %>" target="_blank"><i class="fa fa-comments-o"></i> קבוצת דיון</a>
+              </li>
+              <% } %>
+              <% if(eKnight.attr('repository')) { %>
+              <li>
+                <a class="social-button" href="<%= eKnight.attr('repository').attr('url') %>" target="_blank"><i class="fa fa-github"></i> גיטהאב</a>
+              </li>
+              <% } %>
+            </ul>
+          </div>
+        </footer>
+      </div>
+      <!--
+      <div class="meta">
+        <ul class="semantic">
+          <li>
+            <strong>Status: </strong> <%= eKnight.attr('status') %>
+          </li>
+          <% if(eKnight.attr('permalink')){ %>
+          <li>
+            <a href="<%= eKnight.attr('permalink') %>" target="_blank">Homepage</a>
+          </li>
+          <% } %>
+        </ul>
+      </div>
+      <div class="github-activity">
+        <ul class="semantic">
+          <% if(eKnight.attr('repository')) { %>
+          <li>
+            <strong>Written In: </strong> <%= eKnight.attr('repository').attr('language') %>
+          </li>
+          <li>
+            <strong>Last Commit Date: </strong> <%= eKnight.attr('repository').attr('pushed_at') %>
+          </li>
+          <li>
+            <strong>Leaders: </strong>
+            <% can.each(eKnight.attr('repository').attr('leaders'), function(contributor, index) { %>
+            <a href="<%= contributor.url %>" target="_blank"><%= contributor.login %></a><% if(index + 1 < eKnight.attr('repository').attr('leaders').length) { %>,<% } %>
+            <% }) %>
+          </li>
+          <li>
+            <strong>Contributors: </strong> <%= eKnight.attr('repository').attr('contributors').length %>
+          </li>
+          <li>
+            <strong>Open Issues: </strong> <%= eKnight.attr('repository').attr('open_issues_count') %>
+          </li>
+          <li>
+            <strong>Forks: </strong> <%= eKnight.attr('repository').attr('forks_count') %>
+          </li>
+          <li>
+            <strong>Watchers: </strong> <%= eKnight.attr('repository').attr('watchers') %>
+          </li>
+          <% } %>
+        </ul>
+      </div>
+      -->
+    </article>
+    <% }) %>
+  </div>
+<% }) %>

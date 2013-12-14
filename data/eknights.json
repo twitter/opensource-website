@@ -1,0 +1,31 @@
+[
+  {
+    "name": "כנסת פתוחה",
+    "permalink": "http://oknesset.org",
+    "about": "החשמביר הראשון והאמא של הסדנא.  משרת פעילים וחברי כנסת למעלה משלוש שנים",
+    "status": "פרח מן הקן",
+    "entry_level": "מתקדמים",
+    "discussion_board": "https://groups.google.com/forum/#!forum/open-knesset",
+    "github_repo": "Open-Knesset",
+    "leaders": ["ofri", "MeirKriheli", "amirnissim"],
+    "tags": ["Django", "Python", "Postgresql"]
+  },
+  {
+    "name": "קהילה פתוחה",
+    "about": "הגברת רמת המעורבות של הציבור בקהילה על ידי שיתופו באופן שיטתי בתהליך קבלת ההחלטות, ומימוש, הלכה למעשה, את היותו הריבון של הקהילה.",
+    "status": "בקע מן הביצה",
+    "entry_level": "מתחילים",
+    "github_repo": "OpenCommunity",
+    "leaders": ["BoazChen", "nonZero"],
+    "tags": ["Django", "Python"]
+  },
+  {
+    "name": "רשות מקומית פתוחה",
+    "about": "עידוד רשויות מקומיות להתנהל לפי עקרונות של שקיפות ושיתוף הציבור והגברת מעורבותם של התושבים בהתנהלות הממשל המקומי",
+    "status": "דגירה",
+    "entry_level": "גיבורי-על",
+    "github_repo":"openmuni-budgets",
+    "leaders": [],
+    "tags": ["Django", "Backbone", "D3", "jQuery"]
+  }
+]

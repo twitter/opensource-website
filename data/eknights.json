@@ -30,11 +30,33 @@
   },
     {
     "name": "פותחן התקציב",
+    "permalink": "http://compare.open-budget.org.il",
     "about": "השוואת תקציב המדינה לשנת 2013/2014 לתקציב השנים הקודמות והצפת הסעיפים שגדלו במיוחד או קטנו (בוצע בשיתןף עם ׳כלכליסט׳",
     "status": "פרח מן הקן",
     "entry_level": "גיבורי-על",
     "github_repo":"OpenBudget/obudget_comparator",
     "leaders": ["akariv","mushon"],
     "tags": ["Backbone", "D3"]
+  },
+      {
+    "name": "התקציב הפתוח",
+    "permalink": "http://budget.msh.gov.il",
+    "about": "הצגת תקציב המדינה, מאז 1992 ועד 2014, השאאה היסטורית חיפוש ועוד",
+    "status": "פרח מן הקן",
+    "entry_level": "גיבורי-על",
+    "github_repo":"OpenBudget/obudget",
+    "leaders": ["akariv","daonb"],
+    "tags": ["GWT", "Django"]
+  },
+    {
+    "name": "מעקב טרכטנברג",
+    "permalink": "http://watch.gov.il",
+    "about": "מעקב אחר יישום המלצות וועדת טרכטנברג (הושק לרגל שנה למחאה החברתית, בשיתוף עם הממשלה וארגוני חברה אזרחית)",
+    "status": "פרח מן הקן",
+    "entry_level": "גיבורי-על",
+    "github_repo":"akariv/gov-watch",
+    "leaders": ["akariv","mushon"],
+    "tags": ["Flask", "Redis", "bootstrap", "isotope"]
   }
+
 ]

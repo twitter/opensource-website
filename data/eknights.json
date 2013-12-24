@@ -6,7 +6,7 @@
     "status": "פרח מן הקן",
     "entry_level": "מתקדמים",
     "discussion_board": "https://groups.google.com/forum/#!forum/open-knesset",
-    "github_repo": "Open-Knesset",
+    "github_repo": "hasadna/Open-Knesset",
     "leaders": ["ofri", "MeirKriheli", "amirnissim"],
     "tags": ["Django", "Python", "Postgresql"]
   },
@@ -15,7 +15,7 @@
     "about": "הגברת רמת המעורבות של הציבור בקהילה על ידי שיתופו באופן שיטתי בתהליך קבלת ההחלטות, ומימוש, הלכה למעשה, את היותו הריבון של הקהילה.",
     "status": "בקע מן הביצה",
     "entry_level": "מתחילים",
-    "github_repo": "OpenCommunity",
+    "github_repo": "hasadna/OpenCommunity",
     "leaders": ["BoazChen", "nonZero"],
     "tags": ["Django", "Python"]
   },
@@ -24,8 +24,17 @@
     "about": "עידוד רשויות מקומיות להתנהל לפי עקרונות של שקיפות ושיתוף הציבור והגברת מעורבותם של התושבים בהתנהלות הממשל המקומי",
     "status": "דגירה",
     "entry_level": "גיבורי-על",
-    "github_repo":"openmuni-budgets",
+    "github_repo":"hasadna/openmuni-budgets",
     "leaders": [],
     "tags": ["Django", "Backbone", "D3", "jQuery"]
+  },
+    {
+    "name": "פותחן התקציב",
+    "about": "השוואת תקציב המדינה לשנת 2013/2014 לתקציב השנים הקודמות והצפת הסעיפים שגדלו במיוחד או קטנו (בוצע בשיתןף עם ׳כלכליסט׳",
+    "status": "פרח מן הקן",
+    "entry_level": "גיבורי-על",
+    "github_repo":"OpenBudget/obudget_comparator",
+    "leaders": ["akariv","mushon],
+    "tags": ["Backbone", "D3"]
   }
 ]

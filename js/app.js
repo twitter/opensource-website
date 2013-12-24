@@ -27,14 +27,14 @@
     },
     findOne: function(params){
       return $.ajax({
-        url: 'https://api.github.com/repos/hasadna/' + params.name,
+        url: 'https://api.github.com/repos/' + params.name,
         type: 'get',
         dataType: 'json'
       });
     },
     getLastIssue: function(params){
       return $.ajax({
-        url: 'https://api.github.com/repos/hasadna/' + params.name + '/issues?per_page=1',
+        url: 'https://api.github.com/repos/' + params.name + '/issues?per_page=1',
         type: 'get',
         dataType: 'json'
       });

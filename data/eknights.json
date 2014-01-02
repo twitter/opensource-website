@@ -57,6 +57,23 @@
     "github_repo":"akariv/gov-watch",
     "leaders": ["akariv","mushon"],
     "tags": ["Flask", "Redis", "bootstrap", "isotope"]
+  },
+    {
+    "name": "Anyway (שם זמני)",
+    "about": "נציג באופן בהיר ונגיש מידע על תאונות, כמעט-תאונות ומפגעי תנועה ונאפשר דיון פתוח וגלוי בין נוסע לנוסע ולמקבלי ההחלטות.",
+    "status": "דגירה",
+    "entry_level": "מתקדמים",
+    "github_repo":"hasadna/anyway",
+    "leaders": ["sagism","ronreiter"],
+    "tags": ["Python","Django","Javascript"]
+  },
+    {
+    "name": "ספר החוקים",
+    "about": "מתוך ה'פרסומים הרשמיים' של חוק, לא ניתן לדעת את נוסחו. כאן נכנס לתמונה פרויקט החקיקה הישראלית, שנועד למלא את החסר באמצעות פרסום נוסחי החוק המעודכנים, על שינוייהם ורובדיהם.",
+    "status": "דגירה",
+    "entry_level": "מתחילים",
+    "github_repo":"hasadna/openlaw-bot",
+    "leaders": ["uda"],
+    "tags": ["Python","Django","Javascript"]
   }
-
-]
+  ]

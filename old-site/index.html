@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <title>Hasadna - The Public Knoweldge Workshop</title>
+    <link rel="stylesheet" type="text/css" href="assets/reset.css">
+    <link rel="stylesheet" type="text/css" href="assets/grid.css">
+    <link rel="stylesheet" type="text/css" href="assets/style.css">
+    <script type="text/javascript" src="assets/jquery-1.7.1.min.js"></script>
+    <script type="text/javascript" src="assets/strftime.js"></script>
+    <script type="text/javascript" src="assets/github.js"></script>
+  </head>
+  <body>
+    <div id="wrapper" class="grid clearfix">
+      <div id="main" class="grid-1">
+        <div id="logo"><h1>Hasadna</h1></div>
+        <h1>The Public Knoweldge Workshop</h1>
+        <p>Want to help? <a href="http://www.hasadna.org.il/">Visit Hasadna</a></p>
+        <p>Got something to say? <a href="http://www.hasadna.org.il/%D7%A6%D7%95%D7%A8-%D7%A7%D7%A9%D7%A8/">Talk to us</a></p>
+      </div>
+
+      <div class="grid grid-3">
+        <div id="statistics" class="grid-1 alpha header">
+          <h1>Statistics</h1>
+          <p>
+            <a href="https://github.com/hasadna/repositories"><span id="num-repos"><img src="assets/spinner.gif" /></span> public repos</a>
+            <br>
+            <a href="https://github.com/hasadna?tab=members"><span id="num-members"><img src="assets/spinner.gif" /></span> members</a>
+          </p>
+          <p class="email"><a href="http://www.hasadna.org.il/%D7%A6%D7%95%D7%A8-%D7%A7%D7%A9%D7%A8/">צור קשר</a></p>
+        </div>
+
+        <div id="recently-updated" class="grid-2 omega header">
+          <h1>Recently updated <a href="https://github.com/hasadna/repositories">View All on GitHub</a></h1>
+          <ol id="recently-updated-repos"></ol>
+        </div>
+      </div>
+
+      <ol id="repos"></ol>
+    </div>
+  </body>
+</html>

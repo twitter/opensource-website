@@ -69,7 +69,7 @@ a:hover {
   width: 190px;
   height: 64px;
   margin: 15px 0 0 15px;
-  background: url("logo.png");
+  background: url("logo.jpg") no-repeat center;
   text-indent: -99999px;
 }
 
@@ -77,6 +77,9 @@ a:hover {
   margin: 0;
 }
 
+#logo + h1 {
+  margin-top: 10px;
+}
 div.header {
   height: 130px;
 }

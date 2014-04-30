@@ -136,13 +136,26 @@
       }
       addRepos();
 
-      $.getJSON("https://api.github.com/orgs/twitter/members?callback=?", function (result) {
-        var members = result.data;
+      //get total number of Twitter members
+      function getNumMembers(page, numMembers) {
+        var page = page || 1;
+        var numMembers = numMembers || 0;
+        var membersUri = "https://api.github.com/orgs/twitter/members?callback=?"
+          + "&per_page=100"
+          + "&page="+page;
 
-        $(function () {
-          $("#num-members").text(members.length);
+        $.getJSON(membersUri, function (result) {
+          if (result.data && result.data.length > 0) {
+            numMembers += result.data.length;
+            getNumMembers(page+1, numMembers);
+          } else {
+            $(function () {
+              $("#num-members").text(numMembers);
+            });
+          }
         });
-      });
+      }
+      getNumMembers();
 
       function randomItem(array) {
         return array[Math.floor(Math.random() * array.length)];
@@ -229,7 +242,6 @@
           }
         });
       }
-
     })(jQuery);
     </script>
   </head>

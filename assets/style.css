@@ -45,9 +45,9 @@ a:hover {
 #main, div.header, li.repo {
   background: white;
   background: rgba(255, 255, 255, 0.7);
-  -moz-box-shadow:    0px 0px 5px 1px rgba(0, 0, 0, 0.1);
-  -webkit-box-shadow: 0px 0px 5px 1px rgba(0, 0, 0, 0.1);
-  box-shadow:         0px 0px 5px 1px rgba(0, 0, 0, 0.1);
+  -moz-box-shadow:    0 0 5px 1px rgba(0, 0, 0, 0.1);
+  -webkit-box-shadow: 0 0 5px 1px rgba(0, 0, 0, 0.1);
+  box-shadow:         0 0 5px 1px rgba(0, 0, 0, 0.1);
   margin-bottom: 20px;
 }
 
@@ -128,7 +128,7 @@ div.header h1 {
 }
 
 #recently-updated-repos li span.name {
-  padding: 0 6px 0 0;
+  padding: 0 6px 0;
   font-size: 13px;
 }
 
@@ -206,20 +206,20 @@ li.repo h3 {
   border-right-color: #6aad2d;
 }
 
-@keyframes small-swing { 0% { margin-top: 0px } 50% { margin-top: -10px } 100% { margin-top: 0px } }
-@-moz-keyframes small-swing { 0% { margin-top: 0px } 50% { margin-top: -10px } 100% { margin-top: 0px } }
-@-webkit-keyframes small-swing { 0% { margin-top: 0px } 50% { margin-top: -10px } 100% { margin-top: 0px } }
-@-ms-keyframes small-swing { 0% { margin-top: 0px } 50% { margin-top: -10px } 100% { margin-top: 0px } }
+@keyframes small-swing { 0% { margin-top: 0 } 50% { margin-top: -10px } 100% { margin-top: 0 } }
+@-moz-keyframes small-swing { 0% { margin-top: 0 } 50% { margin-top: -10px } 100% { margin-top: 0 } }
+@-webkit-keyframes small-swing { 0% { margin-top: 0 } 50% { margin-top: -10px } 100% { margin-top: 0 } }
+@-ms-keyframes small-swing { 0% { margin-top: 0 } 50% { margin-top: -10px } 100% { margin-top: 0 } }
 
-@keyframes medium-swing { 0% { margin-top: 0px } 50% { margin-top: -20px } 100% { margin-top: 0px } }
-@-moz-keyframes medium-swing { 0% { margin-top: 0px } 50% { margin-top: -20px } 100% { margin-top: 0px } }
-@-webkit-keyframes medium-swing { 0% { margin-top: 0px } 50% { margin-top: -20px } 100% { margin-top: 0px } }
-@-ms-keyframes medium-swing { 0% { margin-top: 0px } 50% { margin-top: -20px } 100% { margin-top: 0px } }
+@keyframes medium-swing { 0% { margin-top: 0 } 50% { margin-top: -20px } 100% { margin-top: 0 } }
+@-moz-keyframes medium-swing { 0% { margin-top: 0 } 50% { margin-top: -20px } 100% { margin-top: 0 } }
+@-webkit-keyframes medium-swing { 0% { margin-top: 0 } 50% { margin-top: -20px } 100% { margin-top: 0 } }
+@-ms-keyframes medium-swing { 0% { margin-top: 0 } 50% { margin-top: -20px } 100% { margin-top: 0 } }
 
-@keyframes large-swing { 0% { margin-top: 0px } 50% { margin-top: -40px } 100% { margin-top: 0px } }
-@-moz-keyframes large-swing { 0% { margin-top: 0px } 50% { margin-top: -40px } 100% { margin-top: 0px } }
-@-webkit-keyframes large-swing { 0% { margin-top: 0px } 50% { margin-top: -40px } 100% { margin-top: 0px } }
-@-ms-keyframes large-swing { 0% { margin-top: 0px } 50% { margin-top: -40px } 100% { margin-top: 0px } }
+@keyframes large-swing { 0% { margin-top: 0 } 50% { margin-top: -40px } 100% { margin-top: 0 } }
+@-moz-keyframes large-swing { 0% { margin-top: 0 } 50% { margin-top: -40px } 100% { margin-top: 0 } }
+@-webkit-keyframes large-swing { 0% { margin-top: 0 } 50% { margin-top: -40px } 100% { margin-top: 0 } }
+@-ms-keyframes large-swing { 0% { margin-top: 0 } 50% { margin-top: -40px } 100% { margin-top: 0 } }
 
 .larry.size-smaller, .larry.size-small {
   animation: small-swing 0.5s infinite ease-in-out;

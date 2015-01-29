@@ -2,13 +2,13 @@
 
 <html>
   <head>
-    <title>Twitter &hearts; Open Source</title>
+    <title>Ministry of Justice &hearts; Open Source</title>
     <link rel="stylesheet" type="text/css" href="assets/reset.css">
     <link rel="stylesheet" type="text/css" href="assets/grid.css">
     <link rel="stylesheet" type="text/css" href="assets/style.css">
-    <link href="//abs.twimg.com/favicons/favicon.ico" rel="shortcut icon" type="image/x-icon">
+    <link href="assets/favicon.ico" rel="shortcut icon" type="image/x-icon">
     <script type="text/javascript">
-
+<!--
   var _gaq = _gaq || [];
   _gaq.push(['_setAccount', 'UA-39101739-1']);
   _gaq.push(['_trackPageview']);
@@ -18,7 +18,7 @@
     ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
     var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
   })();
-
+-->
     </script>
     <script type="text/javascript" src="assets/jquery-1.7.1.min.js"></script>
     <script type="text/javascript" src="assets/strftime.js"></script>
@@ -81,7 +81,7 @@
         repos = repos || [];
         page = page || 1;
 
-        var uri = "https://api.github.com/orgs/twitter/repos?callback=?"
+        var uri = "https://api.github.com/orgs/ministryofjustice/repos?callback=?"
                 + "&per_page=100"
                 + "&page="+page;
 
@@ -137,11 +137,11 @@
       }
       addRepos();
 
-      //get total number of Twitter members
+      //get total number of members
       function getNumMembers(page, numMembers) {
         var page = page || 1;
         var numMembers = numMembers || 0;
-        var membersUri = "https://api.github.com/orgs/twitter/members?callback=?"
+        var membersUri = "https://api.github.com/orgs/ministryofjustice/members?callback=?"
           + "&per_page=100"
           + "&page="+page;
 
@@ -249,26 +249,24 @@
   <body>
     <div id="wrapper" class="grid clearfix">
       <div id="main" class="grid-1">
-        <div id="logo"><h1>Twitter Open Source</h1></div>
-        <h1>Twitter is built on open source software.</h1>
-        <p>Want to help? <a href="https://twitter.com/jobs">Join the Flock</a></p>
-        <p>Visit <a href="https://dev.twitter.com/">dev.twitter.com</a></p>
-        <p><a href="https://twitter.com/about/resources">Logos and other goodies</a></p>
+        <div id="logo"><h1>Ministry of Justice Open Source</h1></div>
+        <h1>We are built on open source software.</h1>
+        <p>Want to help? <a href="https://mojdigital.blog.gov.uk/working-at-moj-ds/">Join the Flock</a></p>
       </div>
 
       <div class="grid grid-3">
         <div id="statistics" class="grid-1 alpha header">
           <h1>Statistics</h1>
           <p>
-            <a href="https://github.com/twitter/repositories"><span id="num-repos"><img src="assets/spinner.gif" /></span> public repos</a>
+            <a href="https://github.com/ministryofjustice/repositories"><span id="num-repos"><img src="assets/spinner.gif" /></span> public repos</a>
             <br>
-            <a href="https://github.com/twitter?tab=members"><span id="num-members"><img src="assets/spinner.gif" /></span> members</a>
+            <a href="https://github.com/ministryofjustice?tab=members"><span id="num-members"><img src="assets/spinner.gif" /></span> members</a>
           </p>
-          <p class="email"><a href="mailto:opensource@twitter.com">opensource@twitter.com</a></p>
+          <p class="email"><a href="mailto:contact-us@digital.justice.gov.uk">contact-us@digital.justice.gov.uk</a></p>
         </div>
 
         <div id="recently-updated" class="grid-2 omega header">
-          <h1>Recently updated <a href="https://github.com/twitter/repositories">View All on GitHub</a></h1>
+          <h1>Recently updated <a href="https://github.com/ministryofjustice/repositories">View All on GitHub</a></h1>
           <ol id="recently-updated-repos"></ol>
         </div>
       </div>

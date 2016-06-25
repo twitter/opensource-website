@@ -250,3 +250,71 @@ li.repo h3 {
   height: 100%;
   overflow: hidden;
 }
+
+@media screen and (max-width: 1000px) {
+  body {
+    min-width: inherit;  
+  }
+  
+  #wrapper {
+    width: 95%;
+  }
+  
+  #main {
+    width: 100%;
+    display: inline-block;
+    float: none;
+    height: auto;
+    padding-bottom: 20px;
+    margin: 0 auto 20px;
+  }
+  
+  #logo {
+    margin: 15px auto;
+  }
+  
+  .grid .grid-2 {
+    width: 80% !important;
+  }
+  
+  .grid .grid-3 {
+    width: 100%;
+    margin-left: 0;
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  #repos {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 100%;
+  }
+  
+  li.repo {
+    width: 30%;
+    margin-right: 0;
+    display: inline-block;
+    margin-left: 0;
+  }
+}
+
+@media screen and (max-width: 730px) {
+  li.repo {
+    min-width: 49%;
+  }
+}
+
+@media screen and (max-width: 530px) {
+  .grid .grid-3 {
+    flex-direction: column;
+  }
+  
+  .grid .grid-1,
+  .grid .grid-2 {
+    width: 100%;
+    margin-right: 0;
+    margin-left: 0;
+  }
+}

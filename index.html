@@ -85,12 +85,12 @@
 
         $item.append('<span class="bullet">&sdot;</span>');
 
-        var $watchers = $("<a>").attr("href", repo.html_url + "/watchers").text(repo.watchers + " stargazers");
+        var $watchers = $("<a>").attr("href", repo.html_url + "/stargazers").text(repo.stargazers_count + " stargazers");
         $item.append($("<span>").addClass("watchers").append($watchers));
 
         $item.append('<span class="bullet">&sdot;</span>');
 
-        var $forks = $("<a>").attr("href", repo.html_url + "/network").text(repo.forks + " forks");
+        var $forks = $("<a>").attr("href", repo.html_url + "/network").text(repo.forks_count + " forks");
         $item.append($("<span>").addClass("forks").append($forks));
 
         $item.appendTo("#recently-updated-repos");

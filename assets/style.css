@@ -37,6 +37,11 @@ a:hover {
   padding: 20px 0;
 }
 
+#wrapper h2 {
+  margin: 0;
+  padding: 10px 0 0 15px;
+}
+
 #main {
   height: 400px;
   text-align: center;

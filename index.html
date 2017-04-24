@@ -13,10 +13,6 @@
       <div id="main" class="grid-1">
         <div id="logo"><h1>Twitter Open Source</h1></div>
         <h1>Twitter is built on open source software.</h1>
-        <p>Want to help? <a href="https://twitter.com/jobs">Join the Flock</a></p>
-        <p>Visit <a href="https://dev.twitter.com/">dev.twitter.com</a></p>
-        <p><a href="https://twitter.com/about/resources">Logos and other goodies</a></p>
-      </div>
 
       <div class="grid grid-3">
         <div id="statistics" class="grid-1 alpha header">
@@ -55,9 +51,25 @@
 
       // Put custom repo URL's in this object, keyed by repo name.
       var repoUrls = {
-        "bootstrap": "http://twitter.github.com/bootstrap/",
-        "finagle": "http://twitter.github.com/finagle/",
-        "hogan.js": "http://twitter.github.com/hogan.js/"
+        "twemoji": "http://twitter.github.io/twemoji/",
+        "finagle": "http://twitter.github.io/finagle/",
+        "hogan.js": "http://twitter.github.io/hogan.js/",
+        "heron": "http://heronstreaming.io/",
+        "distributedlog": "http://distributedlog.io/",
+        "labella.js": "http://twitter.github.io/labella.js/",
+        "pants": "http://pantsbuild.github.io/",
+        "scala_school": "http://twitter.github.io/scala_school/",
+        "finatra": "https://twitter.github.io/finatra/",
+        "twitter-server": "http://twitter.github.io/twitter-server/",
+        "twisitor": "http://twitter.github.io/twisitor/",
+        "scrooge": "http://twitter.github.io/scrooge/",
+        "util": "http://twitter.github.io/util/",
+        "commons": "http://twitter.github.io/commons/",
+        "typeahead.js": "http://twitter.github.io/typeahead.js/",
+        "plumage.js": "http://twitter.github.io/plumage.js/",
+        "recess": "http://twitter.github.io/recess/",
+        "iago": "http://twitter.github.io/iago/",
+        "ospriet": "http://twitter.github.io/ospriet/"
       };
 
       function repoUrl(repo) {
@@ -66,7 +78,6 @@
 
       // Put custom repo descriptions in this object, keyed by repo name.
       var repoDescriptions = {
-        "bootstrap": "An HTML, CSS, and JS toolkit designed to kickstart development of webapps and sites",
         "naggati2": "A protocol builder for Netty using Scala 2.8"
       };
 
@@ -85,12 +96,12 @@
 
         $item.append('<span class="bullet">&sdot;</span>');
 
-        var $watchers = $("<a>").attr("href", repo.html_url + "/watchers").text(repo.watchers + " stargazers");
+        var $watchers = $("<a>").attr("href", repo.html_url + "/stargazers").text(repo.stargazers_count + " stargazers");
         $item.append($("<span>").addClass("watchers").append($watchers));
 
         $item.append('<span class="bullet">&sdot;</span>');
 
-        var $forks = $("<a>").attr("href", repo.html_url + "/network").text(repo.forks + " forks");
+        var $forks = $("<a>").attr("href", repo.html_url + "/network").text(repo.forks_count + " forks");
         $item.append($("<span>").addClass("forks").append($forks));
 
         $item.appendTo("#recently-updated-repos");

@@ -1,0 +1,195 @@
+/* Styles specific to memberships (#Squad) page */
+
+/* Logo sizes for membership cards */
+
+:root {
+	--logo-size-normal: 80px;
+	--logo-size-small: 60px;
+}
+
+/* Header sizing */
+
+.squad-header {
+  padding-top: calc(var(--feather-grid-mega) * 3);
+  padding-bottom: var(--feather-grid-mega);
+}
+
+.squad-subheading {
+  margin-top: var(--feather-grid-mega);
+}
+
+/* When header less than var(--feather-grid-page-width) + (var(--feather-grid-mega) * 2) */
+@media (max-width: 1236px) {
+	.subheading-header {
+	  padding-bottom: var(--feather-grid-large);
+	}
+
+	.squad-subheading {
+	  margin-top: var(--feather-grid-large);
+	}
+}
+
+/* Adjusts width and margins of membership-container */
+
+.membership-container {
+    max-width: calc(var(--feather-grid-page-width) - var(--feather-grid-mega) * 3);
+    margin: 0 auto;
+}
+
+/* Less than var(--feather-grid-page-width) - var(--feather-grid-mega) */
+@media (max-width: 1116px) {
+    .membership-container {
+        margin: 0 var(--feather-grid-mega);
+    }
+}
+
+@media (max-width: 600px) {
+    .membership-container {
+        margin: 0 var(--feather-grid-medium);
+    }
+}
+
+@media (max-width: 480px) {
+  	.section {
+  		padding: var(--feather-grid-large) 0;
+  	}
+}
+
+/* Membership card elements that are consistent throughout all screen sizes */
+
+.membership {
+	padding: var(--feather-grid-large) 0;
+	border-top: solid 1px var(--tw-color-gray-light);
+	position: relative;
+}
+
+.no-top-border {
+	border-top: none;
+}
+
+a.membership-handle:link, a.membership-handle:visited {
+	color: var(--tw-color-gray-deep);
+	font-size: var(--feather-font-size-normal);
+	line-height: var(--feather-line-height-normal);
+	text-decoration: none;
+}
+
+a.membership-handle:hover, a.membership-handle:active {
+	color: var(--tw-color-text-link);
+} 
+
+.membership button {
+	position: absolute;
+	top: var(--feather-grid-large);
+	right: 0;
+}
+
+/* Membership card layout: greater than 940px */
+/* Logo's position is absolute, and text content is shifted to the right using margins */
+
+.name-handle {
+	width: 80%;
+}
+
+.membership h2 {
+	padding-bottom: var(--feather-grid-micro);
+}
+
+.membership p {
+	padding-top: var(--feather-grid-xsmall);
+	margin-bottom: 0;
+}
+
+.membership-logo {
+	position: absolute;
+	top: var(--feather-grid-large);
+	left: 0;
+	height: var(--logo-size-normal);
+	width: var(--logo-size-normal);  /* will this distort image though */
+}
+
+.name-handle, .membership p {
+	margin-left: calc(var(--logo-size-normal) + var(--feather-grid-large));
+}
+
+/* Membership card layout: between 680px and 940px */ 
+
+@media (max-width: 940px) { 
+	.name-handle {
+		width: 70%;
+	}
+}
+
+/* Membership card layout: less than 680px */
+/* Logo's position is static, and text is no longer shifted to the right with margins */
+
+@media (max-width: 680px) {
+	.membership-logo, .name-handle {
+		position: static;
+		display: inline-block;
+	}
+
+	.membership-logo {
+		height: var(--logo-size-small);
+		width: var(--logo-size-small);
+	}
+
+	.name-handle {
+		margin-left: var(--feather-grid-large);
+		vertical-align: top;
+	}
+
+	.membership p {
+		padding-top: var(--feather-grid-xxsmall);
+		margin-left: 0;
+	}
+}
+
+/* Membership card layout: less than 620px */
+
+@media (max-width: 620px) {
+	.name-handle {
+		width: 60%;
+	}
+}
+
+/* Membership card layout: less than 620px */
+/* Decrease font size of name */
+
+@media (max-width: 480px) {
+	.membership h2 {
+		font-size:  var(--feather-font-size-large);
+		line-height: var(--feather-line-height-large);
+	}
+
+	.name-handle {
+		margin-left: var(--feather-grid-small);
+	}
+
+	.membership p {
+		padding-top: var(--feather-grid-xxsmall);
+	}
+}
+
+/* Membership card layout: less than 420px */
+
+@media (max-width: 420px) {
+	.name-handle {
+		width: 50%;
+	}
+}
+
+/* Membership card layout: less than 340px */
+/* Name and handle move below logo */
+
+@media (max-width: 340px) {
+	.membership-logo, .name-handle {
+		display: block;
+	}
+
+	.name-handle {
+		padding-top: var(--feather-grid-small);
+		margin-left: 0;
+		width: 100%;
+	}
+}

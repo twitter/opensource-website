@@ -1,0 +1,12 @@
+{
+  "name": "twitter-new",
+  "version": "0.0.0",
+  "description": "Home of twitter.github.io",
+  "scripts": {
+    "build:css": "./scripts/optimize_css; ./scripts/clean_feather_css"
+  },
+  "devDependencies": {
+    "cssnano": "^4.1.0",
+    "postcss-cli": "^6.0.0"
+  }
+}

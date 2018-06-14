@@ -72,6 +72,9 @@
     <script type="text/javascript" src="assets/fuse.min.js"></script>
     <script type="text/javascript">
     (function ($, undefined) {
+      
+      var GITHUB_CLIENT_ID = '1bafa09b6086eec7afb4';
+      var GITHUB_CLIENT_SECRET = '7e6422a0a2e24f0d0ecb7521a63990b5758c9cc8';
 
       // Put custom repo URL's in this object, keyed by repo name.
       var repoUrls = {
@@ -149,7 +152,9 @@
 
         var uri = "https://api.github.com/orgs/twitter/repos?callback=?"
                 + "&per_page=100"
-                + "&page="+page;
+                + "&page="+page
+                + "&client_id="+GITHUB_CLIENT_ID
+                + "&client_secret="+GITHUB_CLIENT_SECRET;
 
         $.getJSON(uri, function (result) {
           if (result.data && result.data.length > 0) {
@@ -210,7 +215,9 @@
         var numMembers = numMembers || 0;
         var membersUri = "https://api.github.com/orgs/twitter/members?callback=?"
           + "&per_page=100"
-          + "&page="+page;
+          + "&page="+page
+          + "&client_id="+GITHUB_CLIENT_ID
+          + "&client_secret="+GITHUB_CLIENT_SECRET;
 
         $.getJSON(membersUri, function (result) {
           if (result.data && result.data.length > 0) {

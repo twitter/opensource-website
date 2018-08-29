@@ -25,5 +25,6 @@ deploy:
   github-token: $OAUTH_TOKEN
   keep-history: true
   verbose: true
+  target-branch: master
   on:
     branch: master

@@ -16,7 +16,7 @@ install:
 script:
   - if [ $TRAVIS_EVENT_TYPE == "cron" ];
     then python scripts/fetch_projects.py;
-    else python scripts/fetch_projects.py;
+    else echo "Not triggered by cron";
     fi;
 
 deploy:
@@ -28,3 +28,4 @@ deploy:
   target-branch: master
   on:
     branch: master
+    condition: $TRAVIS_EVENT_TYPE = "cron"

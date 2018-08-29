@@ -16,6 +16,7 @@ install:
 script:
   - if [ $TRAVIS_EVENT_TYPE == "cron" ];
     then python scripts/fetch_projects.py;
+    else python scripts/fetch_projects.py;
     fi;
 
 deploy:
@@ -26,4 +27,3 @@ deploy:
   verbose: true
   on:
     branch: gh-pages
-    condition: $TRAVIS_EVENT_TYPE = "cron"

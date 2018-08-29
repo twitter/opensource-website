@@ -1,6 +1,6 @@
 branches:
   only:
-    - gh-pages
+    - master
 
 language: python
 
@@ -26,4 +26,4 @@ deploy:
   keep-history: true
   verbose: true
   on:
-    branch: gh-pages
+    branch: master

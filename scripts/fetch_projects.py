@@ -60,7 +60,7 @@ for org in all_orgs:
         print("Received request for", org)
 
         if org == 'twitter':
-            SVG_NO_OF_MEMBERS = response["data"]["organization"]["members"]["totalCount"]
+            SVG_NO_OF_MEMBERS = response["data"]["organization"]["membersWithRole"]["totalCount"]
 
         repository_edges = response["data"]["organization"]["repositories"]["edges"]
         all_org_edges.extend(repository_edges)

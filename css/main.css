@@ -196,6 +196,10 @@ body {
 	line-height: var(--line-height-xjumbo);
 }
 
+br {
+  line-height: var(--feather-line-height-xlarge);
+}
+
 /* Media queries */
 
 /* Less than --feather-grid-page-width + (--feather-grid-mega * 2) */

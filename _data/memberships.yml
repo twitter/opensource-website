@@ -1,6 +1,6 @@
 - name: Apache Software Foundation
   description: 'The all-volunteer ASF develops, stewards, and incubates more than 350 Open Source projects and initiatives that cover a wide range of technologies.'
-  logo: https://www.apache.org/foundation/press/kit/feather.svg
+  logo: https://www.apache.org/foundation/press/kit/feather_small.png
   website: https://www.apache.org/
   twitter: TheASF
 
@@ -15,6 +15,12 @@
   logo: https://pbs.twimg.com/profile_images/885315135409082368/CP7GGSWx_400x400.jpg
   website: https://www.opensource.org
   twitter: OpenSourceOrg
+
+- name: Python Software Foundation
+  description: 'The Python Software Foundation is an organization devoted to advancing open source technology related to the Python programming language.'
+  logo: https://pbs.twimg.com/profile_images/439154912719413248/pUBY5pVj_200x200.png
+  website: https://www.python.org/psf-landing/
+  twitter: ThePSF
 
 - name: Scala Center
   description: 'The Scala Center brings together a coalition of individuals and organizations working together to contribute to Scala. All of our members, individual and corporate, are actively involved in the Scala project.'

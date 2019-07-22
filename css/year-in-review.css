@@ -1,0 +1,129 @@
+
+.YIR-wrapper {
+  min-height: 100vh;
+  font-family: 'Helvetica Neue', sans-serif;
+  font-weight: 400;
+  color: white;
+  position: relative;
+}
+
+.YIR-nav-counter {
+  font-weight: 600;
+}
+
+section {
+  height: 100vh;
+  font-size: 40px;
+  font-weight: 400;
+  background-color: #white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+section:nth-child(1) {
+  background: #1da1f2;
+}
+section:nth-child(2) {
+  background: #1da1f2;
+}
+section:nth-child(3) {
+  background: #794bc4;
+}
+section:nth-child(4) {
+  background: #e0245e;
+}
+section:nth-child(5) {
+  background: #f45d22;
+}
+section:nth-child(6) {
+  background: #17bf63;
+}
+section:nth-child(7) {
+  background: #1da1f2;
+}
+
+.YIR-nav-wrapper {
+  position: fixed;
+  height: 100%;
+  padding: 30px;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+}
+.nav {
+  margin: 0 0 0 30px;
+}
+.YIR-nav-counter {
+  font-size: 24px;
+  transition: all 0.15s ease-out;
+}
+.YIR-nav-title {
+  font-size: 32px;
+  font-weight: 400;
+  margin: 0 0 0.25em;
+  width: 300px;
+  height: 0;
+  overflow: hidden;
+  opacity: 0;
+  transition: height 0.3s ease-out, opacity 0.2s ease-out;
+}
+.YIR-nav-body {
+  font-weight: 400;
+  font-size: 18px;
+  width: 400px;
+  height: 0;
+  overflow: hidden;
+  opacity: 0;
+  transition: height 0.3s ease-out, opacity 0.2s ease-out;
+}
+.nav li {
+  position: relative;
+  transition: all 0.3s ease-out;
+  margin-bottom: 1em;
+}
+.nav li:after {
+  content: '';
+  display: block;
+  border-left: 2px solid white;
+  border-top: 2px solid white;
+  height: 250px;
+  width: 20px;
+  position: absolute;
+  left: -30px;
+  top: 15px;
+}
+.nav li a {
+  display: block;
+  padding: 0;
+  color: white;
+  transition: all 0.15s ease-out;
+}
+.nav li a:hover {
+  background-color: transparent;
+  padding-left: 1em;
+}
+.nav li a:focus {
+  background-color: transparent;
+}
+.nav li.active {
+  pointer-events: none;
+  padding-left: 1em;
+}
+.nav li.active:after {
+  width: 35px;
+  height: 400px;
+  top: 35px;
+}
+.nav li.active .YIR-nav-counter {
+  font-size: 64px;
+}
+.nav li.active .YIR-nav-title {
+  height: 40px;
+  opacity: 1;
+  overflow: visible;
+}
+.nav li.active .YIR-nav-body {
+  height: 100px;
+  opacity: 1;
+  overflow: visible;
+}

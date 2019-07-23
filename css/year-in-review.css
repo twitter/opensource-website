@@ -1,12 +1,15 @@
 /* Styles specific to Year in Review page */
 
 :root {
-
+  --timeline-width: 400px;
+  --nav-body-text-height: 80px;
+  --timeline-element-border-height: 400px;
 }
 
 /* General */
 
 .YIR-wrapper {
+  color: white;
   min-height: 100vh;
   position: relative;
 }
@@ -22,82 +25,83 @@
   justify-content: center;
 }
 
-.YIR-nav-counter {
-  font-weight: var(--feather-font-weight-bold);
-}
 .nav {
-  margin: 0 0 0 30px;
+  margin: 0;
+  margin-left: var(--feather-grid-large);
 }
-.YIR-nav-counter {
+
+.YIR-nav-title {
   font-size: var(--feather-font-size-jumbo);
+  font-weight: var(--feather-font-weight-bold);
   transition: all 0.15s ease-out;
 }
-.YIR-nav-title {
-  /* font-size: 32px;
-  font-weight: 400; */
-  margin: 0 0 0.25em;
-  width: 300px;
-  height: 0;
-  overflow: hidden;
-  opacity: 0;
-  transition: height 0.3s ease-out, opacity 0.2s ease-out;
-}
+
 .YIR-nav-body {
-  width: 400px;
+  width: var(--timeline-width);
   height: 0;
   overflow: hidden;
   opacity: 0;
   transition: height 0.3s ease-out, opacity 0.2s ease-out;
 }
+
 .nav li {
   position: relative;
   transition: all 0.3s ease-out;
-  margin-bottom: 1em;
+  margin-bottom: var(--feather-grid-medium);
 }
+
+/* Shorter white lines */
 .nav li:after {
   content: '';
   display: block;
   border-left: 2px solid white;
   border-top: 2px solid white;
-  height: 250px;
-  width: 20px;
   position: absolute;
+  height: var(--timeline-element-border-height);
+  width: 20px;
   left: -30px;
-  top: 15px;
+  top: 12px;
 }
+
 .nav li a {
   display: block;
   padding: 0;
   color: white;
   transition: all 0.15s ease-out;
 }
+
 .nav li a:hover {
   background-color: transparent;
   padding-left: 1em;
 }
+
 .nav li a:focus {
   background-color: transparent;
 }
+
+/* Timeline navigation - active nav title */
+
 .nav li.active {
   pointer-events: none;
-  padding-left: 1em;
+  padding-left: var(--feather-grid-medium);
 }
+
+/* Longer white lines */
 .nav li.active:after {
+  height: var(--timeline-element-border-height);
   width: 35px;
-  height: 400px;
   top: 35px;
 }
-.nav li.active .YIR-nav-counter {
-  font-size: var(--font-size-xxjumbo);
-  /* line-height: var(--line-height-xxjumbo); */
-}
+
 .nav li.active .YIR-nav-title {
-  height: 40px;
-  opacity: 1;
-  overflow: visible;
+  font-size: var(--font-size-xxjumbo);
+  line-height: var(--line-height-xxjumbo);
 }
+
 .nav li.active .YIR-nav-body {
-  height: 100px;
+  margin: 0;
+  margin-top: var(--feather-grid-xsmall);
+  height: var(--nav-body-text-height);
   opacity: 1;
   overflow: visible;
 }

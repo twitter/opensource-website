@@ -1,9 +1,10 @@
 /* Styles specific to Year in Review page */
 
 :root {
+  --YIR-page-width: 1400px;
   --timeline-width: 400px;
   --nav-body-text-height: 80px;
-  --timeline-element-border-height: 400px;
+  --timeline-element-border-height: 100vh;
 }
 
 /* General */
@@ -12,6 +13,95 @@
   color: white;
   min-height: 100vh;
   position: relative;
+}
+
+.YIR-container {
+  max-width: var(--YIR-page-width);
+  margin: 0 auto;
+}
+
+.YIR-container-section {
+  max-width: var(--YIR-page-width);
+  margin: 0 auto;
+  height: inherit;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.YIR-container-content {
+  /* padding-left: var(--timeline-width); */
+}
+
+/* Tables - Top 10 repos & Locations */
+
+table {
+  font-weight: 600;
+  font-size: var(--font-size-xjumbo);
+}
+
+th {
+  font-size: var(--feather-font-size-jumbo);
+}
+
+tr {
+  height: var(--line-height-xjumbo);
+}
+
+table.top-10-repos th {
+  color: var(--tw-color-purple-faded);
+}
+
+table.top-10-repos td.num {
+  color: var(--tw-color-purple-faded);
+  text-align: right;
+  padding-right: var(--feather-grid-xsmall);
+}
+
+table.top-10-repos td.repo {
+  padding-right: calc(2 * var(--feather-grid-mega));
+}
+
+table.top-10-repos td.commit-value {
+  text-align: right;
+}
+
+/* Sections */
+
+section {
+  height: 100vh;
+}
+
+section:nth-child(1) {
+  background: var(--tw-color-blue-medium);
+}
+
+section:nth-child(2) {
+  background: var(--tw-color-blue-medium);
+}
+
+section:nth-child(3) {
+  background: var(--tw-color-purple-medium);
+}
+
+section:nth-child(4) {
+  background: var(--tw-color-green-medium);
+}
+
+section:nth-child(5) {
+  background: var(--tw-color-orange-medium);
+}
+
+section:nth-child(6) {
+  background: var(--tw-color-yellow-deep);
+}
+
+section:nth-child(7) {
+  background: var(--tw-color-red-medium);
+}
+
+section:nth-child(8) {
+  background: var(--tw-color-blue-medium);
 }
 
 /* Timeline navigation */
@@ -104,45 +194,4 @@
   height: var(--nav-body-text-height);
   opacity: 1;
   overflow: visible;
-}
-
-/* Sections */
-
-section {
-  height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-section:nth-child(1) {
-  background: var(--tw-color-blue-medium);
-}
-
-section:nth-child(2) {
-  background: var(--tw-color-blue-medium);
-}
-
-section:nth-child(3) {
-  background: var(--tw-color-purple-medium);
-}
-
-section:nth-child(4) {
-  background: var(--tw-color-green-medium);
-}
-
-section:nth-child(5) {
-  background: var(--tw-color-orange-medium);
-}
-
-section:nth-child(6) {
-  background: var(--tw-color-yellow-deep);
-}
-
-section:nth-child(7) {
-  background: var(--tw-color-red-medium);
-}
-
-section:nth-child(8) {
-  background: var(--tw-color-blue-medium);
 }

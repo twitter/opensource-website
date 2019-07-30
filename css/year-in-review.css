@@ -1,10 +1,13 @@
 /* Styles specific to Year in Review page */
 
 :root {
-  --YIR-page-width: 1400px;
+  --YIR-page-width: 1200px;
   --timeline-width: 400px;
   --nav-body-text-height: 80px;
   --timeline-element-border-height: 100vh;
+
+  --font-size-metric-count: 4.6rem;
+  --line-height-metric-count: 5rem;
 }
 
 /* General */
@@ -29,11 +32,7 @@
   align-items: center;
 }
 
-.YIR-container-content {
-  /* padding-left: var(--timeline-width); */
-}
-
-/* Tables - Top 10 repos & Locations */
+/* Tables - Top 10 repos*/
 
 table {
   font-weight: 600;
@@ -42,9 +41,10 @@ table {
 
 th {
   font-size: var(--feather-font-size-jumbo);
+  padding-bottom: var(--feather-grid-xxsmall);
 }
 
-tr {
+tr.content {
   height: var(--line-height-xjumbo);
 }
 
@@ -64,6 +64,39 @@ table.top-10-repos td.repo {
 
 table.top-10-repos td.commit-value {
   text-align: right;
+}
+
+/* Metrics  */
+
+img.emoji-outline {
+	/* display: block; */
+	height: 220px;
+}
+
+.metric-wrapper {
+  margin-left: 500px; /* FIX - hardcoded */
+}
+
+div.metric {
+  max-width: 550px; /* FIX - hardcoded */
+  margin-top: var(--feather-grid-large);
+}
+
+span.metric-count {
+  font-weight: 600;
+  font-size: var(--font-size-metric-count);
+  line-height: var(--line-height-metric-count);
+}
+
+span.metric-name {
+  font-weight: 600;
+  font-size: var(--font-size-mini-jumbo);
+  line-height: var(--line-height-mini-jumbo);
+  padding-left: var(--feather-grid-xxsmall); /* FIX - maybe space here? */
+}
+
+div.metric div.description {
+  /* font-size: var(--feather-font-size-xlarge); */
 }
 
 /* Sections */

@@ -2,10 +2,14 @@
 
 :root {
   --YIR-page-width: 1200px;
-  --timeline-width: 400px;
+
+  --timeline-active-text-width: 400px;
+  /* YIR-nav-body width + longer white line width + active li padding + YIR-nav-wrapper padding + */
+  --timeline-total-width: calc(var(--timeline-active-text-width) + 35px + var(--feather-grid-medium) + 2 * var(--feather-grid-large));
   --nav-body-text-height: 80px;
   --timeline-element-border-height: 100vh;
 
+  --metric-width: 520px;
   --font-size-metric-count: 4.6rem;
   --line-height-metric-count: 5rem;
 }
@@ -74,11 +78,11 @@ img.emoji-outline {
 }
 
 .metric-wrapper {
-  margin-left: 500px; /* FIX - hardcoded */
+  margin-left: calc(var(--timeline-total-width) + 1.5 * var(--feather-grid-mega)); 
 }
 
 div.metric {
-  max-width: 550px; /* FIX - hardcoded */
+  max-width: var(--metric-width);
   margin-top: var(--feather-grid-large);
 }
 
@@ -92,11 +96,7 @@ span.metric-name {
   font-weight: 600;
   font-size: var(--font-size-mini-jumbo);
   line-height: var(--line-height-mini-jumbo);
-  padding-left: var(--feather-grid-xxsmall); /* FIX - maybe space here? */
-}
-
-div.metric div.description {
-  /* font-size: var(--feather-font-size-xlarge); */
+  padding-left: var(--feather-grid-xxsmall);
 }
 
 /* Sections */
@@ -160,7 +160,7 @@ section:nth-child(8) {
 }
 
 .YIR-nav-body {
-  width: var(--timeline-width);
+  width: var(--timeline-active-text-width);
   height: 0;
   overflow: hidden;
   opacity: 0;

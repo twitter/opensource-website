@@ -228,3 +228,30 @@ section:nth-child(8) {
   opacity: 1;
   overflow: visible;
 }
+
+/* Top navigation */
+
+nav {
+  background-color: transparent;
+}
+
+a.home-link:link, a.home-link:visited {
+  margin-right: var(--feather-grid-micro);
+}
+
+a.home-link:hover, a.home-link:active {
+  color: white;
+  opacity: 0.4;
+}
+
+
+a.YIR-link {
+  color: white;
+  opacity: 0.6;
+  font-weight: 600;
+}
+
+a.YIR-link:hover {
+  text-decoration: none;
+  opacity: 0.2;
+}

@@ -36,7 +36,7 @@
   align-items: center;
 }
 
-/* Tables - Top 10 repos*/
+/* Top 10 repos*/
 
 table {
   font-weight: 600;
@@ -70,10 +70,35 @@ table.top-10-repos td.commit-value {
   text-align: right;
 }
 
+/* Locations */
+
+.locations {
+  display: flex;
+  flex-direction: column;
+  font-size: var(--font-size-xjumbo);
+  line-height: var(--line-height-xjumbo);
+  font-weight: 600;
+
+  min-width: var(--metric-width); /* TEMP FIX */
+}
+
+.location-item {
+  display: flex;
+  justify-content: flex-start;
+  padding: var(--feather-grid-micro) 0;
+}
+
+.location-item img {
+  display: inline-block;
+  height: var(--line-height-xjumbo);
+  padding-right: var(--feather-grid-medium);
+}
+
+
+
 /* Metrics  */
 
 img.emoji-outline {
-	/* display: block; */
 	height: 220px;
 }
 
@@ -241,7 +266,7 @@ a.home-link:link, a.home-link:visited {
 
 a.home-link:hover, a.home-link:active {
   color: white;
-  opacity: 0.4;
+  opacity: 0.6;
 }
 
 
@@ -253,5 +278,5 @@ a.YIR-link {
 
 a.YIR-link:hover {
   text-decoration: none;
-  opacity: 0.2;
+  opacity: 1;
 }

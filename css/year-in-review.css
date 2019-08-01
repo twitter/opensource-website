@@ -1,17 +1,22 @@
 /* Styles specific to Year in Review page */
 
 :root {
+  /* General */
   --YIR-page-width: 1200px;
+  --content-width: 520px;
 
+  /* Timeline nav */
   --timeline-active-text-width: 400px;
   /* YIR-nav-body width + longer white line width + active li padding + YIR-nav-wrapper padding + */
   --timeline-total-width: calc(var(--timeline-active-text-width) + 35px + var(--feather-grid-medium) + 2 * var(--feather-grid-large));
   --nav-body-text-height: 80px;
   --timeline-element-border-height: 100vh;
 
-  --metric-width: 520px;
+  /* Special font sizes */
   --font-size-metric-count: 4.6rem;
   --line-height-metric-count: 5rem;
+  --font-size-location: 2.5rem;
+  --line-height-location: 2.7rem;
 }
 
 /* General */
@@ -73,13 +78,12 @@ table.top-10-repos td.commit-value {
 /* Locations */
 
 .locations {
+  min-width: var(--content-width);
   display: flex;
   flex-direction: column;
-  font-size: var(--font-size-xjumbo);
-  line-height: var(--line-height-xjumbo);
+  font-size: var(--font-size-location);
+  line-height: var(--line-height-location);
   font-weight: 600;
-
-  min-width: var(--metric-width); /* TEMP FIX */
 }
 
 .location-item {
@@ -90,11 +94,9 @@ table.top-10-repos td.commit-value {
 
 .location-item img {
   display: inline-block;
-  height: var(--line-height-xjumbo);
+  height: var(--line-height-location);
   padding-right: var(--feather-grid-medium);
 }
-
-
 
 /* Metrics  */
 
@@ -107,7 +109,7 @@ img.emoji-outline {
 }
 
 div.metric {
-  max-width: var(--metric-width);
+  max-width: var(--content-width);
   margin-top: var(--feather-grid-large);
 }
 

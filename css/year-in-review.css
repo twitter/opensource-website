@@ -57,21 +57,22 @@ tr.content {
   height: var(--line-height-xjumbo);
 }
 
-table.top-10-repos th {
+table#top-10-repos th {
   color: var(--tw-color-purple-faded);
 }
 
-table.top-10-repos td.num {
+table#top-10-repos td.num {
   color: var(--tw-color-purple-faded);
   text-align: right;
   padding-right: var(--feather-grid-xsmall);
 }
 
-table.top-10-repos td.repo {
+table#top-10-repos td.repo {
+  text-transform: capitalize;
   padding-right: calc(2 * var(--feather-grid-mega));
 }
 
-table.top-10-repos td.commit-value {
+table#top-10-repos td.commit-value {
   text-align: right;
 }
 

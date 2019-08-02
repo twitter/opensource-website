@@ -85,62 +85,13 @@ custom_js: year-in-review.js
 
 		<section class="section2" id="section2">
 			<div class="YIR-container-section">
-				<table class="top-10-repos">
+				<table id="top-10-repos">
 					<tr>
 						<th></th>
 						<th></th>
 						<th>Total commits</th>
 					</tr>
-					<tr class="content">
-						<td class="num">1</td>
-						<td class="repo">Scalding</td>
-						<td class="commit-value">1000</td>
-					</tr>
-					<tr class="content">
-						<td class="num">2</td>
-						<td class="repo">Finagle</td>
-						<td class="commit-value">1000</td>
-					</tr>
-					<tr class="content">
-						<td class="num">3</td>
-						<td class="repo">Summingbird</td>
-						<td class="commit-value">1000</td>
-					</tr>
-					<tr class="content">
-						<td class="num">4</td>
-						<td class="repo">Typeahead.js</td>
-						<td class="commit-value">1000</td>
-					</tr>
-					<tr class="content">
-						<td class="num">5</td>
-						<td class="repo">Scalding</td>
-						<td class="commit-value">1000</td>
-					</tr>
-					<tr class="content">
-						<td class="num">6</td>
-						<td class="repo">Twemproxy</td>
-						<td class="commit-value">1000</td>
-					</tr>
-					<tr class="content">
-						<td class="num">7</td>
-						<td class="repo">Twemoji</td>
-						<td class="commit-value">1000</td>
-					</tr>
-					<tr class="content">
-						<td class="num">8</td>
-						<td class="repo">Secure Headers</td>
-						<td class="commit-value">1000</td>
-					</tr>
-					<tr class="content">
-						<td class="num">9</td>
-						<td class="repo">Commons</td>
-						<td class="commit-value">1000</td>
-					</tr>
-					<tr class="content">
-						<td class="num">10</td>
-						<td class="repo">Scala School</td>
-						<td class="commit-value">1000</td>
-					</tr>
+					<!-- Table content added in year-in-review.js -->
 				</table>
 			</div>
 		</section>
@@ -272,4 +223,16 @@ custom_js: year-in-review.js
 		
   	</div> <!-- End of YIR-wrapper -->
 </body>
+
+<!-- Get all repos and commit counts -->
+<script type="text/javascript">
+	let allRepos = [];
+
+	{% for item in site.data.augur.repo_commits %}
+		allRepos.push({
+			name: "{{ item[0] }}",
+			commitCount: "{{ item[1]["commit_count"] }}",
+		})
+	{% endfor %}
+</script>
 

@@ -19,13 +19,12 @@ import requests
 
 API_ENDPOINT = "http://newtwitter.augurlabs.io/api/unstable"
 PATH_TO_METRICS_DATA = "_data"
-PATH_TO_METADATA = "_metadata"
 DATESTAMP = datetime.datetime.now().date().isoformat()
 
 print("LOG: Assuming the current path to be the root of the metrics repository.")
 
 AGGREGATE_SUMMARY = {}
-aggregate_summary_json_file = f"{PATH_TO_METADATA}/augur/aggregate_summary.json"
+aggregate_summary_json_file = f"{PATH_TO_METRICS_DATA}/augur/aggregate_summary.json"
 if os.path.exists(aggregate_summary_json_file):
   with open(aggregate_summary_json_file) as f:
     AGGREGATE_SUMMARY = json.load(f)

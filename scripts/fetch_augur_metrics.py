@@ -16,12 +16,11 @@ import requests
 
 API_ENDPOINT = "http://newtwitter.augurlabs.io/api/unstable"
 PATH_TO_METRICS_DATA = "_data"
-PATH_TO_METADATA = "_metadata"
 DATESTAMP = datetime.datetime.now().date().isoformat()
 
 print("LOG: Assuming the current path to be the root of the metrics repository.")
 # tracked projects
-with open(os.path.join(PATH_TO_METADATA, "projects_tracked.json")) as f:
+with open(os.path.join(PATH_TO_METRICS_DATA, "projects_tracked.json")) as f:
     PROJECTS_TRACKED = json.load(f)
 
 """
@@ -38,7 +37,7 @@ Update _metadata/augur/bus_factor.json
 """
 
 # BUS_FACTOR = {}
-# bus_factor_json_file = f"{PATH_TO_METADATA}/augur/bus_factor.json"
+# bus_factor_json_file = f"{PATH_TO_METRICS_DATA}/augur/bus_factor.json"
 # if os.path.exists(bus_factor_json_file):
 #     with open(bus_factor_json_file) as f:
 #         BUS_FACTOR = json.load(f)
@@ -81,11 +80,11 @@ def tmp(group_series):
 
 
 # necessary repo_ids to loop thru
-with open(os.path.join(PATH_TO_METADATA, "repo_ids.json")) as f:
+with open(os.path.join(PATH_TO_METRICS_DATA, "repo_ids.json")) as f:
   REPO_IDS = json.load(f)
 
 api_data_commits = []
-repo_commits_json_file = f"{PATH_TO_METADATA}/augur/repo_commits.json"
+repo_commits_json_file = f"{PATH_TO_METRICS_DATA}/augur/repo_commits.json"
 if os.path.exists(repo_commits_json_file):
   with open(repo_commits_json_file) as f:
     out = json.load(f)

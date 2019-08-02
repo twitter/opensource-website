@@ -13,8 +13,8 @@
   --timeline-element-border-height: 100vh;
 
   /* Special font sizes */
-  --font-size-metric-count: 4.6rem;
-  --line-height-metric-count: 5rem;
+  --font-size-metric-count: 4.2rem;
+  --line-height-metric-count: 4.8rem;
   --font-size-location: 2.5rem;
   --line-height-location: 2.7rem;
 }
@@ -68,7 +68,8 @@ table#top-10-repos td.num {
 }
 
 table#top-10-repos td.repo {
-  text-transform: capitalize;
+  /* FIX - can you only capitalize first letter? */
+  /* text-transform: capitalize; */ 
   padding-right: calc(2 * var(--feather-grid-mega));
 }
 
@@ -101,10 +102,6 @@ table#top-10-repos td.commit-value {
 
 /* Metrics  */
 
-img.emoji-outline {
-	height: 220px;
-}
-
 .metric-wrapper {
   margin-left: calc(var(--timeline-total-width) + 1.5 * var(--feather-grid-mega)); 
 }
@@ -125,6 +122,147 @@ span.metric-name {
   font-size: var(--font-size-mini-jumbo);
   line-height: var(--line-height-mini-jumbo);
   padding-left: var(--feather-grid-xxsmall);
+}
+
+/* Metrics SVGs */
+
+.fire-st0 {
+  fill: none;
+  stroke: white;
+  stroke-width: 1;
+  stroke-miterlimit: 10;
+  opacity: 1;
+
+  stroke-dasharray: 300;
+  stroke-dashoffset: 300;
+
+  transform-origin: 0 100%;
+}
+
+.fire-st1 {
+  fill: none;
+  stroke: white;
+  stroke-width: 1;
+  stroke-miterlimit: 10;
+  opacity: 1;
+
+  stroke-dasharray: 300;
+  stroke-dashoffset: 0;
+
+  transform-origin: 0 100%;
+}
+
+svg.in-view path {
+  animation: stroke-fire 5s ease-in-out forwards;
+  -webkit-animation: stroke-fire 5s ease-in-out forwards;
+  -o-animation: stroke-fire 5s ease-in-out forwards;
+  -moz-animation: stroke-fire 5s ease-in-out forwards;
+}
+
+@keyframes stroke-fire {
+  0% {
+    fill: none;
+    stroke-dashoffset: 300;
+  }
+  50% {
+    fill: none;
+  }
+  100% {
+    fill: none;
+    stroke-dashoffset: 0;
+  }
+}
+
+.sun-st0 {
+  fill: none;
+  stroke: white;
+  stroke-width: 1;
+  stroke-miterlimit: 10;
+  opacity: 1;
+
+  stroke-dasharray: 300;
+  stroke-dashoffset: 300;
+
+  transform-origin: 0 100%;
+}
+
+.sun-st1, .sun-st2, .sun-st3, .sun-st4, .sun-st5, .sun-st6, .sun-st7, .sun-st8 {
+  fill: none;
+  stroke: white;
+  stroke-width: 1;
+  stroke-miterlimit: 10;
+  opacity: 1;
+
+  stroke-dasharray: 300;
+  stroke-dashoffset: 0;
+}
+
+.sun-svg .in-view {
+  animation: stroke-sun 5s ease-in-out forwards;
+  -webkit-animation: stroke-sun 5s ease-in-out forwards;
+  -o-animation: stroke-sun 5s ease-in-out forwards;
+  -moz-animation: stroke-sun 5s ease-in-out forwards;
+}
+
+@keyframes stroke-sun {
+  0% {
+    fill: none;
+    stroke-dashoffset: 300;
+  }
+  50% {
+    fill: none;
+  }
+  100% {
+    fill: none;
+    stroke-dashoffset: 0;
+  }
+}
+
+.heart-st0 {
+  fill: none;
+  stroke: white;
+  stroke-width: 1;
+  stroke-miterlimit: 10;
+  opacity: 1;
+
+  stroke-dasharray: 300;
+  stroke-dashoffset: 300;
+
+  transform-origin: 0 100%;
+}
+
+.heart-st1 {
+  fill: none;
+  stroke: white;
+  stroke-width: 1;
+  stroke-miterlimit: 10;
+  opacity: 1;
+
+  stroke-dasharray: 300;
+  stroke-dashoffset: 0;
+
+  transform-origin: 0 100%;
+}
+
+.sun-svg .in-view {
+  animation: stroke-heart 5s ease-in-out forwards;
+  -webkit-animation: stroke-heart 5s ease-in-out forwards;
+  -o-animation: stroke-heart 5s ease-in-out forwards;
+  -moz-animation: stroke-heart 5s ease-in-out forwards;
+}
+
+@keyframes stroke-heart {
+  0% {
+    fill: none;
+    stroke-dashoffset: 300;
+  }
+  50% {
+    fill: none;
+  }
+  100% {
+    fill: none;
+    stroke-dashoffset: 0;
+  }
 }
 
 /* Sections */

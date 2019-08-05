@@ -1,3 +1,62 @@
+// Insert top 10 repos
+function renderTopRepos(reposList) {
+    let topTenRepos = reposList.slice(0, 10);
+    var topTenReposTable = document.getElementById("top-10-repos");
+    var num = 1;
+
+    for (var repo of topTenRepos) {
+        // Row
+        var row = document.createElement('tr');
+        row.className = "content";
+
+        // Number
+        var numData = document.createElement('td');
+        numData.className = "num";
+        numData.innerHTML = num;
+        num++;
+        row.appendChild(numData);
+
+        // Repo name
+        var repoData = document.createElement('td');
+        repoData.className = "repo";
+        repoData.innerHTML = repo.name;
+        row.appendChild(repoData);
+
+        // Commit count
+        var commitCountData = document.createElement('td');
+        commitCountData.className = "commit-value";
+        commitCountData.innerHTML = formatNum(repo.commitCount);
+        row.appendChild(commitCountData);
+
+        topTenReposTable.appendChild(row);
+    }
+}
+
+renderTopRepos(allRepos);
+
+// SVG TRIGGERS USING INTERSECTION OBSERVER
+const svgs = document.querySelectorAll('svg');
+
+observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    // in view
+    if (entry.intersectionRatio > 0) {
+      entry.target.classList.add('in-view');
+      // console.log(entry.target.classList)
+    // outside of view
+    } else {
+      entry.target.classList.remove('in-view');
+      // console.log(entry.target.classList)
+    }
+  });
+});
+
+svgs.forEach(image => {
+  observer.observe(image);
+});
+
+
+
 // SMOOTH SCROLLING SECTIONS
 $('a[href*=#]:not([href=#])').click(function() {
     if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') 

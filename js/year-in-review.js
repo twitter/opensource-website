@@ -1,3 +1,18 @@
+// Insert date range for header
+let date = new Date();
+let month = date.toLocaleString('default', { month: 'short' });
+let currYear = date.getFullYear();
+let prevYear = currYear - 1;
+
+let dateRange = document.getElementById("date-range");
+dateRange.innerText = month + " " + prevYear + " - " + month + " " + currYear;
+
+// Typing effect on header
+new TypeIt('#type', {
+    cursor: false,
+    speed: 40,
+}).go();
+
 // Insert top 10 repos
 function renderTopRepos(reposList) {
     let topTenRepos = reposList.slice(0, 10);

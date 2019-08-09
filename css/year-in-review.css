@@ -13,6 +13,9 @@
   --timeline-element-border-height: 100vh;
 
   /* Special font sizes */
+  --font-size-YIR-heading-text: 6rem;
+  --line-height-YIR-heading-text: 5.6rem;
+  --line-height-subheading: 1.9rem;
   --font-size-metric-count: 4.2rem;
   --line-height-metric-count: 4.8rem;
   --font-size-location: 2.5rem;
@@ -39,6 +42,32 @@
   display: flex;
   justify-content: flex-end;
   align-items: center;
+}
+
+/* Header */
+
+.YIR-header {
+  max-width: var(--content-width);
+}
+
+h1.YIR-subheading {
+  font-size: var(--font-size-mini-jumbo);
+  line-height: var(--line-height-subheading);
+}
+
+h1#date-range {
+  color: var( --tw-color-blue-faded);
+}
+
+h1#YIR-heading-text {
+  font-size: var(--font-size-YIR-heading-text);
+  line-height: var(--line-height-YIR-heading-text);
+  padding: var(--feather-grid-large) 0;
+}
+
+/* Hardcoding height so header content doesn't move when text is typed in */
+h1#type {
+  height: 120px;
 }
 
 /* Top 10 repos*/

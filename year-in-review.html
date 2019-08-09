@@ -91,6 +91,12 @@ custom_js: year-in-review.js
 
 		<section class="section2" id="section2">
 			<div class="YIR-container-section">
+				<!-- Only visible in mobile -->
+				<div class="mobile-heading">
+					<h1>Top 10 repos</h1>
+					<p>These are our top 10 GitHub repositories, ranked by total commit counts.</p>
+				</div>
+
 				<table id="top-10-repos">
 					<tr>
 						<th></th>
@@ -104,6 +110,12 @@ custom_js: year-in-review.js
 
 		<section class="section3" id="section3">
 			<div class="YIR-container-section">
+				<!-- Only visible in mobile -->
+				<div class="mobile-heading">
+					<h1 class="large-title">Locations</h1>
+					<p>Our contributors are located around the world. This list is based on self recorded locations from our contributors’ Github profiles.</p>
+				</div>
+
 				<div class="locations">
 					<div class="location-item">
 						<img src="assets/year-in-review/flags/australia_1f1e6-1f1fa.svg" alt="Australia flag"> 
@@ -152,39 +164,51 @@ custom_js: year-in-review.js
 
 		<section class="section4" id="section4">
 			<div class="YIR-container-section">
-					<div class="metric-wrapper">
-						<svg class="fire-svg" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-							width='220px' height ='220px' viewBox="-1 -1 38 38" xml:space="preserve" >
-							<path class="fire-st0" d="M35,19c0-2.1-0.4-4-1-5.9c-0.5,5.4-3.3,8.2-6.3,6.9c-2.8-1.2-0.9-5.9-0.8-8.2c0.2-3.8,0-8.2-6.9-11.8
-								c2.9,5.5,0.3,8.9-2.3,9.1c-3,0.2-5.7-2.5-4.7-7c-3.2,2.4-3.3,6.4-2.3,9c1,2.7,0,5-2.6,5.2c-2.8,0.3-4.4-3-3-8.3c-2.5,3-4,6.8-4,11
-								c0,9.4,7.6,17,17,17S35,28.4,35,19z"/>
-							<path class="fire-st1" d="M28.4,24c0.1,3.1-2.6,4.3-4,3.7c-2.1-0.8-1.5-2.3-2.1-5.3s-2.6-5.1-5.7-6c2.2,6.3-1.2,8.7-3.1,9.1
-								c-1.9,0.4-3.8,0-4-4C7.4,23.7,6,26.7,6,30c0,0.4,0,0.7,0.1,1.1c3.1,3,7.3,4.9,11.9,4.9s8.9-1.9,11.9-4.9c0-0.4,0.1-0.7,0.1-1.1
-								C30,27.8,29.4,25.8,28.4,24z"/>
-						</svg>
-						<!-- <img src="assets/year-in-review/fire_outline.svg" alt="Fire emoji" class="emoji-outline"> -->
-						
-						<div class="metric">
-							<span class="metric-count" id="commit-count"></span>
-							<span class="metric-name">commits</span>
-							<div class="description">
-								Commits reflect the amount of activity across our repositories.
-							</div>
-						</div>
-	
-						<div class="metric">
-							<span class="metric-count" id="committer-count"></span>
-							<span class="metric-name">committers</span>
-							<div class="description">
-								Committers are the unique individuals that drive change in our repositories. 
-							</div>
-						</div>	
-					</div>
+				<!-- Only visible in mobile -->
+				<div class="mobile-heading">
+					<h1>Heat metrics</h1>
+					<p>Heat means work. We measure heat by the number and frequency of commits and committers across our repos.</p>
 				</div>
+
+				<div class="metric-wrapper">
+					<svg class="fire-svg" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+						width='220px' height ='220px' viewBox="-1 -1 38 38" xml:space="preserve" >
+						<path class="fire-st0" d="M35,19c0-2.1-0.4-4-1-5.9c-0.5,5.4-3.3,8.2-6.3,6.9c-2.8-1.2-0.9-5.9-0.8-8.2c0.2-3.8,0-8.2-6.9-11.8
+							c2.9,5.5,0.3,8.9-2.3,9.1c-3,0.2-5.7-2.5-4.7-7c-3.2,2.4-3.3,6.4-2.3,9c1,2.7,0,5-2.6,5.2c-2.8,0.3-4.4-3-3-8.3c-2.5,3-4,6.8-4,11
+							c0,9.4,7.6,17,17,17S35,28.4,35,19z"/>
+						<path class="fire-st1" d="M28.4,24c0.1,3.1-2.6,4.3-4,3.7c-2.1-0.8-1.5-2.3-2.1-5.3s-2.6-5.1-5.7-6c2.2,6.3-1.2,8.7-3.1,9.1
+							c-1.9,0.4-3.8,0-4-4C7.4,23.7,6,26.7,6,30c0,0.4,0,0.7,0.1,1.1c3.1,3,7.3,4.9,11.9,4.9s8.9-1.9,11.9-4.9c0-0.4,0.1-0.7,0.1-1.1
+							C30,27.8,29.4,25.8,28.4,24z"/>
+					</svg>
+					<!-- <img src="assets/year-in-review/fire_outline.svg" alt="Fire emoji" class="emoji-outline"> -->
+					
+					<div class="metric">
+						<span class="metric-count" id="commit-count"></span>
+						<span class="metric-name">commits</span>
+						<div class="description">
+							Commits reflect the amount of activity across our repositories.
+						</div>
+					</div>
+
+					<div class="metric">
+						<span class="metric-count" id="committer-count"></span>
+						<span class="metric-name">committers</span>
+						<div class="description">
+							Committers are the unique individuals that drive change in our repositories. 
+						</div>
+					</div>	
+				</div>
+			</div>
 		</section>
 
 		<section class="section5" id="section5">
 			<div class="YIR-container-section">
+				<!-- Only visible in mobile -->
+				<div class="mobile-heading">
+					<h1>Light metrics</h1>
+					<p>Light means visibility. We measure visibility by number of watchers subscribed to updates, and number of people who have favorited our projects.</p>
+				</div>
+
 				<div class="metric-wrapper">
 					<svg class="sun-svg" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 						width='220px' height ='220px' viewBox="-1 -1 38 38" xml:space="preserve">
@@ -221,6 +245,12 @@ custom_js: year-in-review.js
 
 		<section class="section6" id="section6">
 			<div class="YIR-container-section">
+				<!-- Only visible in mobile -->
+				<div class="mobile-heading">
+					<h1>Love metrics</h1>
+					<p>Love means culture and support. We measure love by the number of users who have copied our projects and contributed changes back upstream.</p>
+				</div>
+
 				<div class="metric-wrapper">
 					<svg class="heart-svg" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 						width='220px' height ='220px' viewBox="-1 -1 38 38" xml:space="preserve">
@@ -255,6 +285,12 @@ custom_js: year-in-review.js
 
 		<section class="section7" id="section7">
 			<div class="YIR-container-section">
+				<!-- Only visible in mobile -->
+				<div class="mobile-heading">
+					<h1>@TwitterOSS</h1>
+					<p>Making it simple to trust, ship, and grow Open Source at Twitter and beyond. Follow @TwitterOSS to stay updated!</p>
+				</div>
+
 				<!-- <div class="YIR-tweet-wrapper"> -->
 					<blockquote class="twitter-tweet" data-lang="en">
 						<p lang="en" dir="ltr">📣 

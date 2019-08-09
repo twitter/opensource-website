@@ -81,6 +81,14 @@ h1#YIR-heading-text {
   padding: var(--feather-grid-large) 0;
 }
 
+h1#date-range, h1#YIR-heading-text {
+  -webkit-animation: fadein 1s;
+  -moz-animation: fadein 1s;
+  -ms-animation: fadein 1s;
+  -o-animation: fadein 1s;
+  animation: fadein 1s;
+}
+
 #YIR-header-mobile-heading {
   padding: 0;
 }
@@ -484,6 +492,10 @@ a.YIRnav-YIR-link:hover {
   opacity: 1;
 }
 
+.nav-menu {
+  display: none;
+}
+
 /* Less than YIR-page-width + feather-grid-large */
 @media (max-width: 1224px) {
   .YIR-container-section {
@@ -520,26 +532,72 @@ a.YIRnav-YIR-link:hover {
     background-color: var(--tw-color-blue-medium);
   }
 
-  /* nav span.Icon {
-    color: var(--tw-color-blue-medium);
+  .YIRnav-home-link, .YIRnav-YIR-link {
+    display: none;
   }
 
-  a.YIRnav-home-link {
-    color: var(--tw-color-blue-medium);
+  /* Copied from main.css because mobile navigation is activated at a wider width on this page */
+  /* Navigation menu - Unactivated */
+
+  .home-text, a.nav-link:visited {
+    margin-right: var(--feather-grid-xsmall);
   }
-  
-  a.YIRnav-home-link:hover {
-    color: var(--tw-color-blue-ligh);
+
+  span.Icon--caretDown {
+    display: inline-block;
+    transform: rotate(0deg);
   }
-  
-  
-  a.YIRnav-YIR-link {
-    color: var(--tw-color-blue-light);
+
+  span.Icon--caretDown:hover {
+    color: var(--tw-color-blue-faded);
   }
-  
-  a.YIRnav-YIR-link:hover {
-    color: var(--tw-color-blue-medium);
-  } */
+
+  .nav-menu {
+    display: none;
+  }
+
+  .nav-list-item {
+    font-weight: var(--feather-font-weight-bold);
+    font-size: var(--feather-font-size-jumbo);
+    line-height: var(--feather-line-height-jumbo);
+    padding: var(--feather-grid-medium) 0;
+    margin: 0;
+    border-bottom: 1px solid var(--tw-color-blue-faded);
+  }
+
+  .list-end {
+    border-bottom: none;
+  }
+
+  /* Navigation menu - Activated */
+
+  nav.active {
+    height: 100vh;
+    overflow-y: auto;
+  }
+
+  nav.active span.Icon--caretDown {
+    transform: rotate(-180deg);
+  }
+
+  nav.active .nav-menu {
+    display: block;
+    margin-top: calc(var(--feather-grid-mega) * 2);
+    margin-left: var(--feather-grid-medium);
+    margin-right: var(--feather-grid-medium);
+  }
+
+  a.nav-link:link {
+    -webkit-animation: fadein 1.5s;
+    -moz-animation: fadein 1.5s;
+    -ms-animation: fadein 1.5s;
+    -o-animation: fadein 1.5s;
+    animation: fadein 1.5s;
+  }
+
+  .home-text {
+    display: inline-block;
+  }
 }
 
 /* Less than content-width + 2 * feather-grid-large */

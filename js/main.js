@@ -28,10 +28,11 @@ function removeClassByClass(target, className) {
 // Create sticky footer by defining min-height of site wrapper
 var site = document.getElementsByClassName("site")[0]
 var footer = document.getElementsByClassName("footer")[0]
-var footerHeight = footer.clientHeight
-
-site.style.minHeight = "calc(100vh - " + footerHeight + "px)"
-
+// Year in Review website does not have a footer
+if (footer) {
+    var footerHeight = footer.clientHeight
+    site.style.minHeight = "calc(100vh - " + footerHeight + "px)"
+}
 
 // Create DOM element for navigation bar
 var navBar = document.getElementsByTagName("nav")[0]

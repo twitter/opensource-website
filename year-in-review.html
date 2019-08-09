@@ -10,15 +10,48 @@ custom_js: year-in-review.js
 
 <body data-spy="scroll" data-target="#YIR-navbar">
 	<!-- Navigation Bar -->
-	<!-- FIX - currently customized for Year in Review -->
     <nav>
 		<div class="nav-title">
 			<span class="Icon Icon--logo Icon--large"></span>
-
 			<!-- Link in web -->
 			<a class="YIRnav-home-link" href="{{ site.baseurl }}/">Twitter Open Source</a>
 			<a class="YIRnav-YIR-link" href="{{ site.baseurl }}/year-in-review">Year in Review</a>
+			
+			<!-- Only in mobile -->
+			<p class="home-text">Twitter Open Source</p>
+			<span id="caret" class="Icon Icon--caretDown"></span>
 		</div>
+		
+		<!-- Only in mobile -->
+		<ul class="nav-menu">
+			<li class="nav-list-item">
+				<a class="nav-link" href="#section1">Welcome</a>
+			</li>
+
+			<li class="nav-list-item">
+				<a class="nav-link" href="#section2">Top 10 repos</a>
+			</li>
+
+			<li class="nav-list-item">
+				<a class="nav-link" href="#section3">Locations</a>
+			</li>
+
+			<li class="nav-list-item">
+				<a class="nav-link" href="#section4">Heat metrics</a>
+			</li>
+
+			<li class="nav-list-item">
+				<a class="nav-link" href="#section5">Light metrics</a>
+			</li>
+
+			<li class="nav-list-item">
+				<a class="nav-link" href="#section5">Love metrics</a>
+			</li>
+
+			<li class="nav-list-item list-end">
+				<a class="nav-link" href="#section6">@TwitterOSS</a>
+			</li>
+		</ul>
 	</nav>
 		
     <div class="YIR-wrapper">

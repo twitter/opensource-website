@@ -1,3 +1,27 @@
+if (matchMedia) {
+  var mediaQuery1080 = window.matchMedia("(max-width: 1080px)")
+  lessThan1080px(mediaQuery1080)
+  mediaQuery1080.addListener(lessThan1080px)
+}
+
+// Breakpoint for Year in Review mobile navigation
+function lessThan1080px(mediaQuery) {
+  if (mediaQuery.matches) {
+      var caret = document.getElementById("caret")
+      caret.addEventListener("click", mobileNavigation)
+      navTitle.addEventListener("click", mobileNavigation)
+
+      // If user clicks on a link in the nav-menu, the nav-menu disappears
+      var navLinkList = document.getElementsByClassName("nav-link");
+      for (var i = 0; i < navLinkList.length; i++) {
+        var navLink = navLinkList[i];
+        navLink.addEventListener("click", mobileNavigation);
+      }
+  } else {
+      navBar.classList.remove("active")
+  }
+}
+
 // Insert date range for header
 let date = new Date();
 let month = date.toLocaleString('default', { month: 'short' });
@@ -56,7 +80,7 @@ function renderTopRepos(reposList) {
 
 renderTopRepos(allRepos);
 
-// SVG TRIGGERS USING INTERSECTION OBSERVER
+// Svg triggers using intersection observer
 const svgs = document.querySelectorAll('svg');
 
 observer = new IntersectionObserver((entries) => {
@@ -64,11 +88,9 @@ observer = new IntersectionObserver((entries) => {
     // in view
     if (entry.intersectionRatio > 0) {
       entry.target.classList.add('in-view');
-      // console.log(entry.target.classList)
     // outside of view
     } else {
       entry.target.classList.remove('in-view');
-      // console.log(entry.target.classList)
     }
   });
 });
@@ -77,9 +99,7 @@ svgs.forEach(image => {
   observer.observe(image);
 });
 
-
-
-// SMOOTH SCROLLING SECTIONS
+// Smooth scrolling sections
 $('a[href*=#]:not([href=#])').click(function() {
     if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') 
         || location.hostname == this.hostname) {

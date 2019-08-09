@@ -73,6 +73,7 @@ h1#type {
 /* Top 10 repos*/
 
 table {
+  max-width: 520px;
   font-weight: 600;
   font-size: var(--font-size-xjumbo);
 }
@@ -97,9 +98,8 @@ table#top-10-repos td.num {
 }
 
 table#top-10-repos td.repo {
-  /* FIX - can you only capitalize first letter? */
-  /* text-transform: capitalize; */ 
-  padding-right: calc(2 * var(--feather-grid-mega));
+  /* FIX - is dis ok? */
+  /* padding-right: var(--feather-grid-mega); */
 }
 
 table#top-10-repos td.commit-value {

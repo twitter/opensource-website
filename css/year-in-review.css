@@ -44,6 +44,10 @@
   align-items: center;
 }
 
+p {
+  margin: 0;
+}
+
 /* All content */
 .mobile-heading, .YIR-header, table, .locations, .metric-wrapper {
   width: var(--content-width);
@@ -88,7 +92,7 @@ h1#YIR-heading-text {
 
 /* Hardcoding height so header content doesn't move when text is typed in */
 h1#type {
-  height: 120px;
+  height: calc(3 * var(--line-height-subheading));
 }
 
 /* Top 10 repos*/
@@ -157,18 +161,16 @@ table#top-10-repos td.commit-value {
 }
 
 p.locations-disclaimer {
-  color: var(--tw-color-green-faded);
+  /* FIX */
+  /* color: var(--tw-color-green-faded); */
   font-size: var(--feather-font-size-large);
+  /* font-weight: var(--feather-font-weight-normal); */
   line-height: var(--feather-line-height-large);
   margin: 0;
   padding-top: var(--feather-grid-xxsmall);
 }
 
 /* Metrics  */
-
-.metric-wrapper {
-  margin-left: calc(var(--timeline-total-width) + 1.5 * var(--feather-grid-mega)); 
-}
 
 div.metric {
   margin-top: var(--feather-grid-large);
@@ -507,10 +509,6 @@ a.YIR-link:hover {
     padding: calc(var(--feather-grid-mega) * 1.5) 0;
   }
 
-  .mobile-heading, .YIR-header, table, .locations, .metric-wrapper {
-    margin: 0 auto;
-  }
-
   .YIR-container-section {
     flex-direction: column;
     justify-content: center;
@@ -523,4 +521,90 @@ a.YIR-link:hover {
 
 /* Less than content-width + 2 * feather-grid-large */
 @media (max-width: 568px) {
+  .mobile-heading, .YIR-header, table, .locations, .metric-wrapper {
+    width: auto;
+  }
+
+  section {
+    padding: var(--feather-grid-mega) 0;
+  }
+
+  /* Decrease font sizes */
+  .mobile-heading h1 {
+    font-size: var(--font-size-mini-jumbo);
+    line-height: var(--line-height-mini-jumbo);
+  }
+
+  /* Header */
+  h1.YIR-subheading {
+    font-size: var(--feather-font-size-jumbo);
+    line-height: var(--feather-line-height-jumbo);
+  }
+  
+  h1#YIR-heading-text {
+    font-size: var(--font-size-xxjumbo);
+    line-height: calc(var(--line-height-xxjumbo) - 0.5rem);
+  }
+
+  h1#type {
+    height: calc(2 * var(--feather-line-height-jumbo));
+  }
+
+  /* Top 10 repos */
+  table {
+    font-size: var(--feather-font-size-jumbo);
+  }
+
+  th {
+    font-size: var(--feather-font-size-large);
+    padding-bottom: 0;
+  }
+
+  tr.content {
+    height: var(--feather-line-height-jumbo);
+  }
+
+  /* Locations */
+  .locations {
+    font-size: var(--feather-font-size-jumbo);
+    line-height: var(--feather-line-height-jumbo);
+  }
+
+  .location-item {
+    padding: 0;
+  }
+
+  .location-item img {
+    height: var(--feather-line-height-jumbo);
+    padding-right: var(--feather-grid-small);
+  }
+
+  /* Metrics */
+  .metric-wrapper svg {
+    padding-top: var(--feather-grid-xxsmall);
+  }
+
+  span.metric-count {
+    font-size: var(--font-size-xxjumbo);
+    line-height: var(--line-height-xxjumbo);
+  }
+
+  span.metric-name {
+    font-size: var(--feather-font-size-jumbo);
+    line-height: var(--feather-line-height-jumbo);
+    padding-left: var(--feather-grid-micro);
+  }
+}
+
+/* Adjusting height of typed text in subheading */
+@media (max-width: 520px) {
+  h1#type {
+    height: calc(3 * var(--feather-line-height-jumbo));
+  }
+}
+
+@media (max-width: 384px) {
+  h1#type {
+    height: calc(4 * var(--feather-line-height-jumbo));
+  }
 }

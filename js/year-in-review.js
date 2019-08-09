@@ -10,6 +10,7 @@ dateRange.innerText = month + " " + prevYear + " - " + month + " " + currYear;
 // Typing effect on header
 new TypeIt('#type', {
     cursor: false,
+    waitUntilVisible: true,
     speed: 40,
 }).go();
 

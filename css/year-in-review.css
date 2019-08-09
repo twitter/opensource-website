@@ -77,6 +77,15 @@ h1#YIR-heading-text {
   padding: var(--feather-grid-large) 0;
 }
 
+#YIR-header-mobile-heading {
+  padding: 0;
+}
+
+#YIR-header-mobile-heading p {
+  padding: 0;
+  padding-top: var(--feather-grid-large);
+}
+
 /* Hardcoding height so header content doesn't move when text is typed in */
 h1#type {
   height: 120px;
@@ -115,6 +124,10 @@ td.repo a:link, td.repo a:visited {
 
 td.repo a:hover, td.repo a:active {
   color: var(--tw-color-purple-faded);
+}
+
+table#top-10-repos th {
+  text-align: right;
 }
 
 table#top-10-repos td.commit-value {
@@ -479,9 +492,8 @@ a.YIR-link:hover {
   }
 }
 
-/* Mobile - timeline bumps into content */
+/* Mobile - remove timeline, add mobile headings */
 @media (max-width: 1080px) {
-  /* Hide timeline */
   .YIR-container {
     display: none;
   }
@@ -490,7 +502,11 @@ a.YIR-link:hover {
     display: block;
   }
 
-  /* Adjust content */
+  section {
+    height: auto;
+    padding: calc(var(--feather-grid-mega) * 1.5) 0;
+  }
+
   .mobile-heading, .YIR-header, table, .locations, .metric-wrapper {
     margin: 0 auto;
   }
@@ -498,6 +514,10 @@ a.YIR-link:hover {
   .YIR-container-section {
     flex-direction: column;
     justify-content: center;
+  }
+
+  .YIR-header {
+    padding-top: var(--feather-grid-large); /* FIX - DELETE if i make top nav stick to top */
   }
 }
 

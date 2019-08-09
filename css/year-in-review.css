@@ -49,7 +49,7 @@ p {
 }
 
 /* All content */
-.mobile-heading, .YIR-header, table, .locations, .metric-wrapper {
+.mobile-heading, .YIR-header, table, .locations, .metric-wrapper, .YIR-tweet-wrapper {
   width: var(--content-width);
 }
 
@@ -103,22 +103,24 @@ table {
 }
 
 th {
+  color: var(--tw-color-purple-faded);
   font-size: var(--feather-font-size-jumbo);
   padding-bottom: var(--feather-grid-xxsmall);
+  text-align: right;
 }
 
 tr.content {
   height: var(--line-height-xjumbo);
 }
 
-table#top-10-repos th {
-  color: var(--tw-color-purple-faded);
-}
-
-table#top-10-repos td.num {
+td.num {
   color: var(--tw-color-purple-faded);
   text-align: right;
   padding-right: var(--feather-grid-xsmall);
+}
+
+td.commit-value {
+  text-align: right;
 }
 
 td.repo a:link, td.repo a:visited {
@@ -128,14 +130,6 @@ td.repo a:link, td.repo a:visited {
 
 td.repo a:hover, td.repo a:active {
   color: var(--tw-color-purple-faded);
-}
-
-table#top-10-repos th {
-  text-align: right;
-}
-
-table#top-10-repos td.commit-value {
-  text-align: right;
 }
 
 /* Locations */
@@ -161,10 +155,8 @@ table#top-10-repos td.commit-value {
 }
 
 p.locations-disclaimer {
-  /* FIX */
-  /* color: var(--tw-color-green-faded); */
   font-size: var(--feather-font-size-large);
-  /* font-weight: var(--feather-font-weight-normal); */
+  font-weight: var(--feather-font-weight-normal);
   line-height: var(--feather-line-height-large);
   margin: 0;
   padding-top: var(--feather-grid-xxsmall);
@@ -466,24 +458,29 @@ nav {
   background-color: transparent;
 }
 
-a.home-link:link, a.home-link:visited {
-  margin-right: var(--feather-grid-micro);
+.nav-title a {
+  text-decoration: none;
+  font-weight: var(--feather-font-weight-bold);
 }
 
-a.home-link:hover, a.home-link:active {
+a.YIRnav-home-link {
+  margin-left: var(--feather-grid-mega);
+  margin-right: var(--feather-grid-micro);
   color: white;
+}
+
+a.YIRnav-home-link:hover {
   opacity: 0.6;
 }
 
 
-a.YIR-link {
+a.YIRnav-YIR-link {
   color: white;
   opacity: 0.6;
   font-weight: 600;
 }
 
-a.YIR-link:hover {
-  text-decoration: none;
+a.YIRnav-YIR-link:hover {
   opacity: 1;
 }
 
@@ -515,14 +512,40 @@ a.YIR-link:hover {
   }
 
   .YIR-header {
-    padding-top: var(--feather-grid-large); /* FIX - DELETE if i make top nav stick to top */
+    padding-top: var(--feather-grid-mega); /* FIX - DELETE if i make top nav stick to top */
   }
+
+  /* Top navigation */
+  nav {
+    background-color: var(--tw-color-blue-medium);
+  }
+
+  /* nav span.Icon {
+    color: var(--tw-color-blue-medium);
+  }
+
+  a.YIRnav-home-link {
+    color: var(--tw-color-blue-medium);
+  }
+  
+  a.YIRnav-home-link:hover {
+    color: var(--tw-color-blue-ligh);
+  }
+  
+  
+  a.YIRnav-YIR-link {
+    color: var(--tw-color-blue-light);
+  }
+  
+  a.YIRnav-YIR-link:hover {
+    color: var(--tw-color-blue-medium);
+  } */
 }
 
 /* Less than content-width + 2 * feather-grid-large */
 @media (max-width: 568px) {
-  .mobile-heading, .YIR-header, table, .locations, .metric-wrapper {
-    width: auto;
+  .mobile-heading, .YIR-header, table, .locations, .metric-wrapper, .YIR-tweet-wrapper {
+    width: 100%;
   }
 
   section {
@@ -561,7 +584,11 @@ a.YIR-link:hover {
   }
 
   tr.content {
-    height: var(--feather-line-height-jumbo);
+    height: calc(var(--feather-line-height-jumbo) - 0.2rem);
+  }
+
+  td.num {
+    padding-right: var(--feather-grid-xxsmall);
   }
 
   /* Locations */
@@ -571,6 +598,7 @@ a.YIR-link:hover {
   }
 
   .location-item {
+    text-transform: capitalize;
     padding: 0;
   }
 

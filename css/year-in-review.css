@@ -44,11 +44,12 @@
   align-items: center;
 }
 
-/* Header */
-
-.YIR-header {
-  max-width: var(--content-width);
+/* All content */
+.YIR-header, table, .location, .metric-wrapper {
+  width: var(--content-width);
 }
+
+/* Header */
 
 h1.YIR-subheading {
   font-size: var(--font-size-mini-jumbo);
@@ -73,7 +74,6 @@ h1#type {
 /* Top 10 repos*/
 
 table {
-  max-width: 520px;
   font-weight: 600;
   font-size: var(--font-size-xjumbo);
 }
@@ -97,9 +97,13 @@ table#top-10-repos td.num {
   padding-right: var(--feather-grid-xsmall);
 }
 
-table#top-10-repos td.repo {
-  /* FIX - is dis ok? */
-  /* padding-right: var(--feather-grid-mega); */
+td.repo a:link, td.repo a:visited {
+  color: white;
+  text-decoration: none;
+}
+
+td.repo a:hover, td.repo a:active {
+  color: var(--tw-color-purple-faded);
 }
 
 table#top-10-repos td.commit-value {
@@ -109,7 +113,6 @@ table#top-10-repos td.commit-value {
 /* Locations */
 
 .locations {
-  min-width: var(--content-width);
   display: flex;
   flex-direction: column;
   font-size: var(--font-size-location);
@@ -129,6 +132,14 @@ table#top-10-repos td.commit-value {
   padding-right: var(--feather-grid-medium);
 }
 
+p.locations-disclaimer {
+  color: var(--tw-color-green-faded);
+  font-size: var(--feather-font-size-large);
+  line-height: var(--feather-line-height-large);
+  margin: 0;
+  padding-top: var(--feather-grid-xxsmall);
+}
+
 /* Metrics  */
 
 .metric-wrapper {
@@ -136,7 +147,6 @@ table#top-10-repos td.commit-value {
 }
 
 div.metric {
-  max-width: var(--content-width);
   margin-top: var(--feather-grid-large);
 }
 
@@ -449,4 +459,29 @@ a.YIR-link {
 a.YIR-link:hover {
   text-decoration: none;
   opacity: 1;
+}
+
+/* Less than YIR-page-width + feather-grid-large */
+@media (max-width: 1224px) {
+  .YIR-container-section {
+    margin: 0 var(--feather-grid-large);
+  }
+}
+
+/* Mobile - timeline bumps into content */
+@media (max-width: 1080px) {
+  /* Hide timeline */
+  .YIR-container {
+    display: none;
+  }
+
+  /* Adjust content */
+  .YIR-header, table, .location, .metric-wrapper {
+    max-width: 900px;
+    margin: 0 auto;
+  }
+
+  .YIR-container-section {
+    justify-content: center;
+  }
 }

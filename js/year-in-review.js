@@ -34,7 +34,13 @@ function renderTopRepos(reposList) {
         // Repo name
         var repoData = document.createElement('td');
         repoData.className = "repo";
-        repoData.innerHTML = repo.name;
+
+        var repoLink = document.createElement('a');
+        repoLink.innerHTML = repo.name;
+        repoLink.href = ""; // FIX FIX FIX FIX FIX
+        repoLink.target = "_blank";
+        
+        repoData.appendChild(repoLink);
         row.appendChild(repoData);
 
         // Commit count

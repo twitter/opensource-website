@@ -81,23 +81,26 @@ function renderTopRepos(reposList) {
 renderTopRepos(allRepos);
 
 // Svg triggers using intersection observer
+// https://alligator.io/js/intersection-observer/
 const svgs = document.querySelectorAll('svg');
+const config = {
+  rootMargin: '50px 50px 50px 50px',
+  threshold: [0, 0.25, 0.5]
+};
 
 observer = new IntersectionObserver((entries) => {
   entries.forEach(entry => {
-    // in view
     if (entry.intersectionRatio > 0) {
       entry.target.classList.add('in-view');
-    // outside of view
     } else {
       entry.target.classList.remove('in-view');
     }
   });
-});
-
+}, config);
 svgs.forEach(image => {
   observer.observe(image);
-});
+}, config);
+
 
 // Smooth scrolling sections
 $('a[href*=#]:not([href=#])').click(function() {

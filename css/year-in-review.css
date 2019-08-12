@@ -198,10 +198,8 @@ span.metric-name {
   stroke-miterlimit: 10;
   opacity: 1;
 
-  stroke-dasharray: 300;
-  stroke-dashoffset: 300;
-
-  transform-origin: 0 100%;
+  stroke-dasharray: 155;
+  stroke-dashoffset: 155;
 }
 
 .fire-st1 {
@@ -211,31 +209,8 @@ span.metric-name {
   stroke-miterlimit: 10;
   opacity: 1;
 
-  stroke-dasharray: 300;
-  stroke-dashoffset: 0;
-
-  transform-origin: 0 100%;
-}
-
-svg.in-view path {
-  animation: stroke-fire 5s ease-in-out forwards;
-  -webkit-animation: stroke-fire 5s ease-in-out forwards;
-  -o-animation: stroke-fire 5s ease-in-out forwards;
-  -moz-animation: stroke-fire 5s ease-in-out forwards;
-}
-
-@keyframes stroke-fire {
-  0% {
-    fill: none;
-    stroke-dashoffset: 300;
-  }
-  50% {
-    fill: none;
-  }
-  100% {
-    fill: none;
-    stroke-dashoffset: 0;
-  }
+  stroke-dasharray: 85;
+  stroke-dashoffset: 85;
 }
 
 .sun-st0 {
@@ -245,10 +220,8 @@ svg.in-view path {
   stroke-miterlimit: 10;
   opacity: 1;
 
-  stroke-dasharray: 300;
-  stroke-dashoffset: 300;
-
-  transform-origin: 0 100%;
+  stroke-dasharray: 65;
+  stroke-dashoffset: 65;
 }
 
 .sun-st1, .sun-st2, .sun-st3, .sun-st4, .sun-st5, .sun-st6, .sun-st7, .sun-st8 {
@@ -258,29 +231,8 @@ svg.in-view path {
   stroke-miterlimit: 10;
   opacity: 1;
 
-  stroke-dasharray: 300;
-  stroke-dashoffset: 0;
-}
-
-.sun-svg .in-view {
-  animation: stroke-sun 5s ease-in-out forwards;
-  -webkit-animation: stroke-sun 5s ease-in-out forwards;
-  -o-animation: stroke-sun 5s ease-in-out forwards;
-  -moz-animation: stroke-sun 5s ease-in-out forwards;
-}
-
-@keyframes stroke-sun {
-  0% {
-    fill: none;
-    stroke-dashoffset: 300;
-  }
-  50% {
-    fill: none;
-  }
-  100% {
-    fill: none;
-    stroke-dashoffset: 0;
-  }
+  stroke-dasharray: 20;
+  stroke-dashoffset: 20;
 }
 
 .heart-st0 {
@@ -290,10 +242,8 @@ svg.in-view path {
   stroke-miterlimit: 10;
   opacity: 1;
 
-  stroke-dasharray: 300;
-  stroke-dashoffset: 300;
-
-  transform-origin: 0 100%;
+  stroke-dasharray: 105;
+  stroke-dashoffset: 105;
 }
 
 .heart-st1 {
@@ -303,28 +253,19 @@ svg.in-view path {
   stroke-miterlimit: 10;
   opacity: 1;
 
-  stroke-dasharray: 300;
-  stroke-dashoffset: 0;
-
-  transform-origin: 0 100%;
+  stroke-dasharray: 75;
+  stroke-dashoffset: 75;
 }
 
-.sun-svg .in-view {
-  animation: stroke-heart 5s ease-in-out forwards;
-  -webkit-animation: stroke-heart 5s ease-in-out forwards;
-  -o-animation: stroke-heart 5s ease-in-out forwards;
-  -moz-animation: stroke-heart 5s ease-in-out forwards;
+.in-view path {
+  animation: stroke 2s ease-in-out forwards;
+  -webkit-animation: stroke 2s ease-in-out forwards;
+  -o-animation: stroke 2s ease-in-out forwards;
+  -moz-animation: stroke 2s ease-in-out forwards;
 }
 
-@keyframes stroke-heart {
-  0% {
-    fill: none;
-    stroke-dashoffset: 300;
-  }
-  50% {
-    fill: none;
-  }
-  100% {
+@keyframes stroke {
+  to {
     fill: none;
     stroke-dashoffset: 0;
   }

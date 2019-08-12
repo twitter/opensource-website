@@ -38,14 +38,6 @@ new TypeIt('#type', {
     speed: 40,
 }).go();
 
-function getGithubURLforYearinReview(repoName) {
-  var url = "https://github.com/twitter/";
-  if (repoName == "search-tweets-python") {
-    url = "https://github.com/twitterdev/";
-  }
-  return url + repoName;
-}
-
 // Insert top 10 repos
 function renderTopRepos(reposList) {
     let topTenRepos = reposList.slice(0, 10);
@@ -70,7 +62,7 @@ function renderTopRepos(reposList) {
 
         var repoLink = document.createElement('a');
         repoLink.innerHTML = repo.name;
-        repoLink.href = getGithubURLforYearinReview(repo.name);
+        repoLink.href = "https://github.com/twitter/" + repo.name;
         repoLink.target = "_blank";
         
         repoData.appendChild(repoLink);

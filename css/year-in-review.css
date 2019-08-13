@@ -106,7 +106,7 @@ h1#type {
 /* Top 10 repos*/
 
 table {
-  font-weight: 600;
+  font-weight: var(--feather-font-weight-bold);
   font-size: var(--font-size-xjumbo);
 }
 
@@ -147,7 +147,8 @@ td.repo a:hover, td.repo a:active {
   flex-direction: column;
   font-size: var(--font-size-location);
   line-height: var(--line-height-location);
-  font-weight: 600;
+  font-weight: var(--feather-font-weight-bold);
+  text-transform: capitalize;
 }
 
 .location-item {
@@ -177,13 +178,13 @@ div.metric {
 }
 
 span.metric-count {
-  font-weight: 600;
+  font-weight: var(--feather-font-weight-bold);
   font-size: var(--font-size-metric-count);
   line-height: var(--line-height-metric-count);
 }
 
 span.metric-name {
-  font-weight: 600;
+  font-weight: var(--feather-font-weight-bold);
   font-size: var(--font-size-mini-jumbo);
   line-height: var(--line-height-mini-jumbo);
   padding-left: var(--feather-grid-xxsmall);
@@ -485,7 +486,7 @@ a.YIRnav-home-link:hover {
 a.YIRnav-YIR-link {
   color: white;
   opacity: 0.6;
-  font-weight: 600;
+  font-weight: var(--feather-font-weight-bold);
 }
 
 a.YIRnav-YIR-link:hover {

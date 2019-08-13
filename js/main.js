@@ -24,20 +24,6 @@ function removeClassByClass(target, className) {
     }
 }
 
-// For Year in Review
-// Convert numbers greater than 1 million to m, and numbers greater than 10,000 to k
-function formatNum(num) {
-    if (num >= 1000000) {
-        num = Math.floor(num / 1000000);
-        return num.toString() + "m";
-    } else if (num >= 10000) {
-        num = Math.floor(num / 1000);
-        return num.toString() + "k";
-    } else {
-        return Math.floor(num).toString();
-    }
-}
-
 
 // Create sticky footer by defining min-height of site wrapper
 var site = document.getElementsByClassName("site")[0]

@@ -1,37 +1,3 @@
-if (matchMedia) {
-  var mediaQuery1080 = window.matchMedia("(max-width: 1080px)")
-  lessThan1080px(mediaQuery1080)
-  mediaQuery1080.addListener(lessThan1080px)
-}
-
-// Given content's div and corresponding section, adjust height of section
-function checkOverflow(content, section) {
-  var contentHeight = content.clientHeight;
-  if (contentHeight > screen.height - 120) {
-    section.classList.add("overflowed");
-  } else {
-    section.classList.remove("overflowed");
-  }
-}
-
-// Breakpoint for Year in Review mobile navigation
-function lessThan1080px(mediaQuery) {
-  if (mediaQuery.matches) {
-      var caret = document.getElementById("caret")
-      caret.addEventListener("click", mobileNavigation)
-      navTitle.addEventListener("click", mobileNavigation)
-
-      // If user clicks on a link in the nav-menu, the nav-menu disappears
-      var navLinkList = document.getElementsByClassName("nav-link");
-      for (var i = 0; i < navLinkList.length; i++) {
-        var navLink = navLinkList[i];
-        navLink.addEventListener("click", mobileNavigation);
-      }
-  } else {
-      navBar.classList.remove("active")
-  }
-}
-
 // Insert date range for header
 let date = new Date();
 let month = date.toLocaleString('default', { month: 'short' });
@@ -111,8 +77,33 @@ svgs.forEach(image => {
   observer.observe(image);
 }, config);
 
+// Media query for Year in Review mobile navigation
+
+if (matchMedia) {
+  var mediaQuery1080 = window.matchMedia("(max-width: 1080px)")
+  lessThan1080px(mediaQuery1080)
+  mediaQuery1080.addListener(lessThan1080px)
+}
+
+function lessThan1080px(mediaQuery) {
+  if (mediaQuery.matches) {
+      var caret = document.getElementById("caret")
+      caret.addEventListener("click", mobileNavigation)
+      navTitle.addEventListener("click", mobileNavigation)
+
+      // If user clicks on a link in the nav-menu, the nav-menu disappears
+      var navLinkList = document.getElementsByClassName("nav-link");
+      for (var i = 0; i < navLinkList.length; i++) {
+        var navLink = navLinkList[i];
+        navLink.addEventListener("click", mobileNavigation);
+      }
+  } else {
+      navBar.classList.remove("active")
+  }
+}
 
 // Smooth scrolling sections
+// https://codepen.io/nailaahmad/pen/MyZXVE
 $('a[href*=#]:not([href=#])').click(function() {
     if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') 
         || location.hostname == this.hostname) {

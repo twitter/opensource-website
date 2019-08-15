@@ -22,6 +22,7 @@
   --line-height-location: 2.7rem;
 }
 
+
 /* General */
 
 .YIR-wrapper {
@@ -48,6 +49,7 @@ p {
   margin: 0;
 }
 
+
 /* All content */
 .mobile-heading, .YIR-header, table, .locations, .metric-wrapper, .YIR-tweet-wrapper {
   width: var(--content-width);
@@ -63,6 +65,172 @@ p {
   line-height: var(--line-height-xxjumbo);
   padding-bottom: var(--feather-grid-xsmall); 
 }
+
+/* Sections */
+
+section {
+  height: 100vh;
+}
+
+section#section1 {
+  background: var(--tw-color-blue-medium);
+}
+
+section#section2 {
+  background: var(--tw-color-purple-medium);
+}
+
+section#section3 {
+  background: var(--tw-color-green-medium);
+}
+
+section#section4 {
+  background: var(--tw-color-orange-medium);
+}
+
+section#section5 {
+  background: var(--tw-color-yellow-deep);
+}
+
+section#section6 {
+  background: var(--tw-color-red-medium);
+}
+
+section#section7 {
+  background: var(--tw-color-blue-medium);
+}
+
+
+/* Top navigation */
+
+nav {
+  background-color: transparent;
+}
+
+.nav-title a {
+  text-decoration: none;
+  font-weight: var(--feather-font-weight-bold);
+}
+
+a.YIRnav-home-link {
+  margin-left: var(--feather-grid-mega);
+  margin-right: var(--feather-grid-micro);
+  color: white;
+}
+
+a.YIRnav-home-link:hover {
+  opacity: 0.6;
+}
+
+
+a.YIRnav-YIR-link {
+  color: white;
+  opacity: 0.6;
+  font-weight: var(--feather-font-weight-bold);
+}
+
+a.YIRnav-YIR-link:hover {
+  opacity: 1;
+}
+
+.nav-menu {
+  display: none;
+}
+
+
+/* Timeline navigation */
+/* Code from https://codepen.io/nailaahmad/pen/MyZXVE */
+
+.YIR-nav-wrapper {
+  position: fixed;
+  height: 100%;
+  padding: var(--feather-grid-large);
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+}
+
+.nav {
+  margin: 0;
+  margin-left: var(--feather-grid-large);
+}
+
+.YIR-nav-title {
+  font-size: var(--feather-font-size-jumbo);
+  font-weight: var(--feather-font-weight-bold);
+  transition: all 0.15s ease-out;
+}
+
+.YIR-nav-body {
+  width: var(--timeline-active-text-width);
+  height: 0;
+  overflow: hidden;
+  opacity: 0;
+  transition: height 0.3s ease-out, opacity 0.2s ease-out;
+}
+
+.nav li {
+  position: relative;
+  transition: all 0.3s ease-out;
+  margin-bottom: var(--feather-grid-medium);
+}
+
+/* Shorter white lines */
+.nav li:after {
+  content: '';
+  display: block;
+  border-left: 2px solid white;
+  border-top: 2px solid white;
+  position: absolute;
+  height: var(--timeline-element-border-height);
+  width: 20px;
+  left: -30px;
+  top: 12px;
+}
+
+.nav li a {
+  display: block;
+  padding: 0;
+  color: white;
+  transition: all 0.15s ease-out;
+}
+
+.nav li a:hover {
+  background-color: transparent;
+  padding-left: 1em;
+}
+
+.nav li a:focus {
+  background-color: transparent;
+}
+
+/* Timeline navigation - active nav title */
+
+.nav li.active {
+  pointer-events: none;
+  padding-left: var(--feather-grid-medium);
+}
+
+/* Longer white lines */
+.nav li.active:after {
+  height: var(--timeline-element-border-height);
+  width: 35px;
+  top: 35px;
+}
+
+.nav li.active .YIR-nav-title {
+  font-size: var(--font-size-xxjumbo);
+  line-height: var(--line-height-xxjumbo);
+}
+
+.nav li.active .YIR-nav-body {
+  margin: 0;
+  margin-top: var(--feather-grid-xsmall);
+  height: var(--nav-body-text-height);
+  opacity: 1;
+  overflow: visible;
+}
+
 
 /* Header */
 
@@ -99,9 +267,11 @@ h1#date-range, h1#YIR-heading-text {
 }
 
 /* Hardcoding height so header content doesn't move when text is typed in */
+/* 3 lines of text */
 h1#type {
   height: calc(3 * var(--line-height-subheading));
 }
+
 
 /* Top 10 repos*/
 
@@ -140,6 +310,7 @@ td.repo a:hover, td.repo a:active {
   color: var(--tw-color-purple-faded);
 }
 
+
 /* Locations */
 
 .locations {
@@ -169,6 +340,7 @@ p.locations-disclaimer {
   margin: 0;
   padding-top: var(--feather-grid-xxsmall);
 }
+
 
 /* Metrics  */
 
@@ -271,167 +443,8 @@ span.metric-name {
   }
 }
 
-/* Sections */
 
-section {
-  height: 100vh;
-}
-
-section#section1 {
-  background: var(--tw-color-blue-medium);
-}
-
-section#section2 {
-  background: var(--tw-color-purple-medium);
-}
-
-section#section3 {
-  background: var(--tw-color-green-medium);
-}
-
-section#section4 {
-  background: var(--tw-color-orange-medium);
-}
-
-section#section5 {
-  background: var(--tw-color-yellow-deep);
-}
-
-section#section6 {
-  background: var(--tw-color-red-medium);
-}
-
-section#section7 {
-  background: var(--tw-color-blue-medium);
-}
-
-/* Timeline navigation */
-
-.YIR-nav-wrapper {
-  position: fixed;
-  height: 100%;
-  padding: var(--feather-grid-large);
-  display: flex;
-  flex-flow: column nowrap;
-  justify-content: center;
-}
-
-.nav {
-  margin: 0;
-  margin-left: var(--feather-grid-large);
-}
-
-.YIR-nav-title {
-  font-size: var(--feather-font-size-jumbo);
-  font-weight: var(--feather-font-weight-bold);
-  transition: all 0.15s ease-out;
-}
-
-.YIR-nav-body {
-  width: var(--timeline-active-text-width);
-  height: 0;
-  overflow: hidden;
-  opacity: 0;
-  transition: height 0.3s ease-out, opacity 0.2s ease-out;
-}
-
-.nav li {
-  position: relative;
-  transition: all 0.3s ease-out;
-  margin-bottom: var(--feather-grid-medium);
-}
-
-/* Shorter white lines */
-.nav li:after {
-  content: '';
-  display: block;
-  border-left: 2px solid white;
-  border-top: 2px solid white;
-  position: absolute;
-  height: var(--timeline-element-border-height);
-  width: 20px;
-  left: -30px;
-  top: 12px;
-}
-
-.nav li a {
-  display: block;
-  padding: 0;
-  color: white;
-  transition: all 0.15s ease-out;
-}
-
-.nav li a:hover {
-  background-color: transparent;
-  padding-left: 1em;
-}
-
-.nav li a:focus {
-  background-color: transparent;
-}
-
-/* Timeline navigation - active nav title */
-
-.nav li.active {
-  pointer-events: none;
-  padding-left: var(--feather-grid-medium);
-}
-
-/* Longer white lines */
-.nav li.active:after {
-  height: var(--timeline-element-border-height);
-  width: 35px;
-  top: 35px;
-}
-
-.nav li.active .YIR-nav-title {
-  font-size: var(--font-size-xxjumbo);
-  line-height: var(--line-height-xxjumbo);
-}
-
-.nav li.active .YIR-nav-body {
-  margin: 0;
-  margin-top: var(--feather-grid-xsmall);
-  height: var(--nav-body-text-height);
-  opacity: 1;
-  overflow: visible;
-}
-
-/* Top navigation */
-
-nav {
-  background-color: transparent;
-}
-
-.nav-title a {
-  text-decoration: none;
-  font-weight: var(--feather-font-weight-bold);
-}
-
-a.YIRnav-home-link {
-  margin-left: var(--feather-grid-mega);
-  margin-right: var(--feather-grid-micro);
-  color: white;
-}
-
-a.YIRnav-home-link:hover {
-  opacity: 0.6;
-}
-
-
-a.YIRnav-YIR-link {
-  color: white;
-  opacity: 0.6;
-  font-weight: var(--feather-font-weight-bold);
-}
-
-a.YIRnav-YIR-link:hover {
-  opacity: 1;
-}
-
-.nav-menu {
-  display: none;
-}
+/* Media queries */
 
 /* Less than YIR-page-width + feather-grid-large */
 @media (max-width: 1224px) {

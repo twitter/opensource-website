@@ -4,6 +4,16 @@ if (matchMedia) {
   mediaQuery1080.addListener(lessThan1080px)
 }
 
+// Given content's div and corresponding section, adjust height of section
+function checkOverflow(content, section) {
+  var contentHeight = content.clientHeight;
+  if (contentHeight > screen.height - 120) {
+    section.classList.add("overflowed");
+  } else {
+    section.classList.remove("overflowed");
+  }
+}
+
 // Breakpoint for Year in Review mobile navigation
 function lessThan1080px(mediaQuery) {
   if (mediaQuery.matches) {

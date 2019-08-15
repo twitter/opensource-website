@@ -148,7 +148,6 @@ td.repo a:hover, td.repo a:active {
   font-size: var(--font-size-location);
   line-height: var(--line-height-location);
   font-weight: var(--feather-font-weight-bold);
-  text-transform: capitalize;
 }
 
 .location-item {
@@ -278,35 +277,31 @@ section {
   height: 100vh;
 }
 
-section:nth-child(1) {
+section#section1 {
   background: var(--tw-color-blue-medium);
 }
 
-section:nth-child(2) {
-  background: var(--tw-color-blue-medium);
-}
-
-section:nth-child(3) {
+section#section2 {
   background: var(--tw-color-purple-medium);
 }
 
-section:nth-child(4) {
+section#section3 {
   background: var(--tw-color-green-medium);
 }
 
-section:nth-child(5) {
+section#section4 {
   background: var(--tw-color-orange-medium);
 }
 
-section:nth-child(6) {
+section#section5 {
   background: var(--tw-color-yellow-deep);
 }
 
-section:nth-child(7) {
+section#section6 {
   background: var(--tw-color-red-medium);
 }
 
-section:nth-child(8) {
+section#section7 {
   background: var(--tw-color-blue-medium);
 }
 
@@ -442,6 +437,47 @@ a.YIRnav-YIR-link:hover {
 @media (max-width: 1224px) {
   .YIR-container-section {
     margin: 0 var(--feather-grid-large);
+  }
+}
+
+/* Hardcoded breakpoints for when window height is too small and causes content to overflow */
+/* Header - when content overflows section */
+@media (max-height: 544px) and (min-width: 1080px) {
+  section#section1 {
+    height: auto;
+    padding: calc(var(--feather-grid-mega) * 1.5) 0;
+  }
+}
+
+/* Top 10 repos - when content overflows section */
+@media (max-height: 652px) and (min-width: 1080px) {
+  section#section2 {
+    height: auto;
+    padding: calc(var(--feather-grid-mega) * 1.5) 0;
+  }
+}
+
+/* Locations - when content overflows section */
+@media (max-height: 772px) and (min-width: 1080px) {
+  section#section3 {
+    height: auto;
+    padding: calc(var(--feather-grid-mega) * 1.5) 0;
+  }
+}
+
+/* Metrics - when content overflows section */
+@media (max-height: 658px) and (min-width: 1080px) {
+  section#section4, section#section5, section#section6 {
+    height: auto;
+    padding: calc(var(--feather-grid-mega) * 1.5) 0;
+  }
+}
+
+/* Tweet - when content overflows section */
+@media (max-height: 730px) and (min-width: 1080px) {
+  section#section7 {
+    height: auto;
+    padding: calc(var(--feather-grid-mega) * 1.5) 0;
   }
 }
 

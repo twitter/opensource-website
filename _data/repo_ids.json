@@ -1,0 +1,710 @@
+{
+  "finagle": [
+    {
+      "repo_id": 26101,
+      "repo_group_id": 25155,
+      "rg_name": "Twitter"
+    }
+  ],
+  "ios-twitter-network-layer": [
+  ],
+  "hdfs-du": [
+    {
+      "repo_id": 26124,
+      "repo_group_id": 25155,
+      "rg_name": "Twitter"
+    }
+  ],
+  "twemcache": [
+    {
+      "repo_id": 26121,
+      "repo_group_id": 25155,
+      "rg_name": "Twitter"
+    }
+  ],
+  "hadoop-lzo": [
+    {
+      "repo_id": 26132,
+      "repo_group_id": 25155,
+      "rg_name": "Twitter"
+    }
+  ],
+  "GraphJet": [
+    {
+      "repo_id": 26176,
+      "repo_group_id": 25155,
+      "rg_name": "Twitter"
+    }
+  ],
+  "vireo": [
+    {
+      "repo_id": 26178,
+      "repo_group_id": 25155,
+      "rg_name": "Twitter"
+    }
+  ],
+  "cassovary": [
+    {
+      "repo_id": 26113,
+      "repo_group_id": 25155,
+      "rg_name": "Twitter"
+    }
+  ],
+  "twemproxy": [
+    {
+      "repo_id": 26114,
+      "repo_group_id": 25155,
+      "rg_name": "Twitter"
+    }
+  ],
+  "diffy": [
+    {
+      "repo_id": 26164,
+      "repo_group_id": 25155,
+      "rg_name": "Twitter"
+    }
+  ],
+  "CocoaSPDY": [
+    {
+      "repo_id": 26148,
+      "repo_group_id": 25155,
+      "rg_name": "Twitter"
+    }
+  ],
+  "thrift_client": [
+    {
+      "repo_id": 26133,
+      "repo_group_id": 25155,
+      "rg_name": "Twitter"
+    }
+  ],
+  "bijection": [
+    {
+      "repo_id": 26135,
+      "repo_group_id": 25155,
+      "rg_name": "Twitter"
+    }
+  ],
+  "repo-scaffolding": [
+  ],
+  "gatekeeper-service": [
+  ],
+  "torch-dataset": [
+    {
+      "repo_id": 26171,
+      "repo_group_id": 25155,
+      "rg_name": "Twitter"
+    }
+  ],
+  "hpack": [
+    {
+      "repo_id": 26149,
+      "repo_group_id": 25155,
+      "rg_name": "Twitter"
+    }
+  ],
+  "pelikan": [
+    {
+      "repo_id": 26166,
+      "repo_group_id": 25155,
+      "rg_name": "Twitter"
+    }
+  ],
+  "groupcache": [
+  ],
+  "twemoji": [
+    {
+      "repo_id": 26131,
+      "repo_group_id": 25155,
+      "rg_name": "Twitter"
+    }
+  ],
+  "finatra-activator-thrift-seed": [
+    {
+      "repo_id": 26177,
+      "repo_group_id": 25155,
+      "rg_name": "Twitter"
+    }
+  ],
+  "fatcache": [
+    {
+      "repo_id": 26136,
+      "repo_group_id": 25155,
+      "rg_name": "Twitter"
+    }
+  ],
+  "spitball": [
+    {
+      "repo_id": 26098,
+      "repo_group_id": 25155,
+      "rg_name": "Twitter"
+    }
+  ],
+  "dodo": [
+    {
+      "repo_id": 26180,
+      "repo_group_id": 25155,
+      "rg_name": "Twitter"
+    }
+  ],
+  "Serial": [
+    {
+      "repo_id": 26188,
+      "repo_group_id": 25155,
+      "rg_name": "Twitter"
+    }
+  ],
+  "recess": [
+    {
+      "repo_id": 26117,
+      "repo_group_id": 25155,
+      "rg_name": "Twitter"
+    }
+  ],
+  "sqrl": [
+  ],
+  "iago": [
+    {
+      "repo_id": 26120,
+      "repo_group_id": 25155,
+      "rg_name": "Twitter"
+    }
+  ],
+  "util": [
+    {
+      "repo_id": 26106,
+      "repo_group_id": 25155,
+      "rg_name": "Twitter"
+    }
+  ],
+  "d3kit": [
+    {
+      "repo_id": 26155,
+      "repo_group_id": 25155,
+      "rg_name": "Twitter"
+    }
+  ],
+  "zktraffic": [
+    {
+      "repo_id": 26153,
+      "repo_group_id": 25155,
+      "rg_name": "Twitter"
+    }
+  ],
+  "scala_school2": [
+    {
+      "repo_id": 26143,
+      "repo_group_id": 25155,
+      "rg_name": "Twitter"
+    }
+  ],
+  "joauth": [
+    {
+      "repo_id": 26102,
+      "repo_group_id": 25155,
+      "rg_name": "Twitter"
+    }
+  ],
+  "twitter-cldr-js": [
+    {
+      "repo_id": 26122,
+      "repo_group_id": 25155,
+      "rg_name": "Twitter"
+    }
+  ],
+  "curation-style-guide": [
+  ],
+  "rsc": [
+    {
+      "repo_id": 26189,
+      "repo_group_id": 25155,
+      "rg_name": "Twitter"
+    }
+  ],
+  "cdk": [
+    {
+      "repo_id": 26145,
+      "repo_group_id": 25155,
+      "rg_name": "Twitter"
+    }
+  ],
+  "scala-json": [
+    {
+      "repo_id": 26201,
+      "repo_group_id": 25155,
+      "rg_name": "Twitter"
+    }
+  ],
+  "ambrose": [
+    {
+      "repo_id": 26118,
+      "repo_group_id": 25155,
+      "rg_name": "Twitter"
+    }
+  ],
+  "commons": [
+    {
+      "repo_id": 26104,
+      "repo_group_id": 25155,
+      "rg_name": "Twitter"
+    }
+  ],
+  "sslconfig": [
+    {
+      "repo_id": 26157,
+      "repo_group_id": 25155,
+      "rg_name": "Twitter"
+    }
+  ],
+  "code-of-conduct": [
+    {
+      "repo_id": 26146,
+      "repo_group_id": 25155,
+      "rg_name": "Twitter"
+    }
+  ],
+  "activerecord-reputation-system": [
+    {
+      "repo_id": 26119,
+      "repo_group_id": 25155,
+      "rg_name": "Twitter"
+    }
+  ],
+  "twitter-cldr-rb": [
+    {
+      "repo_id": 26115,
+      "repo_group_id": 25155,
+      "rg_name": "Twitter"
+    }
+  ],
+  "torch-twrl": [
+    {
+      "repo_id": 26183,
+      "repo_group_id": 25155,
+      "rg_name": "Twitter"
+    }
+  ],
+  "whiskey": [
+    {
+      "repo_id": 26160,
+      "repo_group_id": 25155,
+      "rg_name": "Twitter"
+    }
+  ],
+  "twemoji-parser": [
+  ],
+  "storehaus": [
+    {
+      "repo_id": 26137,
+      "repo_group_id": 25155,
+      "rg_name": "Twitter"
+    }
+  ],
+  "ios-twitter-image-pipeline": [
+    {
+      "repo_id": 26185,
+      "repo_group_id": 25155,
+      "rg_name": "Twitter"
+    }
+  ],
+  "plumage.js": [
+    {
+      "repo_id": 26152,
+      "repo_group_id": 25155,
+      "rg_name": "Twitter"
+    }
+  ],
+  "second-control-probability-distributions": [
+    {
+      "repo_id": 26134,
+      "repo_group_id": 25155,
+      "rg_name": "Twitter"
+    }
+  ],
+  "twitter-server": [
+    {
+      "repo_id": 26140,
+      "repo_group_id": 25155,
+      "rg_name": "Twitter"
+    }
+  ],
+  "go-bindata": [
+    {
+      "repo_id": 26193,
+      "repo_group_id": 25155,
+      "rg_name": "Twitter"
+    }
+  ],
+  "twitter-korean-text": [
+    {
+      "repo_id": 26197,
+      "repo_group_id": 25155,
+      "rg_name": "Twitter"
+    }
+  ],
+  "summingbird": [
+    {
+      "repo_id": 26127,
+      "repo_group_id": 25155,
+      "rg_name": "Twitter"
+    }
+  ],
+  "wordpress": [
+    {
+      "repo_id": 26195,
+      "repo_group_id": 25155,
+      "rg_name": "Twitter"
+    }
+  ],
+  "twitter-text": [
+    {
+      "repo_id": 26199,
+      "repo_group_id": 25155,
+      "rg_name": "Twitter"
+    }
+  ],
+  "cli-guide.js": [
+    {
+      "repo_id": 26161,
+      "repo_group_id": 25155,
+      "rg_name": "Twitter"
+    }
+  ],
+  "gpl-commitment": [
+  ],
+  "tormenta": [
+    {
+      "repo_id": 26126,
+      "repo_group_id": 25155,
+      "rg_name": "Twitter"
+    }
+  ],
+  "ccommon": [
+    {
+      "repo_id": 26167,
+      "repo_group_id": 25155,
+      "rg_name": "Twitter"
+    }
+  ],
+  "css-flip": [
+    {
+      "repo_id": 26150,
+      "repo_group_id": 25155,
+      "rg_name": "Twitter"
+    }
+  ],
+  "twitter.github.io": [
+  ],
+  "torch-decisiontree": [
+    {
+      "repo_id": 26186,
+      "repo_group_id": 25155,
+      "rg_name": "Twitter"
+    }
+  ],
+  "pycascading": [
+    {
+      "repo_id": 26108,
+      "repo_group_id": 25155,
+      "rg_name": "Twitter"
+    }
+  ],
+  "ostrich": [
+    {
+      "repo_id": 26099,
+      "repo_group_id": 25155,
+      "rg_name": "Twitter"
+    }
+  ],
+  "nodes": [
+    {
+      "repo_id": 26182,
+      "repo_group_id": 25155,
+      "rg_name": "Twitter"
+    }
+  ],
+  "sekhmet": [
+    {
+      "repo_id": 26194,
+      "repo_group_id": 25155,
+      "rg_name": "Twitter"
+    }
+  ],
+  "caladrius": [
+  ],
+  "BreakoutDetection": [
+    {
+      "repo_id": 26196,
+      "repo_group_id": 25155,
+      "rg_name": "Twitter"
+    }
+  ],
+  "ossdecks": [
+    {
+      "repo_id": 26191,
+      "repo_group_id": 25155,
+      "rg_name": "Twitter"
+    }
+  ],
+  "scala_school": [
+    {
+      "repo_id": 26100,
+      "repo_group_id": 25155,
+      "rg_name": "Twitter"
+    }
+  ],
+  "chill": [
+    {
+      "repo_id": 26128,
+      "repo_group_id": 25155,
+      "rg_name": "Twitter"
+    }
+  ],
+  "hbc": [
+    {
+      "repo_id": 26138,
+      "repo_group_id": 25155,
+      "rg_name": "Twitter"
+    }
+  ],
+  "analytics-infra-governance": [
+    {
+      "repo_id": 26181,
+      "repo_group_id": 25155,
+      "rg_name": "Twitter"
+    }
+  ],
+  "torch-ipc": [
+    {
+      "repo_id": 26172,
+      "repo_group_id": 25155,
+      "rg_name": "Twitter"
+    }
+  ],
+  "finatra-misc": [
+    {
+      "repo_id": 26165,
+      "repo_group_id": 25155,
+      "rg_name": "Twitter"
+    }
+  ],
+  "torch-thrift": [
+    {
+      "repo_id": 26174,
+      "repo_group_id": 25155,
+      "rg_name": "Twitter"
+    }
+  ],
+  "typeahead.js": [
+    {
+      "repo_id": 26139,
+      "repo_group_id": 25155,
+      "rg_name": "Twitter"
+    }
+  ],
+  "netty-http2": [
+    {
+      "repo_id": 26141,
+      "repo_group_id": 25155,
+      "rg_name": "Twitter"
+    }
+  ],
+  "iago2": [
+  ],
+  "torch-autograd": [
+    {
+      "repo_id": 26168,
+      "repo_group_id": 25155,
+      "rg_name": "Twitter"
+    }
+  ],
+  "hraven": [
+    {
+      "repo_id": 26144,
+      "repo_group_id": 25155,
+      "rg_name": "Twitter"
+    }
+  ],
+  "elephant-bird": [
+    {
+      "repo_id": 26096,
+      "repo_group_id": 25155,
+      "rg_name": "Twitter"
+    }
+  ],
+  "labella.js": [
+    {
+      "repo_id": 26162,
+      "repo_group_id": 25155,
+      "rg_name": "Twitter"
+    }
+  ],
+  "algebird": [
+    {
+      "repo_id": 26123,
+      "repo_group_id": 25155,
+      "rg_name": "Twitter"
+    }
+  ],
+  "scoot": [
+    {
+      "repo_id": 26170,
+      "repo_group_id": 25155,
+      "rg_name": "Twitter"
+    }
+  ],
+  "effectivescala": [
+    {
+      "repo_id": 26111,
+      "repo_group_id": 25155,
+      "rg_name": "Twitter"
+    }
+  ],
+  "ios-twitter-logging-service": [
+    {
+      "repo_id": 26179,
+      "repo_group_id": 25155,
+      "rg_name": "Twitter"
+    }
+  ],
+  "hogan.js": [
+    {
+      "repo_id": 26109,
+      "repo_group_id": 25155,
+      "rg_name": "Twitter"
+    }
+  ],
+  "meta-learning-lstm": [
+    {
+      "repo_id": 26184,
+      "repo_group_id": 25155,
+      "rg_name": "Twitter"
+    }
+  ],
+  "torch-distlearn": [
+    {
+      "repo_id": 26173,
+      "repo_group_id": 25155,
+      "rg_name": "Twitter"
+    }
+  ],
+  "finatra-activator-http-seed": [
+    {
+      "repo_id": 26163,
+      "repo_group_id": 25155,
+      "rg_name": "Twitter"
+    }
+  ],
+  "scrooge": [
+    {
+      "repo_id": 26107,
+      "repo_group_id": 25155,
+      "rg_name": "Twitter"
+    }
+  ],
+  "twitter-cldr-npm": [
+    {
+      "repo_id": 26125,
+      "repo_group_id": 25155,
+      "rg_name": "Twitter"
+    }
+  ],
+  "scalding": [
+    {
+      "repo_id": 26110,
+      "repo_group_id": 25155,
+      "rg_name": "Twitter"
+    }
+  ],
+  "innovators-patent-agreement": [
+    {
+      "repo_id": 26116,
+      "repo_group_id": 25155,
+      "rg_name": "Twitter"
+    }
+  ],
+  "secure_headers": [
+    {
+      "repo_id": 26130,
+      "repo_group_id": 25155,
+      "rg_name": "Twitter"
+    }
+  ],
+  "distributedlog": [
+    {
+      "repo_id": 26175,
+      "repo_group_id": 25155,
+      "rg_name": "Twitter"
+    }
+  ],
+  "cloudhopper-commons": [
+    {
+      "repo_id": 26147,
+      "repo_group_id": 25155,
+      "rg_name": "Twitter"
+    }
+  ],
+  "periscope-live-engagement-unity-sdk": [
+    {
+      "repo_id": 26192,
+      "repo_group_id": 25155,
+      "rg_name": "Twitter"
+    }
+  ],
+  "rpc-perf": [
+    {
+      "repo_id": 26169,
+      "repo_group_id": 25155,
+      "rg_name": "Twitter"
+    }
+  ],
+  "interactive": [
+    {
+      "repo_id": 26142,
+      "repo_group_id": 25155,
+      "rg_name": "Twitter"
+    }
+  ],
+  "twurl": [
+    {
+      "repo_id": 26095,
+      "repo_group_id": 25155,
+      "rg_name": "Twitter"
+    }
+  ],
+  "libwatchman": [
+    {
+      "repo_id": 26151,
+      "repo_group_id": 25155,
+      "rg_name": "Twitter"
+    }
+  ],
+  "SentenTree": [
+    {
+      "repo_id": 26154,
+      "repo_group_id": 25155,
+      "rg_name": "Twitter"
+    }
+  ],
+  "bookkeeper": [
+    {
+      "repo_id": 26129,
+      "repo_group_id": 25155,
+      "rg_name": "Twitter"
+    }
+  ],
+  "AnomalyDetection": [
+    {
+      "repo_id": 26200,
+      "repo_group_id": 25155,
+      "rg_name": "Twitter"
+    }
+  ],
+  "finatra": [
+    {
+      "repo_id": 26112,
+      "repo_group_id": 25155,
+      "rg_name": "Twitter"
+    }
+  ]
+}

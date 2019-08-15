@@ -16,6 +16,8 @@ install:
 script:
   - if [ $TRAVIS_EVENT_TYPE == "cron" ];
     then python scripts/fetch_projects.py;
+         python scripts/fetch_augur_metrics.py;
+         python scripts/fetch_year_in_review.py;
     else echo "Not triggered by cron";
     fi;
 

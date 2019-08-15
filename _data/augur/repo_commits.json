@@ -1,0 +1,290 @@
+{
+  "finagle": {
+    "commit_count": 6781
+  },
+  "scalding": {
+    "commit_count": 4148
+  },
+  "util": {
+    "commit_count": 2533
+  },
+  "twitter-text": {
+    "commit_count": 2277
+  },
+  "finatra": {
+    "commit_count": 1950
+  },
+  "summingbird": {
+    "commit_count": 1792
+  },
+  "commons": {
+    "commit_count": 1656
+  },
+  "algebird": {
+    "commit_count": 1505
+  },
+  "scrooge": {
+    "commit_count": 1465
+  },
+  "elephant-bird": {
+    "commit_count": 1374
+  },
+  "twitter-cldr-rb": {
+    "commit_count": 1283
+  },
+  "ostrich": {
+    "commit_count": 1270
+  },
+  "secure_headers": {
+    "commit_count": 967
+  },
+  "storehaus": {
+    "commit_count": 960
+  },
+  "bookkeeper": {
+    "commit_count": 831
+  },
+  "rsc": {
+    "commit_count": 788
+  },
+  "twitter-server": {
+    "commit_count": 695
+  },
+  "bijection": {
+    "commit_count": 691
+  },
+  "ambrose": {
+    "commit_count": 642
+  },
+  "ccommon": {
+    "commit_count": 627
+  },
+  "torch-autograd": {
+    "commit_count": 596
+  },
+  "typeahead.js": {
+    "commit_count": 594
+  },
+  "chill": {
+    "commit_count": 591
+  },
+  "pelikan": {
+    "commit_count": 582
+  },
+  "twitter-korean-text": {
+    "commit_count": 506
+  },
+  "cassovary": {
+    "commit_count": 501
+  },
+  "twemproxy": {
+    "commit_count": 495
+  },
+  "scala_school": {
+    "commit_count": 482
+  },
+  "scoot": {
+    "commit_count": 434
+  },
+  "cloudhopper-commons": {
+    "commit_count": 424
+  },
+  "effectivescala": {
+    "commit_count": 364
+  },
+  "interactive": {
+    "commit_count": 349
+  },
+  "hraven": {
+    "commit_count": 338
+  },
+  "twemoji": {
+    "commit_count": 338
+  },
+  "cli-guide.js": {
+    "commit_count": 332
+  },
+  "twitter-cldr-js": {
+    "commit_count": 310
+  },
+  "joauth": {
+    "commit_count": 301
+  },
+  "d3kit": {
+    "commit_count": 291
+  },
+  "hadoop-lzo": {
+    "commit_count": 273
+  },
+  "rpc-perf": {
+    "commit_count": 272
+  },
+  "thrift_client": {
+    "commit_count": 268
+  },
+  "tormenta": {
+    "commit_count": 266
+  },
+  "hogan.js": {
+    "commit_count": 244
+  },
+  "CocoaSPDY": {
+    "commit_count": 243
+  },
+  "hbc": {
+    "commit_count": 241
+  },
+  "zktraffic": {
+    "commit_count": 216
+  },
+  "go-bindata": {
+    "commit_count": 195
+  },
+  "labella.js": {
+    "commit_count": 173
+  },
+  "twurl": {
+    "commit_count": 173
+  },
+  "spitball": {
+    "commit_count": 162
+  },
+  "scala_school2": {
+    "commit_count": 146
+  },
+  "activerecord-reputation-system": {
+    "commit_count": 141
+  },
+  "wordpress": {
+    "commit_count": 131
+  },
+  "SentenTree": {
+    "commit_count": 107
+  },
+  "cdk": {
+    "commit_count": 105
+  },
+  "scala-json": {
+    "commit_count": 103
+  },
+  "whiskey": {
+    "commit_count": 100
+  },
+  "torch-ipc": {
+    "commit_count": 98
+  },
+  "libwatchman": {
+    "commit_count": 95
+  },
+  "pycascading": {
+    "commit_count": 95
+  },
+  "AnomalyDetection": {
+    "commit_count": 92
+  },
+  "distributedlog": {
+    "commit_count": 91
+  },
+  "recess": {
+    "commit_count": 88
+  },
+  "diffy": {
+    "commit_count": 78
+  },
+  "GraphJet": {
+    "commit_count": 73
+  },
+  "hpack": {
+    "commit_count": 63
+  },
+  "netty-http2": {
+    "commit_count": 59
+  },
+  "dodo": {
+    "commit_count": 57
+  },
+  "meta-learning-lstm": {
+    "commit_count": 50
+  },
+  "finatra-activator-http-seed": {
+    "commit_count": 50
+  },
+  "twemcache": {
+    "commit_count": 42
+  },
+  "ios-twitter-logging-service": {
+    "commit_count": 41
+  },
+  "fatcache": {
+    "commit_count": 41
+  },
+  "twitter-cldr-npm": {
+    "commit_count": 41
+  },
+  "torch-twrl": {
+    "commit_count": 38
+  },
+  "ios-twitter-image-pipeline": {
+    "commit_count": 34
+  },
+  "finatra-activator-thrift-seed": {
+    "commit_count": 31
+  },
+  "Serial": {
+    "commit_count": 31
+  },
+  "nodes": {
+    "commit_count": 31
+  },
+  "css-flip": {
+    "commit_count": 30
+  },
+  "torch-dataset": {
+    "commit_count": 28
+  },
+  "torch-distlearn": {
+    "commit_count": 20
+  },
+  "BreakoutDetection": {
+    "commit_count": 19
+  },
+  "torch-thrift": {
+    "commit_count": 16
+  },
+  "innovators-patent-agreement": {
+    "commit_count": 12
+  },
+  "sslconfig": {
+    "commit_count": 11
+  },
+  "sekhmet": {
+    "commit_count": 10
+  },
+  "code-of-conduct": {
+    "commit_count": 10
+  },
+  "vireo": {
+    "commit_count": 10
+  },
+  "ossdecks": {
+    "commit_count": 10
+  },
+  "torch-decisiontree": {
+    "commit_count": 8
+  },
+  "finatra-misc": {
+    "commit_count": 6
+  },
+  "hdfs-du": {
+    "commit_count": 5
+  },
+  "periscope-live-engagement-unity-sdk": {
+    "commit_count": 4
+  },
+  "second-control-probability-distributions": {
+    "commit_count": 1
+  },
+  "analytics-infra-governance": {
+    "commit_count": 1
+  }
+}

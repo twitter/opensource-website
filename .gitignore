@@ -8,3 +8,4 @@ assets/.DS_Store
 fonts/.DS_Store
 __pycache__
 node_modules
+.idea/

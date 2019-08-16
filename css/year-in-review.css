@@ -487,7 +487,7 @@ span.metric-name {
 }
 
 /* Tweet - when content overflows section */
-@media (max-height: 730px) and (min-width: 1080px) {
+@media (max-height: 721px) and (min-width: 1080px) {
   section#section7 {
     height: auto;
     padding: calc(var(--feather-grid-mega) * 1.5) 0;

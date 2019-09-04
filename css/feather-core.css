@@ -1,0 +1,1730 @@
+/*! @twitter/feather-core v2.8.0 */
+
+/*
+DO NOT EDIT.
+This is auto-generated with `npm run dist`.
+Edit `src/js/core.js` instead.
+*/
+
+:root {
+  /* Colors */
+  --tw-color-blue-primary: #1da1f2;
+  --tw-color-text-primary: #14171a;
+  --tw-color-text-link: #1b95e0;
+  --tw-color-gray-deep: #657786;
+  --tw-color-gray-medium: #aab8c2;
+  --tw-color-gray-light: #ccd6dd;
+  --tw-color-gray-faded: #e6ecf0;
+  --tw-color-gray-faint: #f5f8fa;
+  --tw-color-red-deep: #a01744;
+  --tw-color-red-medium: #e0245e;
+  --tw-color-red-light: #f6809a;
+  --tw-color-red-faded: #ffb8c2;
+  --tw-color-orange-deep: #d82e18;
+  --tw-color-orange-medium: #f45d22;
+  --tw-color-orange-light: #ff8d57;
+  --tw-color-orange-faded: #ffbe78;
+  --tw-color-yellow-deep: #f98e00;
+  --tw-color-yellow-medium: #ffad1f;
+  --tw-color-yellow-light: #ffd03f;
+  --tw-color-yellow-faded: #ffe76e;
+  --tw-color-green-deep: #008951;
+  --tw-color-green-medium: #17bf63;
+  --tw-color-green-light: #68e090;
+  --tw-color-green-faded: #a5f2aa;
+  --tw-color-blue-deep: #005fd1;
+  --tw-color-blue-medium: #1da1f2;
+  --tw-color-blue-light: #71c9f8;
+  --tw-color-blue-faded: #97e3ff;
+  --tw-color-blue-faint: #eaf5fd;
+  --tw-color-purple-deep: #4f0299;
+  --tw-color-purple-medium: #794bc4;
+  --tw-color-purple-light: #a37ced;
+  --tw-color-purple-faded: #c7b4fa;
+  /* Form controls */
+  --feather-form-control-xsmall-font-size: 0.6rem;
+  --feather-form-control-xsmall-height: 1rem;
+  --feather-form-control-xsmall-border-radius: 0.2rem;
+  --feather-form-control-xsmall-padding-x: 0.4rem;
+  --feather-form-control-xsmall-adornment-margin: 0.2rem;
+  --feather-form-control-small-font-size: 0.6rem;
+  --feather-form-control-small-height: 1.2rem;
+  --feather-form-control-small-border-radius: 0.2rem;
+  --feather-form-control-small-padding-x: 0.4rem;
+  --feather-form-control-small-adornment-margin: 0.2rem;
+  --feather-form-control-default-font-size: 0.7rem;
+  --feather-form-control-default-height: 1.6rem;
+  --feather-form-control-default-border-radius: 0.2rem;
+  --feather-form-control-default-padding-x: 0.6rem;
+  --feather-form-control-default-adornment-margin: 0.3rem;
+  --feather-form-control-large-font-size: 0.8rem;
+  --feather-form-control-large-height: 2rem;
+  --feather-form-control-large-border-radius: 0.2rem;
+  --feather-form-control-large-padding-x: 0.8rem;
+  --feather-form-control-large-adornment-margin: 0.4rem;
+  /* Grid */
+  --feather-grid-micro: 0.2rem;
+  --feather-grid-xxsmall: 0.4rem;
+  --feather-grid-xsmall: 0.6rem;
+  --feather-grid-small: 0.8rem;
+  --feather-grid-medium: 1rem;
+  --feather-grid-large: 1.2rem;
+  --feather-grid-mega: 2rem;
+  --feather-grid-baseline-gap: 8px;
+  --feather-grid-column-gap: 20px;
+  --feather-grid-column-width: 78px;
+  --feather-grid-column-count: 12;
+  --feather-grid-page-width: 1156px;
+  /* Typography */
+  --feather-font-family-base: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen-Sans, Ubuntu, Cantarell, 'Helvetica Neue', sans-serif;
+  --feather-font-family-monospace: Menlo, Monaco, Consolas, 'Courier New', monospace;
+  --feather-font-size-jumbo: 1.2rem;
+  --feather-line-height-jumbo: 1.6rem;
+  --feather-font-size-xlarge: 1rem;
+  --feather-line-height-xlarge: 1.4rem;
+  --feather-font-size-large: 0.8rem;
+  --feather-line-height-large: 1.2rem;
+  --feather-font-size-normal: 0.7rem;
+  --feather-line-height-normal: 1rem;
+  --feather-font-size-small: 0.6rem;
+  --feather-line-height-small: 0.8rem;
+  --feather-font-weight-normal: 400;
+  --feather-font-weight-bold: 700;
+  --feather-text-jumbo: {
+    font-size: 1.2rem;
+    line-height: 1.6rem;
+  }
+  --feather-text-xlarge: {
+    font-size: 1rem;
+    line-height: 1.4rem;
+  }
+  --feather-text-large: {
+    font-size: 0.8rem;
+    line-height: 1.2rem;
+  }
+  --feather-text-normal: {
+    font-size: 0.7rem;
+    line-height: 1rem;
+  }
+  --feather-text-small: {
+    font-size: 0.6rem;
+    line-height: 0.8rem;
+  }
+  --feather-text-small-caps: {
+    font-weight: 700;
+    letter-spacing: 0.025rem;
+    text-transform: uppercase;
+    font-size: 0.6rem;
+    line-height: 0.8rem;
+  }
+  --feather-h1: {
+    font-weight: 700;
+    font-size: 1.2rem;
+    line-height: 1.6rem;
+  }
+  --feather-h2: {
+    font-weight: 700;
+    font-size: 1rem;
+    line-height: 1.4rem;
+  }
+  --feather-h3: {
+    font-weight: 700;
+    font-size: 0.8rem;
+    line-height: 1.2rem;
+  }
+}
+/* Typography Classes */
+.feather-text-jumbo {
+  font-size: 1.2rem;
+  line-height: 1.6rem;
+}
+.feather-text-xlarge {
+  font-size: 1rem;
+  line-height: 1.4rem;
+}
+.feather-text-large {
+  font-size: 0.8rem;
+  line-height: 1.2rem;
+}
+.feather-text-normal {
+  font-size: 0.7rem;
+  line-height: 1rem;
+}
+.feather-text-small {
+  font-size: 0.6rem;
+  line-height: 0.8rem;
+}
+.feather-text-small-caps {
+  font-weight: 700;
+  letter-spacing: 0.025rem;
+  text-transform: uppercase;
+  font-size: 0.6rem;
+  line-height: 0.8rem;
+}
+.feather-h1 {
+  font-weight: 700;
+  font-size: 1.2rem;
+  line-height: 1.6rem;
+}
+.feather-h2 {
+  font-weight: 700;
+  font-size: 1rem;
+  line-height: 1.4rem;
+}
+.feather-h3 {
+  font-weight: 700;
+  font-size: 0.8rem;
+  line-height: 1.2rem;
+}
+/*! Copyright 2019 Twitter Inc. All rights reserved. */
+/* @generated */
+/*! normalize.css v7.0.0 | MIT License | github.com/necolas/normalize.css */
+/* Document
+   ========================================================================== */
+/**
+ * 1. Correct the line height in all browsers.
+ * 2. Prevent adjustments of font size after orientation changes in
+ *    IE on Windows Phone and in iOS.
+ */
+html {
+  line-height: 1.15;
+  /* 1 */
+  -ms-text-size-adjust: 100%;
+  /* 2 */
+  -webkit-text-size-adjust: 100%;
+  /* 2 */
+}
+/* Sections
+   ========================================================================== */
+/**
+ * Remove the margin in all browsers (opinionated).
+ */
+body {
+  margin: 0;
+}
+/**
+ * Add the correct display in IE 9-.
+ */
+article,
+aside,
+footer,
+header,
+nav,
+section {
+  display: block;
+}
+/**
+ * Correct the font size and margin on `h1` elements within `section` and
+ * `article` contexts in Chrome, Firefox, and Safari.
+ */
+h1 {
+  font-size: 2em;
+  margin: 0.67em 0;
+}
+/* Grouping content
+   ========================================================================== */
+/**
+ * Add the correct display in IE 9-.
+ * 1. Add the correct display in IE.
+ */
+figcaption,
+figure,
+main {
+  /* 1 */
+  display: block;
+}
+/**
+ * Add the correct margin in IE 8.
+ */
+figure {
+  margin: 1em 40px;
+}
+/**
+ * 1. Add the correct box sizing in Firefox.
+ * 2. Show the overflow in Edge and IE.
+ */
+hr {
+  box-sizing: content-box;
+  /* 1 */
+  height: 0;
+  /* 1 */
+  overflow: visible;
+  /* 2 */
+}
+/**
+ * 1. Correct the inheritance and scaling of font size in all browsers.
+ * 2. Correct the odd `em` font sizing in all browsers.
+ */
+pre {
+  font-family: monospace, monospace;
+  /* 1 */
+  font-size: 1em;
+  /* 2 */
+}
+/* Text-level semantics
+   ========================================================================== */
+/**
+ * 1. Remove the gray background on active links in IE 10.
+ * 2. Remove gaps in links underline in iOS 8+ and Safari 8+.
+ */
+a {
+  background-color: transparent;
+  /* 1 */
+  -webkit-text-decoration-skip: objects;
+  /* 2 */
+}
+/**
+ * 1. Remove the bottom border in Chrome 57- and Firefox 39-.
+ * 2. Add the correct text decoration in Chrome, Edge, IE, Opera, and Safari.
+ */
+abbr[title] {
+  border-bottom: none;
+  /* 1 */
+  text-decoration: underline;
+  /* 2 */
+  -webkit-text-decoration: underline dotted;
+          text-decoration: underline dotted;
+  /* 2 */
+}
+/**
+ * Prevent the duplicate application of `bolder` by the next rule in Safari 6.
+ */
+b,
+strong {
+  font-weight: inherit;
+}
+/**
+ * Add the correct font weight in Chrome, Edge, and Safari.
+ */
+b,
+strong {
+  font-weight: bolder;
+}
+/**
+ * 1. Correct the inheritance and scaling of font size in all browsers.
+ * 2. Correct the odd `em` font sizing in all browsers.
+ */
+code,
+kbd,
+samp {
+  font-family: monospace, monospace;
+  /* 1 */
+  font-size: 1em;
+  /* 2 */
+}
+/**
+ * Add the correct font style in Android 4.3-.
+ */
+dfn {
+  font-style: italic;
+}
+/**
+ * Add the correct background and color in IE 9-.
+ */
+mark {
+  background-color: #ff0;
+  color: #000;
+}
+/**
+ * Add the correct font size in all browsers.
+ */
+small {
+  font-size: 80%;
+}
+/**
+ * Prevent `sub` and `sup` elements from affecting the line height in
+ * all browsers.
+ */
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+sub {
+  bottom: -0.25em;
+}
+sup {
+  top: -0.5em;
+}
+/* Embedded content
+   ========================================================================== */
+/**
+ * Add the correct display in IE 9-.
+ */
+audio,
+video {
+  display: inline-block;
+}
+/**
+ * Add the correct display in iOS 4-7.
+ */
+audio:not([controls]) {
+  display: none;
+  height: 0;
+}
+/**
+ * Remove the border on images inside links in IE 10-.
+ */
+img {
+  border-style: none;
+}
+/**
+ * Hide the overflow in IE.
+ */
+svg:not(:root) {
+  overflow: hidden;
+}
+/* Forms
+   ========================================================================== */
+/**
+ * 1. Change the font styles in all browsers (opinionated).
+ * 2. Remove the margin in Firefox and Safari.
+ */
+button,
+input,
+optgroup,
+select,
+textarea {
+  font-family: sans-serif;
+  /* 1 */
+  font-size: 100%;
+  /* 1 */
+  line-height: 1.15;
+  /* 1 */
+  margin: 0;
+  /* 2 */
+}
+/**
+ * Show the overflow in IE.
+ * 1. Show the overflow in Edge.
+ */
+button,
+input {
+  /* 1 */
+  overflow: visible;
+}
+/**
+ * Remove the inheritance of text transform in Edge, Firefox, and IE.
+ * 1. Remove the inheritance of text transform in Firefox.
+ */
+button,
+select {
+  /* 1 */
+  text-transform: none;
+}
+/**
+ * 1. Prevent a WebKit bug where (2) destroys native `audio` and `video`
+ *    controls in Android 4.
+ * 2. Correct the inability to style clickable types in iOS and Safari.
+ */
+button,
+html [type="button"],
+[type="reset"],
+[type="submit"] {
+  -webkit-appearance: button;
+  /* 2 */
+}
+/**
+ * Remove the inner border and padding in Firefox.
+ */
+button::-moz-focus-inner,
+[type="button"]::-moz-focus-inner,
+[type="reset"]::-moz-focus-inner,
+[type="submit"]::-moz-focus-inner {
+  border-style: none;
+  padding: 0;
+}
+/**
+ * Restore the focus styles unset by the previous rule.
+ */
+button:-moz-focusring,
+[type="button"]:-moz-focusring,
+[type="reset"]:-moz-focusring,
+[type="submit"]:-moz-focusring {
+  outline: 1px dotted ButtonText;
+}
+/**
+ * Correct the padding in Firefox.
+ */
+fieldset {
+  padding: 0.35em 0.75em 0.625em;
+}
+/**
+ * 1. Correct the text wrapping in Edge and IE.
+ * 2. Correct the color inheritance from `fieldset` elements in IE.
+ * 3. Remove the padding so developers are not caught out when they zero out
+ *    `fieldset` elements in all browsers.
+ */
+legend {
+  box-sizing: border-box;
+  /* 1 */
+  color: inherit;
+  /* 2 */
+  display: table;
+  /* 1 */
+  max-width: 100%;
+  /* 1 */
+  padding: 0;
+  /* 3 */
+  white-space: normal;
+  /* 1 */
+}
+/**
+ * 1. Add the correct display in IE 9-.
+ * 2. Add the correct vertical alignment in Chrome, Firefox, and Opera.
+ */
+progress {
+  display: inline-block;
+  /* 1 */
+  vertical-align: baseline;
+  /* 2 */
+}
+/**
+ * Remove the default vertical scrollbar in IE.
+ */
+textarea {
+  overflow: auto;
+}
+/**
+ * 1. Add the correct box sizing in IE 10-.
+ * 2. Remove the padding in IE 10-.
+ */
+[type="checkbox"],
+[type="radio"] {
+  box-sizing: border-box;
+  /* 1 */
+  padding: 0;
+  /* 2 */
+}
+/**
+ * Correct the cursor style of increment and decrement buttons in Chrome.
+ */
+[type="number"]::-webkit-inner-spin-button,
+[type="number"]::-webkit-outer-spin-button {
+  height: auto;
+}
+/**
+ * 1. Correct the odd appearance in Chrome and Safari.
+ * 2. Correct the outline style in Safari.
+ */
+[type="search"] {
+  -webkit-appearance: textfield;
+  /* 1 */
+  outline-offset: -2px;
+  /* 2 */
+}
+/**
+ * Remove the inner padding and cancel buttons in Chrome and Safari on macOS.
+ */
+[type="search"]::-webkit-search-cancel-button,
+[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+/**
+ * 1. Correct the inability to style clickable types in iOS and Safari.
+ * 2. Change font properties to `inherit` in Safari.
+ */
+::-webkit-file-upload-button {
+  -webkit-appearance: button;
+  /* 1 */
+  font: inherit;
+  /* 2 */
+}
+/* Interactive
+   ========================================================================== */
+/*
+ * Add the correct display in IE 9-.
+ * 1. Add the correct display in Edge, IE, and Firefox.
+ */
+details,
+menu {
+  display: block;
+}
+/*
+ * Add the correct display in all browsers.
+ */
+summary {
+  display: list-item;
+}
+/* Scripting
+   ========================================================================== */
+/**
+ * Add the correct display in IE 9-.
+ */
+canvas {
+  display: inline-block;
+}
+/**
+ * Add the correct display in IE.
+ */
+template {
+  display: none;
+}
+/* Hidden
+   ========================================================================== */
+/**
+ * Add the correct display in IE 10-.
+ */
+[hidden] {
+  display: none;
+}
+/**
+ * A thin layer on top of normalize.css that provides a starting point more
+ * suitable for web applications.
+ */
+/**
+ * 1. Prevent padding and border from affecting element width
+ * https://goo.gl/pYtbK7
+ * 2. Change the default font family in all browsers
+ */
+html {
+  box-sizing: border-box;
+  /* 1 */
+  font-family: sans-serif;
+  /* 2 */
+}
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+/**
+ * Removes the default spacing and border for appropriate elements.
+ */
+body,
+blockquote,
+dl,
+dd,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+figure,
+p,
+pre {
+  margin: 0;
+}
+button {
+  background: transparent;
+  border: 0;
+  padding: 0;
+}
+/**
+ * Work around a Firefox/IE bug where the transparent `button` background
+ * results in a loss of the default `button` focus styles.
+ */
+button:focus {
+  outline: 1px dotted;
+  outline: 5px auto -webkit-focus-ring-color;
+}
+fieldset {
+  border: 0;
+  margin: 0;
+  padding: 0;
+}
+iframe {
+  border: 0;
+}
+ol,
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+/**
+ * Suppress the focus outline on elements that cannot be accessed via keyboard.
+ * This prevents an unwanted focus outline from appearing around elements that
+ * might still respond to pointer events.
+ */
+[tabindex="-1"]:focus {
+  outline: none !important;
+}
+/**
+ * Remove the outline on focused links when they are also active or hovered
+ * in all browsers.
+ */
+a:active,
+a:hover {
+  outline-width: 0;
+}
+/**
+ * Change the font styles in all browsers.
+ */
+button,
+input,
+optgroup,
+select,
+textarea {
+  font-family: sans-serif;
+  font-size: 100%;
+  line-height: 1.15;
+}
+/**
+ * Change the border, margin, and padding in all browsers.
+ */
+fieldset {
+  border: 1px solid #c0c0c0;
+  margin: 0 2px;
+  padding: 0.35em 0.625em 0.75em;
+}
+* {
+  box-sizing: border-box;
+}
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+button:not([disabled]) {
+  cursor: pointer;
+}
+fieldset {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+.u-featherHiddenVisually {
+  border: 0 !important;
+  clip: rect(1px, 1px, 1px, 1px) !important;
+  height: 1px !important;
+  overflow: hidden !important;
+  padding: 0 !important;
+  position: absolute !important;
+  width: 1px !important;
+}
+/*
+DO NOT EDIT.
+This is auto-generated with `npm run dist`.
+Edit `src/js/core.js` instead.
+*/
+.feather-text-jumbo {
+  font-size: 1.2rem;
+  line-height: 1.6rem;
+}
+.feather-text-xlarge {
+  font-size: 1rem;
+  line-height: 1.4rem;
+}
+.feather-text-large {
+  font-size: 0.8rem;
+  line-height: 1.2rem;
+}
+.feather-text-normal {
+  font-size: 0.7rem;
+  line-height: 1rem;
+}
+.feather-text-small {
+  font-size: 0.6rem;
+  line-height: 0.8rem;
+}
+.feather-text-small-caps {
+  font-weight: 700;
+  letter-spacing: 0.025rem;
+  text-transform: uppercase;
+  font-size: 0.6rem;
+  line-height: 0.8rem;
+}
+/*
+This is based on Edge icon CSS from macaw-swift.
+
+To add an icon:
+
+1.  File a Feather ticket: http://go/feather/ticket
+2.  Someone on the core Feather team should request an icon:
+    http://go/iconrequest
+3.  When the icon has been added to the icon font, use the update steps below.
+
+To update icons:
+
+1.  Get the icon font zip from http://go/iconfont . Copy the font files into
+    `src/fonts/`.
+2.  Copy icon CSS from here:
+    https://cgit.twitter.biz/source/tree/macaw-swift/web-resources/css/swift_css/components/icon.css
+3.  Run:
+
+        cd feather-core/
+        npm run normalize-icon-less
+
+    This rewrites `edge-icons.less` to replace some macaw-swift-specific
+    variables with Feather variables. Review the changes, and manually preserve
+    any unwanted changes.
+4.  If any icons were deleted, revert the deletion and add a comment noting the
+    deprecation. Be sure to preserve colors for deprecated icons too.
+5.  In `feather-docs`, add new icons to `/icons` and `/docs/history`.
+6.  Check that these icon sizes match `src/lib/less/icons-px.less`.
+*/
+/*
+This is a set of Feather-specific overrides for `edge-icons.less`, giving us
+access to the very latest icons that aren't yet deployed to Twitter.com[1].
+
+To use the icons that aren't yet exposed on Twitter.com, Feather exposes them
+here, but with `feather` in the class name to denote the difference. When they
+land in Twitter.com and get official class names, these will be deprecated.
+
+[1]: https://cgit.twitter.biz/source/log/macaw-swift/web-resources/css/swift_css/components/icon.css
+*/
+/* Feather-specific icons */
+.Icon--arrowRight:before {
+  content: '\F114';
+}
+.Icon--featherAd:before {
+  content: '\F407';
+}
+.Icon--featherAdCampaign:before {
+  content: '\F405';
+}
+.Icon--featherAdGroup:before {
+  content: '\F406';
+}
+.Icon--featherAudience:before {
+  content: '\F408';
+}
+.Icon--featherCard:before {
+  content: '\F204';
+}
+.Icon--featherCircleCheck:before {
+  content: '\F043';
+}
+.Icon--featherCircleCheckFilled:before {
+  content: '\F220';
+}
+.Icon--featherCircleFail:before {
+  content: '\F044';
+}
+.Icon--featherCircleFailFilled:before {
+  content: "\F222";
+}
+.Icon--featherClone:before {
+  content: '\F214';
+}
+.Icon--featherCode:before {
+  content: '\F410';
+}
+.Icon--featherCurrency:before {
+  content: '\F403';
+}
+.Icon--featherDownload:before {
+  content: '\F186';
+}
+.Icon--featherDraggableGrip:before {
+  content: '\F206';
+}
+.Icon--featherFail:before {
+  content: '\F182';
+}
+.Icon--featherFilm:before {
+  content: '\F211';
+}
+.Icon--featherHistory:before {
+  content: '\F404';
+}
+.Icon--featherMegaphoneStroke:before {
+  content: '\F070';
+}
+.Icon--featherPhotoAlbum:before {
+  content: '\F109';
+}
+.Icon--featherPreview:before {
+  content: '\F216';
+}
+.Icon--featherReload:before {
+  content: '\F303';
+}
+.Icon--featherSignal:before {
+  content: '\F212';
+}
+.Icon--featherWarning:before {
+  content: '\F221';
+}
+.Icon--featherWebsiteVisit:before {
+  content: '\F213';
+}
+/* DEPRECATED Feather-specific icons
+
+Please add deprecated icons in the following format:
+
+.Icon--featherFoo:before { ... } // Deprecated in Feather 1.1; use `Icon--bar` instead.
+*/
+/* Colors */
+.Icon--featherWarning {
+  color: #ffad1f;
+}
+.Icon--featherFail {
+  color: #e0245e;
+}
+/**
+ * Tooltip cue is a fixed size and uses pure css (no Edge font-based icon). The
+ * selector includes `.Icon` to increase specificity.
+ */
+.Icon.Icon--featherTooltipCue {
+  position: relative;
+  width: 0.7rem;
+  height: 0.7rem;
+  background-color: #71c9f8;
+  border-radius: 50%;
+  vertical-align: middle;
+}
+h1 .Icon.Icon--featherTooltipCue,
+h2 .Icon.Icon--featherTooltipCue {
+  vertical-align: super;
+}
+.Icon.Icon--featherTooltipCue::before {
+  position: absolute;
+  top: 0.35rem;
+  width: 100%;
+  color: white;
+  content: '?';
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen-Sans, Ubuntu, Cantarell, 'Helvetica Neue', sans-serif;
+  font-size: 0.5rem;
+  font-weight: 700;
+  line-height: 0;
+}
+.Icon.Icon--featherTooltipCue:hover,
+.Icon.Icon--featherTooltipCue:focus {
+  background-color: #1da1f2;
+  cursor: pointer;
+}
+/*
+Rosetta-style loading indicators. Sources:
+- https://cgit.twitter.biz/twitter/tree/macaw-swift/web-resources/img/t1
+- https://svn.twitter.biz/design/revenue/components/loading/
+*/
+.Icon.Icon--loadingSmall {
+  width: 0.7rem;
+  height: 0.7rem;
+  background: url(../images/spinner-rosetta-blue-14x14@2x.gif) 0 0 no-repeat;
+  background-size: 0.7rem 0.7rem;
+}
+.Icon.Icon--loadingMedium {
+  width: 1.3rem;
+  height: 1.3rem;
+  background: url(../images/spinner-rosetta-blue-26x26@2x.gif) 0 0 no-repeat;
+  background-size: 1.3rem 1.3rem;
+}
+.Icon.Icon--loadingLarge {
+  width: 1.6rem;
+  height: 1.6rem;
+  background: url(../images/spinner-rosetta-blue-32x32@2x.gif) 0 0 no-repeat;
+  background-size: 1.6rem 1.6rem;
+}
+/**
+ * Font-based icons
+ * For latest version of all images and their characters, see:
+ * https://confluence.twitter.biz/display/UI/Desktop+Web+-+Icon+Font
+ */
+@font-face {
+  font-family: "edgeicons";
+  src: url("../fonts/edge-icons-Regular.eot");
+  /* IE9 Compat Modes */
+  src: url("../fonts/edge-icons-Regular.eot?#iefix") format("embedded-opentype"), /* IE8 */ url("../fonts/edge-icons-Regular.woff") format("woff"), /* Modern Browsers */ url("../fonts/edge-icons-Regular.ttf") format("truetype");
+  /* Safari, Android, iOS */
+}
+/*
+ * Reset styles for any element that may be used to display an icon (including
+ * overrides of legacy CSS).
+ */
+.Icon {
+  background: transparent;
+  display: inline-block;
+  font-style: normal;
+  vertical-align: baseline;
+  position: relative;
+}
+/**
+ * A pseudo-element is used to display the icon's glyph. If an icon needs to be
+ * "stacked" to achieve multiple colors you may use both :before and :after
+ * psuedo-elements.
+ */
+.Icon:after,
+.Icon:before {
+  display: block;
+  font-family: "edgeicons";
+  font-weight: normal;
+  font-style: normal;
+  text-align: center;
+  /* Make sure we get the best rendering for the icons on webkit */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+/**
+ * Icon sizes & spacing
+ */
+.Icon--smallest {
+  font-size: 0.6rem;
+  line-height: 0.6rem;
+}
+.Icon--small {
+  font-size: 0.8rem;
+  line-height: 0.75rem;
+}
+.Icon--medium {
+  font-size: 0.9rem;
+  line-height: 0.9rem;
+}
+.Icon--large {
+  font-size: 1.05rem;
+  line-height: 1;
+}
+.Icon--extraLarge {
+  font-size: 1.6rem;
+  line-height: 1;
+}
+/**
+ * Individual icons
+ * Keep this list alphabetized
+ */
+.Icon--add:before {
+  content: "\F183";
+}
+.Icon--addLight:before {
+  content: "\F198";
+}
+/* Lighter version of the add icon */
+.Icon--analytics:before {
+  content: "\F200";
+}
+.Icon--arrowDown:before {
+  content: "\F174";
+}
+.Icon--arrowLeft:before {
+  content: "\F114";
+  /*@replace: initial*/
+  transform: scaleX(-1);
+}
+.Icon--arrowUp:before {
+  content: "\F188";
+}
+.Icon--atSymbol:before {
+  content: "\F050";
+}
+.Icon--attachFile:before {
+  content: "\F088";
+}
+.Icon--audioBadge:before {
+  content: "\F311";
+}
+.Icon--audioMuted:before {
+  content: "\F306";
+}
+.Icon--audioUnmuted:before {
+  content: "\F305";
+}
+.Icon--balloon:before {
+  content: "\F092";
+}
+.Icon--bird:before {
+  content: "\F179";
+}
+/* TODO: combine with Icon--logo */
+.Icon--bookmark:before {
+  content: "\F155";
+}
+.Icon--calendar:before {
+  content: "\F203";
+}
+.Icon--camera:before {
+  content: "\F027";
+}
+.Icon--cameraPlus:before {
+  content: "\F111";
+}
+.Icon--cameraVideo:before {
+  content: "\F030";
+}
+.Icon--cards:before {
+  content: "\F402";
+}
+.Icon--caretDown:before {
+  content: "\F181";
+}
+.Icon--caretDownLight:before {
+  content: "\F196";
+}
+.Icon--caretLeft:before {
+  /*@replace: "\f173"*/
+  content: "\F172";
+}
+.Icon--caretLeftLight:before {
+  content: "\F193";
+}
+.Icon--caretRight:before {
+  /*@replace: "\f172"*/
+  content: "\F173";
+}
+.Icon--caretRightLight:before {
+  content: "\F194";
+}
+.Icon--caretUp:before {
+  content: "\F181";
+  transform: scaleY(-1);
+}
+.Icon--caretUpLight:before {
+  content: "\F195";
+}
+.Icon--cart:before {
+  content: "\F095";
+}
+.Icon--check:before {
+  content: "\F170";
+}
+.Icon--checkLight:before {
+  content: "\F197";
+}
+/* Lighter version of the check icon */
+.Icon--chevronDown:before {
+  content: "\F202";
+}
+.Icon--chevronUp:before {
+  content: "\F201";
+}
+.Icon--circleActiveAnalytics:before {
+  content: "\F516";
+}
+.Icon--circleActiveBird:before {
+  content: "\F520";
+}
+.Icon--circleActiveDm:before {
+  content: "\F517";
+}
+.Icon--circleActiveHeart:before {
+  content: "\F514";
+}
+.Icon--circleActiveList:before {
+  content: "\F518";
+}
+.Icon--circleActiveMe:before {
+  content: "\F519";
+}
+.Icon--circleActiveMore:before {
+  content: "\F515";
+}
+.Icon--circleActiveRetweet:before {
+  content: "\F512";
+}
+.Icon--circleActiveStar:before {
+  content: "\F513";
+}
+.Icon--circleError:before {
+  content: "\F042";
+}
+.Icon--circleMe:before {
+  content: "\F519";
+}
+.Icon--circleReply:before {
+  content: "\F511";
+}
+.Icon--clock:before {
+  content: "\F177";
+}
+.Icon--close:before {
+  content: "\F045";
+}
+.Icon--cog:before {
+  content: "\F059";
+}
+.Icon--cogWithCaret:before {
+  content: "\F124";
+}
+.Icon--collapseTweets:before {
+  content: "\F051";
+}
+.Icon--collections:before {
+  content: "\F008";
+}
+.Icon--conversation:before {
+  content: "\F157";
+}
+.Icon--cover:before {
+  content: "\F163";
+}
+.Icon--createMoment:before {
+  content: "\F162";
+}
+.Icon--creditCard:before {
+  content: "\F401";
+}
+.Icon--crescent:before {
+  content: "\F066";
+}
+.Icon--crescentFilled:before {
+  content: "\F567";
+}
+.Icon--crop:before {
+  content: "\F190";
+}
+.Icon--cvv:before {
+  content: "\F402";
+}
+.Icon--delete:before {
+  content: "\F154";
+}
+.Icon--deskBell:before {
+  content: "\F090";
+}
+.Icon--desktop:before {
+  content: "\F087";
+}
+.Icon--device:before {
+  content: "\F085";
+}
+.Icon--discover:before {
+  content: "\F052";
+}
+/* TODO: rename to Icon--hashtag */
+.Icon--dm:before {
+  content: "\F054";
+}
+.Icon--dmCompose:before {
+  content: "\F035";
+}
+.Icon--dots:before {
+  content: "\F150";
+}
+.Icon--dotsVertical:before {
+  content: "\F149";
+}
+.Icon--download:before {
+  content: "\F186";
+}
+.Icon--editPencil:before {
+  content: "\F112";
+}
+.Icon--envelope:before {
+  content: "\F187";
+}
+.Icon--fail:before {
+  content: "\F000";
+}
+/* TODO: DESIGN-993 – create a dedicated fail icon */
+.Icon--filter:before {
+  content: "\F138";
+}
+.Icon--follow:before {
+  content: "\F175";
+}
+.Icon--follower:before {
+  content: "\F002";
+}
+/* TODO: rename to Icon--followBadge */
+.Icon--following:before {
+  content: "\F176";
+}
+.Icon--geo:before {
+  content: "\F031";
+}
+.Icon--geoBadge:before {
+  content: "\F010";
+}
+.Icon--gif:before {
+  content: "\F028";
+}
+.Icon--gifBadge:before {
+  content: "\F309";
+}
+.Icon--grid:before {
+  content: "\F046";
+}
+.Icon--handset:before {
+  content: "\F091";
+}
+.Icon--heart:before {
+  content: "\F148";
+}
+.Icon--heartBadge:before {
+  content: "\F015";
+}
+.Icon--home:before {
+  content: "\F053";
+}
+.Icon--homeFilled:before {
+  content: "\F553";
+}
+.Icon--horizontalBarChart:before {
+  content: "\F048";
+}
+.Icon--info:before {
+  content: "\F209";
+}
+.Icon--imageCrop:before {
+  content: "\F158";
+}
+.Icon--lifeline:before {
+  content: "\F026";
+}
+.Icon--lifelineBadge:before {
+  content: "\F000";
+}
+.Icon--lightning:before {
+  content: "\F160";
+}
+.Icon--lightningBadge:before {
+  content: "\F161";
+}
+.Icon--lightningFilled:before {
+  content: "\F017";
+}
+.Icon--list:before {
+  content: "\F094";
+}
+.Icon--listBadge:before {
+  content: "\F012";
+}
+.Icon--logo:before {
+  content: "\F179";
+}
+/* TODO: combine with Icon--bird */
+.Icon--magicrecs:before {
+  content: "\F014";
+}
+.Icon--markAllRead:before {
+  content: "\F036";
+}
+.Icon--me:before {
+  content: "\F056";
+}
+/* TODO: rename to Icon--profile */
+.Icon--meFilled:before {
+  content: "\F002";
+}
+/* TODO: rename to Icon--profileFilled */
+.Icon--media:before {
+  content: "\F109";
+}
+.Icon--mediaCollapse:before {
+  content: "\F335";
+}
+.Icon--mediaDocking:before {
+  content: "\F336";
+}
+.Icon--mediaExpand:before {
+  content: "\F334";
+}
+.Icon--menu:before {
+  content: "\F093";
+}
+.Icon--message:before {
+  content: "\F054";
+}
+/* TODO: combine with Icon--dm */
+.Icon--moderator:before {
+  content: "\F089";
+}
+.Icon--muted:before {
+  content: "\F101";
+}
+.Icon--newsBadge:before {
+  content: "\F009";
+}
+.Icon--notifications:before {
+  content: "\F055";
+}
+.Icon--notificationsFilled:before {
+  content: "\F019";
+}
+.Icon--notificationsDisabled:before {
+  content: "\F037";
+}
+.Icon--pause:before {
+  content: "\F302";
+}
+.Icon--periscopeBadge:before {
+  content: "\F320";
+}
+.Icon--person:before {
+  content: "\F056";
+}
+.Icon--people:before {
+  content: "\F178";
+}
+.Icon--photo:before {
+  content: "\F158";
+}
+.Icon--pinned:before {
+  content: "\F003";
+}
+.Icon--play:before {
+  content: "\F301";
+}
+.Icon--political:before {
+  content: "\F004";
+}
+.Icon--poll:before {
+  content: "\F034";
+}
+.Icon--pollBar:before {
+  content: "\F199";
+}
+.Icon--promoted:before {
+  content: "\F004";
+}
+.Icon--promotedStroked:before {
+  content: "\F504";
+}
+.Icon--promotedTrend:before {
+  content: "\F011";
+}
+.Icon--promoteMode:before {
+  content: "\F409";
+}
+.Icon--protected:before {
+  content: "\F096";
+}
+.Icon--refresh:before {
+  content: "\F189";
+}
+.Icon--reply:before {
+  content: "\F151";
+}
+.Icon--report:before {
+  content: "\E609";
+}
+.Icon--retweet:before {
+  content: "\F152";
+}
+.Icon--retweeted:before {
+  content: "\F006";
+}
+/* TODO: rename to Icon--retweetBadge */
+.Icon--search:before {
+  content: "\F058";
+}
+.Icon--share:before {
+  content: "\F185";
+}
+.Icon--smileRating1:before {
+  content: "\F430";
+}
+.Icon--smileRating1Fill:before {
+  content: "\F431";
+}
+.Icon--smileRating2:before {
+  content: "\F432";
+}
+.Icon--smileRating2Fill:before {
+  content: "\F433";
+}
+.Icon--smileRating3:before {
+  content: "\F434";
+}
+.Icon--smileRating3Fill:before {
+  content: "\F435";
+}
+.Icon--smileRating4:before {
+  content: "\F436";
+}
+.Icon--smileRating4Fill:before {
+  content: "\F437";
+}
+.Icon--smileRating5:before {
+  content: "\F438";
+}
+.Icon--smileRating5Fill:before {
+  content: "\F439";
+}
+.Icon--smiley:before {
+  content: "\F033";
+}
+.Icon--snapReelBadge:before {
+  content: "\F312";
+}
+.Icon--soundOff:before {
+  content: "\F306";
+}
+.Icon--soundOn:before {
+  content: "\F305";
+}
+.Icon--stickerBadge:before {
+  content: "\F047";
+}
+.Icon--summary:before {
+  content: "\F156";
+}
+.Icon--tablet:before {
+  content: "\F086";
+}
+.Icon--top:before {
+  content: "\F007";
+}
+.Icon--translator:before {
+  content: "\F089";
+}
+.Icon--truck:before {
+  content: "\F400";
+}
+.Icon--tweet:before {
+  content: "\F029";
+}
+/* TODO: rename to Icon--compose */
+.Icon--unfollow:before {
+  content: "\F097";
+}
+.Icon--unmuted:before {
+  content: "\F101";
+}
+.Icon--url:before {
+  content: "\F098";
+}
+.Icon--vineBadge:before {
+  content: "\F310";
+}
+.Icon--visibilityFollowers:before {
+  content: "\F103";
+}
+.Icon--visibilityFollowing:before {
+  content: "\F105";
+}
+.Icon--visibilityMutual:before {
+  content: "\F104";
+}
+.Icon--visibilityOnlyMe:before {
+  content: "\F106";
+}
+.Icon--visibilityPublic:before {
+  content: "\F102";
+}
+.Icon--warning:before {
+  content: "\F182";
+}
+.Icon--laptop:before {
+  content: "\F084";
+}
+/**
+ * Stacked verified icon
+ *
+ * The :before pseudo-element is the white fill that ensures the tick mark
+ * remains white. The :after pseudo-element is the actual verified icon. The
+ * reason why the white fill is positioned absolutely is because we want the
+ * verified icon to be what gives the element width and height, not the fill.
+ */
+.Icon--verified:before {
+  content: "\F032";
+  font-size: 0.7em;
+  left: 26%;
+  line-height: 1;
+  position: absolute;
+  top: 20%;
+}
+.Icon--verified:after {
+  content: "\F099";
+  line-height: 1;
+  position: relative;
+}
+/**
+ * Stacked play icon
+ *
+ * The :before pseudo-element is the background fill color of the button. The
+ * :after pseudo-element is the play icon with ring. The reason why the
+ * background fill is positioned absolutely is because we want the play icon to
+ * be what gives the element width and height.
+ */
+.Icon--playButton:before {
+  content: "\F032";
+  line-height: 1;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  opacity: 0.8;
+}
+.Icon--playButton:after {
+  content: "\F040";
+  line-height: 1;
+  position: relative;
+}
+/**
+ * 1. The protected glyph is a bit small relative to the verified glyph. Resize
+ *    so that they take up the same visual space when placed next to each other.
+ */
+.Icon--protected {
+  font-size: 1.1em;
+  /* 1 */
+  padding-left: 1px;
+  /* 1 */
+}
+/* Colors */
+.Icon--fail {
+  color: #e0245e;
+}
+.Icon--follower,
+.Icon--magicrecs,
+.Icon--colorLightning,
+.Icon--colorFollower {
+  color: #1da1f2;
+}
+.Icon--lifelineBadge {
+  color: #d82e18;
+}
+.Icon--listBadge:before {
+  color: #657786;
+}
+.Icon--muted {
+  color: #e0245e;
+}
+.Icon--political {
+  color: #794bc4;
+}
+.Icon--promoted {
+  color: #657786;
+}
+.Icon--promotedTrend {
+  color: #ffad1f;
+}
+.Icon--protected {
+  color: #14171a;
+}
+.Icon--retweeted,
+.Icon--colorRetweeted {
+  color: #17bf63;
+}
+.Icon--smiley {
+  color: #aab8c2;
+}
+.Icon--top {
+  color: #1da1f2;
+}
+.Icon--translator {
+  color: #1da1f2;
+}
+.Icon--moderator {
+  color: #ffad1f;
+}
+.Icon--unmuted {
+  color: #ccd6dd;
+}
+.Icon--verified {
+  color: #1da1f2;
+}
+.Icon--verified:before {
+  color: white;
+}
+.Icon--circleActiveMe,
+.Icon--circleActiveBird {
+  color: #1da1f2;
+}
+.Icon--colorHeart,
+.Icon--circleActiveHeart,
+.Icon--heartBadge {
+  color: #e0245e;
+}
+.Icon--circleActiveRetweet {
+  color: #17bf63;
+}
+.Icon--circleActiveList {
+  color: #657786;
+}
+.Icon--playButton {
+  color: #1da1f2;
+}
+.Icon--playButton:after {
+  color: white;
+}
+.Icon--white {
+  color: white;
+}
+/**
+ * Inverted Color Scheme
+ *
+ * Icon colors for placement on dark backgrounds
+ */
+.Icon--inverted.Icon--verified {
+  color: white;
+}
+.Icon--inverted.Icon--verified:before {
+  color: #14171a;
+}
+/* Body text */
+html {
+  font-size: 20px;
+}
+body {
+  color: #14171a;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen-Sans, Ubuntu, Cantarell, 'Helvetica Neue', sans-serif;
+  font-size: 0.7rem;
+  line-height: 1rem;
+}
+a {
+  color: #1b95e0;
+  text-decoration: none;
+}
+a:hover,
+a:focus {
+  color: #1b95e0;
+  text-decoration: underline;
+}
+p {
+  margin: 0 0 0.4rem;
+}
+ul,
+ol {
+  margin: 0.4rem 0;
+  padding-left: 1.2rem;
+  list-style: disc;
+}
+ol {
+  list-style: decimal;
+}
+code,
+kbd,
+pre,
+samp {
+  font-family: Menlo, Monaco, Consolas, 'Courier New', monospace;
+}
+button {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen-Sans, Ubuntu, Cantarell, 'Helvetica Neue', sans-serif;
+  line-height: inherit;
+}
+/* Headings */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen-Sans, Ubuntu, Cantarell, 'Helvetica Neue', sans-serif;
+}
+h1 {
+  font-weight: 700;
+  font-size: 1.2rem;
+  line-height: 1.6rem;
+}
+h2 {
+  font-weight: 700;
+  font-size: 1rem;
+  line-height: 1.4rem;
+}
+h3 {
+  font-weight: 700;
+  font-size: 0.8rem;
+  line-height: 1.2rem;
+}
+h4,
+h5,
+h6 {
+  font-size: 0.7rem;
+  line-height: 1rem;
+  font-weight: 700;
+}
+/* Icons */
+.Icon::after,
+.Icon::before {
+  -moz-osx-font-smoothing: auto;
+  -webkit-font-smoothing: subpixel-antialiased;
+}
+.Icon.Icon--medium::after,
+.Icon.Icon--large::after,
+.Icon.Icon--extraLarge::after,
+.Icon.Icon--medium::before,
+.Icon.Icon--large::before,
+.Icon.Icon--extraLarge::before {
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+}
+.Icon.Icon--verified::after,
+.Icon.Icon--verified::before {
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+}

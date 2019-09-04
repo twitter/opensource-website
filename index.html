@@ -14,24 +14,18 @@
         <div id="logo"><h1>Twitter Open Source</h1></div>
         <h1>Twitter is built on open source software.</h1>
 
-      <div class="grid grid-3">
-        <div id="statistics" class="grid-1 alpha header">
-          <h1>Statistics</h1>
-          <p>
-            <a href="https://github.com/twitter/repositories"><span id="num-repos"><img src="assets/spinner.gif" /></span> public repos</a>
-            <br>
-            <a href="https://github.com/twitter?tab=members"><span id="num-members"><img src="assets/spinner.gif" /></span> members</a>
-          </p>
-          <p class="email"><a href="mailto:opensource@twitter.com">opensource@twitter.com</a></p>
+        <div class="Grid-cell u-size1of3 emoji-card">
+            <img src="assets/sun.png" alt="Sun emoji" class="emoji-img center-margin large-margin">
+            <h1 class="center-text medium-margin">Light</h1>
+            <p class="center-text">Light means visibility. <br/>For the projects, contributions, opportunities, challenges, and people that impact the community.</p>
         </div>
 
-        <div id="recently-updated" class="grid-2 omega header">
-          <h1>Recently updated <a href="https://github.com/twitter/repositories">View All on GitHub</a></h1>
-          <ol id="recently-updated-repos"></ol>
+        <div class="Grid-cell u-size1of3 emoji-card">
+            <img src="assets/pride.png" alt="Pride heart emoji" class="emoji-img center-margin large-margin">
+            <h1 class="center-text medium-margin">Love</h1>
+            <p class="center-text">Love means culture and support.<br/>Why we care. How we work. Actions that grow the community.</p>
         </div>
-      </div>
 
-      <ol id="repos"></ol>
     </div>
      <script>
     var _gaq = _gaq || [];
@@ -145,144 +139,41 @@
                 var weightForPush = 1;
                 var weightForWatchers = 1.314 * Math.pow(10, 7);
 
-                repo.hotness = weightForPush * Math.pow(Math.E, -1 * weekHalfLife * pushDelta);
-                repo.hotness += weightForWatchers * repo.watchers / createdDelta;
-              });
+<!-- Explore Projects -->
 
-              // Sort by highest # of watchers.
-              repos.sort(function (a, b) {
-                if (a.hotness < b.hotness) return 1;
-                if (b.hotness < a.hotness) return -1;
-                return 0;
-              });
+<div class="section explore-projects">
+    <div class="Grid container">
+        <div class="Grid-cell left-text u-size5of12 u-after1of12">
+            <h1 class="small-title mega-margin">Explore Projects</h1>
+            <p class="mega-margin">Twitter has been built on open source since the beginning. Openness is part of our DNA. The projects you see here were born at Twitter, and patches are always welcome!</p>
+            <button onclick="location.href='projects.html'" type="button" class="Button Button--large">View All Projects</button>
+        </div>
+        <div class="Grid-cell explore-projects-blank"></div>
+    </div>
+</div>
 
-              $.each(repos, function (i, repo) {
-                addRepo(repo);
-              });
+<!-- Follow Us @TwitterOSS -->
 
-              // Sort by most-recently pushed to.
-              repos.sort(function (a, b) {
-                if (a.pushed_at < b.pushed_at) return 1;
-                if (b.pushed_at < a.pushed_at) return -1;
-                return 0;
-              });
+<div class="grey section">
+    <div class="Grid container">
+        <!-- The heading "Follow Us @TwitterOSS" is inserted with Javascript -->
+        <div id="open-source-timeline" class="Grid-cell timeline-cell u-size1of2">
+            <a class="twitter-timeline" data-height="700px" href="https://twitter.com/TwitterOSS?ref_src=twsrc%5Etfw">Tweets by TwitterOSS</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+        </div>
+    </div>
+</div>
 
-              $.each(repos.slice(0, 3), function (i, repo) {
-                addRecentlyUpdatedRepo(repo);
-              });
-            });
-          }
-        });
-      }
-      addRepos();
+<!-- Join the Flock -->
 
-      //get total number of Twitter members
-      function getNumMembers(page, numMembers) {
-        var page = page || 1;
-        var numMembers = numMembers || 0;
-        var membersUri = "https://api.github.com/orgs/twitter/members?callback=?"
-          + "&per_page=100"
-          + "&page="+page;
-
-        $.getJSON(membersUri, function (result) {
-          if (result.data && result.data.length > 0) {
-            numMembers += result.data.length;
-            getNumMembers(page+1, numMembers);
-          } else {
-            $(function () {
-              $("#num-members").text(numMembers);
-            });
-          }
-        });
-      }
-      getNumMembers();
-
-      function randomItem(array) {
-        return array[Math.floor(Math.random() * array.length)];
-      }
-
-      var $flyzone;
-
-      function flyzone() {
-        if (!$flyzone) {
-          $flyzone = $("<div>").attr("id", "flyzone").prependTo(document.body);
-        }
-
-        return $flyzone;
-      }
-
-      var sizes = ["smaller", "small", "medium", "large", "fat"];
-
-      var sizeDimensions = {
-        "smaller": 50,
-        "small": 80,
-        "medium": 130,
-        "large": 200,
-        "fat": 300
-      };
-
-      function randomOpacity(threshold) {
-        var opacity = Math.random();
-
-        while (opacity < threshold) {
-          opacity = Math.random();
-        }
-
-        return opacity;
-      }
-
-      function makeLarry(sizeName, speed) {
-        var size = sizeDimensions[sizeName];
-        var top = Math.floor((flyzone().height() - size) * Math.random());
-
-        var $img = $("<img>")
-          .addClass("larry size-" + sizeName)
-          .attr("src", "assets/larry.png")
-          .attr("width", size)
-          .attr("height", size)
-          .css({
-            position: "absolute",
-            opacity: randomOpacity(0.4),
-            top: top,
-            left: -size
-          });
-
-        $img.prependTo(flyzone());
-
-        var left = flyzone().width() + size;
-
-        $img.animate({left: left}, speed, function () {
-          $img.remove();
-          makeRandomLarry();
-        });
-
-        return $img;
-      }
-
-      function makeRandomLarry() {
-        var size = randomItem(sizes);
-        var speed = Math.floor(Math.random() * 20000) + 15000;
-        return makeLarry(size, speed);
-      }
-
-      $(function () {
-        $("#logo").click(function () {
-          makeRandomLarry();
-        });
-      });
-
-      var match = (/\blarry(=(\d+))?\b/i).exec(window.location.search);
-
-      if (match) {
-        var n = parseInt(match[2]) || 20;
-
-        $(function () {
-          for (var i = 0; i < n; ++i) {
-            setTimeout(makeRandomLarry, Math.random() * n * 500);
-          }
-        });
-      }
-    })(jQuery);
-    </script>
-  </body>
-</html>
+<div class="section">
+    <div class="Grid container">
+        <div id="career-text" class="Grid-cell left-text u-size5of12 u-after1of12 same-mega-margin">
+            <h1 class="small-title mega-margin career-title">Join the Flock</h1>
+            <p class="mega-margin">We are always on the lookout for innovative and creative individuals who are passionate about building a platform where all voices can be heard.</p>
+            <button onclick="window.open('https://careers.twitter.com')" type="button" class="Button Button--large">View All Careers</button>
+        </div>
+        <div class="Grid-cell timeline-cell u-size1of2">
+            <a class="twitter-timeline" data-height="700px" data-partner="tweetdeck" href="https://twitter.com/TwitterOSS/timelines/1028044487681925121?ref_src=twsrc%5Etfw">#TwitterOSSJobs - Curated tweets by TwitterOSS</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+        </div>
+    </div>
+</div>

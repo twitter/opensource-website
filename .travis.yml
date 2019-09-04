@@ -1,0 +1,33 @@
+branches:
+  only:
+    - master
+
+language: python
+
+python:
+  - "3.6"
+
+git:
+  depth: false
+
+install:
+  - pip install -r requirements.txt
+
+script:
+  - if [ $TRAVIS_EVENT_TYPE == "cron" ];
+    then python scripts/fetch_projects.py;
+         python scripts/fetch_augur_metrics.py;
+         python scripts/fetch_year_in_review.py;
+    else echo "Not triggered by cron";
+    fi;
+
+deploy:
+  provider: pages
+  skip-cleanup: true
+  github-token: $OAUTH_TOKEN
+  keep-history: true
+  verbose: true
+  target-branch: master
+  on:
+    branch: master
+    condition: $TRAVIS_EVENT_TYPE = "cron"

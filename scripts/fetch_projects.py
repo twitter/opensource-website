@@ -43,8 +43,8 @@ with open("repos-to-include.txt", "r") as f:
         else:
             all_repos.append((owner, repo))
 
-print("LOG: Orgs to track", all_orgs)
-print("Repos to track", all_repos)
+print("LOG: Orgs to track:", all_orgs)
+print("Repos to track:", all_repos)
 
 for org in all_orgs:
     # Combine the paginated responses from the API
@@ -52,7 +52,7 @@ for org in all_orgs:
     end_cursor = None
     num_of_pages = 0
     while True:
-        print("Num of pages", num_of_pages)
+        print("Num of pages:", num_of_pages)
         variables = json.dumps({"owner": org, "endCursor": end_cursor})
 
         print("Sending request for", org)
@@ -67,9 +67,9 @@ for org in all_orgs:
 
         pageInfo = response["data"]["organization"]["repositories"]["pageInfo"]
         has_next_page = pageInfo["hasNextPage"]
-        print("has_next_page", has_next_page)
+        print("has_next_page:", has_next_page)
         end_cursor = pageInfo["endCursor"]
-        print("end_cursor", end_cursor)
+        print("end_cursor:", end_cursor)
         num_of_pages += 1
         if not has_next_page:
             break
@@ -108,7 +108,7 @@ for edge in all_repo_edges:
         public_repos.append({'node': edge['repository']})
 
 SVG_NO_OF_REPOS = len(public_repos)
-print("LOG: Number of public repos", len(public_repos))
+print("LOG: Number of public repos:", len(public_repos))
 
 DATA_JSON = {}
 for repo in public_repos:
@@ -153,8 +153,8 @@ print("LOG: Saved to", file_path)
 
 
 # Update the SVG
-print("No of members", SVG_NO_OF_MEMBERS)
-print("No of repos", SVG_NO_OF_REPOS)
+print("No of members:", SVG_NO_OF_MEMBERS)
+print("No of repos:", SVG_NO_OF_REPOS)
 network_svg = open("assets/network_raw.svg").read()
 network_svg = network_svg.replace("{$members}", str(SVG_NO_OF_MEMBERS))
 network_svg = network_svg.replace("{$Repos}", str(SVG_NO_OF_REPOS))

@@ -12,19 +12,19 @@
 
 - name: Open Source Initiative
   description: 'Global non-profit: promotes and protects open source software, development & communities through education and advocacy. Yes, we coined the term!'
-  logo: https://pbs.twimg.com/profile_images/885315135409082368/CP7GGSWx_400x400.jpg
+  logo: https://upload.wikimedia.org/wikipedia/commons/thumb/4/4e/Open_Source_Initiative_keyhole.svg/600px-Open_Source_Initiative_keyhole.svg.png
   website: https://www.opensource.org
   twitter: OpenSourceOrg
 
 - name: Python Software Foundation
   description: 'The Python Software Foundation is an organization devoted to advancing open source technology related to the Python programming language.'
-  logo: https://pbs.twimg.com/profile_images/439154912719413248/pUBY5pVj_200x200.png
+  logo: https://upload.wikimedia.org/wikipedia/commons/c/c3/Python-logo-notext.svg
   website: https://www.python.org/psf-landing/
   twitter: ThePSF
 
 - name: Scala Center
   description: 'The Scala Center brings together a coalition of individuals and organizations working together to contribute to Scala. All of our members, individual and corporate, are actively involved in the Scala project.'
-  logo: https://pbs.twimg.com/profile_images/3310435403/dc47c969494d3279783610ba3298f58b_400x400.png
+  logo: https://scala.epfl.ch/resources/img/scala-center-swirl@2x.png
   website: https://scala.epfl.ch/
   twitter: scala_lang
 

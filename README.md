@@ -1,4 +1,4 @@
-# Frontend of the infrastructure for experimental support
+# Infrastructure for experimental support
 
 The aim of this repository is to show the work done in Mediafutures to support the partners and participants in the open calls and innovation experiments with knowledge and experience in both technical and socio-technical aspects in order to enable them to deliver high-quality processes and projects throughout the programme. Thus our work will
 1. develop a data innovation toolkit providing guidance and resources to develop innovation activities; and

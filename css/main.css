@@ -58,7 +58,7 @@ body {
 /* Navigation wrapper */
 
 nav {
-  background-color: var(--tw-color-blue-primary);
+  background-color: #600060;
   padding: var(--feather-grid-xsmall);
   width: 100%;
   position: fixed;
@@ -136,7 +136,7 @@ a.nav-link:hover, a.nav-link:active {
 /* Headers */
 
 .header, .footer {
-  background-color: var(--tw-color-blue-primary);
+  background-color: #600060;
   color: white;
 }
 
@@ -183,48 +183,48 @@ a.foot-link:hover, a.foot-link:active {
 /* Margins */
 
 .center-margin {
-	margin-left: auto;
-	margin-right: auto;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .same-mega-margin {
-	margin-bottom: var(--feather-grid-mega);
+    margin-bottom: var(--feather-grid-mega);
 }
 
 .mega-margin {
-	margin-bottom: var(--feather-grid-mega);
+    margin-bottom: var(--feather-grid-mega);
 }
 
 .large-margin {
-	margin-bottom: var(--feather-grid-large);
+    margin-bottom: var(--feather-grid-large);
 }
 
 .medium-margin {
-	margin-bottom: var(--feather-grid-medium);
+    margin-bottom: var(--feather-grid-medium);
 }
 
 .small-margin {
-	margin-bottom: var(--feather-grid-small);
+    margin-bottom: var(--feather-grid-small);
 }
 
 .xsmall-margin {
-	margin-bottom: var(--feather-grid-xsmall);
+    margin-bottom: var(--feather-grid-xsmall);
 }
 
 /* Text */
 
 body {
-	font-size: var(--feather-font-size-large);
-	line-height: var(--feather-line-height-large);
+    font-size: var(--feather-font-size-large);
+    line-height: var(--feather-line-height-large);
 }
 
 .center-text {
-	text-align: center;
+    text-align: center;
 }
 
 .small-title {
-	font-size: var(--font-size-xjumbo);
-	line-height: var(--line-height-xjumbo);
+    font-size: var(--font-size-xjumbo);
+    line-height: var(--line-height-xjumbo);
 }
 
 br {

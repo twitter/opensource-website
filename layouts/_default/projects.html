@@ -1,0 +1,47 @@
+{{ define "main" }}
+<!-- Header -->
+
+<div class="header simple-header">
+    <div class="Grid container">
+        <div id="header-text" class="Grid-cell">
+            <h1 class="large-title">Projects</h1>
+            <div class="search-bar">
+                <input class="search-box" type="text" name="search" placeholder="Search Projects" autocomplete="off" />
+                <span class="Icon Icon--search"></span>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<!-- Container for no results text -->
+<div class="Grid container no-results-container"></div>
+
+<!-- Projects grid (See renderProjects() in projects.js) -->
+<div class="Grid container all-projects"></div>
+<!-- End of all-projects -->
+
+<script type="text/javascript">
+    let allProjects = [];
+    {{ range $.Site.Data.projects }}
+        allProjects.push({
+            name: "{{ .name }}",
+            nameWithOwner: "{{ .nameWithOwner }}",
+            description: "{{ .descriptionHTML }}",
+            {{- with .primaryLanguage }}
+            color: "{{ .color }}",
+            primaryLanguage: "{{ .name }}",
+            {{ end -}}
+            homepageURL: "{{ .homepageUrl }}",
+            pushedAt : "{{ .pushedAt }}",
+            languages : "{{ .languages }}",
+            forks : "{{ .forkCount }}",
+            topics : "{{ .repositoryTopics }}",
+            stars : "{{ .stargazers }}",
+            watchers : "{{ .watchers }}",
+        })
+    {{ end }}
+</script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/3.0.4/fuse.min.js" async></script>
+{{ end }}

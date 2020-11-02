@@ -1,22 +1,21 @@
-<!-- index.html -->
 <!DOCTYPE html>
 <html>
   <head>
     <meta charset="utf-8" />
-    <meta name="title" content="{{ page.title }}">
-    <meta name="description" content="{{ page.description }}">
-    <meta name="keywords" content="{{ page.keywords }}">
+    <meta name="title" content="{{ .Title }}">
+    <meta name="description" content="{{ .Description }}">
+    <meta name="keywords" content="{{ .Params.keywords }}">
 
-    <meta name="og:title" content="{{ page.title }}">
-    <meta name="og:url" content="{{ page.url }}">
-    <!-- <meta name="og:image" content="{{ page.logo }}"> -->
-    <meta name="og:description" content="{{ page.description }}">
+    <meta name="og:title" content="{{ .Title }}">
+    <meta name="og:url" content="{{ .Permalink }}">
+    <!-- <meta name="og:image" content="{{ .Params.logo }}"> -->
+    <meta name="og:description" content="{{ .Description }}">
 
     <meta name="twitter:card" content="summary" />
-    <meta name="twitter:site" content="{{ page.url }}" />
-    <meta name="twitter:title" content="{{ page.title }}" />
-    <meta name="twitter:description" content="{{ page.description }}" />
-    <!-- <meta name="twitter:image" content="{{ page.logo }}" /> -->
+    <meta name="twitter:site" content="{{ .Permalink }}" />
+    <meta name="twitter:title" content="{{ .Title }}" />
+    <meta name="twitter:description" content="{{ .Description }}" />
+    <!-- <meta name="twitter:image" content="{{ .Params.logo }}" /> -->
 
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -25,19 +24,19 @@
     <meta http-equiv='Cache-Control' content='no-cache'>
     <meta http-equiv='imagetoolbar' content='no'>
 
-    <title>{{ page.title }}</title>
-    <link rel="shortcut icon" type="image/png" href="{{ site.baseurl }}/assets/favicon.ico"/>
+    <title>{{ .Title }}</title>
+    <link rel="shortcut icon" type="image/png" href="{{ "assets/favicon.ico" | relURL }}"/>
 
     <!-- Feather CSS -->
-    <link rel="stylesheet" href="{{ site.baseurl }}/css/feather-core.css"/>
-    <link rel="stylesheet" href="{{ site.baseurl }}/css/feather-component-grid.css"/>
-    <link rel="stylesheet" href="{{ site.baseurl }}/css/feather-component-button.css"/>
+    <link rel="stylesheet" href="{{ "css/feather-core.css" | relURL }}"/>
+    <link rel="stylesheet" href="{{ "css/feather-component-grid.css" | relURL }}"/>
+    <link rel="stylesheet" href="{{ "css/feather-component-button.css" | relURL }}"/>
 
     <!-- Main CSS -->
-    <link rel="stylesheet" href="{{ site.baseurl }}/css/main.css"/>
+    <link rel="stylesheet" href="{{ "css/main.css" | relURL }}"/>
 
     <!-- Custom CSS -->
-    <link rel="stylesheet" href="{{ site.baseurl }}/css/{{ page.custom_css }}"/>
+    <link rel="stylesheet" href="{{ printf "css/%s" .Params.custom_css | relURL }}"/>
 
   </head>
 
@@ -49,7 +48,7 @@
             <span class="Icon Icon--logo Icon--large"></span>
 
             <!-- Link in web -->
-            <a class="home-link" href="{{ site.baseurl }}/">Twitter Open Source</a>
+            <a class="home-link" href="{{ .Site.BaseURL }}">Twitter Open Source</a>
 
             <!-- Text in mobile -->
             <p class="home-text">Twitter Open Source</p>
@@ -58,19 +57,19 @@
         <ul class="nav-menu">
             <!-- This link only exists in mobile -->
             <li id="extra-mobile-link" class="nav-list-item">
-                <a class="nav-link" href="{{ site.baseurl }}/">Twitter Open Source</a>
+                <a class="nav-link" href="{{ .Site.BaseURL }}">Twitter Open Source</a>
             </li>
 
             <li class="nav-list-item">
-                <a class="nav-link" href="{{ site.baseurl }}/projects">Projects</a>
+                <a class="nav-link" href="{{ "projects" | relURL }}">Projects</a>
             </li>
 
             <li class="nav-list-item">
-                <a class="nav-link" href="{{ site.baseurl }}/memberships">#Squad</a>
+                <a class="nav-link" href="{{ "memberships" | relURL }}">#Squad</a>
             </li>
 
             <li class="nav-list-item">
-                <a class="nav-link" href="{{ site.baseurl }}/year-in-review">Year in Review</a>
+              <a class="nav-link" href="{{ "year-in-review" | relURL }}">Year in Review</a>
             </li>
 
             <li class="nav-list-item">
@@ -85,14 +84,14 @@
 
     <!-- Site wrapper -->
     <div class="site">
-        {{ content }}
+        {{ block "main" . }}{{ end }}
     </div>
 
     <!-- Footer -->
     <div class="footer">
         <div class="Grid container">
             <div class="Grid-cell footer-cell u-size1of4 footer-margin">
-                <button onclick="location.href='{{ site.baseurl }}/projects'" type="button" class="Button Button--large">Explore Projects</button>
+                <button onclick="location.href='{{ "projects" | relURL }}'" type="button" class="Button Button--large">Explore Projects</button>
             </div>
             <div class="Grid-cell footer-cell u-size1of4 footer-margin">
                 <h3 class="xsmall-margin">
@@ -140,9 +139,7 @@
     </div> <!-- End of Footer -->
   </body>
 
+  <script src="{{ "js/main.js" | relURL }}"></script>
+  <script src="{{ printf "js/%s" .Params.custom_js | relURL }}"></script>
+  {{ partial "ga.html" . }}
 </html>
-
-<script src="{{ site.baseurl }}/js/main.js"></script>
-<script src="{{ site.baseurl }}/js/{{ page.custom_js }}"></script>
-
-{% include ga.html %}

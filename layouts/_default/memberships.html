@@ -1,0 +1,43 @@
+{{ define "main" }}
+
+<div class="header squad-header">
+	<div class="Grid container">
+		<div id="header-text" class="Grid-cell">
+			<h1 class="large-title">#Squad</h1>
+			<h1 class="squad-subheading">Our upstream and downstream partners who make open source happen</h1>
+		</div>
+	</div>
+</div>
+
+<div class="section">
+	<div class="Grid membership-container container">
+		{{ range $.Site.Data.memberships }}
+		<div class="Grid-cell sizeFull membership">
+			<!-- Logo -->
+			<img src="{{ .logo }}" class="membership-logo">
+
+			<div class="name-handle">
+				<!-- Name -->
+				<h2>{{ .name }}</h2>
+
+				<!-- Twitter handle -->
+				{{ with .twitter }}
+				<a href="https://twitter.com/{{ . }}" target="_blank" class="membership-handle">
+					@{{ . }}
+				</a>
+				{{ end }}
+			</div>
+
+			<!-- Description -->
+			<p>{{ .description }}</p>
+
+		    <!-- Visit website -->
+		    {{ with .website }}
+		    <button onclick="window.open('{{ . }}')" type="button" class="Button">Visit</button>
+		    {{ end }}
+
+		</div>
+		{{ end }}
+	</div>
+</div>
+{{ end }}

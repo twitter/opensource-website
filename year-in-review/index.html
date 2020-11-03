@@ -1,0 +1,921 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="title" content="Year in Review | Twitter Open Source">
+    <meta name="description" content="Twitter Open Source Website">
+    <meta name="keywords" content="[twitter, open, source, open source, finatra, finagle, scala]">
+
+    <meta name="og:title" content="Year in Review | Twitter Open Source">
+    <meta name="og:url" content="https://twitter.github.io/year-in-review/">
+    
+    <meta name="og:description" content="Twitter Open Source Website">
+
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:site" content="https://twitter.github.io/year-in-review/" />
+    <meta name="twitter:title" content="Year in Review | Twitter Open Source" />
+    <meta name="twitter:description" content="Twitter Open Source Website" />
+    
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <meta http-equiv='Expires' content='0'>
+    <meta http-equiv='Pragma' content='no-cache'>
+    <meta http-equiv='Cache-Control' content='no-cache'>
+    <meta http-equiv='imagetoolbar' content='no'>
+
+    <title>Year in Review | Twitter Open Source</title>
+    <link rel="shortcut icon" type="image/png" href="/assets/favicon.ico"/>
+
+    
+    <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css'>
+    <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css'>
+
+    
+    <link rel="stylesheet" href="/css/feather-core.css"/>
+    <link rel="stylesheet" href="/css/feather-component-grid.css"/>
+    <link rel="stylesheet" href="/css/feather-component-button.css"/>
+
+    
+    <link rel="stylesheet" href="/css/main.css"/>
+    
+    <link rel="stylesheet" href="/css/year-in-review.css"/>
+    
+  </head>
+
+<body data-spy="scroll" data-target="#YIR-navbar">
+  
+    <nav>
+    <div class="nav-title">
+      <span class="Icon Icon--logo Icon--large"></span>
+      
+      <a class="YIRnav-home-link" href="/">Twitter Open Source</a>
+      <a class="YIRnav-YIR-link" href="/year-in-review">Year in Review</a>
+      
+      
+      <p class="home-text">Twitter Open Source</p>
+      <span id="caret" class="Icon Icon--caretDown"></span>
+    </div>
+
+    
+    <ul class="nav-menu">
+      <li class="nav-list-item">
+        <a class="nav-link" href="#section1">Welcome</a>
+      </li>
+
+      <li class="nav-list-item">
+        <a class="nav-link" href="#section2">Top 10 repos</a>
+      </li>
+
+      <li class="nav-list-item">
+        <a class="nav-link" href="#section3">Locations</a>
+      </li>
+
+      <li class="nav-list-item">
+        <a class="nav-link" href="#section4">Heat metrics</a>
+      </li>
+
+      <li class="nav-list-item">
+        <a class="nav-link" href="#section5">Light metrics</a>
+      </li>
+
+      <li class="nav-list-item">
+        <a class="nav-link" href="#section6">Love metrics</a>
+      </li>
+
+      <li class="nav-list-item list-end">
+        <a class="nav-link" href="#section7">@TwitterOSS</a>
+      </li>
+    </ul>
+  </nav>
+    
+  
+    <div class="YIR-wrapper">
+    <div class="YIR-container">
+      <div class="YIR-nav-wrapper" id="YIR-navbar">
+        <ul class="nav">
+          <li class="active">
+            <a href="#section1">
+              <span class="YIR-nav-title">Welcome</span>
+              <p class="YIR-nav-body">This webpage updates weekly and provides a sliding window into the previous 12 months. Patches are always welcome.</p>
+            </a>
+          </li>
+
+          <li>
+            <a href="#section2">
+              <span class="YIR-nav-title">Top 10 repos</span>
+              <p class="YIR-nav-body">These are our top 10 GitHub repositories, ranked by total commit counts.</p>
+            </a>
+          </li>
+
+          <li>
+            <a href="#section3">
+              <span class="YIR-nav-title">Locations</span>
+              <p class="YIR-nav-body">Our contributors are located all around the world. This list is based on self reported locations from our contributors’ GitHub profiles.</p>
+            </a>
+          </li>
+      
+          <li>
+            <a href="#section4">
+              <span class="YIR-nav-title">Heat metrics</span>
+              <p class="YIR-nav-body">Heat means work. We measure heat by the number and frequency of commits and committers across our repos.</p>
+            </a>
+          </li>
+          
+          <li>
+            <a href="#section5">
+              <span class="YIR-nav-title">Light metrics</span>
+              <p class="YIR-nav-body">Light means visibility. We measure visibility by number of watchers subscribed to updates, and number of people who have favorited our projects.</p>
+            </a>
+          </li>
+          
+          <li>
+            <a href="#section6">
+              <span class="YIR-nav-title">Love metrics</span>
+              <p class="YIR-nav-body">Love means culture and support. We measure love by the number of users who have copied our projects and contributed changes back upstream.</p>
+            </a>
+          </li>
+
+          <li>
+            <a href="#section7">
+              <span class="YIR-nav-title">@TwitterOSS</span>
+              <p class="YIR-nav-body">Making it simple to trust, ship, and grow Open Source at Twitter and beyond. Follow @TwitterOSS to stay updated!</p>
+            </a>
+          </li>
+        </ul>
+      </div> 
+    </div> 
+
+    <section class="section1" id="section1">
+      <div class="YIR-container-section">
+        <div class="YIR-header">
+          
+          <h1 class="YIR-subheading" id="date-range"></h1>
+          <h1 id="YIR-heading-text">Year in Review</h1>
+          <h1 class="YIR-subheading" id="type">An overview of the past 12 months of activity on Twitter’s Open Source projects.</h1>
+        </div>
+
+        
+        <div class="mobile-heading" id="YIR-header-mobile-heading">
+          <p>This webpage updates weekly and provides a sliding window into the previous 12 months. Patches are always welcome.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section2" id="section2">
+      <div class="YIR-container-section">
+        
+        <div class="mobile-heading">
+          <h1>Top 10 repos</h1>
+          <p>These are our top 10 GitHub repositories, ranked by total commit counts.</p>
+        </div>
+
+        <table id="top-10-repos">
+          <tr>
+            <th></th>
+            <th></th>
+            <th>Total commits</th>
+          </tr>
+          
+        </table>
+      </div>
+    </section>
+
+    <section class="section3" id="section3">
+      <div class="YIR-container-section">
+        
+        <div class="mobile-heading">
+          <h1 class="large-title">Locations</h1>
+          <p>Our contributors are located all around the world. This list is based on self reported locations from our contributors’ GitHub profiles.</p>
+        </div>
+
+        <div class="locations">
+          <div class="location-item">
+            <img src="/assets/year-in-review/flags/united_states_1f1fa-1f1f8.svg" alt="United States flag"> 
+            United States 
+          </div>
+          <div class="location-item">
+            <img src="/assets/year-in-review/flags/greece_1f1ec-1f1f7.svg" alt="Greece flag"> 
+            Greece 
+          </div>
+          <div class="location-item">
+            <img src="/assets/year-in-review/flags/germany_1f1e9-1f1ea.svg" alt="Germany flag"> 
+            Germany 
+          </div>
+          <div class="location-item">
+            <img src="/assets/year-in-review/flags/united_kingdom_1f1ec-1f1e7.svg" alt="United Kingdom flag"> 
+            United Kingdom 
+          </div>
+           <div class="location-item">
+            <img src="/assets/year-in-review/flags/singapore_1f1f8-1f1ec.svg" alt="Singapore flag"> 
+            Singapore 
+          </div>
+          <div class="location-item">
+            <img src="/assets/year-in-review/flags/china_1f1e8-1f1f3.svg" alt="China flag"> 
+            China 
+          </div>
+          <div class="location-item">
+            <img src="/assets/year-in-review/flags/belgium_1f1e7-1f1ea.svg" alt="Belgium flag"> 
+            Belgium 
+          </div>
+          <div class="location-item">
+            <img src="/assets/year-in-review/flags/austria_1f1e6-1f1f9.svg" alt="Austria flag"> 
+            Austria 
+          </div>
+          <div class="location-item">
+            <img src="/assets/year-in-review/flags/peru_1f1f5-1f1ea.svg" alt="Peru flag"> 
+            Peru 
+            </div>
+          <div class="location-item">
+            <img src="/assets/year-in-review/flags/australia_1f1e6-1f1fa.svg" alt="Australia flag"> 
+            Australia 
+          </div>
+          <p class="locations-disclaimer">*Top 10 locations ranked by commits, accurate as of Aug 2019</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section4" id="section4">
+      <div class="YIR-container-section">
+        
+        <div class="mobile-heading">
+          <h1>Heat metrics</h1>
+          <p>Heat means work. We measure heat by the number and frequency of commits and committers across our repos.</p>
+        </div>
+
+        <div class="metric-wrapper">
+          <svg class="fire-svg" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+            width='220px' height ='220px' viewBox="-1 -1 38 38" xml:space="preserve" >
+            <path class="fire-st0" d="M35,19c0-2.1-0.4-4-1-5.9c-0.5,5.4-3.3,8.2-6.3,6.9c-2.8-1.2-0.9-5.9-0.8-8.2c0.2-3.8,0-8.2-6.9-11.8
+              c2.9,5.5,0.3,8.9-2.3,9.1c-3,0.2-5.7-2.5-4.7-7c-3.2,2.4-3.3,6.4-2.3,9c1,2.7,0,5-2.6,5.2c-2.8,0.3-4.4-3-3-8.3c-2.5,3-4,6.8-4,11
+              c0,9.4,7.6,17,17,17S35,28.4,35,19z"/>
+            <path class="fire-st1" d="M28.4,24c0.1,3.1-2.6,4.3-4,3.7c-2.1-0.8-1.5-2.3-2.1-5.3s-2.6-5.1-5.7-6c2.2,6.3-1.2,8.7-3.1,9.1
+              c-1.9,0.4-3.8,0-4-4C7.4,23.7,6,26.7,6,30c0,0.4,0,0.7,0.1,1.1c3.1,3,7.3,4.9,11.9,4.9s8.9-1.9,11.9-4.9c0-0.4,0.1-0.7,0.1-1.1
+              C30,27.8,29.4,25.8,28.4,24z"/>
+          </svg>
+          
+          
+          <div class="metric">
+            <span class="metric-count" id="commit-count"></span>
+            <span class="metric-name">commits</span>
+            <div class="description">
+              Commits reflect the amount of activity across our repositories.
+            </div>
+          </div>
+
+          <div class="metric">
+            <span class="metric-count" id="committer-count"></span>
+            <span class="metric-name">committers</span>
+            <div class="description">
+              Committers are the unique individuals that drive change in our repositories. 
+            </div>
+          </div>  
+        </div>
+      </div>
+    </section>
+
+    <section class="section5" id="section5">
+      <div class="YIR-container-section">
+        
+        <div class="mobile-heading">
+          <h1>Light metrics</h1>
+          <p>Light means visibility. We measure visibility by number of watchers subscribed to updates, and number of people who have favorited our projects.</p>
+        </div>
+
+        <div class="metric-wrapper">
+          <svg class="sun-svg" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+            width='220px' height ='220px' viewBox="-1 -1 38 38" xml:space="preserve">
+            <path class="sun-st0" d="M8,18a10,10 0 1,0 20,0a10,10 0 1,0 -20,0"/>
+            <path class="sun-st1" d="M16,2c0,0,0-2,2-2s2,2,2,2v2c0,0,0,2-2,2s-2-2-2-2V2z"/>
+            <path class="sun-st2" d="M34,16c0,0,2,0,2,2s-2,2-2,2h-2c0,0-2,0-2-2s2-2,2-2H34z"/>
+            <path class="sun-st3" d="M4,16c0,0,2,0,2,2s-2,2-2,2H2c0,0-2,0-2-2s2-2,2-2H4z"/>
+            <path class="sun-st4" d="M9.1,7.3c0,0,1.4,1.4,0,2.8s-2.8,0-2.8,0L4.9,8.7c0,0-1.4-1.4,0-2.8c1.4-1.4,2.8,0,2.8,0L9.1,7.3z"/>
+            <path class="sun-st5" d="M30.1,28.3c0,0,1.4,1.4,0,2.8c-1.4,1.4-2.8,0-2.8,0l-1.4-1.4c0,0-1.4-1.4,0-2.8s2.8,0,2.8,0S30.1,28.3,30.1,28.3z"/>
+            <path class="sun-st6" d="M29.7,10.1c0,0-1.4,1.4-2.8,0s0-2.8,0-2.8l1.4-1.4c0,0,1.4-1.4,2.8,0s0,2.8,0,2.8S29.7,10.1,29.7,10.1z"/>
+            <path class="sun-st7" d="M8.7,31.1c0,0-1.4,1.4-2.8,0s0-2.8,0-2.8l1.4-1.4c0,0,1.4-1.4,2.8,0s0,2.8,0,2.8S8.7,31.1,8.7,31.1z"/>
+            <path class="sun-st8" d="M16,32c0,0,0-2,2-2s2,2,2,2v2c0,0,0,2-2,2s-2-2-2-2V32z"/>
+          </svg>  
+          
+          
+          <div class="metric">
+            <span class="metric-count" id="watcher-count"></span>
+            <span class="metric-name">watchers</span>
+            <div class="description">
+              Watchers receive notifications for some or all changes to our codebases.
+            </div>
+          </div>
+
+          <div class="metric">
+            <span class="metric-count" id="star-count"></span>
+            <span class="metric-name">stars</span>
+            <div class="description">
+              Stars show preference for a repository, like a bookmark.
+            </div>
+          </div>  
+        </div>
+      </div>
+    </section>
+
+    <section class="section6" id="section6">
+      <div class="YIR-container-section">
+        
+        <div class="mobile-heading">
+          <h1>Love metrics</h1>
+          <p>Love means culture and support. We measure love by the number of users who have copied our projects and contributed changes back upstream.</p>
+        </div>
+
+        <div class="metric-wrapper">
+          <svg class="heart-svg" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+            width='220px' height ='220px' viewBox="-1 -1 38 38" xml:space="preserve">
+            <path class="heart-st0" d="M31.6,22.9c2-2.8,3.5-5.8,4-8.8c0.2-0.7,0.3-1.5,0.3-2.2C35.9,6.4,31.5,2,26,2c-3.3,0-6.2,1.6-8,4.1
+              C16.2,3.6,13.3,2,10,2c-5.4,0-9.9,4.4-9.9,9.9c0,0.8,0.1,1.5,0.3,2.2C1.8,22.6,11.2,31.6,18,34c2.6-0.9,5.6-2.8,8.4-5.3"/>
+            <path class="heart-st1" d="M34.3,23.9l-3.8-1.4l-1.4-3.8C29,18.3,28.6,18,28.2,18s-0.8,0.3-0.9,0.7l-1.4,3.8L22,23.9
+              c-0.4,0.1-0.7,0.5-0.7,0.9c0,0.4,0.3,0.8,0.7,0.9l3.8,1.4l1.4,3.8c0.1,0.4,0.5,0.7,0.9,0.7s0.8-0.3,0.9-0.7l1.4-3.8l3.8-1.4
+              c0.4-0.1,0.7-0.5,0.7-0.9S34.7,24,34.3,23.9z M11.3,7.9L9,7L8.1,4.7C8,4.3,7.6,4,7.2,4C6.8,4,6.4,4.3,6.2,4.7L5.4,7L3,7.9
+              C2.6,8,2.3,8.4,2.3,8.8c0,0.4,0.3,0.8,0.7,0.9l2.4,0.9L6.2,13c0.1,0.4,0.5,0.7,0.9,0.7S8,13.4,8.1,13L9,10.6l2.4-0.9
+              C11.7,9.6,12,9.2,12,8.8C12,8.4,11.7,8,11.3,7.9z"/>
+            </svg>
+          
+          
+          <div class="metric">
+            <span class="metric-count" id="fork-count"></span>
+            <span class="metric-name">forks</span>
+            <div class="description">
+              Forks represent full-copies of our repositories, usually for development and testing.
+            </div>
+          </div>
+
+          <div class="metric">
+            <span class="metric-count" id="merged-count"></span>
+            <span class="metric-name">PRs merged</span>
+            <div class="description">
+              Our users contribute pull requests (PRs) directly back to us.
+            </div>
+          </div>  
+        </div>
+      </div>
+    </section>
+
+    <section class="section7" id="section7">
+      <div class="YIR-container-section">
+        
+        <div class="mobile-heading">
+          <h1>@TwitterOSS</h1>
+          <p>Making it simple to trust, ship, and grow Open Source at Twitter and beyond. Follow @TwitterOSS to stay updated!</p>
+        </div>
+
+        <div class="YIR-tweet-wrapper">
+          <blockquote class="twitter-tweet"><p lang="en" dir="ltr">Heat 🔥 Light ☀️ Love 💖<br><br>A year of growth in Twitter Open Source.<br>Built by <a href="https://twitter.com/terns?ref_src=twsrc%5Etfw">@terns</a>, powered by <a href="https://twitter.com/CHAOSSproj?ref_src=twsrc%5Etfw">@CHAOSSproj</a> <a href="https://t.co/sHuWhxAahJ">https://t.co/sHuWhxAahJ</a></p>&mdash; Twitter Open Source (@TwitterOSS) <a href="https://twitter.com/TwitterOSS/status/1162412830189948929?ref_src=twsrc%5Etfw">August 16, 2019</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+        </div>
+      </div>
+    </section>
+    
+  </div> 
+
+</body>
+
+
+<script type="text/javascript">
+  
+  let allRepos = [];
+  
+    allRepos.push({
+      name: "AnomalyDetection",
+      commitCount: "92",
+    })
+  
+    allRepos.push({
+      name: "BreakoutDetection",
+      commitCount: "19",
+    })
+  
+    allRepos.push({
+      name: "CocoaSPDY",
+      commitCount: "243",
+    })
+  
+    allRepos.push({
+      name: "GraphJet",
+      commitCount: "73",
+    })
+  
+    allRepos.push({
+      name: "SentenTree",
+      commitCount: "107",
+    })
+  
+    allRepos.push({
+      name: "Serial",
+      commitCount: "31",
+    })
+  
+    allRepos.push({
+      name: "activerecord-reputation-system",
+      commitCount: "141",
+    })
+  
+    allRepos.push({
+      name: "algebird",
+      commitCount: "1505",
+    })
+  
+    allRepos.push({
+      name: "ambrose",
+      commitCount: "642",
+    })
+  
+    allRepos.push({
+      name: "analytics-infra-governance",
+      commitCount: "1",
+    })
+  
+    allRepos.push({
+      name: "bijection",
+      commitCount: "691",
+    })
+  
+    allRepos.push({
+      name: "bookkeeper",
+      commitCount: "831",
+    })
+  
+    allRepos.push({
+      name: "cassovary",
+      commitCount: "501",
+    })
+  
+    allRepos.push({
+      name: "ccommon",
+      commitCount: "627",
+    })
+  
+    allRepos.push({
+      name: "cdk",
+      commitCount: "105",
+    })
+  
+    allRepos.push({
+      name: "chill",
+      commitCount: "591",
+    })
+  
+    allRepos.push({
+      name: "cli-guide.js",
+      commitCount: "332",
+    })
+  
+    allRepos.push({
+      name: "cloudhopper-commons",
+      commitCount: "424",
+    })
+  
+    allRepos.push({
+      name: "code-of-conduct",
+      commitCount: "10",
+    })
+  
+    allRepos.push({
+      name: "commons",
+      commitCount: "1656",
+    })
+  
+    allRepos.push({
+      name: "css-flip",
+      commitCount: "30",
+    })
+  
+    allRepos.push({
+      name: "d3kit",
+      commitCount: "291",
+    })
+  
+    allRepos.push({
+      name: "diffy",
+      commitCount: "78",
+    })
+  
+    allRepos.push({
+      name: "distributedlog",
+      commitCount: "91",
+    })
+  
+    allRepos.push({
+      name: "dodo",
+      commitCount: "57",
+    })
+  
+    allRepos.push({
+      name: "effectivescala",
+      commitCount: "364",
+    })
+  
+    allRepos.push({
+      name: "elephant-bird",
+      commitCount: "1374",
+    })
+  
+    allRepos.push({
+      name: "fatcache",
+      commitCount: "41",
+    })
+  
+    allRepos.push({
+      name: "finagle",
+      commitCount: "6781",
+    })
+  
+    allRepos.push({
+      name: "finatra",
+      commitCount: "1950",
+    })
+  
+    allRepos.push({
+      name: "finatra-activator-http-seed",
+      commitCount: "50",
+    })
+  
+    allRepos.push({
+      name: "finatra-activator-thrift-seed",
+      commitCount: "31",
+    })
+  
+    allRepos.push({
+      name: "finatra-misc",
+      commitCount: "6",
+    })
+  
+    allRepos.push({
+      name: "go-bindata",
+      commitCount: "195",
+    })
+  
+    allRepos.push({
+      name: "hadoop-lzo",
+      commitCount: "273",
+    })
+  
+    allRepos.push({
+      name: "hbc",
+      commitCount: "241",
+    })
+  
+    allRepos.push({
+      name: "hdfs-du",
+      commitCount: "5",
+    })
+  
+    allRepos.push({
+      name: "hogan.js",
+      commitCount: "244",
+    })
+  
+    allRepos.push({
+      name: "hpack",
+      commitCount: "63",
+    })
+  
+    allRepos.push({
+      name: "hraven",
+      commitCount: "338",
+    })
+  
+    allRepos.push({
+      name: "innovators-patent-agreement",
+      commitCount: "12",
+    })
+  
+    allRepos.push({
+      name: "interactive",
+      commitCount: "349",
+    })
+  
+    allRepos.push({
+      name: "ios-twitter-image-pipeline",
+      commitCount: "34",
+    })
+  
+    allRepos.push({
+      name: "ios-twitter-logging-service",
+      commitCount: "41",
+    })
+  
+    allRepos.push({
+      name: "joauth",
+      commitCount: "301",
+    })
+  
+    allRepos.push({
+      name: "labella.js",
+      commitCount: "173",
+    })
+  
+    allRepos.push({
+      name: "libwatchman",
+      commitCount: "95",
+    })
+  
+    allRepos.push({
+      name: "meta-learning-lstm",
+      commitCount: "50",
+    })
+  
+    allRepos.push({
+      name: "netty-http2",
+      commitCount: "59",
+    })
+  
+    allRepos.push({
+      name: "nodes",
+      commitCount: "31",
+    })
+  
+    allRepos.push({
+      name: "ossdecks",
+      commitCount: "10",
+    })
+  
+    allRepos.push({
+      name: "ostrich",
+      commitCount: "1270",
+    })
+  
+    allRepos.push({
+      name: "pelikan",
+      commitCount: "582",
+    })
+  
+    allRepos.push({
+      name: "periscope-live-engagement-unity-sdk",
+      commitCount: "4",
+    })
+  
+    allRepos.push({
+      name: "pycascading",
+      commitCount: "95",
+    })
+  
+    allRepos.push({
+      name: "recess",
+      commitCount: "88",
+    })
+  
+    allRepos.push({
+      name: "rpc-perf",
+      commitCount: "272",
+    })
+  
+    allRepos.push({
+      name: "rsc",
+      commitCount: "788",
+    })
+  
+    allRepos.push({
+      name: "scala-json",
+      commitCount: "103",
+    })
+  
+    allRepos.push({
+      name: "scala_school",
+      commitCount: "482",
+    })
+  
+    allRepos.push({
+      name: "scala_school2",
+      commitCount: "146",
+    })
+  
+    allRepos.push({
+      name: "scalding",
+      commitCount: "4148",
+    })
+  
+    allRepos.push({
+      name: "scoot",
+      commitCount: "434",
+    })
+  
+    allRepos.push({
+      name: "scrooge",
+      commitCount: "1465",
+    })
+  
+    allRepos.push({
+      name: "second-control-probability-distributions",
+      commitCount: "1",
+    })
+  
+    allRepos.push({
+      name: "secure_headers",
+      commitCount: "967",
+    })
+  
+    allRepos.push({
+      name: "sekhmet",
+      commitCount: "10",
+    })
+  
+    allRepos.push({
+      name: "spitball",
+      commitCount: "162",
+    })
+  
+    allRepos.push({
+      name: "sslconfig",
+      commitCount: "11",
+    })
+  
+    allRepos.push({
+      name: "storehaus",
+      commitCount: "960",
+    })
+  
+    allRepos.push({
+      name: "summingbird",
+      commitCount: "1792",
+    })
+  
+    allRepos.push({
+      name: "thrift_client",
+      commitCount: "268",
+    })
+  
+    allRepos.push({
+      name: "torch-autograd",
+      commitCount: "596",
+    })
+  
+    allRepos.push({
+      name: "torch-dataset",
+      commitCount: "28",
+    })
+  
+    allRepos.push({
+      name: "torch-decisiontree",
+      commitCount: "8",
+    })
+  
+    allRepos.push({
+      name: "torch-distlearn",
+      commitCount: "20",
+    })
+  
+    allRepos.push({
+      name: "torch-ipc",
+      commitCount: "98",
+    })
+  
+    allRepos.push({
+      name: "torch-thrift",
+      commitCount: "16",
+    })
+  
+    allRepos.push({
+      name: "torch-twrl",
+      commitCount: "38",
+    })
+  
+    allRepos.push({
+      name: "tormenta",
+      commitCount: "266",
+    })
+  
+    allRepos.push({
+      name: "twemcache",
+      commitCount: "42",
+    })
+  
+    allRepos.push({
+      name: "twemoji",
+      commitCount: "338",
+    })
+  
+    allRepos.push({
+      name: "twemproxy",
+      commitCount: "495",
+    })
+  
+    allRepos.push({
+      name: "twitter-cldr-js",
+      commitCount: "310",
+    })
+  
+    allRepos.push({
+      name: "twitter-cldr-npm",
+      commitCount: "41",
+    })
+  
+    allRepos.push({
+      name: "twitter-cldr-rb",
+      commitCount: "1283",
+    })
+  
+    allRepos.push({
+      name: "twitter-korean-text",
+      commitCount: "506",
+    })
+  
+    allRepos.push({
+      name: "twitter-server",
+      commitCount: "695",
+    })
+  
+    allRepos.push({
+      name: "twitter-text",
+      commitCount: "2277",
+    })
+  
+    allRepos.push({
+      name: "twurl",
+      commitCount: "173",
+    })
+  
+    allRepos.push({
+      name: "typeahead.js",
+      commitCount: "594",
+    })
+  
+    allRepos.push({
+      name: "util",
+      commitCount: "2533",
+    })
+  
+    allRepos.push({
+      name: "vireo",
+      commitCount: "10",
+    })
+  
+    allRepos.push({
+      name: "whiskey",
+      commitCount: "100",
+    })
+  
+    allRepos.push({
+      name: "wordpress",
+      commitCount: "131",
+    })
+  
+    allRepos.push({
+      name: "zktraffic",
+      commitCount: "216",
+    })
+  
+
+  
+  function formatNum(num) {
+    if (num >= 1000000) {
+      num = Math.floor(num / 1000000);
+      return num.toString() + "m";
+    } else if (num >= 10000) {
+      num = Math.floor(num / 1000);
+      return num.toString() + "k";
+    } else {
+      return Math.floor(num).toString();
+    }
+  }
+
+  
+  
+    var commitCountSpan = document.getElementById("commit-count");
+    commitCountSpan.innerText = formatNum("141862");
+
+    var committerCountSpan = document.getElementById("committer-count");
+    committerCountSpan.innerText = formatNum("416");
+
+    var watcherCountSpan = document.getElementById("watcher-count");
+    watcherCountSpan.innerText = formatNum("7141");
+
+    var starCountSpan = document.getElementById("star-count");
+    starCountSpan.innerText = formatNum("135376");
+
+    var forkCountSpan = document.getElementById("fork-count");
+    forkCountSpan.innerText = formatNum("66634");
+
+    var mergedCountSpan = document.getElementById("merged-count");
+    mergedCountSpan.innerText = formatNum("2427");   
+  
+
+</script>
+
+
+<script src="https://cdn.jsdelivr.net/npm/typeit@6.0.3/dist/typeit.min.js"></script>
+
+
+<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+<script src='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js'></script>
+
+
+
+
+<script src="/js/main.js"></script> 
+<script src="/js/year-in-review.js"></script>
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-30775-124"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-30775-124');
+</script>
+
+</html>

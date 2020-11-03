@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  
+  <url>
+    <loc>https://twitter.github.io/memberships/</loc>
+  </url>
+  
+  <url>
+    <loc>https://twitter.github.io/projects/</loc>
+  </url>
+  
+  <url>
+    <loc>https://twitter.github.io/</loc>
+  </url>
+  
+  <url>
+    <loc>https://twitter.github.io/year-in-review/</loc>
+  </url>
+  
+</urlset>

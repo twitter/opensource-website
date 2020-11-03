@@ -1,0 +1,31 @@
+name: github-pages
+
+on:
+  workflow_dispatch: {}
+  push:
+    branches:
+      - master
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          submodules: true
+          fetch-depth: 0
+
+      - name: setup hugo
+        uses: peaceiris/actions-hugo@2e89aa6 # v2.4.13
+        with:
+          hugo-version: '0.78.0'
+          extended: true
+
+      - name: build
+        run: hugo
+
+      - name: deploy
+        uses: peaceiris/actions-gh-pages@bbdfb20 # v3.7.3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./public

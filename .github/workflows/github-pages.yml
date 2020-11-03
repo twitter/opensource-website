@@ -2,6 +2,11 @@ name: github-pages
 
 on:
   workflow_dispatch: {}
+  schedule:
+    # Run Mondays at 3:00 am (15 minutes after Update data)
+    # Ideally, this shouldn't need a schedule at all, but
+    # workflows (like Update data) can't trigger other workflows.
+    - cron: "00 3 * * 1"
   push:
     branches:
       - master

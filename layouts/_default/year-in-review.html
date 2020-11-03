@@ -39,8 +39,10 @@
     <!-- Main CSS -->
     <link rel="stylesheet" href="{{ "css/main.css" | relURL }}"/>
 
+    {{- with .Params.custom_css }}
     <!-- Custom CSS -->
-    <link rel="stylesheet" href="{{ printf "css/%s" .Params.custom_css | relURL }}"/>
+    <link rel="stylesheet" href="{{ printf "css/%s" . | relURL }}"/>
+    {{ end }}
   </head>
 
 <body data-spy="scroll" data-target="#YIR-navbar">

@@ -1,142 +1,18 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <meta charset="utf-8" />
-    <meta name="title" content="{{ .Title }}">
-    <meta name="description" content="{{ .Description }}">
-    <meta name="keywords" content="{{ .Params.keywords }}">
-
-    <meta name="og:title" content="{{ .Title }}">
-    <meta name="og:url" content="{{ .Permalink }}">
-    <!-- <meta name="og:image" content="{{ .Params.logo }}"> -->
-    <meta name="og:description" content="{{ .Description }}">
-
-    <meta name="twitter:card" content="summary" />
-    <meta name="twitter:site" content="{{ .Permalink }}" />
-    <meta name="twitter:title" content="{{ .Title }}" />
-    <meta name="twitter:description" content="{{ .Description }}" />
-    <!-- <meta name="twitter:image" content="{{ .Params.logo }}" /> -->
-
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-
-    <meta http-equiv='Expires' content='0'>
-    <meta http-equiv='Pragma' content='no-cache'>
-    <meta http-equiv='Cache-Control' content='no-cache'>
-    <meta http-equiv='imagetoolbar' content='no'>
-
-    <title>{{ .Title }}</title>
-    <link rel="shortcut icon" type="image/png" href="{{ "assets/favicon.ico" | relURL }}"/>
-
-    <!-- Feather CSS -->
-    <link rel="stylesheet" href="{{ "css/feather-core.css" | relURL }}"/>
-    <link rel="stylesheet" href="{{ "css/feather-component-grid.css" | relURL }}"/>
-    <link rel="stylesheet" href="{{ "css/feather-component-button.css" | relURL }}"/>
-
-    <!-- Main CSS -->
-    <link rel="stylesheet" href="{{ "css/main.css" | relURL }}"/>
-
-    <!-- Custom CSS -->
-    <link rel="stylesheet" href="{{ printf "css/%s" .Params.custom_css | relURL }}"/>
-
+    {{ partial "head.html" . }}
   </head>
 
   <body>
-
-    <!-- Navigation Bar -->
-    <nav>
-        <div class="nav-title">
-            <span class="Icon Icon--logo Icon--large"></span>
-
-            <!-- Link in web -->
-            <a class="home-link" href="{{ .Site.BaseURL }}">Twitter Open Source</a>
-
-            <!-- Text in mobile -->
-            <p class="home-text">Twitter Open Source</p>
-            <span id="caret" class="Icon Icon--caretDown"></span>
-        </div>
-        <ul class="nav-menu">
-            <!-- This link only exists in mobile -->
-            <li id="extra-mobile-link" class="nav-list-item">
-                <a class="nav-link" href="{{ .Site.BaseURL }}">Twitter Open Source</a>
-            </li>
-
-            <li class="nav-list-item">
-                <a class="nav-link" href="{{ "projects" | relURL }}">Projects</a>
-            </li>
-
-            <li class="nav-list-item">
-                <a class="nav-link" href="{{ "memberships" | relURL }}">#Squad</a>
-            </li>
-
-            <li class="nav-list-item">
-              <a class="nav-link" href="{{ "year-in-review" | relURL }}">Year in Review</a>
-            </li>
-
-            <li class="nav-list-item">
-                <a class="nav-link" href="https://blog.twitter.com/engineering/en_us/topics/open-source.html" target="_blank">Blog</a>
-            </li>
-
-            <li class="nav-list-item list-end">
-                <a class="nav-link" href="https://github.com/twitter" target="_blank">GitHub</a>
-            </li>
-        </ul>
-    </nav>
+    {{ partial "nav.html" . }}
 
     <!-- Site wrapper -->
     <div class="site">
         {{ block "main" . }}{{ end }}
     </div>
 
-    <!-- Footer -->
-    <div class="footer">
-        <div class="Grid container">
-            <div class="Grid-cell footer-cell u-size1of4 footer-margin">
-                <button onclick="location.href='{{ "projects" | relURL }}'" type="button" class="Button Button--large">Explore Projects</button>
-            </div>
-            <div class="Grid-cell footer-cell u-size1of4 footer-margin">
-                <h3 class="xsmall-margin">
-                    <a class="foot-link" target="_blank" href="https://about.twitter.com/">About</a>
-                </h3>
-                <a class="foot-link" target="_blank" href="https://about.twitter.com/en_us/lets-go-twitter.html">Let's go Twitter</a>
-                <a class="foot-link" target="_blank" href="https://careers.twitter.com/en.html">Careers</a>
-            </div>
-
-            <div class="Grid-cell footer-cell u-size1of4 footer-margin">
-                <h3 class="xsmall-margin">
-                    <a class="foot-link" target="_blank" href="https://blog.twitter.com/">Blogs</a>
-                </h3>
-                <a class="foot-link" target="_blank" href="https://blog.twitter.com/engineering/en_us/topics/open-source.html">Open Source</a>
-                <a class="foot-link" target="_blank" href="https://blog.twitter.com/engineering/en_us.html">Engineering</a>
-                <a class="foot-link" target="_blank" href="https://blog.twitter.com/developer">Developer</a>
-            </div>
-
-            <div class="Grid-cell footer-cell u-size1of4 footer-margin">
-                <h3 class="xsmall-margin">
-                    <a class="foot-link" target="_blank" href="https://developer.twitter.com/">Developers</a>
-                </h3>
-                <a class="foot-link" target="_blank" href="https://dev.twitter.com/overview/documentation">Documentation</a>
-                <a class="foot-link" target="_blank" href="https://twittercommunity.com/">Forums</a>
-                <a class="foot-link" target="_blank" href="https://dev.twitter.com/community">Communities</a>
-            </div>
-
-            <div class="Grid-cell footer-cell u-size1of4">
-                <a class="foot-link" href="">© 2018 Twitter, Inc.</a>
-            </div>
-
-            <div class="Grid-cell footer-cell u-size1of4">
-                <a class="foot-link" target="_blank" href="https://support.twitter.com/articles/20170520">Cookies</a>
-            </div>
-
-            <div class="Grid-cell footer-cell u-size1of4">
-                <a class="foot-link" target="_blank" href="https://twitter.com/privacy">Privacy</a>
-            </div>
-
-            <div class="Grid-cell footer-cell u-size1of4">
-                <a class="foot-link" target="_blank" href="https://twitter.com/tos">Terms and Conditions</a>
-            </div>
-
-        </div>
-    </div> <!-- End of Footer -->
+    {{ partial "footer.html" . }}
   </body>
 
   <script src="{{ "js/main.js" | relURL }}"></script>

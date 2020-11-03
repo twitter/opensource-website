@@ -15,7 +15,7 @@ import requests
 
 
 API_ENDPOINT = "http://newtwitter.augurlabs.io/api/unstable"
-PATH_TO_METRICS_DATA = "_data"
+PATH_TO_METRICS_DATA = "data"
 DATESTAMP = datetime.datetime.now().date().isoformat()
 
 print("LOG: Assuming the current path to be the root of the metrics repository.")

@@ -5,7 +5,7 @@ import requests
 
 import graphql_queries
 
-PATH_TO_DATA = "_data"
+PATH_TO_DATA = "data"
 GITHUB_USERNAME = os.environ["GH_USERNAME"]
 GITHUB_OAUTH_TOKEN = os.environ["OAUTH_TOKEN"]
 GITHUB_API_ENDPOINT = "https://api.github.com/graphql"
@@ -155,9 +155,9 @@ print("LOG: Saved to", file_path)
 # Update the SVG
 print("No of members", SVG_NO_OF_MEMBERS)
 print("No of repos", SVG_NO_OF_REPOS)
-network_svg = open("assets/network_raw.svg").read()
+network_svg = open("static/assets/network_raw.svg").read()
 network_svg = network_svg.replace("{$members}", str(SVG_NO_OF_MEMBERS))
 network_svg = network_svg.replace("{$Repos}", str(SVG_NO_OF_REPOS))
-with open("assets/network.svg", "w+") as f:
+with open("static/assets/network.svg", "w+") as f:
     f.write(network_svg)
 print("LOG: assets/network.svg updated!")

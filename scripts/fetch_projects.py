@@ -148,7 +148,7 @@ for repo in public_repos:
 # Save to _data directory
 file_path = PATH_TO_DATA + "/" + "projects.json"
 with open(file_path, "w+") as f:
-    json.dump(DATA_JSON, f)
+    json.dump(DATA_JSON, f, sort_keys=True, indent=2)
 print("LOG: Saved to", file_path)
 
 

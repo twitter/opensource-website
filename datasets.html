@@ -1,0 +1,46 @@
+---
+layout: default
+title: Datasets | MediaFutures
+description: All MediaFutures Datasets
+keywords: mediafutures,datasets
+url: https://mediafutureseu.github.io/datasets
+custom_css: datasets.css
+custom_js: datasets.js
+---
+
+<div class="header squad-header">
+    <div class="Grid container">
+        <div id="header-text" class="Grid-cell">
+            <h1 class="large-title">Datasets</h1>            
+            <h1 class="squad-subheading">Open Datasets by Third Parties about Coronavirus and Misinformation</h1>
+        </div>
+    </div>
+</div>
+
+<div class="section">
+    <div class="Grid dataset-container container">
+        {% for item in site.data.datasets %}
+        <div class="Grid-cell sizeFull dataset">
+            <!-- Logo -->
+            <!--img src="{{ item["logo"] }}" class="dataset-logo"-->
+
+            <div>
+                <!-- Name -->
+                <h2>{{ item["name"] }}</h2>
+                <h3>{{ item["provider"] }}</h3>
+                <br/>
+                {{ item["description"] }}
+            </div>
+
+            <!-- Description -->
+            
+
+            <!-- Visit website -->
+            {% if item["url"] %}
+            <button onclick="window.open('{{ item["url"] }}')" type="button" class="Button">Access to data</button>
+            {% endif %}
+
+        </div>
+        {% endfor %}
+    </div>
+</div>

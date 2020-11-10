@@ -1,0 +1,42 @@
+---
+layout: default
+title: Training | MediaFutures
+description: MediaFutures Training
+keywords: mediafutures,training
+url: https://mediafutureseu.github.io/training
+custom_css: datasets.css
+custom_js: datasets.js
+---
+
+<div class="header squad-header">
+    <div class="Grid container">
+        <div id="header-text" class="Grid-cell">
+            <h1 class="large-title">Training</h1>            
+        </div>
+    </div>
+</div>
+
+<div class="section">
+    <div class="Grid dataset-container container">
+
+        {% for item in site.data.training %}
+        <div class="Grid-cell sizeFull dataset">
+            <!-- Logo -->
+            <!--img src="{{ item["logo"] }}" class="dataset-logo"-->
+            <div>
+                <!-- Name -->
+                <h2>{{ item["name"] }}</h2>
+                <h3>{{ item["type"] }}</h3>
+                <br/>
+                {{ item["description"] }}
+            </div>
+
+            <!-- Visit website -->
+            {% if item["url"] %}
+            <button onclick="window.open('{{ item["url"] }}')" type="button" class="Button">Access to data</button>
+            {% endif %}
+
+        </div>
+        {% endfor %}
+    </div>
+</div>

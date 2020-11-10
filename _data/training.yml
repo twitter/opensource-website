@@ -1,0 +1,39 @@
+- name: 'Anonymisation is for everyone'
+  type: 'Training course'
+  description: 'This course will introduce the latest thinking on anonymisation and work through a practical exercise in anonymising data while maintaining utility and minimising risk. Through the practical exercise, we will explore the needs of different stakeholders, both internal and external and explore how tools like the ODI Data Ethics Canvas and Consequence Scanning toolkit can help.'
+
+- name: 'Applying Machine Learning and AI Techniques to Data'
+  type: 'Training course'
+  description: 'The course takes a practical approach to understand the key machine learning techniques to help you understand what these black boxes might be doing, how they can be applied and what implications each has. During the course you will be challenged to build your own machine learning algorithm for a set of real world data.'
+
+- name: 'Introduction to data ethics and the data ethics canvas'
+  type: 'Training course'
+  description: 'In this two-hour online course, run by our experts, you will be given an introduction to the concept of data ethics, how ethics is addressed in other domains, and how data ethics can be applied to help organisations avoid harmful impacts and increase trust in new products and services.'
+
+- name: 'Open data in a day'
+  type: 'Training course'
+  description: 'An introductory course to open data. Participants will learn how to discover, use and describe the benefits of open data, and how can impact an organisation.'
+
+- name: 'Strategic Data Skills'
+  type: 'Training course'
+  description: 'This comprehensive online course is for people who want to work strategically with data, but don’t need or want to learn complex programming. Start this course when you want, work at your own pace, and get access to the content for 12-months.  Complete and submit your assignments within 3-months of starting and you will be eligible for your completion certificate.'
+
+- name: 'Datopolis'
+  type: 'Workshop'
+  description: 'Workshop based on Dataopolis, the open data board game exploring building things with open and closed data.'
+
+- name: 'Open data essentials'
+  type: 'Elearning'
+  description: 'Learn all the essentials of open data with this easy to follow, online course.'
+
+- name: 'Finding stories in data'
+  type: 'Elearning'
+  description: 'Learn how to tell compelling stories from data.'
+
+- name: 'ODI Summit'
+  type: 'Annual event'
+  description: 'ODI’s flagship event, bringing people from a broad range of sectors, backgrounds and countries together to discuss critical issues around data.'
+
+- name: 'ODI Fridays'
+  type: 'Weekly lectures series'
+  description: 'Weekly lectures with a range of ODI and guest speakers exploring a broad range of data related topics.'

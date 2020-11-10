@@ -1,22 +1,22 @@
-/* Styles specific to projects page */
+/* Styles specific to tools page */
 
 /* Widths */
 :root {
-    --project-card-min-width: 385px;
-    --project-card-max-width: 500px;
+    --tool-card-min-width: 385px;
+    --tool-card-max-width: 500px;
     --search-bar-width: 450px;
 }
 
-.all-projects {
+.all-tools {
     padding-top: var(--feather-grid-mega);
     padding-bottom: calc(var(--feather-grid-mega) * 2);
 }
 
 
-.project-card {
+.tool-card {
     position: relative;
     padding: var(--feather-grid-mega) calc(var(--feather-grid-mega) * 1.5);
-    min-width: var(--project-card-min-width);
+    min-width: var(--tool-card-min-width);
 }
 
 .border {
@@ -25,23 +25,23 @@
     border-bottom-width: 5px;
 }
 
-.project-language {
+.tool-language {
     color: var(--tw-color-gray-deep);
     font-size: var(--feather-font-size-normal);
     line-height: var(--feather-line-height-normal);
 }
 
-.project-links a {
+.tool-links a {
     display: block;
     font-weight: var(--feather-font-weight-bold);
     text-decoration: none;
 }
 
-.project-links a:link, .project-links a:visited {
+.tool-links a:link, .tool-links a:visited {
     color: var(--tw-color-text-primary);
 }
 
-.project-links a:hover, .project-links a:active {
+.tool-links a:hover, .tool-links a:active {
     color: var(--tw-color-text-link);
 }
 
@@ -49,12 +49,12 @@
     height: calc(var(--feather-grid-mega) * 1.6);
 }
 
-.project-links {
+.tool-links {
     position: absolute;
     bottom: var(--feather-grid-mega);
 }
 
-.project-card button {
+.tool-card button {
     position: absolute;
     bottom: var(--feather-grid-mega);
     right: calc(var(--feather-grid-mega) * 1.5);
@@ -101,27 +101,27 @@ input:focus {
 
 /* 2 columns */
 @media (max-width: 1236px) {
-    .all-projects {
-        max-width: calc(var(--project-card-max-width) * 2);
+    .all-tools {
+        max-width: calc(var(--tool-card-max-width) * 2);
         margin: 0 auto;
     }
 }
 
 /* 1 column */
 @media (max-width: 850px) {
-    .all-projects {
+    .all-tools {
         padding-top: var(--feather-grid-large);
         padding-bottom: calc(var(--feather-grid-mega) * 1.5);
-        max-width: var(--project-card-max-width);
+        max-width: var(--tool-card-max-width);
     }
 
-    .project-card {
+    .tool-card {
         min-width: 250px;
         padding-left: var(--feather-grid-mega);
         padding-right: var(--feather-grid-mega);
     }
 
-    .project-card button {
+    .tool-card button {
         right: var(--feather-grid-mega);
     }
 }

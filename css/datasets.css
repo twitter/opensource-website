@@ -1,6 +1,6 @@
-/* Styles specific to memberships (#Squad) page */
+/* Styles specific to datasets (#Squad) page */
 
-/* Logo sizes for membership cards */
+/* Logo sizes for dataset cards */
 
 :root {
 	--logo-size-normal: 80px;
@@ -29,22 +29,22 @@
 	}
 }
 
-/* Adjusts width and margins of membership-container */
+/* Adjusts width and margins of dataset-container */
 
-.membership-container {
+.dataset-container {
     max-width: calc(var(--feather-grid-page-width) - var(--feather-grid-mega) * 3);
     margin: 0 auto;
 }
 
 /* Less than var(--feather-grid-page-width) - var(--feather-grid-mega) */
 @media (max-width: 1116px) {
-    .membership-container {
+    .dataset-container {
         margin: 0 var(--feather-grid-mega);
     }
 }
 
 @media (max-width: 600px) {
-    .membership-container {
+    .dataset-container {
         margin: 0 var(--feather-grid-medium);
     }
 }
@@ -55,9 +55,9 @@
   	}
 }
 
-/* Membership card elements that are consistent throughout all screen sizes */
+/* dataset card elements that are consistent throughout all screen sizes */
 
-.membership {
+.dataset {
 	padding: var(--feather-grid-large) 0;
 	border-top: solid 1px var(--tw-color-gray-light);
 	position: relative;
@@ -67,40 +67,40 @@
 	border-top: none;
 }
 
-a.membership-handle:link, a.membership-handle:visited {
+a.dataset-handle:link, a.dataset-handle:visited {
 	color: var(--tw-color-gray-deep);
 	font-size: var(--feather-font-size-normal);
 	line-height: var(--feather-line-height-normal);
 	text-decoration: none;
 }
 
-a.membership-handle:hover, a.membership-handle:active {
+a.dataset-handle:hover, a.dataset-handle:active {
 	color: var(--tw-color-text-link);
 } 
 
-.membership button {
+.dataset button {
 	position: absolute;
 	top: var(--feather-grid-large);
 	right: 0;
 }
 
-/* Membership card layout: greater than 940px */
+/* dataset card layout: greater than 940px */
 /* Logo's position is absolute, and text content is shifted to the right using margins */
 
 .name-handle {
 	width: 80%;
 }
 
-.membership h2 {
+.dataset h2 {
 	padding-bottom: var(--feather-grid-micro);
 }
 
-.membership p {
+.dataset p {
 	padding-top: var(--feather-grid-xsmall);
 	margin-bottom: 0;
 }
 
-.membership-logo {
+.dataset-logo {
 	position: absolute;
 	top: var(--feather-grid-large);
 	left: 0;
@@ -108,11 +108,11 @@ a.membership-handle:hover, a.membership-handle:active {
 	width: var(--logo-size-normal);  /* will this distort image though */
 }
 
-.name-handle, .membership p {
+.name-handle, .dataset p {
 	margin-left: calc(var(--logo-size-normal) + var(--feather-grid-large));
 }
 
-/* Membership card layout: between 680px and 940px */ 
+/* dataset card layout: between 680px and 940px */ 
 
 @media (max-width: 940px) { 
 	.name-handle {
@@ -120,16 +120,16 @@ a.membership-handle:hover, a.membership-handle:active {
 	}
 }
 
-/* Membership card layout: less than 680px */
+/* dataset card layout: less than 680px */
 /* Logo's position is static, and text is no longer shifted to the right with margins */
 
 @media (max-width: 680px) {
-	.membership-logo, .name-handle {
+	.dataset-logo, .name-handle {
 		position: static;
 		display: inline-block;
 	}
 
-	.membership-logo {
+	.dataset-logo {
 		height: var(--logo-size-small);
 		width: var(--logo-size-small);
 	}
@@ -139,13 +139,13 @@ a.membership-handle:hover, a.membership-handle:active {
 		vertical-align: top;
 	}
 
-	.membership p {
+	.dataset p {
 		padding-top: var(--feather-grid-xxsmall);
 		margin-left: 0;
 	}
 }
 
-/* Membership card layout: less than 620px */
+/* dataset card layout: less than 620px */
 
 @media (max-width: 620px) {
 	.name-handle {
@@ -153,11 +153,11 @@ a.membership-handle:hover, a.membership-handle:active {
 	}
 }
 
-/* Membership card layout: less than 620px */
+/* dataset card layout: less than 620px */
 /* Decrease font size of name */
 
 @media (max-width: 480px) {
-	.membership h2 {
+	.dataset h2 {
 		font-size:  var(--feather-font-size-large);
 		line-height: var(--feather-line-height-large);
 	}
@@ -166,12 +166,12 @@ a.membership-handle:hover, a.membership-handle:active {
 		margin-left: var(--feather-grid-small);
 	}
 
-	.membership p {
+	.dataset p {
 		padding-top: var(--feather-grid-xxsmall);
 	}
 }
 
-/* Membership card layout: less than 420px */
+/* dataset card layout: less than 420px */
 
 @media (max-width: 420px) {
 	.name-handle {
@@ -179,11 +179,11 @@ a.membership-handle:hover, a.membership-handle:active {
 	}
 }
 
-/* Membership card layout: less than 340px */
+/* dataset card layout: less than 340px */
 /* Name and handle move below logo */
 
 @media (max-width: 340px) {
-	.membership-logo, .name-handle {
+	.dataset-logo, .name-handle {
 		display: block;
 	}
 

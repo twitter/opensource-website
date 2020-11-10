@@ -1,0 +1,48 @@
+---
+layout: default
+title: Tools | Mediafutures
+description: Free Open Source Tools for Data Analysis and Visualization
+keywords: mediafutures, tools
+url: https://mediafutureseu.github.io/tools
+custom_css: tools.css
+custom_js: tools.js
+---
+
+<!-- Header -->
+
+<div class="header simple-header">
+    <div class="Grid container">
+        <div id="header-text" class="Grid-cell">
+            <h1 class="large-title">Tools</h1>
+            <h1 class="squad-subheading">Free Open Source Tools for Data Analysis and Visualization
+            <div class="search-bar">
+                <input class="search-box" type="text" name="search" placeholder="Search Datasets" autocomplete="off" />
+                <span class="Icon Icon--search"></span>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<!-- Container for no results text -->
+<div class="Grid container no-results-container"></div>
+
+<!-- Tools grid (See renderTools() in tools.js) -->
+<div class="Grid container all-tools"></div>
+<!-- End of all-tools -->
+
+<script type="text/javascript">
+    let allTools = [];
+    {% for item in site.data.tools %}
+        allTools.push({
+            name: "{{ item["name"] }}",
+            project_url: "{{ item["project_url"] }}",
+            code_url: "{{ item["code_url"] }}",
+            description: "{{ item["description"] }}",
+            category_name: "{{ item["category_name"] }}",
+            type: "{{ item["type"] }}",            
+        })
+    {% endfor %}
+</script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/3.0.4/fuse.min.js" async></script>

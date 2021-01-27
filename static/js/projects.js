@@ -38,7 +38,7 @@ var renderProjects = function(projectsList, searchString="") {
             // Color-coded border
             var colorDiv = document.createElement('div')
             colorDiv.className = "border small-margin"
-            colorDiv.style = "border-bottom-color: " + project.color
+            colorDiv.style.borderBottomColor = project.color
             projectDiv.appendChild(colorDiv)
 
             // Project Description (HTML version)
@@ -48,10 +48,12 @@ var renderProjects = function(projectsList, searchString="") {
             projectDiv.appendChild(descriptionDiv)
 
             // Primary Language
-            var languageDiv = document.createElement('p')
-            languageDiv.className = "project-language"
-            languageDiv.innerHTML = project.primaryLanguage
-            projectDiv.appendChild(languageDiv)
+            if(project.primaryLanguage != null) {
+              var languageDiv = document.createElement('p')
+              languageDiv.className = "project-language"
+              languageDiv.innerHTML = project.primaryLanguage
+              projectDiv.appendChild(languageDiv)
+            }
 
             // Whitespace
             var whitespaceDiv = document.createElement('div')

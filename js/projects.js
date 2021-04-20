@@ -97,7 +97,7 @@ var renderProjects = function(projectsList, searchString="") {
         noResultDiv.className = 'no-results'
 
         var noResultPara = document.createElement('p')
-        noResultPara.innerHTML = "No results for " + '<b>' + searchString + '</b>'
+        noResultPara.innerText = "No results for " + searchString
         noResultDiv.appendChild(noResultPara)
 
         var noResultContainer = document.getElementsByClassName("no-results-container")[0]

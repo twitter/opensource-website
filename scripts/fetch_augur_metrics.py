@@ -98,14 +98,14 @@ for repo in PROJECTS_TRACKED['projects']['twitter']:
 
   # hits endpoint using specific repo_ids
   print(f"Sending request to {API_ENDPOINT}/repo-groups/twitter/repos/{repo_id}/code-changes")
-  r = requests.get(f"{API_ENDPOINT}/repo-groups/twitter/repos/{repo_id}/code-changes")
+  request = requests.get(f"{API_ENDPOINT}/repo-groups/twitter/repos/{repo_id}/code-changes")
   try:
-    if r.ok:
+    if request.ok:
       print("OK!")
-      api_data_commits.append(json.loads(r.text))
+      api_data_commits.append(json.loads(request.text))
     else:
-      print(f"Error! Response code {r.status_code}")
-      print(r.content.decode("utf-8"))
+      print(f"Error! Response code {request.status_code}")
+      print(request.content.decode("utf-8"))
   except Exception as e:
     print(f"Error: Something went wrong with repo_commits - {e}")
 

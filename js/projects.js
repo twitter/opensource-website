@@ -48,10 +48,12 @@ var renderProjects = function(projectsList, searchString="") {
             projectDiv.appendChild(descriptionDiv)
 
             // Primary Language
-            var languageDiv = document.createElement('p')
-            languageDiv.className = "project-language"
-            languageDiv.innerHTML = project.primaryLanguage
-            projectDiv.appendChild(languageDiv)
+            if (project.primaryLanguage) {
+                var languageDiv = document.createElement('p')
+                languageDiv.className = "project-language"
+                languageDiv.innerHTML = project.primaryLanguage
+                projectDiv.appendChild(languageDiv)
+            }
 
             // Whitespace
             var whitespaceDiv = document.createElement('div')

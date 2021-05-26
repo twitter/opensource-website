@@ -1,5 +1,6 @@
-/*! @twitter/feather-core v2.8.0 */
-
+/*! @twitter/feather-core v4.3.1 */
+/*! Copyright 2021 Twitter Inc. All rights reserved. */
+/* @generated */
 /*
 DO NOT EDIT.
 This is auto-generated with `npm run dist`.
@@ -8,58 +9,93 @@ Edit `src/js/core.js` instead.
 
 :root {
   /* Colors */
-  --tw-color-blue-primary: #1da1f2;
-  --tw-color-text-primary: #14171a;
+  --tw-color-blue-primary: #1DA1F2;
+  --tw-color-text-primary: #0F1419;
   --tw-color-text-link: #1b95e0;
-  --tw-color-gray-deep: #657786;
-  --tw-color-gray-medium: #aab8c2;
-  --tw-color-gray-light: #ccd6dd;
-  --tw-color-gray-faded: #e6ecf0;
-  --tw-color-gray-faint: #f5f8fa;
-  --tw-color-red-deep: #a01744;
-  --tw-color-red-medium: #e0245e;
-  --tw-color-red-light: #f6809a;
-  --tw-color-red-faded: #ffb8c2;
-  --tw-color-orange-deep: #d82e18;
-  --tw-color-orange-medium: #f45d22;
-  --tw-color-orange-light: #ff8d57;
-  --tw-color-orange-faded: #ffbe78;
-  --tw-color-yellow-deep: #f98e00;
-  --tw-color-yellow-medium: #ffad1f;
-  --tw-color-yellow-light: #ffd03f;
-  --tw-color-yellow-faded: #ffe76e;
-  --tw-color-green-deep: #008951;
-  --tw-color-green-medium: #17bf63;
-  --tw-color-green-light: #68e090;
-  --tw-color-green-faded: #a5f2aa;
-  --tw-color-blue-deep: #005fd1;
-  --tw-color-blue-medium: #1da1f2;
-  --tw-color-blue-light: #71c9f8;
-  --tw-color-blue-faded: #97e3ff;
-  --tw-color-blue-faint: #eaf5fd;
-  --tw-color-purple-deep: #4f0299;
-  --tw-color-purple-medium: #794bc4;
-  --tw-color-purple-light: #a37ced;
-  --tw-color-purple-faded: #c7b4fa;
+  --tw-color-blue-0-experimental: #E6F5FF;
+  --tw-color-blue-200-experimental: #9ADDFF;
+  --tw-color-blue-300-experimental: #74CAFE;
+  --tw-color-blue-500-experimental: #1DA1F2;
+  --tw-color-blue-600-experimental: #177AC2;
+  --tw-color-gray-0-experimental: #F7F9FA;
+  --tw-color-gray-50-experimental: #EBEEF0;
+  --tw-color-gray-200-experimental: #C4CFD6;
+  --tw-color-gray-300-experimental: #AAB8C2;
+  --tw-color-gray-600-experimental: #5B7083;
+  --tw-color-gray-900-experimental: #0F1419;
+  --tw-color-green-200-experimental: #8BEBA1;
+  --tw-color-green-300-experimental: #65DC89;
+  --tw-color-green-500-experimental: #17BF63;
+  --tw-color-green-600-experimental: #129954;
+  --tw-color-orange-200-experimental: #FFCA9E;
+  --tw-color-orange-300-experimental: #FFAC79;
+  --tw-color-orange-500-experimental: #F45D22;
+  --tw-color-orange-600-experimental: #BD411A;
+  --tw-color-purple-200-experimental: #C6ADEF;
+  --tw-color-purple-300-experimental: #AD8EE1;
+  --tw-color-purple-500-experimental: #794BC4;
+  --tw-color-purple-600-experimental: #592F95;
+  --tw-color-red-200-experimental: #FD9BB0;
+  --tw-color-red-300-experimental: #F37695;
+  --tw-color-red-500-experimental: #E0245E;
+  --tw-color-red-600-experimental: #AD1A48;
+  --tw-color-yellow-200-experimental: #FFE76E;
+  --tw-color-yellow-300-experimental: #FFD03F;
+  --tw-color-yellow-500-experimental: #FFAD1F;
+  --tw-color-yellow-600-experimental: #F98E00;
+  --tw-color-gray-deep: #5B7083;
+  --tw-color-gray-medium: #AAB8C2;
+  --tw-color-gray-light: #C4CFD6;
+  --tw-color-gray-faded: #EBEEF0;
+  --tw-color-gray-faint: #F7F9FA;
+  --tw-color-red-deep: #AD1A48;
+  --tw-color-red-medium: #E0245E;
+  --tw-color-red-light: #F37695;
+  --tw-color-red-faded: #FD9BB0;
+  --tw-color-red-50-experimental: #FFD2DA;
+  --tw-color-orange-deep: #BD411A;
+  --tw-color-orange-medium: #F45D22;
+  --tw-color-orange-light: #FFAC79;
+  --tw-color-orange-faded: #FFCA9E;
+  --tw-color-yellow-deep: #F98E00;
+  --tw-color-yellow-medium: #FFAD1F;
+  --tw-color-yellow-light: #FFD03F;
+  --tw-color-yellow-faded: #FFE76E;
+  --tw-color-yellow-50-experimental: #FFF4D3;
+  --tw-color-green-deep: #129954;
+  --tw-color-green-medium: #17BF63;
+  --tw-color-green-light: #65DC89;
+  --tw-color-green-faded: #8BEBA1;
+  --tw-color-green-50-experimental: #CBFCD1;
+  --tw-color-blue-deep: #177AC2;
+  --tw-color-blue-medium: #1DA1F2;
+  --tw-color-blue-light: #74CAFE;
+  --tw-color-blue-faded: #9ADDFF;
+  --tw-color-blue-faint: #E6F5FF;
+  --tw-color-blue-50-experimental: #D2F1FF;
+  --tw-color-purple-deep: #592F95;
+  --tw-color-purple-medium: #794BC4;
+  --tw-color-purple-light: #AD8EE1;
+  --tw-color-purple-faded: #C6ADEF;
   /* Form controls */
   --feather-form-control-xsmall-font-size: 0.6rem;
   --feather-form-control-xsmall-height: 1rem;
-  --feather-form-control-xsmall-border-radius: 0.2rem;
+  --feather-form-control-xsmall-border-radius: 4px;
   --feather-form-control-xsmall-padding-x: 0.4rem;
   --feather-form-control-xsmall-adornment-margin: 0.2rem;
   --feather-form-control-small-font-size: 0.6rem;
   --feather-form-control-small-height: 1.2rem;
-  --feather-form-control-small-border-radius: 0.2rem;
+  --feather-form-control-small-border-radius: 4px;
   --feather-form-control-small-padding-x: 0.4rem;
   --feather-form-control-small-adornment-margin: 0.2rem;
   --feather-form-control-default-font-size: 0.7rem;
   --feather-form-control-default-height: 1.6rem;
-  --feather-form-control-default-border-radius: 0.2rem;
+  --feather-form-control-default-border-radius: 4px;
   --feather-form-control-default-padding-x: 0.6rem;
   --feather-form-control-default-adornment-margin: 0.3rem;
   --feather-form-control-large-font-size: 0.8rem;
   --feather-form-control-large-height: 2rem;
-  --feather-form-control-large-border-radius: 0.2rem;
+  --feather-form-control-large-border-radius: 4px;
   --feather-form-control-large-padding-x: 0.8rem;
   --feather-form-control-large-adornment-margin: 0.4rem;
   /* Grid */
@@ -73,11 +109,28 @@ Edit `src/js/core.js` instead.
   --feather-grid-baseline-gap: 8px;
   --feather-grid-column-gap: 20px;
   --feather-grid-column-width: 78px;
-  --feather-grid-column-count: 12;
   --feather-grid-page-width: 1156px;
+  /* Spaces */
+  --feather-space-1-experimental: 1px;
+  --feather-space-2-experimental: 0.1rem;
+  --feather-space-4-experimental: 0.2rem;
+  --feather-space-8-experimental: 0.4rem;
+  --feather-space-12-experimental: 0.6rem;
+  --feather-space-16-experimental: 0.8rem;
+  --feather-space-20-experimental: 1rem;
+  --feather-space-24-experimental: 1.2rem;
+  --feather-space-28-experimental: 1.4rem;
+  --feather-space-32-experimental: 1.6rem;
+  --feather-space-36-experimental: 1.8rem;
+  --feather-space-40-experimental: 2rem;
+  /* Layout */
+  --feather-layout-container-padding-x: 1.2rem;
+  --feather-layout-navigation-bar-height-experimental: 2.8rem;
+  --feather-layout-navigation-sidebar-width-experimental: 14rem;
   /* Typography */
   --feather-font-family-base: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen-Sans, Ubuntu, Cantarell, 'Helvetica Neue', sans-serif;
   --feather-font-family-monospace: Menlo, Monaco, Consolas, 'Courier New', monospace;
+  --feather-font-size-root: 20px;
   --feather-font-size-jumbo: 1.2rem;
   --feather-line-height-jumbo: 1.6rem;
   --feather-font-size-xlarge: 1rem;
@@ -90,50 +143,27 @@ Edit `src/js/core.js` instead.
   --feather-line-height-small: 0.8rem;
   --feather-font-weight-normal: 400;
   --feather-font-weight-bold: 700;
-  --feather-text-jumbo: {
-    font-size: 1.2rem;
-    line-height: 1.6rem;
-  }
-  --feather-text-xlarge: {
-    font-size: 1rem;
-    line-height: 1.4rem;
-  }
-  --feather-text-large: {
-    font-size: 0.8rem;
-    line-height: 1.2rem;
-  }
-  --feather-text-normal: {
-    font-size: 0.7rem;
-    line-height: 1rem;
-  }
-  --feather-text-small: {
-    font-size: 0.6rem;
-    line-height: 0.8rem;
-  }
-  --feather-text-small-caps: {
-    font-weight: 700;
-    letter-spacing: 0.025rem;
-    text-transform: uppercase;
-    font-size: 0.6rem;
-    line-height: 0.8rem;
-  }
-  --feather-h1: {
-    font-weight: 700;
-    font-size: 1.2rem;
-    line-height: 1.6rem;
-  }
-  --feather-h2: {
-    font-weight: 700;
-    font-size: 1rem;
-    line-height: 1.4rem;
-  }
-  --feather-h3: {
-    font-weight: 700;
-    font-size: 0.8rem;
-    line-height: 1.2rem;
-  }
+  /* Border radius */
+  --feather-border-radius-none-experimental: 0px;
+  --feather-border-radius-xsmall-experimental: 2px;
+  --feather-border-radius-small-experimental: 4px;
+  --feather-border-radius-medium-experimental: 8px;
+  --feather-border-radius-large-experimental: 12px;
+  --feather-border-radius-xlarge-experimental: 16px;
+  --feather-border-radius-infinite-experimental: 9999px;
+  /* Border width */
+  --feather-border-width-none-experimental: 0px;
+  --feather-border-width-small-experimental: 1px;
+  --feather-border-width-medium-experimental: 2px;
+  --feather-border-width-large-experimental: 4px;
+  /* Breakpoints - private variables for Feather use only */
+  --feather-breakpoint-xsmall-experimental: 0px;
+  --feather-breakpoint-small-experimental: 600px;
+  --feather-breakpoint-medium-experimental: 1024px;
+  --feather-breakpoint-large-experimental: 1280px;
+  --feather-breakpoint-xlarge-experimental: 1920px;
 }
-/* Typography Classes */
+/* Typography class names */
 .feather-text-jumbo {
   font-size: 1.2rem;
   line-height: 1.6rem;
@@ -176,8 +206,7 @@ Edit `src/js/core.js` instead.
   font-size: 0.8rem;
   line-height: 1.2rem;
 }
-/*! Copyright 2019 Twitter Inc. All rights reserved. */
-/* @generated */
+
 /*! normalize.css v7.0.0 | MIT License | github.com/necolas/normalize.css */
 /* Document
    ========================================================================== */
@@ -727,143 +756,95 @@ Edit `src/js/core.js` instead.
   font-size: 0.6rem;
   line-height: 0.8rem;
 }
-/*
-This is based on Edge icon CSS from macaw-swift.
-
-To add an icon:
-
-1.  File a Feather ticket: http://go/feather/ticket
-2.  Someone on the core Feather team should request an icon:
-    http://go/iconrequest
-3.  When the icon has been added to the icon font, use the update steps below.
-
-To update icons:
-
-1.  Get the icon font zip from http://go/iconfont . Copy the font files into
-    `src/fonts/`.
-2.  Copy icon CSS from here:
-    https://cgit.twitter.biz/source/tree/macaw-swift/web-resources/css/swift_css/components/icon.css
-3.  Run:
-
-        cd feather-core/
-        npm run normalize-icon-less
-
-    This rewrites `edge-icons.less` to replace some macaw-swift-specific
-    variables with Feather variables. Review the changes, and manually preserve
-    any unwanted changes.
-4.  If any icons were deleted, revert the deletion and add a comment noting the
-    deprecation. Be sure to preserve colors for deprecated icons too.
-5.  In `feather-docs`, add new icons to `/icons` and `/docs/history`.
-6.  Check that these icon sizes match `src/lib/less/icons-px.less`.
-*/
-/*
-This is a set of Feather-specific overrides for `edge-icons.less`, giving us
-access to the very latest icons that aren't yet deployed to Twitter.com[1].
-
-To use the icons that aren't yet exposed on Twitter.com, Feather exposes them
-here, but with `feather` in the class name to denote the difference. When they
-land in Twitter.com and get official class names, these will be deprecated.
-
-[1]: https://cgit.twitter.biz/source/log/macaw-swift/web-resources/css/swift_css/components/icon.css
-*/
 /* Feather-specific icons */
 .Icon--arrowRight:before {
-  content: '\F114';
+  content: '\f114';
 }
 .Icon--featherAd:before {
-  content: '\F407';
+  content: '\f407';
 }
 .Icon--featherAdCampaign:before {
-  content: '\F405';
+  content: '\f405';
 }
 .Icon--featherAdGroup:before {
-  content: '\F406';
+  content: '\f406';
 }
 .Icon--featherAudience:before {
-  content: '\F408';
+  content: '\f408';
 }
 .Icon--featherCard:before {
-  content: '\F204';
+  content: '\f204';
 }
 .Icon--featherCircleCheck:before {
-  content: '\F043';
+  content: '\f043';
 }
 .Icon--featherCircleCheckFilled:before {
-  content: '\F220';
+  content: '\f220';
 }
 .Icon--featherCircleFail:before {
-  content: '\F044';
+  content: '\f044';
 }
 .Icon--featherCircleFailFilled:before {
-  content: "\F222";
+  content: "\f222";
 }
 .Icon--featherClone:before {
-  content: '\F214';
+  content: '\f214';
 }
 .Icon--featherCode:before {
-  content: '\F410';
+  content: '\f410';
 }
 .Icon--featherCurrency:before {
-  content: '\F403';
+  content: '\f403';
 }
 .Icon--featherDownload:before {
-  content: '\F186';
+  content: '\f186';
 }
 .Icon--featherDraggableGrip:before {
-  content: '\F206';
+  content: '\f206';
 }
 .Icon--featherFail:before {
-  content: '\F182';
+  content: '\f182';
 }
 .Icon--featherFilm:before {
-  content: '\F211';
+  content: '\f211';
 }
 .Icon--featherHistory:before {
-  content: '\F404';
+  content: '\f404';
 }
 .Icon--featherMegaphoneStroke:before {
-  content: '\F070';
+  content: '\f070';
 }
 .Icon--featherPhotoAlbum:before {
-  content: '\F109';
+  content: '\f109';
 }
 .Icon--featherPreview:before {
-  content: '\F216';
+  content: '\f216';
 }
 .Icon--featherReload:before {
-  content: '\F303';
+  content: '\f303';
 }
 .Icon--featherSignal:before {
-  content: '\F212';
+  content: '\f212';
 }
 .Icon--featherWarning:before {
-  content: '\F221';
+  content: '\f221';
 }
 .Icon--featherWebsiteVisit:before {
-  content: '\F213';
+  content: '\f213';
 }
-/* DEPRECATED Feather-specific icons
-
-Please add deprecated icons in the following format:
-
-.Icon--featherFoo:before { ... } // Deprecated in Feather 1.1; use `Icon--bar` instead.
-*/
+/* DEPRECATED Feather-specific icons */
 /* Colors */
 .Icon--featherWarning {
-  color: #ffad1f;
+  color: #FFAD1F;
 }
 .Icon--featherFail {
-  color: #e0245e;
+  color: #E0245E;
 }
-/**
- * Tooltip cue is a fixed size and uses pure css (no Edge font-based icon). The
- * selector includes `.Icon` to increase specificity.
- */
 .Icon.Icon--featherTooltipCue {
   position: relative;
   width: 0.7rem;
   height: 0.7rem;
-  background-color: #71c9f8;
+  background-color: #74CAFE;
   border-radius: 50%;
   vertical-align: middle;
 }
@@ -884,14 +865,9 @@ h2 .Icon.Icon--featherTooltipCue {
 }
 .Icon.Icon--featherTooltipCue:hover,
 .Icon.Icon--featherTooltipCue:focus {
-  background-color: #1da1f2;
+  background-color: #1DA1F2;
   cursor: pointer;
 }
-/*
-Rosetta-style loading indicators. Sources:
-- https://cgit.twitter.biz/twitter/tree/macaw-swift/web-resources/img/t1
-- https://svn.twitter.biz/design/revenue/components/loading/
-*/
 .Icon.Icon--loadingSmall {
   width: 0.7rem;
   height: 0.7rem;
@@ -910,16 +886,12 @@ Rosetta-style loading indicators. Sources:
   background: url(../images/spinner-rosetta-blue-32x32@2x.gif) 0 0 no-repeat;
   background-size: 1.6rem 1.6rem;
 }
-/**
- * Font-based icons
- * For latest version of all images and their characters, see:
- * https://confluence.twitter.biz/display/UI/Desktop+Web+-+Icon+Font
- */
+/* Font-based icons */
 @font-face {
   font-family: "edgeicons";
-  src: url("../fonts/edge-icons-Regular.eot");
+  src: url(../fonts/edge-icons-Regular.eot);
   /* IE9 Compat Modes */
-  src: url("../fonts/edge-icons-Regular.eot?#iefix") format("embedded-opentype"), /* IE8 */ url("../fonts/edge-icons-Regular.woff") format("woff"), /* Modern Browsers */ url("../fonts/edge-icons-Regular.ttf") format("truetype");
+  src: url(../fonts/edge-icons-Regular.eot?#iefix) format("embedded-opentype"),  url(../fonts/edge-icons-Regular.woff) format("woff"),  url(../fonts/edge-icons-Regular.ttf) format("truetype");
   /* Safari, Android, iOS */
 }
 /*
@@ -977,519 +949,516 @@ Rosetta-style loading indicators. Sources:
  * Keep this list alphabetized
  */
 .Icon--add:before {
-  content: "\F183";
+  content: "\f183";
 }
 .Icon--addLight:before {
-  content: "\F198";
+  content: "\f198";
 }
 /* Lighter version of the add icon */
 .Icon--analytics:before {
-  content: "\F200";
+  content: "\f200";
 }
 .Icon--arrowDown:before {
-  content: "\F174";
+  content: "\f174";
 }
 .Icon--arrowLeft:before {
-  content: "\F114";
+  content: "\f114";
   /*@replace: initial*/
   transform: scaleX(-1);
 }
 .Icon--arrowUp:before {
-  content: "\F188";
+  content: "\f188";
 }
 .Icon--atSymbol:before {
-  content: "\F050";
+  content: "\f050";
 }
 .Icon--attachFile:before {
-  content: "\F088";
+  content: "\f088";
 }
 .Icon--audioBadge:before {
-  content: "\F311";
+  content: "\f311";
 }
 .Icon--audioMuted:before {
-  content: "\F306";
+  content: "\f306";
 }
 .Icon--audioUnmuted:before {
-  content: "\F305";
+  content: "\f305";
 }
 .Icon--balloon:before {
-  content: "\F092";
+  content: "\f092";
 }
 .Icon--bird:before {
-  content: "\F179";
+  content: "\f179";
 }
 /* TODO: combine with Icon--logo */
 .Icon--bookmark:before {
-  content: "\F155";
+  content: "\f155";
 }
 .Icon--calendar:before {
-  content: "\F203";
+  content: "\f203";
 }
 .Icon--camera:before {
-  content: "\F027";
+  content: "\f027";
 }
 .Icon--cameraPlus:before {
-  content: "\F111";
+  content: "\f111";
 }
 .Icon--cameraVideo:before {
-  content: "\F030";
+  content: "\f030";
 }
 .Icon--cards:before {
-  content: "\F402";
+  content: "\f402";
 }
 .Icon--caretDown:before {
-  content: "\F181";
-}
-.Icon--caretDownLight:before {
-  content: "\F196";
+  content: "\f181";
 }
 .Icon--caretLeft:before {
   /*@replace: "\f173"*/
-  content: "\F172";
+  content: "\f172";
 }
 .Icon--caretLeftLight:before {
-  content: "\F193";
+  content: "\f193";
 }
 .Icon--caretRight:before {
   /*@replace: "\f172"*/
-  content: "\F173";
+  content: "\f173";
 }
 .Icon--caretRightLight:before {
-  content: "\F194";
+  content: "\f194";
 }
 .Icon--caretUp:before {
-  content: "\F181";
+  content: "\f181";
   transform: scaleY(-1);
 }
-.Icon--caretUpLight:before {
-  content: "\F195";
-}
 .Icon--cart:before {
-  content: "\F095";
+  content: "\f095";
 }
 .Icon--check:before {
-  content: "\F170";
+  content: "\f170";
 }
 .Icon--checkLight:before {
-  content: "\F197";
+  content: "\f197";
 }
 /* Lighter version of the check icon */
 .Icon--chevronDown:before {
-  content: "\F202";
+  content: "\f202";
 }
 .Icon--chevronUp:before {
-  content: "\F201";
+  content: "\f201";
 }
 .Icon--circleActiveAnalytics:before {
-  content: "\F516";
+  content: "\f516";
 }
 .Icon--circleActiveBird:before {
-  content: "\F520";
+  content: "\f520";
 }
 .Icon--circleActiveDm:before {
-  content: "\F517";
+  content: "\f517";
 }
 .Icon--circleActiveHeart:before {
-  content: "\F514";
+  content: "\f514";
 }
 .Icon--circleActiveList:before {
-  content: "\F518";
+  content: "\f518";
 }
 .Icon--circleActiveMe:before {
-  content: "\F519";
+  content: "\f519";
 }
 .Icon--circleActiveMore:before {
-  content: "\F515";
+  content: "\f515";
 }
 .Icon--circleActiveRetweet:before {
-  content: "\F512";
+  content: "\f512";
 }
 .Icon--circleActiveStar:before {
-  content: "\F513";
+  content: "\f513";
 }
 .Icon--circleError:before {
-  content: "\F042";
+  content: "\f042";
 }
 .Icon--circleMe:before {
-  content: "\F519";
+  content: "\f519";
 }
 .Icon--circleReply:before {
-  content: "\F511";
+  content: "\f511";
 }
 .Icon--clock:before {
-  content: "\F177";
+  content: "\f177";
 }
 .Icon--close:before {
-  content: "\F045";
+  content: "\f045";
 }
 .Icon--cog:before {
-  content: "\F059";
+  content: "\f059";
 }
 .Icon--cogWithCaret:before {
-  content: "\F124";
+  content: "\f124";
 }
 .Icon--collapseTweets:before {
-  content: "\F051";
+  content: "\f051";
 }
 .Icon--collections:before {
-  content: "\F008";
+  content: "\f008";
 }
 .Icon--conversation:before {
-  content: "\F157";
+  content: "\f157";
 }
 .Icon--cover:before {
-  content: "\F163";
+  content: "\f163";
 }
 .Icon--createMoment:before {
-  content: "\F162";
+  content: "\f162";
 }
 .Icon--creditCard:before {
-  content: "\F401";
+  content: "\f401";
 }
 .Icon--crescent:before {
-  content: "\F066";
+  content: "\f066";
 }
 .Icon--crescentFilled:before {
-  content: "\F567";
+  content: "\f567";
 }
 .Icon--crop:before {
-  content: "\F190";
+  content: "\f190";
 }
 .Icon--cvv:before {
-  content: "\F402";
+  content: "\f402";
 }
 .Icon--delete:before {
-  content: "\F154";
+  content: "\f154";
 }
 .Icon--deskBell:before {
-  content: "\F090";
+  content: "\f090";
 }
 .Icon--desktop:before {
-  content: "\F087";
+  content: "\f087";
 }
 .Icon--device:before {
-  content: "\F085";
+  content: "\f085";
 }
 .Icon--discover:before {
-  content: "\F052";
+  content: "\f052";
 }
 /* TODO: rename to Icon--hashtag */
 .Icon--dm:before {
-  content: "\F054";
+  content: "\f054";
 }
 .Icon--dmCompose:before {
-  content: "\F035";
+  content: "\f035";
 }
 .Icon--dots:before {
-  content: "\F150";
+  content: "\f150";
 }
 .Icon--dotsVertical:before {
-  content: "\F149";
+  content: "\f149";
 }
 .Icon--download:before {
-  content: "\F186";
+  content: "\f186";
 }
 .Icon--editPencil:before {
-  content: "\F112";
+  content: "\f112";
 }
 .Icon--envelope:before {
-  content: "\F187";
+  content: "\f187";
 }
 .Icon--fail:before {
-  content: "\F000";
+  content: "\f000";
 }
 /* TODO: DESIGN-993 – create a dedicated fail icon */
 .Icon--filter:before {
-  content: "\F138";
+  content: "\f138";
 }
 .Icon--follow:before {
-  content: "\F175";
+  content: "\f175";
 }
 .Icon--follower:before {
-  content: "\F002";
+  content: "\f002";
 }
 /* TODO: rename to Icon--followBadge */
 .Icon--following:before {
-  content: "\F176";
+  content: "\f176";
 }
 .Icon--geo:before {
-  content: "\F031";
+  content: "\f031";
 }
 .Icon--geoBadge:before {
-  content: "\F010";
+  content: "\f010";
 }
 .Icon--gif:before {
-  content: "\F028";
+  content: "\f028";
 }
 .Icon--gifBadge:before {
-  content: "\F309";
+  content: "\f309";
 }
 .Icon--grid:before {
-  content: "\F046";
+  content: "\f046";
 }
 .Icon--handset:before {
-  content: "\F091";
+  content: "\f091";
 }
 .Icon--heart:before {
-  content: "\F148";
+  content: "\f148";
 }
 .Icon--heartBadge:before {
-  content: "\F015";
+  content: "\f015";
 }
 .Icon--home:before {
-  content: "\F053";
+  content: "\f053";
 }
 .Icon--homeFilled:before {
-  content: "\F553";
+  content: "\f553";
 }
 .Icon--horizontalBarChart:before {
-  content: "\F048";
+  content: "\f048";
 }
 .Icon--info:before {
-  content: "\F209";
+  content: "\f209";
 }
 .Icon--imageCrop:before {
-  content: "\F158";
+  content: "\f158";
+}
+.Icon--laptop:before {
+  content: "\f084";
 }
 .Icon--lifeline:before {
-  content: "\F026";
+  content: "\f026";
 }
 .Icon--lifelineBadge:before {
-  content: "\F000";
+  content: "\f000";
+}
+.Icon--lightBulbOn:before {
+  content: "\f066";
+}
+.Icon--lightBulbOff:before {
+  content: "\f567";
 }
 .Icon--lightning:before {
-  content: "\F160";
+  content: "\f160";
 }
 .Icon--lightningBadge:before {
-  content: "\F161";
+  content: "\f161";
 }
 .Icon--lightningFilled:before {
-  content: "\F017";
+  content: "\f017";
 }
 .Icon--list:before {
-  content: "\F094";
+  content: "\f094";
 }
 .Icon--listBadge:before {
-  content: "\F012";
+  content: "\f012";
 }
 .Icon--logo:before {
-  content: "\F179";
+  content: "\f179";
 }
 /* TODO: combine with Icon--bird */
 .Icon--magicrecs:before {
-  content: "\F014";
+  content: "\f014";
 }
 .Icon--markAllRead:before {
-  content: "\F036";
+  content: "\f036";
 }
 .Icon--me:before {
-  content: "\F056";
+  content: "\f056";
 }
 /* TODO: rename to Icon--profile */
 .Icon--meFilled:before {
-  content: "\F002";
+  content: "\f002";
 }
 /* TODO: rename to Icon--profileFilled */
 .Icon--media:before {
-  content: "\F109";
+  content: "\f109";
 }
 .Icon--mediaCollapse:before {
-  content: "\F335";
+  content: "\f335";
 }
 .Icon--mediaDocking:before {
-  content: "\F336";
+  content: "\f336";
 }
 .Icon--mediaExpand:before {
-  content: "\F334";
+  content: "\f334";
 }
 .Icon--menu:before {
-  content: "\F093";
+  content: "\f093";
 }
 .Icon--message:before {
-  content: "\F054";
+  content: "\f054";
 }
 /* TODO: combine with Icon--dm */
 .Icon--moderator:before {
-  content: "\F089";
+  content: "\f089";
 }
 .Icon--muted:before {
-  content: "\F101";
+  content: "\f101";
 }
 .Icon--newsBadge:before {
-  content: "\F009";
+  content: "\f009";
 }
 .Icon--notifications:before {
-  content: "\F055";
+  content: "\f055";
 }
 .Icon--notificationsFilled:before {
-  content: "\F019";
+  content: "\f019";
 }
 .Icon--notificationsDisabled:before {
-  content: "\F037";
+  content: "\f037";
+}
+.Icon--paintbrush:before {
+  content: "\f159";
 }
 .Icon--pause:before {
-  content: "\F302";
+  content: "\f302";
 }
 .Icon--periscopeBadge:before {
-  content: "\F320";
+  content: "\f320";
 }
 .Icon--person:before {
-  content: "\F056";
+  content: "\f056";
 }
 .Icon--people:before {
-  content: "\F178";
-}
-.Icon--photo:before {
-  content: "\F158";
+  content: "\f178";
 }
 .Icon--pinned:before {
-  content: "\F003";
+  content: "\f003";
 }
 .Icon--play:before {
-  content: "\F301";
-}
-.Icon--political:before {
-  content: "\F004";
+  content: "\f301";
 }
 .Icon--poll:before {
-  content: "\F034";
+  content: "\f034";
 }
 .Icon--pollBar:before {
-  content: "\F199";
+  content: "\f199";
 }
 .Icon--promoted:before {
-  content: "\F004";
+  content: "\f004";
 }
 .Icon--promotedStroked:before {
-  content: "\F504";
+  content: "\f504";
 }
 .Icon--promotedTrend:before {
-  content: "\F011";
+  content: "\f011";
 }
 .Icon--promoteMode:before {
-  content: "\F409";
+  content: "\f409";
 }
 .Icon--protected:before {
-  content: "\F096";
+  content: "\f096";
 }
 .Icon--refresh:before {
-  content: "\F189";
+  content: "\f189";
 }
 .Icon--reply:before {
-  content: "\F151";
+  content: "\f151";
 }
 .Icon--report:before {
-  content: "\E609";
+  content: "\e609";
 }
 .Icon--retweet:before {
-  content: "\F152";
+  content: "\f152";
 }
 .Icon--retweeted:before {
-  content: "\F006";
+  content: "\f006";
 }
 /* TODO: rename to Icon--retweetBadge */
 .Icon--search:before {
-  content: "\F058";
+  content: "\f058";
 }
 .Icon--share:before {
-  content: "\F185";
+  content: "\f185";
 }
 .Icon--smileRating1:before {
-  content: "\F430";
+  content: "\f430";
 }
 .Icon--smileRating1Fill:before {
-  content: "\F431";
+  content: "\f431";
 }
 .Icon--smileRating2:before {
-  content: "\F432";
+  content: "\f432";
 }
 .Icon--smileRating2Fill:before {
-  content: "\F433";
+  content: "\f433";
 }
 .Icon--smileRating3:before {
-  content: "\F434";
+  content: "\f434";
 }
 .Icon--smileRating3Fill:before {
-  content: "\F435";
+  content: "\f435";
 }
 .Icon--smileRating4:before {
-  content: "\F436";
+  content: "\f436";
 }
 .Icon--smileRating4Fill:before {
-  content: "\F437";
+  content: "\f437";
 }
 .Icon--smileRating5:before {
-  content: "\F438";
+  content: "\f438";
 }
 .Icon--smileRating5Fill:before {
-  content: "\F439";
+  content: "\f439";
 }
 .Icon--smiley:before {
-  content: "\F033";
+  content: "\f033";
 }
 .Icon--snapReelBadge:before {
-  content: "\F312";
+  content: "\f312";
 }
 .Icon--soundOff:before {
-  content: "\F306";
+  content: "\f306";
 }
 .Icon--soundOn:before {
-  content: "\F305";
+  content: "\f305";
 }
 .Icon--stickerBadge:before {
-  content: "\F047";
+  content: "\f047";
 }
 .Icon--summary:before {
-  content: "\F156";
+  content: "\f156";
 }
 .Icon--tablet:before {
-  content: "\F086";
+  content: "\f086";
 }
 .Icon--top:before {
-  content: "\F007";
+  content: "\f007";
 }
 .Icon--translator:before {
-  content: "\F089";
+  content: "\f089";
 }
 .Icon--truck:before {
-  content: "\F400";
+  content: "\f400";
 }
 .Icon--tweet:before {
-  content: "\F029";
+  content: "\f029";
 }
 /* TODO: rename to Icon--compose */
 .Icon--unfollow:before {
-  content: "\F097";
+  content: "\f097";
 }
 .Icon--unmuted:before {
-  content: "\F101";
+  content: "\f101";
 }
 .Icon--url:before {
-  content: "\F098";
+  content: "\f098";
 }
 .Icon--vineBadge:before {
-  content: "\F310";
+  content: "\f310";
 }
 .Icon--visibilityFollowers:before {
-  content: "\F103";
+  content: "\f103";
 }
 .Icon--visibilityFollowing:before {
-  content: "\F105";
+  content: "\f105";
 }
 .Icon--visibilityMutual:before {
-  content: "\F104";
+  content: "\f104";
 }
 .Icon--visibilityOnlyMe:before {
-  content: "\F106";
+  content: "\f106";
 }
 .Icon--visibilityPublic:before {
-  content: "\F102";
+  content: "\f102";
 }
 .Icon--warning:before {
-  content: "\F182";
-}
-.Icon--laptop:before {
-  content: "\F084";
+  content: "\f182";
 }
 /**
  * Stacked verified icon
@@ -1500,15 +1469,15 @@ Rosetta-style loading indicators. Sources:
  * verified icon to be what gives the element width and height, not the fill.
  */
 .Icon--verified:before {
-  content: "\F032";
-  font-size: 0.7em;
-  left: 26%;
+  content: "\f032";
+  font-size: 0.6em;
+  left: 20%;
   line-height: 1;
   position: absolute;
-  top: 20%;
+  top: 25%;
 }
 .Icon--verified:after {
-  content: "\F099";
+  content: "\f099";
   line-height: 1;
   position: relative;
 }
@@ -1521,7 +1490,7 @@ Rosetta-style loading indicators. Sources:
  * be what gives the element width and height.
  */
 .Icon--playButton:before {
-  content: "\F032";
+  content: "\f032";
   line-height: 1;
   position: absolute;
   top: 0;
@@ -1531,7 +1500,7 @@ Rosetta-style loading indicators. Sources:
   opacity: 0.8;
 }
 .Icon--playButton:after {
-  content: "\F040";
+  content: "\f040";
   line-height: 1;
   position: relative;
 }
@@ -1547,77 +1516,74 @@ Rosetta-style loading indicators. Sources:
 }
 /* Colors */
 .Icon--fail {
-  color: #e0245e;
+  color: #E0245E;
 }
 .Icon--follower,
 .Icon--magicrecs,
 .Icon--colorLightning,
 .Icon--colorFollower {
-  color: #1da1f2;
+  color: #1DA1F2;
 }
 .Icon--lifelineBadge {
-  color: #d82e18;
+  color: #BD411A;
 }
 .Icon--listBadge:before {
-  color: #657786;
+  color: #5B7083;
 }
 .Icon--muted {
-  color: #e0245e;
-}
-.Icon--political {
-  color: #794bc4;
+  color: #E0245E;
 }
 .Icon--promoted {
-  color: #657786;
+  color: #5B7083;
 }
 .Icon--promotedTrend {
-  color: #ffad1f;
+  color: #FFAD1F;
 }
 .Icon--protected {
-  color: #14171a;
+  color: #0F1419;
 }
 .Icon--retweeted,
 .Icon--colorRetweeted {
-  color: #17bf63;
+  color: #17BF63;
 }
 .Icon--smiley {
-  color: #aab8c2;
+  color: #AAB8C2;
 }
 .Icon--top {
-  color: #1da1f2;
+  color: #1DA1F2;
 }
 .Icon--translator {
-  color: #1da1f2;
+  color: #1DA1F2;
 }
 .Icon--moderator {
-  color: #ffad1f;
+  color: #FFAD1F;
 }
 .Icon--unmuted {
-  color: #ccd6dd;
+  color: #C4CFD6;
 }
 .Icon--verified {
-  color: #1da1f2;
+  color: #1DA1F2;
 }
 .Icon--verified:before {
   color: white;
 }
 .Icon--circleActiveMe,
 .Icon--circleActiveBird {
-  color: #1da1f2;
+  color: #1DA1F2;
 }
 .Icon--colorHeart,
 .Icon--circleActiveHeart,
 .Icon--heartBadge {
-  color: #e0245e;
+  color: #E0245E;
 }
 .Icon--circleActiveRetweet {
-  color: #17bf63;
+  color: #17BF63;
 }
 .Icon--circleActiveList {
-  color: #657786;
+  color: #5B7083;
 }
 .Icon--playButton {
-  color: #1da1f2;
+  color: #1DA1F2;
 }
 .Icon--playButton:after {
   color: white;
@@ -1634,14 +1600,14 @@ Rosetta-style loading indicators. Sources:
   color: white;
 }
 .Icon--inverted.Icon--verified:before {
-  color: #14171a;
+  color: #0F1419;
 }
 /* Body text */
 html {
   font-size: 20px;
 }
 body {
-  color: #14171a;
+  color: #0F1419;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen-Sans, Ubuntu, Cantarell, 'Helvetica Neue', sans-serif;
   font-size: 0.7rem;
   line-height: 1rem;
@@ -1728,3 +1694,4 @@ h6 {
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
 }
+

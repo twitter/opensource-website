@@ -82,9 +82,8 @@ var renderProjects = function(projectsList, searchString="") {
             projectDiv.appendChild(projectLinksDiv)
 
             // Metrics button
-            var metricsButton = document.createElement('button')
-            metricsButton.setAttribute("onclick", "window.open('https://opensource.twitter.com/metrics/" + project.nameWithOwner + "/WEEKLY')")
-            metricsButton.type = "button"
+            var metricsButton = document.createElement('a')
+            metricsButton.setAttribute("href", "https://opensource.twitter.com/metrics/" + project.nameWithOwner + "/WEEKLY")
             metricsButton.className = "Button Button--tertiary"
             metricsButton.innerHTML = "Metrics"
             projectDiv.appendChild(metricsButton)

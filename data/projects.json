@@ -551,7 +551,7 @@
   "twitter/effectivescala": {
     "descriptionHTML": "<div>Twitter's Effective Scala Guide</div>",
     "forkCount": 616,
-    "homepageUrl": "http://twitter.github.com/effectivescala",
+    "homepageUrl": "http://twitter.github.io/effectivescala",
     "isPrivate": false,
     "languages": "Makefile Shell HTML",
     "name": "effectivescala",
@@ -786,7 +786,7 @@
   "twitter/hogan.js": {
     "descriptionHTML": "<div>A compiler for the Mustache templating language</div>",
     "forkCount": 450,
-    "homepageUrl": "http://twitter.github.com/hogan.js",
+    "homepageUrl": "http://twitter.github.io/hogan.js",
     "isPrivate": false,
     "languages": "JavaScript",
     "name": "hogan.js",
@@ -1134,7 +1134,7 @@
   "twitter/recess": {
     "descriptionHTML": "<div>A simple and attractive code quality tool for CSS built on top of LESS</div>",
     "forkCount": 202,
-    "homepageUrl": "http://twitter.github.com/recess",
+    "homepageUrl": "http://twitter.github.io/recess",
     "isPrivate": false,
     "languages": "CSS JavaScript",
     "name": "recess",
@@ -1822,7 +1822,7 @@
   "twitter/util": {
     "descriptionHTML": "<div>Wonderful reusable code from Twitter</div>",
     "forkCount": 533,
-    "homepageUrl": "http://twitter.github.com/util",
+    "homepageUrl": "http://twitter.github.io/util",
     "isPrivate": false,
     "languages": "Scala Java",
     "name": "util",

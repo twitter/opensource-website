@@ -534,7 +534,7 @@
   "twitter/dodo-build": {
     "descriptionHTML": "<div>A Github Action for running Dodo: The Twitter OSS Project Builder</div>",
     "forkCount": 0,
-    "homepageUrl": "https://github.com/twitter/dodo",
+    "homepageUrl": "https://github.io/twitter/dodo",
     "isPrivate": false,
     "languages": "TypeScript JavaScript",
     "name": "dodo-build",
@@ -551,7 +551,7 @@
   "twitter/effectivescala": {
     "descriptionHTML": "<div>Twitter's Effective Scala Guide</div>",
     "forkCount": 616,
-    "homepageUrl": "http://twitter.github.com/effectivescala",
+    "homepageUrl": "http://twitter.github.io/effectivescala",
     "isPrivate": false,
     "languages": "Makefile Shell HTML",
     "name": "effectivescala",
@@ -786,7 +786,7 @@
   "twitter/hogan.js": {
     "descriptionHTML": "<div>A compiler for the Mustache templating language</div>",
     "forkCount": 450,
-    "homepageUrl": "http://twitter.github.com/hogan.js",
+    "homepageUrl": "http://twitter.github.io/hogan.js",
     "isPrivate": false,
     "languages": "JavaScript",
     "name": "hogan.js",
@@ -1134,7 +1134,7 @@
   "twitter/recess": {
     "descriptionHTML": "<div>A simple and attractive code quality tool for CSS built on top of LESS</div>",
     "forkCount": 202,
-    "homepageUrl": "http://twitter.github.com/recess",
+    "homepageUrl": "http://twitter.github.io/recess",
     "isPrivate": false,
     "languages": "CSS JavaScript",
     "name": "recess",
@@ -1448,7 +1448,7 @@
   "twitter/thrift_client": {
     "descriptionHTML": "<div>A Thrift client wrapper that encapsulates some common failover behavior</div>",
     "forkCount": 74,
-    "homepageUrl": "http://github.com/twitter/thrift_client",
+    "homepageUrl": "http://github.io/twitter/thrift_client",
     "isPrivate": false,
     "languages": "Ruby",
     "name": "thrift_client",
@@ -1822,7 +1822,7 @@
   "twitter/util": {
     "descriptionHTML": "<div>Wonderful reusable code from Twitter</div>",
     "forkCount": 533,
-    "homepageUrl": "http://twitter.github.com/util",
+    "homepageUrl": "http://twitter.github.io/util",
     "isPrivate": false,
     "languages": "Scala Java",
     "name": "util",
@@ -1873,7 +1873,7 @@
   "twitter/wordpress": {
     "descriptionHTML": "<div>The official Twitter plugin for WordPress. Embed Twitter content and grow your audience on Twitter.</div>",
     "forkCount": 108,
-    "homepageUrl": "https://github.com/twitter/wordpress/wiki",
+    "homepageUrl": "https://github.io/twitter/wordpress/wiki",
     "isPrivate": false,
     "languages": "PHP",
     "name": "wordpress",

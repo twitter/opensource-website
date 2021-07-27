@@ -203,7 +203,7 @@
   "twitter/ambrose": {
     "descriptionHTML": "<div>A platform for visualization and real-time monitoring of data workflows</div>",
     "forkCount": 214,
-    "homepageUrl": "http://twitter.com/ambrose",
+    "homepageUrl": "https://twitter.com/ambrose",
     "isPrivate": false,
     "languages": "Java JavaScript",
     "name": "ambrose",
@@ -319,7 +319,7 @@
   "twitter/cassovary": {
     "descriptionHTML": "<div>Cassovary is a simple big graph processing library for the JVM</div>",
     "forkCount": 137,
-    "homepageUrl": "http://twitter.com/cassovary",
+    "homepageUrl": "https://twitter.com/cassovary",
     "isPrivate": false,
     "languages": "Scala",
     "name": "cassovary",
@@ -353,7 +353,7 @@
   "twitter/cdk": {
     "descriptionHTML": "<div>CDK is a tool to quickly generate single-file html slide presentations from AsciiDoc</div>",
     "forkCount": 26,
-    "homepageUrl": "http://cdk.readthedocs.org/en/latest/",
+    "homepageUrl": "https://cdk.readthedocs.org/en/latest/",
     "isPrivate": false,
     "languages": "Python JavaScript CSS",
     "name": "cdk",
@@ -500,7 +500,7 @@
   "twitter/distributedlog": {
     "descriptionHTML": "<div>A high performance replicated log service. (The development is moved to Apache Incubator)</div>",
     "forkCount": 288,
-    "homepageUrl": "http://distributedlog.incubator.apache.org/",
+    "homepageUrl": "https://github.com/twitter/distributedlog",
     "isPrivate": false,
     "languages": "Java",
     "name": "distributedlog",
@@ -786,7 +786,7 @@
   "twitter/hogan.js": {
     "descriptionHTML": "<div>A compiler for the Mustache templating language</div>",
     "forkCount": 450,
-    "homepageUrl": "http://twitter.github.io/hogan.js",
+    "homepageUrl": "https://twitter.github.io/hogan.js",
     "isPrivate": false,
     "languages": "JavaScript",
     "name": "hogan.js",
@@ -868,7 +868,7 @@
   "twitter/interactive": {
     "descriptionHTML": "<div>Twitter interactive visualization</div>",
     "forkCount": 65,
-    "homepageUrl": "http://twitter.github.io/interactive",
+    "homepageUrl": "https://twitter.github.io/interactive",
     "isPrivate": false,
     "languages": "CSS HTML ApacheConf",
     "name": "interactive",
@@ -953,7 +953,7 @@
   "twitter/labella.js": {
     "descriptionHTML": "<div>Placing labels on a timeline without overlap.</div>",
     "forkCount": 135,
-    "homepageUrl": "http://twitter.github.io/labella.js/",
+    "homepageUrl": "https://twitter.github.io/labella.js/",
     "isPrivate": false,
     "languages": "JavaScript",
     "name": "labella.js",
@@ -1134,7 +1134,7 @@
   "twitter/recess": {
     "descriptionHTML": "<div>A simple and attractive code quality tool for CSS built on top of LESS</div>",
     "forkCount": 202,
-    "homepageUrl": "http://twitter.github.io/recess",
+    "homepageUrl": "https://twitter.github.io/recess",
     "isPrivate": false,
     "languages": "CSS JavaScript",
     "name": "recess",
@@ -1304,7 +1304,7 @@
   "twitter/scalding": {
     "descriptionHTML": "<div>A Scala API for Cascading</div>",
     "forkCount": 682,
-    "homepageUrl": "http://twitter.com/scalding",
+    "homepageUrl": "https://twitter.com/scalding",
     "isPrivate": false,
     "languages": "Java Scala",
     "name": "scalding",
@@ -1338,7 +1338,7 @@
   "twitter/scrooge": {
     "descriptionHTML": "<div>A Thrift parser/generator</div>",
     "forkCount": 230,
-    "homepageUrl": "http://twitter.github.io/scrooge/",
+    "homepageUrl": "https://twitter.github.io/scrooge/",
     "isPrivate": false,
     "languages": "Scala Java Objective-C Mustache",
     "name": "scrooge",
@@ -1448,7 +1448,7 @@
   "twitter/thrift_client": {
     "descriptionHTML": "<div>A Thrift client wrapper that encapsulates some common failover behavior</div>",
     "forkCount": 74,
-    "homepageUrl": "http://github.com/twitter/thrift_client",
+    "homepageUrl": "https://github.com/twitter/thrift_client",
     "isPrivate": false,
     "languages": "Ruby",
     "name": "thrift_client",
@@ -1737,7 +1737,7 @@
   "twitter/twitter-server": {
     "descriptionHTML": "<div>Twitter-Server defines a template from which services at Twitter are built</div>",
     "forkCount": 200,
-    "homepageUrl": "http://twitter.github.io/twitter-server/",
+    "homepageUrl": "https://twitter.github.io/twitter-server/",
     "isPrivate": false,
     "languages": "Scala",
     "name": "twitter-server",
@@ -1771,7 +1771,7 @@
   "twitter/twitter.github.io": {
     "descriptionHTML": "<div>A listing of open source efforts at Twitter on GitHub</div>",
     "forkCount": 552,
-    "homepageUrl": "http://twitter.github.io",
+    "homepageUrl": "https://twitter.github.io",
     "isPrivate": false,
     "languages": "JavaScript HTML Python SCSS",
     "name": "twitter.github.io",
@@ -1805,7 +1805,7 @@
   "twitter/typeahead.js": {
     "descriptionHTML": "<div>typeahead.js is a fast and fully-featured autocomplete library</div>",
     "forkCount": 3271,
-    "homepageUrl": "http://twitter.github.io/typeahead.js/",
+    "homepageUrl": "https://twitter.github.io/typeahead.js/",
     "isPrivate": false,
     "languages": "JavaScript",
     "name": "typeahead.js",

@@ -3,19 +3,19 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>https://twitter.github.io/memberships/</loc>
+    <loc>https://opensource.twitter.dev/memberships/</loc>
   </url>
   
   <url>
-    <loc>https://twitter.github.io/projects/</loc>
+    <loc>https://opensource.twitter.dev/projects/</loc>
   </url>
   
   <url>
-    <loc>https://twitter.github.io/</loc>
+    <loc>https://opensource.twitter.dev/</loc>
   </url>
   
   <url>
-    <loc>https://twitter.github.io/year-in-review/</loc>
+    <loc>https://opensource.twitter.dev/year-in-review/</loc>
   </url>
   
 </urlset>

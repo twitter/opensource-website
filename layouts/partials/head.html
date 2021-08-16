@@ -24,15 +24,10 @@
     <title>{{ .Title }}</title>
     <link rel="shortcut icon" type="image/png" href="{{ "assets/favicon.ico" | relURL }}"/>
 
-    <!-- Feather CSS -->
-    <link rel="stylesheet" href="{{ "css/feather-core.css" | relURL }}"/>
-    <link rel="stylesheet" href="{{ "css/feather-component-grid.css" | relURL }}"/>
-    <link rel="stylesheet" href="{{ "css/feather-component-button.css" | relURL }}"/>
-
-    <!-- Main CSS -->
-    <link rel="stylesheet" href="{{ "css/main.css" | relURL }}"/>
+    {{- $style := resources.Get "css/style.scss" | toCSS | minify | fingerprint }}
+    <link rel="stylesheet" href="{{ $style.RelPermalink }}"/>
 
     {{- with .Params.custom_css }}
-    <!-- Custom CSS -->
-    <link rel="stylesheet" href="{{ printf "css/%s" . | relURL }}"/>
+    {{- $style := resources.Get (printf "css/%s" .) | toCSS | minify | fingerprint }}
+    <link rel="stylesheet" href="{{ $style.RelPermalink }}"/>
     {{ end }}

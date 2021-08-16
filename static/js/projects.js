@@ -48,11 +48,11 @@ var renderProjects = function(projectsList, searchString="") {
             projectDiv.appendChild(descriptionDiv)
 
             // Primary Language
-            if(project.primaryLanguage != null) {
-              var languageDiv = document.createElement('p')
-              languageDiv.className = "project-language"
-              languageDiv.innerHTML = project.primaryLanguage
-              projectDiv.appendChild(languageDiv)
+            if (project.primaryLanguage) {
+                var languageDiv = document.createElement('p')
+                languageDiv.className = "project-language"
+                languageDiv.innerHTML = project.primaryLanguage
+                projectDiv.appendChild(languageDiv)
             }
 
             // Whitespace
@@ -84,9 +84,8 @@ var renderProjects = function(projectsList, searchString="") {
             projectDiv.appendChild(projectLinksDiv)
 
             // Metrics button
-            var metricsButton = document.createElement('button')
-            metricsButton.setAttribute("onclick", "window.open('https://opensource.twitter.com/metrics/" + project.nameWithOwner + "/WEEKLY')")
-            metricsButton.type = "button"
+            var metricsButton = document.createElement('a')
+            metricsButton.setAttribute("href", "https://opensource.twitter.com/metrics/" + project.nameWithOwner + "/WEEKLY")
             metricsButton.className = "Button Button--tertiary"
             metricsButton.innerHTML = "Metrics"
             projectDiv.appendChild(metricsButton)
@@ -99,7 +98,7 @@ var renderProjects = function(projectsList, searchString="") {
         noResultDiv.className = 'no-results'
 
         var noResultPara = document.createElement('p')
-        noResultPara.innerHTML = "No results for " + '<b>' + searchString + '</b>'
+        noResultPara.innerText = "No results for " + searchString
         noResultDiv.appendChild(noResultPara)
 
         var noResultContainer = document.getElementsByClassName("no-results-container")[0]

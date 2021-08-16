@@ -9,7 +9,7 @@ on:
     - cron: "00 3 * * 1"
   push:
     branches:
-      - master
+      - main
 
 jobs:
   deploy:
@@ -34,3 +34,4 @@ jobs:
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./public
+          cname: opensource.twitter.dev

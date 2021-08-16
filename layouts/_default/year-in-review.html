@@ -31,17 +31,14 @@
     <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css'>
     <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css'>
 
-    <!-- Feather CSS -->
-    <link rel="stylesheet" href="{{ "css/feather-core.css" | relURL }}"/>
-    <link rel="stylesheet" href="{{ "css/feather-component-grid.css" | relURL }}"/>
-    <link rel="stylesheet" href="{{ "css/feather-component-button.css" | relURL }}"/>
-
     <!-- Main CSS -->
-    <link rel="stylesheet" href="{{ "css/main.css" | relURL }}"/>
+    {{- $style := resources.Get "css/style.scss" | toCSS | minify | fingerprint }}
+    <link rel="stylesheet" href="{{ $style.RelPermalink }}"/>
 
-    {{- with .Params.custom_css }}
     <!-- Custom CSS -->
-    <link rel="stylesheet" href="{{ printf "css/%s" . | relURL }}"/>
+    {{- with .Params.custom_css }}
+    {{- $style := resources.Get (printf "css/%s" .) | toCSS | minify | fingerprint }}
+    <link rel="stylesheet" href="{{ $style.RelPermalink }}"/>
     {{ end }}
   </head>
 

@@ -1,5 +1,0 @@
-#!/usr/bin/env bash
-set -euo pipefail
-
-# Optimizes all CSS files.
-$(npm bin)/postcss css/feather-* --replace

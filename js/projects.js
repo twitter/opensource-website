@@ -38,7 +38,7 @@ var renderProjects = function(projectsList, searchString="") {
             // Color-coded border
             var colorDiv = document.createElement('div')
             colorDiv.className = "border small-margin"
-            colorDiv.style = "border-bottom-color: " + project.color
+            colorDiv.style.borderBottomColor = project.color
             projectDiv.appendChild(colorDiv)
 
             // Project Description (HTML version)

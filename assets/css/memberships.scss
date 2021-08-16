@@ -1,4 +1,4 @@
-/* Styles specific to memberships (#Squad) page */
+/* Styles specific to memberships page */
 
 /* Logo sizes for membership cards */
 
@@ -9,12 +9,12 @@
 
 /* Header sizing */
 
-.squad-header {
+.memberships-header {
   padding-top: calc(var(--feather-grid-mega) * 3);
   padding-bottom: var(--feather-grid-mega);
 }
 
-.squad-subheading {
+.memberships-subheading {
   margin-top: var(--feather-grid-mega);
 }
 
@@ -24,7 +24,7 @@
 	  padding-bottom: var(--feather-grid-large);
 	}
 
-	.squad-subheading {
+	.memberships-subheading {
 	  margin-top: var(--feather-grid-large);
 	}
 }

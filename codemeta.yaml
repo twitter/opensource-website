@@ -1,0 +1,12 @@
+---
+"@context": https://doi.org/10.5063/schema/codemeta-2.0
+"@type": SoftwareSourceCode
+license: https://spdx.org/licenses/Apache-2.0
+codeRepository: git+https://github.com/twitter/opensource-website.git
+issueTracker: https://github.com/twitter/opensource-website/issues
+name: opensource.twitter.dev
+developmentStatus: active
+author:
+- "@type": Organization
+  identifier: OSS
+  name: Twitter Open Source Programs Office

@@ -10,7 +10,7 @@
  <br> <br>
  
  <h3>Join the Flock </h3>
- We are always on the lookout for innovative and creative individuals who are passionate about building a platform where all voices can be heard.
+ <p>We are always on the lookout for innovative and creative individuals who are passionate about building a platform where all voices can be heard.</p>
  
  To view all the career opportunities , visit https://careers.twitter.com/
  <br><br>

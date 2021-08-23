@@ -193,3 +193,12 @@ a.membership-handle:hover, a.membership-handle:active {
 		width: 100%;
 	}
 }
+
+.section{
+	background-color: white;
+	color: black;
+	@media (prefers-color-scheme: dark){
+		background-color: #121212;
+		color: white;
+	}
+}

@@ -59,6 +59,9 @@ body {
 
 nav {
   background-color: var(--tw-color-blue-primary);
+  @media (prefers-color-scheme: dark){
+    background-color: black;
+  }
   padding: var(--feather-grid-xsmall);
   width: 100%;
   position: fixed;
@@ -138,6 +141,9 @@ a.nav-link:hover, a.nav-link:active {
 .header, .footer {
   background-color: var(--tw-color-blue-primary);
   color: white;
+  @media (prefers-color-scheme: dark){
+    background-color: black;
+  }
 }
 
 .simple-header {
@@ -354,3 +360,11 @@ br {
   }
 }
 
+.explore-projects{
+    background-color: white;
+    color: black;
+    @media (prefers-color-scheme: dark){
+      background-color: black;
+      color: white;
+    }
+}

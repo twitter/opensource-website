@@ -21,8 +21,12 @@
 	color: var(--tw-color-blue-faded);
 }
 
-.grey {
+.grey{
 	background-color: var(--tw-color-gray-faint);
+	@media (prefers-color-scheme: dark){
+		background-color: #121212;
+		color: white;
+	}
 }
 
 .small-container {

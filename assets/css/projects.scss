@@ -126,3 +126,19 @@ input:focus {
 	}
 }
 
+.all-projects{
+	background-color: white;
+	color: black;
+	@media (prefers-color-scheme: dark){
+	    background-color: #121212;
+		color: white;
+		width: inherit;
+	}
+}
+
+.project-links a{
+	color: black;
+	@media (prefers-color-scheme: dark){
+		color: white;
+	}
+}

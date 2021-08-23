@@ -30,4 +30,18 @@
     {{- with .Params.custom_css }}
     {{- $style := resources.Get (printf "css/%s" .) | toCSS | minify | fingerprint }}
     <link rel="stylesheet" href="{{ $style.RelPermalink }}"/>
+
+    <style>
+        button#btntog:hover{
+            color: black;
+            background-color: white;
+            transition: 0.5s;
+        }
+        button#btntog:not(:hover){
+            color: white;
+        }
+
+    </style>
+
+
     {{ end }}

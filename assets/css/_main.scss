@@ -74,12 +74,6 @@ nav {
 }
 
 
-
-.togg-butt{
-  padding: 4px;
-  border-radius: 50px;
-}
-
 span.Icon--logo {
   color: white;
   position: absolute;
@@ -310,6 +304,11 @@ br {
 
   .list-end {
     border-bottom: none;
+  }
+
+  button#btntog:hover{
+    color: black;
+    background-color: white;
   }
 
   /* Navigation menu - Activated */

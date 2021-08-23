@@ -9,8 +9,6 @@ function changeHeightByClass(target, newHeight) {
     }
 }
 
-// Creates DOM element for Open Source text on homepage
-
 var textCell = document.createElement('div')
 textCell.classList.add("Grid-cell", "u-size5of12", "u-before1of12")
 textCell.id = "open-source-text"

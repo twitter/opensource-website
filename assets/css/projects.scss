@@ -82,7 +82,19 @@
 }
 
 .search-box::placeholder {
-	color: white;
+	color: black;
+}
+
+ .toadd{
+	 .search-box input::-webkit-input-placeholder{
+		 color: black;
+	 }
+ }
+
+ .white{
+	.search-box input::-webkit-input-placeholder{
+		color: white;
+	}
 }
 
 .Icon--search {

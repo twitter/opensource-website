@@ -1,13 +1,13 @@
 {{ define "main" }}
 <!-- Header -->
 
-<div class="header simple-header">
+<div class="header simple-header toggle">
     <div class="Grid container">
         <div id="header-text" class="Grid-cell">
             <h1 class="large-title">Projects</h1>
-            <div class="search-bar">
+            <div class="search-bar" id="search-tab-wala" style="background-color: white;" >
                 <input class="search-box" type="text" name="search" placeholder="Search Projects" autocomplete="off" />
-                <span class="Icon Icon--search"></span>
+                <span class="Icon Icon--search" style="color: black;"></span>
             </div>
         </div>
     </div>
@@ -18,7 +18,7 @@
 <div class="Grid container no-results-container"></div>
 
 <!-- Projects grid (See renderProjects() in projects.js) -->
-<div class="Grid container all-projects"></div>
+<div class="Grid container all-projects" id="project_page" style="background-color: white;"></div>
 <!-- End of all-projects -->
 
 <script type="text/javascript">

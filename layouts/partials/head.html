@@ -21,6 +21,67 @@
     <meta http-equiv='Cache-Control' content='no-cache'>
     <meta http-equiv='imagetoolbar' content='no'>
 
+    <!-- <script>
+        var navb = document.getElementsByClassName('toggle');
+        var cont = document.getElementsByClassName('toggle-cont');
+        var project = document.getElementsByClassName('toggle-project')[0];
+        var greysec = document.getElementsByClassName('greyish');
+        var bts = document.getElementsByClassName('button-toggle');
+        // var sec = document.getElementsByClassName('toggler')[0];
+        var btnnew = document.getElementsByClassName('search-bar');
+
+        function togglefunction(){
+            // console.log(navb.style.backgroundColor);
+            for(var i=0;i<navb.length;i++){
+                if(navb[i].style.backgroundColor == 'black'){
+                    navb[i].style.backgroundColor = 'var(--tw-color-blue-primary)';
+                }else{
+                    navb[i].style.backgroundColor = 'black';
+                }
+            }
+
+            for(var i=0;i<cont.length;i++){
+                if(cont[i].style.color == 'white'){
+                    cont[i].style.color = 'black';
+                }else{
+                    cont[i].style.color = 'white';
+                }
+            }
+
+            for(var i=0;i<greysec.length;i++){
+                if(greysec[i].style.backgroundColor == 'var(--tw-color-gray-faint)'){
+                    greysec[i].style.backgroundColor = '#787878';
+                }else{
+                    greysec[i].style.backgroundColor = 'var(--tw-color-gray-faint)';
+                }
+            }
+
+            for(var i=0;i<bts.length;i++){
+    
+                if(bts[i].style.color == 'var(--tw-color-blue-primary)'){
+                    bts[i].style.color = 'black';
+                }else{
+                    bts[i].style.color = 'var(--tw-color-blue-primary)';
+                }
+
+            }
+
+            if(btnnew.style.backgroundColor == 'var(--tw-color-blue-light)'){
+                btnnew.style.backgroundColor = 'white';
+            }else{
+                btnnew.style.backgroundColor = 'var(--tw-color-blue-light)'
+            }
+
+            if(projects[i].style.backgroundColor == 'black'){
+                projects[i].style.backgroundColor = 'var(--tw-color-blue-primary)';
+            }else{
+                projects[i].style.backgroundColor = 'black';
+            }
+
+        }
+    </script> -->
+
+
     <title>{{ .Title }}</title>
     <link rel="shortcut icon" type="image/png" href="{{ "assets/favicon.ico" | relURL }}"/>
 

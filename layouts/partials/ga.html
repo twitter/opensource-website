@@ -18,6 +18,7 @@
   // var sec = document.getElementsByClassName('toggler')[0];
   var btnnew = document.getElementsByClassName('search-bar')[0];
   var btx = document.getElementsByClassName('togg-butt')[0];
+  var flock = document.getElementsByClassName('flock-toggle')[0];
   // var project_page = document.getElementById('project_page');
 
   function togglefunction(){
@@ -60,6 +61,12 @@
         btx.textContent  = "LIGHT MODE";
       }else{
         btx.textContent  = "DARK MODE";
+      }
+
+      if(flock.style.backgroundColor == 'white'){
+          flock.style.backgroundColor = '#787878';
+      }else{
+          flock.style.backgroundColor = 'white';
       }
 
       // if(project_page.style.backgroundColor == 'white'){

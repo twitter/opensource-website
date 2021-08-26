@@ -1,6 +1,9 @@
 /*! Copyright 2021 Twitter Inc. All rights reserved. */
 /* @generated */
 /* Button groups */
+
+
+
 .ButtonGroup {
   display: inline-block;
   vertical-align: middle;
@@ -288,7 +291,7 @@ fieldset[disabled] a.Button {
 /* Variants */
 .Button,
 .Button:visited {
-  background-color: white;
+  // background-color: white;
   border: 1px solid #1DA1F2;
   color: #1DA1F2;
 }
@@ -308,10 +311,42 @@ fieldset[disabled] a.Button {
 }
 .Button:hover,
 .Button.is-hover {
-  background-color: #e8f6fe;
-  border-color: #1DA1F2;
-  color: #1DA1F2;
+  background-color: white;
+  border-color: black;
+  color: black;
 }
+
+// .footer-button{
+//   pointer-events: none;
+// }
+
+
+// @media (prefer-color-scheme:light){
+
+@media (prefer-color-scheme:light){
+  .Button:hover{
+    background-color: var(--tw-color-blue-primary);
+    color: white;
+  }
+}
+
+
+@media (prefer-color-scheme:dark){
+  .Button:hover{
+    background-color: white;
+    color: black;
+  }
+}
+
+
+.footer-button:hover,
+.footer-button.is-hover{
+  background-color: var(--tw-color-blue-primary);
+  border: 1px solid var(--tw-color-blue-primary);  
+}
+
+
+
 .Button:active,
 .Button.is-active {
   background-color: #d2ecfc;
@@ -383,6 +418,16 @@ fieldset[disabled] .Button {
 .ButtonGroup--primary > .Button.is-active.is-focus:not(.is-mouseFocus) {
   box-shadow: 0 0 0 2px white, 0 0 0 4px #1781c2;
 }
+
+
+// @media (prefer-color-scheme: light){
+// 	.Button {background-color: white;color: #1da1f2;border: 1px solid #1da1f2;}
+//   }
+  
+//   @media (prefers-color-scheme: dark){
+// 	.Button {background-color: white;color: black; border:1px solid black;}
+//   }
+
 .u-featherBackgroundDark .Button.Button--primary:active:focus:not(.is-mouseFocus),
 .u-featherBackgroundDark .Button.Button--primary.is-active.is-focus:not(.is-mouseFocus),
 .u-featherBackgroundDark .ButtonGroup--primary > .Button:active:focus:not(.is-mouseFocus),
@@ -403,9 +448,9 @@ fieldset[disabled] .ButtonGroup--primary > .Button {
 .Button.Button--tertiary:visited,
 .ButtonGroup--tertiary > .Button,
 .ButtonGroup--tertiary > .Button:visited {
-  background-color: white;
-  border: 1px solid #5B7083;
-  color: #5B7083;
+  // background-color: white;
+  border: 1px solid var(--tw-color-blue-primary);
+  color: var(--tw-color-blue-primary);
 }
 .Button.Button--tertiary:focus,
 .Button.Button--tertiary.is-focus,

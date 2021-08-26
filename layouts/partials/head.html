@@ -30,18 +30,40 @@
     {{- with .Params.custom_css }}
     {{- $style := resources.Get (printf "css/%s" .) | toCSS | minify | fingerprint }}
     <link rel="stylesheet" href="{{ $style.RelPermalink }}"/>
+<!-- 
+    <script>
+        var storedTheme = localStorage.getItem('theme') || (window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light");
 
-    <style>
-        button#btntog:hover{
-            color: black;
-            background-color: white;
-            transition: 0.5s;
-        }
-        button#btntog:not(:hover){
-            color: white;
-        }
+        setTimeout(function() {
+            var targetTheme = storedTheme == "dark" ? "light" : "dark";
+            switchTweetTheme(targetTheme, storedTheme);
+        }, 1000);
 
-    </style>
+        function switchTweetTheme(currentTheme, targetTheme) {
+            var tweets = document.querySelectorAll('[data-tweet-id]');
+
+            tweets.forEach(function(tweet) {
+                var src = tweet.getAttribute("src");
+                tweet.setAttribute("src", src.replace("theme=" + currentTheme, "theme=" + targetTheme));
+            });
+        }
+    </script> -->
+
+        
+    <!-- <script>
+        var result;
+        function getcol(){
+            var storedTheme = (window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light");
+            var toset;
+            if(storedTheme == "dark")toset = "light";
+            else toset = "dark";
+            
+            console.log(toset);
+            return toset;
+        }
+        result = getcol();
+    </script> -->
+
 
 
     {{ end }}

@@ -66,7 +66,6 @@ nav {
   overflow-y: visible;
 }
 
-
 /* Navigation title - web */
 
 .nav-title {
@@ -360,4 +359,49 @@ br {
     margin: 0 var(--feather-grid-medium);
   }
 }
+
+
+@media (prefer-color-scheme: light){
+  nav {background-color: var(--tw-color-blue-primary);}
+}
+
+@media (prefers-color-scheme: dark){
+  nav {background-color: black;}
+}
+
+
+@media (prefer-color-scheme: light){
+  .header {background-color: var(--tw-color-blue-primary);}
+}
+
+@media (prefers-color-scheme: dark){
+  .header {background-color: black;}
+}
+
+
+@media (prefer-color-scheme: light){
+  .footer {background-color: var(--tw-color-blue-primary);}
+}
+
+@media (prefers-color-scheme: dark){
+  .footer {background-color: black;}
+}
+
+
+@media (prefer-color-scheme: light){
+  .toggle-project {background-color: white;color: black;}
+}
+
+@media (prefers-color-scheme: dark){
+  .toggle-project {background-color: black;color: white;}
+}
+
+
+// @media (prefer-color-scheme: light){
+//   .all-projects {background-color: white;color: black;}
+// }
+
+// @media (prefers-color-scheme: dark){
+//   .all-projects {background-color: #121212;color: white;}
+// }
 

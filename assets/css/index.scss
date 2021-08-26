@@ -204,15 +204,18 @@ img.emoji-img {
 // #15292B
 // #121212
 
-// @media (prefer-color-scheme:light){
-// 	.twitter-timeline{
-// 		data-theme:light;
-// 	}
-// }
+@media (prefer-color-scheme:light){
+	a.twitter-timeline{
+		background-color: white !important;
+		color: black !important;
+	}
+}
 
 
-// @media (prefer-color-scheme:dark){
-// 	.twitter-timeline{
-// 		data-theme:dark;
-// 	}
-// }
+@media (prefer-color-scheme:dark){
+	a.twitter-timeline{
+		background: #292F33 !important;
+		color: white !important;
+	}
+}
+

@@ -1,22 +1,26 @@
 <!-- Global site tag (gtag.js) - Google Analytics -->
-<!-- <script>
-function getcol(){
-    var atags = document.getElementsByClassName('twitter-timeline');
-    var storedTheme = (window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light");
+ <!-- <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script> -->
 
-    if(storedTheme == "dark"){
-      for(var i=0;i<atags.length;i++){
-        atags[i].data-theme = "dark";
+<script>
+  
+  var storedTheme = (window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light");
+  
+  function switchTweetTheme(){
+    var ans;
+    if(storedTheme=="dark")ans = "dark";
+    else ans = "light";
+    var x = document.getElementsByClassName('twitter-timeline');
+
+    console.log(x.length);
+      for(var i=0;i<x.length;i++){
+        if(ans=="dark")x[i].setAttribute('data-theme','dark');
+        else x[i].setAttribute('data-theme','light');
       }
+      // window.location.reload();
     }
-    else {
-      for(var i=0;i<atags.length;i++){
-        atags[i].data-theme = "light";
-      }
-    }
-}
-getcol();
-</script> -->
+    switchTweetTheme();
+</script>
+
 
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-30775-124"></script>
 <script>

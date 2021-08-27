@@ -195,18 +195,11 @@ a.membership-handle:hover, a.membership-handle:active {
 }
 
 
-@media (prefer-color-scheme: light){
-  .section {background-color: white;color: black;}
-}
-
-@media (prefers-color-scheme: dark){
-  .section {background-color: #121212;color: white;}
-}
-
-@media (prefer-color-scheme:light){
-	.member_page:link{background-color: white; color: var(--tw-color-blue-primary);border:1px solid #1da1f2;}
-}
-
-@media (prefer-color-scheme:light){
-	.member_page:link{background-color: white; color: black;border:1px solid black;}
+.section{
+	background-color: white;
+	color: black;
+	@media (prefers-color-scheme: dark){
+		background-color: #121212;
+		color: white;
+	}
 }

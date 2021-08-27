@@ -5,17 +5,12 @@
   var storedTheme = (window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light");
   
   function switchTweetTheme(){
-    var ans;
-    if(storedTheme=="dark")ans = "dark";
-    else ans = "light";
     var x = document.getElementsByClassName('twitter-timeline');
 
-    console.log(x.length);
       for(var i=0;i<x.length;i++){
-        if(ans=="dark")x[i].setAttribute('data-theme','dark');
+        if(storedTheme=="dark")x[i].setAttribute('data-theme','dark');
         else x[i].setAttribute('data-theme','light');
       }
-      // window.location.reload();
     }
     switchTweetTheme();
 </script>

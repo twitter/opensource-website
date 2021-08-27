@@ -59,6 +59,9 @@ body {
 
 nav {
   background-color: var(--tw-color-blue-primary);
+  @media (prefers-color-scheme: dark){
+    background-color: black;
+  }
   padding: var(--feather-grid-xsmall);
   width: 100%;
   position: fixed;
@@ -139,6 +142,9 @@ a.nav-link:hover, a.nav-link:active {
 .header, .footer {
   background-color: var(--tw-color-blue-primary);
   color: white;
+  @media (prefers-color-scheme: dark){
+    background-color: black;
+  }
 }
 
 .simple-header {
@@ -305,11 +311,6 @@ br {
     border-bottom: none;
   }
 
-  button#btntog:hover{
-    color: black;
-    background-color: white;
-  }
-
   /* Navigation menu - Activated */
 
   nav.active {
@@ -361,39 +362,13 @@ br {
 }
 
 
-@media (prefer-color-scheme: light){
-  nav {background-color: var(--tw-color-blue-primary);}
-}
-
-@media (prefers-color-scheme: dark){
-  nav {background-color: black;}
-}
-
-
-@media (prefer-color-scheme: light){
-  .header {background-color: var(--tw-color-blue-primary);}
-}
-
-@media (prefers-color-scheme: dark){
-  .header {background-color: black;}
-}
-
-
-@media (prefer-color-scheme: light){
-  .footer {background-color: var(--tw-color-blue-primary);}
-}
-
-@media (prefers-color-scheme: dark){
-  .footer {background-color: black;}
-}
-
-
-@media (prefer-color-scheme: light){
-  .toggle-project {background-color: white;color: black;}
-}
-
-@media (prefers-color-scheme: dark){
-  .toggle-project {background-color: black;color: white;}
+.explore-projects{
+    background-color: white;
+    color: black;
+    @media (prefers-color-scheme: dark){
+      background-color: black;
+      color: white;
+    }
 }
 
 

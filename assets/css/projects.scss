@@ -138,20 +138,19 @@ input:focus {
 	}
 }
 
-
-@media (prefer-color-scheme: light){
-  .all-projects {background-color: white;color: black;}
+.all-projects{
+	background-color: white;
+	color: black;
+	@media (prefers-color-scheme: dark){
+	    background-color: #121212;
+		color: white;
+		width: inherit;
+	}
 }
 
-@media (prefers-color-scheme: dark){
-  .all-projects {background-color: #121212;color: white;width: inherit;}
-}
-
-
-@media (prefer-color-scheme: light){
-	.project-links a {color: black;}
-  }
-  
-  @media (prefers-color-scheme: dark){
-	.project-links a {color: white;}
+  .project-links a{
+		color: black;
+		@media (prefers-color-scheme: dark){
+			color: white;
+		}
   }

@@ -309,13 +309,6 @@ fieldset[disabled] a.Button {
 .u-featherBackgroundDark .Button.is-focus:not(.is-mouseFocus) {
   box-shadow: 0 0 0 2px black, 0 0 0 4px #74CAFE;
 }
-.Button:hover,
-.Button.is-hover {
-  background-color: white;
-  border-color: black;
-  color: black;
-}
-
 
 @media (prefer-color-scheme:light){
   .Button:hover{
@@ -412,15 +405,6 @@ fieldset[disabled] .Button {
 .ButtonGroup--primary > .Button.is-active.is-focus:not(.is-mouseFocus) {
   box-shadow: 0 0 0 2px white, 0 0 0 4px #1781c2;
 }
-
-
-// @media (prefer-color-scheme: light){
-// 	.Button {background-color: white;color: #1da1f2;border: 1px solid #1da1f2;}
-//   }
-  
-//   @media (prefers-color-scheme: dark){
-// 	.Button {background-color: white;color: black; border:1px solid black;}
-//   }
 
 .u-featherBackgroundDark .Button.Button--primary:active:focus:not(.is-mouseFocus),
 .u-featherBackgroundDark .Button.Button--primary.is-active.is-focus:not(.is-mouseFocus),

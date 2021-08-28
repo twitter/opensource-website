@@ -306,22 +306,11 @@ fieldset[disabled] a.Button {
   box-shadow: 0 0 0 2px black, 0 0 0 4px #74CAFE;
 }
 
-.Button:hover{
-    background-color: var(--tw-color-blue-primary);
-    color: white;
-    @media (prefer-color-scheme:dark){
-        background-color: white;
-        color: black;
-    }
-}
-
 .footer-button:hover,
 .footer-button.is-hover{
   background-color: var(--tw-color-blue-primary);
   border: 1px solid var(--tw-color-blue-primary);  
 }
-
-
 
 .Button:active,
 .Button.is-active {

@@ -120,4 +120,3 @@ function lessThan900px(mediaQuery) {
         removeClassByClass("emoji-card", "center-margin")
     }
 }
-

@@ -1,21 +1,4 @@
 <!-- Global site tag (gtag.js) - Google Analytics -->
- 
-<script>
-  
-  var storedTheme = (window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light");
-  
-  function switchTweetTheme(){
-    var x = document.getElementsByClassName('twitter-timeline');
-
-      for(var i=0;i<x.length;i++){
-        if(storedTheme=="dark")x[i].setAttribute('data-theme','dark');
-        else x[i].setAttribute('data-theme','light');
-      }
-    }
-    switchTweetTheme();
-</script>
-
-
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-30775-124"></script>
 <script>
   window.dataLayer = window.dataLayer || [];

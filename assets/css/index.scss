@@ -159,22 +159,6 @@ img.emoji-img {
 		background-position: bottom right -400px;
 	}
 }
-
-
-.switch {
-	position: relative;
-	display: inline-block;
-	width: 60px;
-	height: 34px;
-  }
-  
-  /* Hide default HTML checkbox */
-  .switch input {
-	opacity: 0;
-	width: 0;
-	height: 0;
-  }
-  
 	
 	.grey{
 		background-color: var(--tw-color-gray-faint);
@@ -186,7 +170,7 @@ img.emoji-img {
 	}
   
   .flock-toggle{
-		background-color: var(--tw-color-gray-faint);
+		background-color: white;
 		color: black;
 		@media (prefers-color-scheme: dark){
 			background-color: #121212;

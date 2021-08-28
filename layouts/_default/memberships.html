@@ -1,6 +1,6 @@
 {{ define "main" }}
 
-<div class="header memberships-header toggle" style="transition: background 1s;">
+<div class="header memberships-header" style="transition: background 1s;">
 	<div class="Grid container">
 		<div id="header-text" class="Grid-cell">
 			<h1 class="large-title">Memberships</h1>
@@ -33,7 +33,7 @@
 
 		    <!-- Visit website -->
 		    {{ with .website }}
-				<a href="{{ . }}" class="Button member_page">Visit</a>
+				<a href="{{ . }}" class="Button">Visit</a>
 		    {{ end }}
 
 		</div>

@@ -371,4 +371,11 @@ br {
     }
 }
 
-
+.Button:hover{
+  background-color: var(--tw-color-blue-primary);
+  color: white;
+  @media (prefer-color-scheme:dark){
+      background-color: white;
+      color: black;
+  }
+}

@@ -1,8 +1,8 @@
     <!-- Footer -->
-    <div class="footer toggle" style="transition: background 1s;">
+    <div class="footer" style="transition: background 1s;">
         <div class="Grid container">
             <div class="Grid-cell footer-cell u-size1of4 footer-margin">
-                <a href="{{ "projects" | relURL }}" class="Button Button--large button-toggle footer-button" style="color: white; border:1px solid white;">Explore Projects</a>
+                <a href="{{ "projects" | relURL }}" class="Button Button--large" style="color: white; border:1px solid white;">Explore Projects</a>
             </div>
             <div class="Grid-cell footer-cell u-size1of4 footer-margin">
                 <h3 class="xsmall-margin">
@@ -49,3 +49,14 @@
         </div>
     </div> <!-- End of Footer -->
 
+    <script>
+        function switchTweetTheme(){
+          if(window.matchMedia("(prefers-color-scheme: dark)").matches){
+              for(const e of document.getElementsByClassName('twitter-timeline')){
+                e.setAttribute('data-theme','dark');
+              }
+            }
+          }
+          switchTweetTheme();
+    </script>
+    

@@ -29,6 +29,10 @@
   color: var(--tw-color-gray-deep);
   font-size: var(--feather-font-size-normal);
   line-height: var(--feather-line-height-normal);
+
+  @media (prefers-color-scheme: dark) {
+    color: var(--tw-color-gray-faded);
+  }
 }
 
 .project-links a {
@@ -39,6 +43,10 @@
 
 .project-links a:link, .project-links a:visited {
   color: var(--tw-color-text-primary);
+
+  @media (prefers-color-scheme: dark) {
+    color: white;
+  }
 }
 
 .project-links a:hover, .project-links a:active {
@@ -71,6 +79,10 @@
   line-height: calc(1.8rem - (1px * 2));
   padding: 0 var(--feather-grid-medium);
   background-color: var(--tw-color-blue-light);
+
+  @media (prefers-color-scheme: dark) {
+    background-color: var(--tw-color-gray-600-experimental);
+  }
 }
 
 .search-box {
@@ -123,22 +135,5 @@ input:focus {
 
   .project-card .Button {
     right: var(--feather-grid-mega);
-  }
-}
-
-.all-projects {
-  background-color: white;
-  color: black;
-  @media (prefers-color-scheme: dark) {
-    background-color: #121212;
-    color: white;
-    width: inherit;
-  }
-}
-
-.project-links a {
-  color: black;
-  @media (prefers-color-scheme: dark) {
-    color: white;
   }
 }

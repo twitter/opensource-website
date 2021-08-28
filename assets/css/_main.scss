@@ -44,6 +44,11 @@
 
 body {
   background-color: white;
+
+  @media (prefers-color-scheme: dark) {
+    background-color: var(--tw-color-gray-900-experimental);
+    color: var(--tw-color-gray-faint);
+  }
 }
 
 .section {
@@ -59,14 +64,15 @@ body {
 
 nav {
   background-color: var(--tw-color-blue-primary);
-  @media (prefers-color-scheme: dark) {
-    background-color: black;
-  }
   padding: var(--feather-grid-xsmall);
   width: 100%;
   position: fixed;
   z-index: 2;
   overflow-y: visible;
+
+  @media (prefers-color-scheme: dark) {
+    background-color: black;
+  }
 }
 
 /* Navigation title - web */
@@ -96,6 +102,10 @@ a.home-link:link, a.home-link:visited, .home-text {
 
 a.home-link:hover, a.home-link:active {
   color: var(--tw-color-blue-faded);
+
+  @media (prefers-color-scheme: dark) {
+    color: var(--tw-color-gray-light);
+  }
 }
 
 span.Icon--caretDown {
@@ -122,6 +132,10 @@ a.nav-link:link, a.nav-link:visited {
 
 a.nav-link:hover, a.nav-link:active {
   color: var(--tw-color-blue-faded);
+
+  @media (prefers-color-scheme: dark) {
+    color: var(--tw-color-gray-light);
+  }
 }
 
 .home-link {
@@ -141,6 +155,7 @@ a.nav-link:hover, a.nav-link:active {
 .header, .footer {
   background-color: var(--tw-color-blue-primary);
   color: white;
+
   @media (prefers-color-scheme: dark) {
     background-color: black;
   }
@@ -180,6 +195,10 @@ a.foot-link:link, a.foot-link:visited {
 a.foot-link:hover, a.foot-link:active {
   color: var(--tw-color-blue-faded);
   text-decoration: none;
+
+  @media (prefers-color-scheme: dark) {
+    color: var(--tw-color-gray-light);
+  }
 }
 
 .footer-margin {
@@ -358,13 +377,4 @@ br {
   .container {
     margin: 0 var(--feather-grid-medium);
   }
-}
-
-.explore-projects {
-    background-color: white;
-    color: black;
-    @media (prefers-color-scheme: dark) {
-      background-color: black;
-      color: white;
-    }
 }

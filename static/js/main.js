@@ -82,3 +82,9 @@ function lessThan800px(mediaQuery) {
     }
 }
 
+// set dark theme on twitter timeline widgets and feather components
+if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
+    for (const e of document.getElementsByClassName('twitter-timeline')) {
+        e.setAttribute('data-theme','dark');
+    }
+}

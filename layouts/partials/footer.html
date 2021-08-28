@@ -49,13 +49,3 @@
         </div>
     </div> <!-- End of Footer -->
 
-    <script>
-        function switchTweetTheme(){
-          if(window.matchMedia("(prefers-color-scheme: dark)").matches){
-              for(const e of document.getElementsByClassName('twitter-timeline')){
-                e.setAttribute('data-theme','dark');
-              }
-            }
-          }
-          switchTweetTheme();
-    </script>

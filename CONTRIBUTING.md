@@ -26,15 +26,15 @@ Guidelines for bug reports:
 
 If you'd like to contribute please follow these instructions.
 
-[Fork this repo on GitHub](https://github.com/twitter/twitter.github.io/fork)
+[Fork this repo on GitHub](https://github.com/twitter/opensource-website/fork)
 
 ### Setup
 
 1. Clone your fork
 
 ```bash
-git clone https://github.com/$YOUR_USERNAME/twitter.github.io.git/
-cd twitter.github.io
+git clone https://github.com/$YOUR_USERNAME/opensource-website/
+cd opensource-website
 ```
 
 2. Install Hugo

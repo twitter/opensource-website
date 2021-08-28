@@ -1,0 +1,60 @@
+@media (prefers-color-scheme: dark) {
+  /* feather buttons */
+  .Button,
+  .Button:visited {
+    background-color: black;
+    border: 1px solid var(--tw-color-blue-primary);
+    color: var(--tw-color-blue-primary);
+  }
+  .Button:focus,
+  .Button.is-focus {
+    background: black;
+    border-color: var(--tw-color-blue-primary);
+    color: var(--tw-color-blue-primary);
+  }
+  .Button:hover,
+  .Button.is-hover {
+    background-color: var(--tw-color-gray-900-experimental);
+    border-color: var(--tw-color-blue-primary);
+    color: var(--tw-color-blue-primary);
+  }
+  .Button:active,
+  .Button.is-active {
+    background-color: var(--tw-color-gray-900-experimental);
+    border-color: var(--tw-color-blue-primary);
+    color: var(--tw-color-blue-primary);
+  }
+
+  .Button.Button--tertiary,
+  .Button.Button--tertiary:visited,
+  .ButtonGroup--tertiary > .Button,
+  .ButtonGroup--tertiary > .Button:visited {
+    background-color: black;
+    border: 1px solid var(--tw-color-blue-primary);
+    color: #1DA1F2;
+  }
+  .Button.Button--tertiary:focus,
+  .Button.Button--tertiary.is-focus,
+  .ButtonGroup--tertiary > .Button:focus,
+  .ButtonGroup--tertiary > .Button.is-focus {
+    background-color: black;
+    border: 1px solid var(--tw-color-blue-primary);
+    color: var(--tw-color-blue-primary);
+  }
+  .Button.Button--tertiary:hover,
+  .Button.Button--tertiary.is-hover,
+  .ButtonGroup--tertiary > .Button:hover,
+  .ButtonGroup--tertiary > .Button.is-hover {
+    background-color: var(--tw-color-gray-900-experimental);
+    border-color: var(--tw-color-blue-primary);
+    color: var(--tw-color-blue-primary);
+  }
+  .Button.Button--tertiary:active,
+  .Button.Button--tertiary.is-active,
+  .ButtonGroup--tertiary > .Button:active,
+  .ButtonGroup--tertiary > .Button.is-active {
+    background-color: var(--tw-color-gray-900-experimental);
+    border-color: var(--tw-color-blue-primary);
+    color: var(--tw-color-blue-primary);
+  }
+}

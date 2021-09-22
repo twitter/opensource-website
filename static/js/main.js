@@ -1,3 +1,8 @@
+/**
+ * Copyright 2018 Twitter, Inc.
+ * SPDX-License-Identifier: Apache-2.0
+ */
+
 // Functions to add and remove CSS classes
 
 function addClassById(id, className) {

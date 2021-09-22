@@ -1,3 +1,6 @@
+# Copyright 2018 Twitter, Inc.
+# SPDX-License-Identifier: Apache-2.0
+
 org_all_repos = """
 query ($owner: String!, $endCursor: String) {
   organization(login: $owner) {

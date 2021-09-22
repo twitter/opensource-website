@@ -1,3 +1,6 @@
+# Copyright 2018 Twitter, Inc.
+# SPDX-License-Identifier: Apache-2.0
+
 """
 Fetch metrics provided by Augur.
 https://github.com/osshealth/augur

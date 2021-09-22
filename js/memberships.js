@@ -1,3 +1,8 @@
+/**
+ * Copyright 2018 Twitter, Inc.
+ * SPDX-License-Identifier: Apache-2.0
+ */
+
 // Remove top border from first membership card
 
 var memberships = document.getElementsByClassName("membership");

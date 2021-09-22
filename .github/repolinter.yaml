@@ -1,0 +1,2 @@
+extends: https://raw.githubusercontent.com/twitter/.github/master/repolinter-rulesets/default.yaml
+# Add custom repolinter rules here. Learn more at https://github.com/todogroup/repolinter

@@ -1,0 +1,11 @@
+name: repolinter
+on: [push, pull_request]
+
+jobs:
+  repolinter:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+    - uses: todogroup/repolinter-action@v1
+      with:
+        config_file: .github/repolinter.yaml

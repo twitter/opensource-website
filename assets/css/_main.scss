@@ -55,7 +55,10 @@ body {
   }
 }
 
-.content, .section {
+.content {
+  padding: var(--feather-grid-mega) 0;
+}
+.section {
   padding: calc(var(--feather-grid-mega) * 2) 0;
 }
 
@@ -225,6 +228,10 @@ body {
   line-height: var(--feather-line-height-large);
 }
 
+h2 {
+  margin: 1.5em 0 0.5em;
+}
+
 .center-text {
   text-align: center;
 }
@@ -352,7 +359,7 @@ br {
 
 /* Less than 600px */
 @media (max-width: 600px) {
-  .content, .section {
+  .section {
     padding: calc(var(--feather-grid-mega) * 1.5) 0;
   }
 

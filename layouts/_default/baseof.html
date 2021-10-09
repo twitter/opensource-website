@@ -16,6 +16,6 @@
   </body>
 
   <script src="{{ "js/main.js" | relURL }}"></script>
-  <script src="{{ printf "js/%s" .Params.custom_js | relURL }}"></script>
+  {{ with .Params.custom_js }}<script src="{{ printf "js/%s" . | relURL }}"></script>{{ end }}
   {{ partial "ga.html" . }}
 </html>

@@ -9,22 +9,6 @@
     margin: var(--feather-grid-medium) 0;
 }
 
-.subheading a {
-  text-decoration: none;
-}
-
-.subheading a:link, .subheading a:visited {
-  color: white;
-}
-
-.subheading a:hover, .subheading a:active {
-  color: var(--tw-color-blue-faded);
-
-  @media (prefers-color-scheme: dark) {
-    color: var(--tw-color-gray-light);
-  }
-}
-
 .grey {
   background-color: var(--tw-color-gray-faint);
 

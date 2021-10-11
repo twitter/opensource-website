@@ -51,7 +51,7 @@ body {
   }
 }
 
-.section {
+.content, .section {
   padding: calc(var(--feather-grid-mega) * 2) 0;
 }
 
@@ -348,11 +348,17 @@ br {
 
 /* Less than 600px */
 @media (max-width: 600px) {
-  .section {
+  .content, .section {
     padding: calc(var(--feather-grid-mega) * 1.5) 0;
   }
 
   .container {
     margin: 0 var(--feather-grid-medium);
+  }
+}
+
+@media (max-width: 480px) {
+  .content, .section {
+    padding: var(--feather-grid-large) 0;
   }
 }

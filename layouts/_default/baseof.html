@@ -8,7 +8,7 @@
     {{ partial "nav.html" . }}
 
     <!-- Site wrapper -->
-    <div class="site">
+    <main>
       <div class="header">
         <div class="Grid container">
           <div id="header-text" class="Grid-cell">
@@ -19,8 +19,10 @@
           </div>
         </div>
       </div>
-        {{ block "main" . }}{{ end }}
-    </div>
+      <div class="content">
+        {{ block "content" . }}{{ end }}
+      </div>
+    </main>
 
     {{ partial "footer.html" . }}
   </body>

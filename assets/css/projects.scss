@@ -7,12 +7,6 @@
   --search-bar-width: 450px;
 }
 
-.all-projects {
-  padding-top: var(--feather-grid-mega);
-  padding-bottom: calc(var(--feather-grid-mega) * 2);
-}
-
-
 .project-card {
   position: relative;
   padding: var(--feather-grid-mega) calc(var(--feather-grid-mega) * 1.5);

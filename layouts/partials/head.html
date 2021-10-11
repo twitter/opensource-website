@@ -1,17 +1,17 @@
     <meta charset="utf-8" />
     <meta name="title" content="{{ .Title }}">
-    <meta name="description" content="{{ .Description }}">
-    <meta name="keywords" content="{{ .Params.keywords }}">
+    {{ with .Description }}<meta name="description" content="{{ . }}">{{ end }}
+    {{ with .Params.keywords }}<meta name="keywords" content="{{ . }}">{{ end }}
 
     <meta name="og:title" content="{{ .Title }}">
     <meta name="og:url" content="{{ .Permalink }}">
     <!-- <meta name="og:image" content="{{ .Params.logo }}"> -->
-    <meta name="og:description" content="{{ .Description }}">
+    {{ with .Description }}<meta name="og:description" content="{{ . }}">{{ end }}
 
     <meta name="twitter:card" content="summary" />
     <meta name="twitter:site" content="{{ .Permalink }}" />
     <meta name="twitter:title" content="{{ .Title }}" />
-    <meta name="twitter:description" content="{{ .Description }}" />
+    {{ with .Description }}<meta name="twitter:description" content="{{ . }}" />{{ end }}
     <!-- <meta name="twitter:image" content="{{ .Params.logo }}" /> -->
 
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -21,7 +21,7 @@
     <meta http-equiv='Cache-Control' content='no-cache'>
     <meta http-equiv='imagetoolbar' content='no'>
 
-    <title>{{ .Title }}</title>
+    <title>{{ .Title }}{{ if not .IsHome }} | {{ site.Title }}{{ end }}</title>
     <link rel="shortcut icon" type="image/png" href="{{ "assets/favicon.ico" | relURL }}"/>
 
     {{- $style := resources.Get "css/style.scss" | toCSS | minify | fingerprint }}

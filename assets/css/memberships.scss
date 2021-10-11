@@ -7,28 +7,6 @@
   --logo-size-small: 60px;
 }
 
-/* Header sizing */
-
-.memberships-header {
-  padding-top: calc(var(--feather-grid-mega) * 3);
-  padding-bottom: var(--feather-grid-mega);
-}
-
-.memberships-subheading {
-  margin-top: var(--feather-grid-mega);
-}
-
-/* When header less than var(--feather-grid-page-width) + (var(--feather-grid-mega) * 2) */
-@media (max-width: 1236px) {
-  .subheading-header {
-    padding-bottom: var(--feather-grid-large);
-  }
-
-  .memberships-subheading {
-    margin-top: var(--feather-grid-large);
-  }
-}
-
 /* Adjusts width and margins of membership-container */
 
 .membership-container {

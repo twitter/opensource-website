@@ -9,7 +9,13 @@
 
     <!-- Site wrapper -->
     <div class="site">
-        {{ block "header" . }}{{ end }}
+      <div class="header">
+        <div class="Grid container">
+          <div id="header-text" class="Grid-cell">
+            {{ block "header" . }}{{ end }}
+          </div>
+        </div>
+      </div>
         {{ block "main" . }}{{ end }}
     </div>
 

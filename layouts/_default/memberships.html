@@ -1,5 +1,4 @@
-{{ define "main" }}
-
+{{ define "header" }}
 <div class="header memberships-header">
 	<div class="Grid container">
 		<div id="header-text" class="Grid-cell">
@@ -8,7 +7,9 @@
 		</div>
 	</div>
 </div>
+{{ end }}
 
+{{ define "main" }}
 <div class="section">
 	<div class="Grid membership-container container">
 		{{ range $.Site.Data.memberships }}

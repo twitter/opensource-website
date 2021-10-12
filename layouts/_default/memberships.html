@@ -1,7 +1,7 @@
 {{ define "content" }}
 	<div class="Grid membership-container container">
 		{{ range $.Site.Data.memberships }}
-		<div class="Grid-cell sizeFull membership">
+		<div class="Grid-cell sizeFull membership" id="{{ .id }}">
 			<!-- Logo -->
 			<img src="{{ .logo }}" class="membership-logo">
 

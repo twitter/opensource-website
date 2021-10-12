@@ -1,5 +1,7 @@
 # opensource.twitter.dev
 
+[![status: active](https://opensource.twitter.dev/status/active.svg)](https://opensource.twitter.dev/status/#active)
+
 This is the Twitter Open Source website at https://opensource.twitter.dev.
 
 This site is built with [hugo], using a custom built-in theme.  Follow the

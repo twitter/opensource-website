@@ -2,7 +2,7 @@
 title: Project Status
 ---
 
-Open source projects come in all shapes and sizes, and Twitter's projects no
+Open source projects come in all shapes and sizes, and Twitter's projects are no
 exception.  Sometimes we publish projects that are highly experimental or are in
 very early stages of development.  Other times we publish some of the core
 infrastructure that is used to serve hundreds of millions of tweets every day.

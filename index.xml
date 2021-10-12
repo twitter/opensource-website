@@ -21,7 +21,7 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://opensource.twitter.dev/status/</guid>
-      <description>Open source projects come in all shapes and sizes, and Twitter&amp;rsquo;s projects no exception. Sometimes we publish projects that are highly experimental or are in very early stages of development. Other times we publish some of the core infrastructure that is used to serve hundreds of millions of tweets every day.
+      <description>Open source projects come in all shapes and sizes, and Twitter&amp;rsquo;s projects are no exception. Sometimes we publish projects that are highly experimental or are in very early stages of development. Other times we publish some of the core infrastructure that is used to serve hundreds of millions of tweets every day.
 These project status labels, which you&amp;rsquo;ll find attached to various Twitter projects, are designed to help indicate how stable a project is and where it is in its development lifecycle.</description>
     </item>
     

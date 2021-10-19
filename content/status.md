@@ -20,6 +20,7 @@ in its development lifecycle.
  - [Unmaintained](#unmaintained)
  - [Deprecated](#deprecated)
  - [Retired](#retired)
+ - [Static](#static)
 
 ## Idea
 
@@ -131,6 +132,23 @@ This code is read-only. There is neither a maintainer nor any support.
 - Contains the appropriate Twitter open source category header in the repository's README file
 - Previous references to Support should be modified or removed from the README
 - Project is read-only and available for cloning only
+
+## Static
+
+![status: static](static.svg)
+
+### Expectations
+
+This code is not expected to be updated after publication. Most often, this is
+code published alongside a research paper, a blog post, or for demonstration
+purposes.
+
+### Requirements
+
+- Complies with Twitter's legal and security requirements for open source software
+- Contains the appropriate Twitter open source category header in the repository's README file
+- (Optional) Issues at the project owner's discretion
+- (Optional) Project may be archived as read-only and only available for cloning
 
 ---
 Thanks to [repostatus.org](https://www.repostatus.org/) and [New

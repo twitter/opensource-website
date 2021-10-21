@@ -891,7 +891,9 @@ h2 .Icon.Icon--featherTooltipCue {
   font-family: "edgeicons";
   src: url(../fonts/edge-icons-Regular.eot);
   /* IE9 Compat Modes */
-  src: url(../fonts/edge-icons-Regular.eot?#iefix) format("embedded-opentype"),  url(../fonts/edge-icons-Regular.woff) format("woff"),  url(../fonts/edge-icons-Regular.ttf) format("truetype");
+  src: url(../fonts/edge-icons-Regular.eot?#iefix) format("embedded-opentype"), url(../fonts/edge-icons-Regular.ttf) format("truetype");
+  font-display: swap;
+
   /* Safari, Android, iOS */
 }
 /*

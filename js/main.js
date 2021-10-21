@@ -31,7 +31,7 @@ function removeClassByClass(target, className) {
 
 
 // Create sticky footer by defining min-height of site wrapper
-var site = document.getElementsByClassName("site")[0]
+var site = document.getElementsByTagName("main")[0]
 var footer = document.getElementsByClassName("footer")[0]
 // Year in Review website does not have a footer
 if (footer) {

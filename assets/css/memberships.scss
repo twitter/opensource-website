@@ -33,10 +33,10 @@
   padding: var(--feather-grid-large) 0;
   border-top: solid 1px var(--tw-color-gray-light);
   position: relative;
-}
 
-.no-top-border {
-  border-top: none;
+  &:first-child {
+    border-top: none;
+  }
 }
 
 a.membership-handle:link, a.membership-handle:visited {

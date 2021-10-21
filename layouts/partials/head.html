@@ -1,6 +1,8 @@
     <meta charset="utf-8" />
     <meta name="title" content="{{ .Title }}">
-    {{ with .Description }}<meta name="description" content="{{ . }}">{{ end }}
+    <meta name="theme-color" content="#1DA1F2" media="(prefers-color-scheme: light)">
+    <meta name="theme-color" content="#0f1419" media="(prefers-color-scheme: dark)">
+    <meta name="description" content="{{ .Description | default .Site.Title }}">
     {{ with .Params.keywords }}<meta name="keywords" content="{{ . }}">{{ end }}
 
     <meta name="og:title" content="{{ .Title }}">

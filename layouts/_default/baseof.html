@@ -29,5 +29,5 @@
 
   <script src="{{ "js/main.js" | relURL }}"></script>
   {{ with .Params.custom_js }}<script src="{{ printf "js/%s" . | relURL }}"></script>{{ end }}
-  {{ partial "ga.html" . }}
+  {{ if hugo.IsProduction }}{{ partial "ga.html" . }}{{ end }}
 </html>

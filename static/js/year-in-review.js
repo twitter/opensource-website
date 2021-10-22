@@ -5,7 +5,7 @@
 
 // Insert top 10 repos
 function renderTopRepos(reposList) {
-    let topTenRepos = reposList.slice(0, 10);
+    let topTenRepos = reposList.sort((a,b) => b.commitCount-a.commitCount).slice(0, 10);
     var topTenReposTable = document.getElementById("top-10-repos");
     var num = 1;
 

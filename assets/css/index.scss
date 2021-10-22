@@ -18,11 +18,6 @@
   margin: 0 auto;
 }
 
-.small-container .Grid-cell {
-  padding: var(--feather-grid-large) var(--feather-grid-mega);
-  max-width: 600px;
-}
-
 .twitter-timeline, .timeline-cell {
   height: 450px;
   @media (min-width: 600px) {

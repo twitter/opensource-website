@@ -38,6 +38,7 @@ function renderTopRepos(reposList) {
         repoLink.innerHTML = repo.name;
         repoLink.href = "https://github.com/twitter/" + repo.name;
         repoLink.target = "_blank";
+        repoLink.rel = "noopener";
         
         repoData.appendChild(repoLink);
         row.appendChild(repoData);

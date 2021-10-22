@@ -74,6 +74,7 @@ var renderProjects = function(projectsList, searchString="") {
             githubLink.href = getGithubURL(project)
             githubLink.innerHTML = "GitHub"
             githubLink.target = "_blank"
+            githubLink.rel = "noopener"
             projectLinksDiv.appendChild(githubLink)
 
             // Website link (with clause)
@@ -83,6 +84,7 @@ var renderProjects = function(projectsList, searchString="") {
                 websiteLink.href = homepageURL
                 websiteLink.innerHTML = "Website"
                 websiteLink.target = "_blank"
+                websiteLink.rel = "noopener"
                 projectLinksDiv.appendChild(websiteLink)
             }
 

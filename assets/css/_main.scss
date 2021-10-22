@@ -90,7 +90,7 @@ nav {
 }
 
 nav, .header, .footer {
-  a {
+  a:not(.Button) {
     color: white;
     text-decoration: none;
 

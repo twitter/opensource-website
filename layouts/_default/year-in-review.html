@@ -129,7 +129,7 @@
       <div class="YIR-container-section">
         <div class="YIR-header">
           <!-- id="type" -->
-          <h1 class="YIR-subheading" id="date-range"></h1>
+          <h1 class="YIR-subheading" id="date-range">{{ (now.AddDate -1 0 0).Format "Jan 2006" }} - {{ now.Format "Jan 2006" }}</h1>
           <h1 id="YIR-heading-text">Year in Review</h1>
           <h1 class="YIR-subheading" id="type">An overview of the past 12 months of activity on Twitter’s Open Source projects.</h1>
         </div>

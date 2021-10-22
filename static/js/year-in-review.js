@@ -3,15 +3,6 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
-// Insert date range for header
-let date = new Date();
-let month = date.toLocaleString('default', { month: 'short' });
-let currYear = date.getFullYear();
-let prevYear = currYear - 1;
-
-let dateRange = document.getElementById("date-range");
-dateRange.innerText = month + " " + prevYear + " - " + month + " " + currYear;
-
 // Insert top 10 repos
 function renderTopRepos(reposList) {
     let topTenRepos = reposList.slice(0, 10);

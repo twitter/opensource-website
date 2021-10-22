@@ -79,6 +79,8 @@
   line-height: calc(1.8rem - (1px * 2));
   padding: 0 var(--feather-grid-medium);
   background-color: var(--tw-color-blue-light);
+  display: flex;
+  justify-content: space-between;
 
   @media (prefers-color-scheme: dark) {
     background-color: var(--tw-color-gray-600-experimental);
@@ -91,18 +93,20 @@
   min-width: 90%;
   line-height: calc(1.8rem - (1px * 2));
   background-color: transparent;
+  &::placeholder {
+    color: white;
+  }
+  &:focus {
+    outline: none;
+  }
 }
 
-.search-box::placeholder {
-  color: white;
-}
-
-.Icon--search {
-  float: right;
-}
-
-input:focus {
-  outline: none;
+#search-icon {
+  fill: #ffffff;
+  height: 17px;
+  width: 17px;
+  margin-top: 9px;
+  flex-shrink: 0;
 }
 
 .no-results {

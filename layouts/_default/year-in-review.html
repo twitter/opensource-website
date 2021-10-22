@@ -27,10 +27,6 @@
     <title>{{ .Title }}</title>
     <link rel="shortcut icon" type="image/png" href="{{ "assets/favicon.ico" | relURL }}"/>
 
-    <!-- Year in Review timeline effect CSS -->
-    <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css'>
-    <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css'>
-
     <!-- Main CSS -->
     {{- $style := resources.Get "css/style.scss" | toCSS | minify | fingerprint }}
     <link rel="stylesheet" href="{{ $style.RelPermalink }}"/>
@@ -385,14 +381,7 @@
   {{ end }}
 </script>
 
-<!-- Year in Review timeline effect JS -->
-<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
-<script src='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js'></script>
-
-<!-- Twemoji -->
-<!-- <script src="https://twemoji.maxcdn.com/v/latest/twemoji.min.js" crossorigin="anonymous"></script> -->
-
-<script src="{{ "js/main.js" | relURL }}"></script> 
+<script src="{{ "js/main.js" | relURL }}"></script>
 <script src="{{ printf "js/%s" .Params.custom_js | relURL }}"></script>
 {{ partial "ga.html" . }}
 </html>

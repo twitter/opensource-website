@@ -180,6 +180,7 @@ a.YIRnav-YIR-link:hover {
 }
 
 .nav li {
+  list-style: none;
   position: relative;
   transition: all 0.3s ease-out;
   margin-bottom: var(--feather-grid-medium);

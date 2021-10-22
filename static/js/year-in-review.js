@@ -48,12 +48,10 @@ renderTopRepos(allRepos);
 
 // Svg triggers using intersection observer
 // https://alligator.io/js/intersection-observer/
-const svgs = document.querySelectorAll('.YIR-wrapper svg');
 const config = {
   rootMargin: '50px 50px 50px 50px',
   threshold: [0, 0.25, 0.5]
 };
-
 observer = new IntersectionObserver((entries) => {
   entries.forEach(entry => {
     if (entry.intersectionRatio > 0) {
@@ -63,11 +61,28 @@ observer = new IntersectionObserver((entries) => {
     }
   });
 }, config);
-svgs.forEach(image => {
+document.querySelectorAll('.YIR-wrapper svg').forEach(image => {
   observer.observe(image);
-}, config);
+});
 
-// Media query for Year in Review mobile navigation
+// show active section in nav menu
+const navEntries = document.querySelectorAll('.nav > li')
+observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      navEntries.forEach(n => {
+        if (n.querySelector(`a[href="#${entry.target.id}"]`)) {
+          n.classList.add('active')
+        } else {
+          n.classList.remove('active')
+        }
+      })
+    }
+  })
+}, {rootMargin: "-50% 0px"})
+document.querySelectorAll('section').forEach(e => {
+  observer.observe(e);
+})
 
 // Close nav-menu when menu item clicked (only effects mobile menu)
 document.querySelectorAll("#nav-menu a").forEach(e => {

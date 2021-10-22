@@ -91,7 +91,6 @@ nav {
 
 nav, .header, .footer {
   a {
-    color: white;
     text-decoration: none;
 
     &:hover, &:active {
@@ -196,6 +195,7 @@ span.Icon--caretDown {
 }
 
 a.foot-link {
+  color: white;
   display: block;
   line-height: var(--feather-line-height-xlarge);
 }

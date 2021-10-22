@@ -46,45 +46,25 @@
   <!-- Navigation Bar -->
     <nav>
     <div class="nav-title">
-      <span class="Icon Icon--logo Icon--large"></span>
-      <!-- Link in web -->
-      <a class="YIRnav-home-link" href="{{ "" | relURL }}">Twitter Open Source</a>
-      <a class="YIRnav-YIR-link" href="{{ "year-in-review" | relURL }}">Year in Review</a>
-      
-      <!-- Only in mobile -->
-      <p class="home-text">Twitter Open Source</p>
-      <span id="caret" class="Icon Icon--caretDown"></span>
+        <a class="home-link" href="{{ .Site.BaseURL }}">
+            <img src="/assets/twitter-logo.svg" alt="Twitter">
+            Open Source
+            <a class="YIRnav-YIR-link" href="{{ "year-in-review" | relURL }}">Year in Review</a>
+        </a>
     </div>
+    <a id="menu-toggle" href="#" onclick="document.getElementById('nav-menu').classList.toggle('active'); return false;">
+        <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px" fill="#ffffff"><path d="M0 0h24v24H0z" fill="none"/><path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"/></svg>
+    </a>
 
     <!-- Only in mobile -->
-    <ul class="nav-menu">
-      <li class="nav-list-item">
-        <a class="nav-link" href="#section1">Welcome</a>
-      </li>
-
-      <li class="nav-list-item">
-        <a class="nav-link" href="#section2">Top 10 repos</a>
-      </li>
-
-      <li class="nav-list-item">
-        <a class="nav-link" href="#section3">Locations</a>
-      </li>
-
-      <li class="nav-list-item">
-        <a class="nav-link" href="#section4">Heat metrics</a>
-      </li>
-
-      <li class="nav-list-item">
-        <a class="nav-link" href="#section5">Light metrics</a>
-      </li>
-
-      <li class="nav-list-item">
-        <a class="nav-link" href="#section6">Love metrics</a>
-      </li>
-
-      <li class="nav-list-item list-end">
-        <a class="nav-link" href="#section7">@TwitterOSS</a>
-      </li>
+    <ul id="nav-menu">
+      <li><a href="#section1">Welcome</a></li>
+      <li><a href="#section2">Top 10 repos</a></li>
+      <li><a href="#section3">Locations</a></li>
+      <li><a href="#section4">Heat metrics</a></li>
+      <li><a href="#section5">Light metrics</a></li>
+      <li><a href="#section6">Love metrics</a></li>
+      <li><a href="#section7">@TwitterOSS</a></li>
     </ul>
   </nav>
     

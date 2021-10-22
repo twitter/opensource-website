@@ -133,7 +133,7 @@ a.YIRnav-YIR-link:hover {
   opacity: 1;
 }
 
-.nav-menu {
+#nav-menu {
   display: none;
 }
 
@@ -519,76 +519,38 @@ span.metric-name {
     padding-top: var(--feather-grid-mega); /* FIX - DELETE if i make top nav stick to top */
   }
 
-  /* Top navigation */
   nav {
     background-color: var(--tw-color-blue-medium);
   }
-
-  .YIRnav-home-link, .YIRnav-YIR-link {
-    display: none;
-  }
-
-  /* Copied from main.css because mobile navigation is activated at a wider width on this page */
-  /* Navigation menu - Unactivated */
-
-  .home-text, a.nav-link:visited {
-    margin-right: var(--feather-grid-xsmall);
-  }
-
-  span.Icon--caretDown {
-    display: inline-block;
-    transform: rotate(0deg);
-  }
-
-  span.Icon--caretDown:hover {
-    color: var(--tw-color-blue-faded);
-  }
-
-  .nav-menu {
-    display: none;
-  }
-
-  .nav-list-item {
-    font-weight: var(--feather-font-weight-bold);
-    font-size: var(--feather-font-size-jumbo);
-    line-height: var(--feather-line-height-jumbo);
-    padding: var(--feather-grid-medium) 0;
-    margin: 0;
-    border-bottom: 1px solid var(--tw-color-blue-faded);
-  }
-
-  .list-end {
-    border-bottom: none;
-  }
-
-  /* Navigation menu - Activated */
-
-  nav.active {
-    height: 100vh;
-    overflow-y: auto;
-  }
-
-  nav.active span.Icon--caretDown {
-    transform: rotate(-180deg);
-  }
-
-  nav.active .nav-menu {
+  
+  // Copied from main.css because mobile navigation is activated at a wider width on this page
+  #menu-toggle {
     display: block;
+  }
+
+  #nav-menu {
+    display: none;
+    height: 100vh;
+    width: 100%;
+    margin: 0;
     margin-top: calc(var(--feather-grid-mega) * 2);
-    margin-left: var(--feather-grid-medium);
-    margin-right: var(--feather-grid-medium);
-  }
-
-  a.nav-link:link {
-    -webkit-animation: fadein 1.5s;
-    -moz-animation: fadein 1.5s;
-    -ms-animation: fadein 1.5s;
-    -o-animation: fadein 1.5s;
     animation: fadein 1.5s;
+
+    li {
+      display: block;
+      font-weight: var(--feather-font-weight-bold);
+      font-size: var(--feather-font-size-jumbo);
+      line-height: var(--feather-line-height-jumbo);
+      padding: var(--feather-grid-medium) 0;
+      margin: 0;
+      &:not(:last-child) {
+        border-bottom: 1px solid var(--tw-color-blue-faded);
+      }
+    }
   }
 
-  .home-text {
-    display: inline-block;
+  #nav-menu.active {
+    display: block;
   }
 }
 

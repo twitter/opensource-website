@@ -43,10 +43,6 @@ if (matchMedia) {
     var mediaQuery650 = window.matchMedia("(max-width: 650px)")
     lessThan650px(mediaQuery650)
     mediaQuery650.addListener(lessThan650px)
-
-    var mediaQuery800 = window.matchMedia("(max-width: 800px)")
-    lessThan800px(mediaQuery800)
-    mediaQuery800.addListener(lessThan800px)
 }
 
 // Breakpoint for mobile navigation
@@ -66,15 +62,6 @@ function mobileNavigation() {
         navBar.classList.remove("active")
     } else {
         navBar.classList.add("active")
-    }
-}
-
-// Mobile footer
-function lessThan800px(mediaQuery) {
-    if (mediaQuery.matches) {
-        removeClassByClass("footer-cell", "u-size1of4")
-    } else {
-        addClassByClass("footer-cell", "u-size1of4")
     }
 }
 

@@ -3,18 +3,9 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
-// Insert date range for header
-let date = new Date();
-let month = date.toLocaleString('default', { month: 'short' });
-let currYear = date.getFullYear();
-let prevYear = currYear - 1;
-
-let dateRange = document.getElementById("date-range");
-dateRange.innerText = month + " " + prevYear + " - " + month + " " + currYear;
-
 // Insert top 10 repos
 function renderTopRepos(reposList) {
-    let topTenRepos = reposList.slice(0, 10);
+    let topTenRepos = reposList.sort((a,b) => b.commitCount-a.commitCount).slice(0, 10);
     var topTenReposTable = document.getElementById("top-10-repos");
     var num = 1;
 
@@ -57,12 +48,10 @@ renderTopRepos(allRepos);
 
 // Svg triggers using intersection observer
 // https://alligator.io/js/intersection-observer/
-const svgs = document.querySelectorAll('.YIR-wrapper svg');
 const config = {
   rootMargin: '50px 50px 50px 50px',
   threshold: [0, 0.25, 0.5]
 };
-
 observer = new IntersectionObserver((entries) => {
   entries.forEach(entry => {
     if (entry.intersectionRatio > 0) {
@@ -72,32 +61,43 @@ observer = new IntersectionObserver((entries) => {
     }
   });
 }, config);
-svgs.forEach(image => {
+document.querySelectorAll('.YIR-wrapper svg').forEach(image => {
   observer.observe(image);
-}, config);
+});
 
-// Media query for Year in Review mobile navigation
+// show active section in nav menu
+const navEntries = document.querySelectorAll('.nav > li')
+observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      navEntries.forEach(n => {
+        if (n.querySelector(`a[href="#${entry.target.id}"]`)) {
+          n.classList.add('active')
+        } else {
+          n.classList.remove('active')
+        }
+      })
+    }
+  })
+}, {rootMargin: "-50% 0px"})
+document.querySelectorAll('section').forEach(e => {
+  observer.observe(e);
+})
 
 // Close nav-menu when menu item clicked (only effects mobile menu)
 document.querySelectorAll("#nav-menu a").forEach(e => {
   e.addEventListener("click", () => {
     document.getElementById('nav-menu').classList.remove('active')
   })
-})
-
-// Smooth scrolling sections
-// https://codepen.io/nailaahmad/pen/MyZXVE
-$('a[href*=#]:not([href=#])').click(function() {
-    if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') 
-        || location.hostname == this.hostname) {
-
-        var target = $(this.hash);
-        target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
-           if (target.length) {
-             $('html,body').animate({
-                 scrollTop: target.offset().top
-            }, 1000);
-            return false;
-        }
-    }
 });
+
+// polyfill smooth scrolling if needed
+if (!('scrollBehavior' in document.documentElement.style)) {
+  Promise.all([
+    import('https://unpkg.com/smoothscroll-polyfill/dist/smoothscroll.min.js'),
+    import('https://unpkg.com/smoothscroll-anchor-polyfill')
+  ])
+  .then(([smoothscrollPolyfill]) => {
+    smoothscrollPolyfill.polyfill();
+  });
+}

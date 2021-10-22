@@ -23,7 +23,17 @@
 }
 
 
-/* General */
+html {
+  scroll-padding-top: 0rem;
+  // smooth scrolling unless user has requested not to
+  --scroll-behavior: smooth;
+  scroll-behavior: smooth;
+
+  @media (prefers-reduced-motion: reduce) {
+      --scroll-behavior: auto;
+      scroll-behavior: auto;
+  }
+}
 
 .YIR-wrapper {
   color: white;
@@ -519,10 +529,13 @@ span.metric-name {
     padding-top: var(--feather-grid-mega); /* FIX - DELETE if i make top nav stick to top */
   }
 
+  html {
+    scroll-padding-top: 2.5rem;
+  }
   nav {
     background-color: var(--tw-color-blue-medium);
   }
-  
+
   // Copied from main.css because mobile navigation is activated at a wider width on this page
   #menu-toggle {
     display: block;

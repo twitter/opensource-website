@@ -83,21 +83,15 @@ document.querySelectorAll("#nav-menu a").forEach(e => {
   e.addEventListener("click", () => {
     document.getElementById('nav-menu').classList.remove('active')
   })
-})
-
-// Smooth scrolling sections
-// https://codepen.io/nailaahmad/pen/MyZXVE
-$('a[href*=#]:not([href=#])').click(function() {
-    if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') 
-        || location.hostname == this.hostname) {
-
-        var target = $(this.hash);
-        target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
-           if (target.length) {
-             $('html,body').animate({
-                 scrollTop: target.offset().top
-            }, 1000);
-            return false;
-        }
-    }
 });
+
+// polyfill smooth scrolling if needed
+if (!('scrollBehavior' in document.documentElement.style)) {
+  Promise.all([
+    import('https://unpkg.com/smoothscroll-polyfill/dist/smoothscroll.min.js'),
+    import('https://unpkg.com/smoothscroll-anchor-polyfill')
+  ])
+  .then(([smoothscrollPolyfill]) => {
+    smoothscrollPolyfill.polyfill();
+  });
+}

@@ -32,7 +32,7 @@ var renderProjects = function(projectsList, searchString="") {
         for (var project of projectsList) {
             // Div for each project
             var projectDiv = document.createElement('div')
-            projectDiv.className = "Grid-cell u-size1of3 project-card"
+            projectDiv.className = "project-card"
 
             // Project Name
             var nameDiv = document.createElement('h1')
@@ -109,15 +109,6 @@ var renderProjects = function(projectsList, searchString="") {
         var noResultContainer = document.getElementsByClassName("no-results-container")[0]
         noResultContainer.appendChild(noResultDiv)
     }
-    // Apply functions that determine how many columns
-    if (matchMedia) {
-        var mq3 = window.matchMedia("(min-width: 1236px)")
-        var mq2 = window.matchMedia("(max-width: 1236px) and (min-width: 850px)")
-        var mq1 = window.matchMedia("(max-width: 850px)")
-        threeColumn(mq3)
-        twoColumn(mq2)
-        oneColumn(mq1)
-    }
 }
 
 // Sort the projects
@@ -187,49 +178,3 @@ document.addEventListener('keyup', function(event) {
     }
     renderProjects(newProjectsList, searchString=searchBox.value)
 })
-
-/* Search implementation ends */
-
-// Media queries for projects grid
-if (matchMedia) {
-    var mediaQueryThreeColumn = window.matchMedia("(min-width: 1236px)")
-    threeColumn(mediaQueryThreeColumn)
-    mediaQueryThreeColumn.addListener(threeColumn)
-
-    var mediaQueryTwoColumn = window.matchMedia("(max-width: 1236px) and (min-width: 850px)")
-    twoColumn(mediaQueryTwoColumn)
-    mediaQueryTwoColumn.addListener(twoColumn)
-
-    var mediaQueryOneColumn = window.matchMedia("(max-width: 850px)")
-    oneColumn(mediaQueryOneColumn)
-    mediaQueryOneColumn.addListener(oneColumn)
-}
-
-// 3 columns
-function threeColumn(mediaQuery) {
-    if (mediaQuery.matches) {
-        addClassByClass("project-card", "u-size1of3")
-        removeClassByClass("project-card", "u-size1of2")
-    } else {
-        removeClassByClass("project-card", "u-size1of3")
-    }
-}
-
-// 2 columns
-function twoColumn(mediaQuery) {
-    if (mediaQuery.matches) {
-        addClassByClass("project-card", "u-size1of2")
-        removeClassByClass("project-card", "u-size1of3")
-    } else {
-        removeClassByClass("project-card", "u-size1of2")
-    }
-}
-
-// 1 column
-function oneColumn(mediaQuery) {
-    if (mediaQuery.matches) {
-        removeClassByClass("project-card", "u-size1of3")
-        removeClassByClass("project-card", "u-size1of2")
-    }
-}
-

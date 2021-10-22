@@ -3,33 +3,6 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
-// Functions to add and remove CSS classes
-
-function addClassById(id, className) {
-	document.getElementById(id).classList.add(className)
-}
-
-function removeClassById(id, className) {
-	document.getElementById(id).classList.remove(className)
-}
-
-function addClassByClass(target, className) {
-    var elements = document.getElementsByClassName(target)
-    var i
-    for (i = 0; i < elements.length; i++) {
-        elements[i].classList.add(className)
-    }
-}
-
-function removeClassByClass(target, className) {
-    var elements = document.getElementsByClassName(target)
-    var i
-    for (i = 0; i < elements.length; i++) {
-        elements[i].classList.remove(className)
-    }
-}
-
-
 // Create DOM element for navigation bar
 var navBar = document.getElementsByTagName("nav")[0]
 
@@ -43,10 +16,6 @@ if (matchMedia) {
     var mediaQuery650 = window.matchMedia("(max-width: 650px)")
     lessThan650px(mediaQuery650)
     mediaQuery650.addListener(lessThan650px)
-
-    var mediaQuery800 = window.matchMedia("(max-width: 800px)")
-    lessThan800px(mediaQuery800)
-    mediaQuery800.addListener(lessThan800px)
 }
 
 // Breakpoint for mobile navigation
@@ -66,15 +35,6 @@ function mobileNavigation() {
         navBar.classList.remove("active")
     } else {
         navBar.classList.add("active")
-    }
-}
-
-// Mobile footer
-function lessThan800px(mediaQuery) {
-    if (mediaQuery.matches) {
-        removeClassByClass("footer-cell", "u-size1of4")
-    } else {
-        addClassByClass("footer-cell", "u-size1of4")
     }
 }
 

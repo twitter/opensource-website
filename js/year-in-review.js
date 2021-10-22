@@ -12,13 +12,6 @@ let prevYear = currYear - 1;
 let dateRange = document.getElementById("date-range");
 dateRange.innerText = month + " " + prevYear + " - " + month + " " + currYear;
 
-// Typing effect on header
-new TypeIt('#type', {
-    cursor: false,
-    waitUntilVisible: true,
-    speed: 40,
-}).go();
-
 // Insert top 10 repos
 function renderTopRepos(reposList) {
     let topTenRepos = reposList.slice(0, 10);

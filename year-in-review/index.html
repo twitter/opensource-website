@@ -32,10 +32,10 @@
     <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css'>
 
     
-    <link rel="stylesheet" href="/css/style.min.e47f85092586f21b91c5a1a2343b695f72e621d730c9c6f9522d091cdd955a2a.css"/>
+    <link rel="stylesheet" href="/css/style.min.b79c89d6cf0a2a0d87a34d9d33484410cf0cf593adc259befc3661ca1b56c236.css"/>
 
     
-    <link rel="stylesheet" href="/css/year-in-review.min.1958b5da7507325ce9fa70d132c3675c8851daf9f8a8e9fd3f01593978e6376f.css"/>
+    <link rel="stylesheet" href="/css/year-in-review.min.1dc2ccbdf3cc7c16f45d7874d0199c9f0bb9b87feeee28b1a42aea0b1352c53a.css"/>
     
   </head>
 
@@ -43,45 +43,25 @@
   
     <nav>
     <div class="nav-title">
-      <span class="Icon Icon--logo Icon--large"></span>
-      
-      <a class="YIRnav-home-link" href="/">Twitter Open Source</a>
-      <a class="YIRnav-YIR-link" href="/year-in-review">Year in Review</a>
-      
-      
-      <p class="home-text">Twitter Open Source</p>
-      <span id="caret" class="Icon Icon--caretDown"></span>
+        <a class="home-link" href="https://opensource.twitter.dev/">
+            <img src="/assets/twitter-logo.svg" alt="Twitter">
+            Open Source
+            <a class="YIRnav-YIR-link" href="/year-in-review">Year in Review</a>
+        </a>
     </div>
+    <a id="menu-toggle" href="#" onclick="document.getElementById('nav-menu').classList.toggle('active'); return false;">
+        <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px" fill="#ffffff"><path d="M0 0h24v24H0z" fill="none"/><path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"/></svg>
+    </a>
 
     
-    <ul class="nav-menu">
-      <li class="nav-list-item">
-        <a class="nav-link" href="#section1">Welcome</a>
-      </li>
-
-      <li class="nav-list-item">
-        <a class="nav-link" href="#section2">Top 10 repos</a>
-      </li>
-
-      <li class="nav-list-item">
-        <a class="nav-link" href="#section3">Locations</a>
-      </li>
-
-      <li class="nav-list-item">
-        <a class="nav-link" href="#section4">Heat metrics</a>
-      </li>
-
-      <li class="nav-list-item">
-        <a class="nav-link" href="#section5">Light metrics</a>
-      </li>
-
-      <li class="nav-list-item">
-        <a class="nav-link" href="#section6">Love metrics</a>
-      </li>
-
-      <li class="nav-list-item list-end">
-        <a class="nav-link" href="#section7">@TwitterOSS</a>
-      </li>
+    <ul id="nav-menu">
+      <li><a href="#section1">Welcome</a></li>
+      <li><a href="#section2">Top 10 repos</a></li>
+      <li><a href="#section3">Locations</a></li>
+      <li><a href="#section4">Heat metrics</a></li>
+      <li><a href="#section5">Light metrics</a></li>
+      <li><a href="#section6">Love metrics</a></li>
+      <li><a href="#section7">@TwitterOSS</a></li>
     </ul>
   </nav>
     

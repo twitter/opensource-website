@@ -28,7 +28,7 @@
 
     <title>Projects | Twitter Open Source</title>
     <link rel="shortcut icon" type="image/png" href="/assets/favicon.ico"/>
-    <link rel="stylesheet" href="/css/style.min.e47f85092586f21b91c5a1a2343b695f72e621d730c9c6f9522d091cdd955a2a.css"/>
+    <link rel="stylesheet" href="/css/style.min.b79c89d6cf0a2a0d87a34d9d33484410cf0cf593adc259befc3661ca1b56c236.css"/>
     <link rel="stylesheet" href="/css/projects.min.e1b32ad668f10656e177028ce637c7b7afcb7c894e563cb933af21bbcb3a8f54.css"/>
     
 
@@ -38,44 +38,22 @@
         
     <nav>
         <div class="nav-title">
-            <span class="Icon Icon--logo Icon--large"></span>
-
-            
-            <a class="home-link" href="https://opensource.twitter.dev/">Open Source</a>
-
-            
-            <p class="home-text">Open Source</p>
-            <span id="caret" class="Icon Icon--caretDown"></span>
+            <a class="home-link" href="https://opensource.twitter.dev/">
+                <img src="/assets/twitter-logo.svg" alt="Twitter">
+                Open Source
+            </a>
         </div>
-        <ul class="nav-menu">
-            
-            <li id="extra-mobile-link" class="nav-list-item">
-                <a class="nav-link" href="https://opensource.twitter.dev/">Home</a>
-            </li>
-
-            <li class="nav-list-item">
-                <a class="nav-link" href="/projects">Projects</a>
-            </li>
-
-            <li class="nav-list-item">
-                <a class="nav-link" href="/memberships">Memberships</a>
-            </li>
-
-            <li class="nav-list-item">
-              <a class="nav-link" href="/year-in-review">Year in Review</a>
-            </li>
-
-            <li class="nav-list-item">
-                <a class="nav-link" href="https://blog.twitter.com/engineering/en_us/topics/open-source.html" target="_blank" rel="noopener">Blog</a>
-            </li>
-
-            <li class="nav-list-item list-end">
-                <a class="nav-link" href="https://github.com/twitter" target="_blank" rel="noopener">GitHub</a>
-            </li>
+        <a id="menu-toggle" href="#" onclick="document.getElementById('nav-menu').classList.toggle('active'); return false;">
+            <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px" fill="#ffffff"><path d="M0 0h24v24H0z" fill="none"/><path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"/></svg>
+        </a>
+        <ul id="nav-menu">
+            <li><a href="/projects">Projects</a></li>
+            <li><a href="/memberships">Memberships</a></li>
+            <li><a href="/year-in-review">Year in Review</a></li>
+            <li><a href="https://blog.twitter.com/engineering/en_us/topics/open-source.html" target="_blank" rel="noopener">Blog</a></li>
+            <li><a href="https://github.com/twitter" target="_blank" rel="noopener">GitHub</a></li>
         </ul>
     </nav>
-
-
 
     
     <main>

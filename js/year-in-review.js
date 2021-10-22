@@ -57,7 +57,7 @@ renderTopRepos(allRepos);
 
 // Svg triggers using intersection observer
 // https://alligator.io/js/intersection-observer/
-const svgs = document.querySelectorAll('svg');
+const svgs = document.querySelectorAll('.YIR-wrapper svg');
 const config = {
   rootMargin: '50px 50px 50px 50px',
   threshold: [0, 0.25, 0.5]
@@ -78,28 +78,12 @@ svgs.forEach(image => {
 
 // Media query for Year in Review mobile navigation
 
-if (matchMedia) {
-  var mediaQuery1080 = window.matchMedia("(max-width: 1080px)")
-  lessThan1080px(mediaQuery1080)
-  mediaQuery1080.addListener(lessThan1080px)
-}
-
-function lessThan1080px(mediaQuery) {
-  if (mediaQuery.matches) {
-      var caret = document.getElementById("caret")
-      caret.addEventListener("click", mobileNavigation)
-      navTitle.addEventListener("click", mobileNavigation)
-
-      // If user clicks on a link in the nav-menu, the nav-menu disappears
-      var navLinkList = document.getElementsByClassName("nav-link");
-      for (var i = 0; i < navLinkList.length; i++) {
-        var navLink = navLinkList[i];
-        navLink.addEventListener("click", mobileNavigation);
-      }
-  } else {
-      navBar.classList.remove("active")
-  }
-}
+// Close nav-menu when menu item clicked (only effects mobile menu)
+document.querySelectorAll("#nav-menu a").forEach(e => {
+  e.addEventListener("click", () => {
+    document.getElementById('nav-menu').classList.remove('active')
+  })
+})
 
 // Smooth scrolling sections
 // https://codepen.io/nailaahmad/pen/MyZXVE

@@ -366,38 +366,23 @@
 
   // Convert numbers greater than 1 million to m, and numbers greater than 10,000 to k
   function formatNum(num) {
-    if (num >= 1000000) {
-      num = Math.floor(num / 1000000);
-      return num.toString() + "m";
-    } else if (num >= 10000) {
-      num = Math.floor(num / 1000);
-      return num.toString() + "k";
-    } else {
-      return Math.floor(num).toString();
+    if (num >= 1e6) {
+      return `${Math.floor(num / 1e6)}m`
+    } else if (num >= 1e4) {
+      return `${Math.floor(num / 1e3)}k`
     }
+    return num
   }
 
   // Insert metric counts
   {{ range $.Site.Data.augur.aggregate_summary }}
-    var commitCountSpan = document.getElementById("commit-count");
-    commitCountSpan.innerText = formatNum("{{ .commit_count }}");
-
-    var committerCountSpan = document.getElementById("committer-count");
-    committerCountSpan.innerText = formatNum("{{ .committer_count }}");
-
-    var watcherCountSpan = document.getElementById("watcher-count");
-    watcherCountSpan.innerText = formatNum("{{ .watcher_count }}");
-
-    var starCountSpan = document.getElementById("star-count");
-    starCountSpan.innerText = formatNum("{{ .stars_count }}");
-
-    var forkCountSpan = document.getElementById("fork-count");
-    forkCountSpan.innerText = formatNum("{{ .fork_count }}");
-
-    var mergedCountSpan = document.getElementById("merged-count");
-    mergedCountSpan.innerText = formatNum("{{ .merged_count }}");   
+    document.getElementById("commit-count").innerText = formatNum("{{ .commit_count }}");
+    document.getElementById("committer-count").innerText = formatNum("{{ .committer_count }}");
+    document.getElementById("watcher-count").innerText = formatNum("{{ .watcher_count }}");
+    document.getElementById("star-count").innerText = formatNum("{{ .stars_count }}");
+    document.getElementById("fork-count").innerText = formatNum("{{ .fork_count }}");
+    document.getElementById("merged-count").innerText = formatNum("{{ .merged_count }}");
   {{ end }}
-
 </script>
 
 <!-- Year in Review timeline effect JS -->

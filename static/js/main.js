@@ -3,33 +3,6 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
-// Functions to add and remove CSS classes
-
-function addClassById(id, className) {
-	document.getElementById(id).classList.add(className)
-}
-
-function removeClassById(id, className) {
-	document.getElementById(id).classList.remove(className)
-}
-
-function addClassByClass(target, className) {
-    var elements = document.getElementsByClassName(target)
-    var i
-    for (i = 0; i < elements.length; i++) {
-        elements[i].classList.add(className)
-    }
-}
-
-function removeClassByClass(target, className) {
-    var elements = document.getElementsByClassName(target)
-    var i
-    for (i = 0; i < elements.length; i++) {
-        elements[i].classList.remove(className)
-    }
-}
-
-
 // Create DOM element for navigation bar
 var navBar = document.getElementsByTagName("nav")[0]
 

@@ -37,7 +37,7 @@ function renderTopRepos(reposList) {
         // Commit count
         const commitCountData = document.createElement('td');
         commitCountData.className = "commit-value";
-        commitCountData.innerHTML = formatNum(repo.commitCount);
+        commitCountData.innerHTML = repo.commitCount;
         row.appendChild(commitCountData);
 
         topTenReposTable.appendChild(row);

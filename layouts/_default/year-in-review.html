@@ -352,13 +352,11 @@
 <!-- Get all repos and commit counts -->
 <script type="text/javascript">
   // Get all repos from repo_commits.json
-  let allRepos = [];
-  {{ range $name, $data := $.Site.Data.augur.repo_commits }}
-    allRepos.push({
-      name: "{{ $name }}",
-      commitCount: "{{ $data.commit_count }}",
-    })
-  {{ end }}
+  let allRepos = [
+  {{- range $name, $data := $.Site.Data.augur.repo_commits -}}
+    { name: "{{ $name }}", commitCount: "{{ $data.commit_count }}", },
+  {{- end -}}
+  ];
 
   // Convert numbers greater than 1 million to m, and numbers greater than 10,000 to k
   function formatNum(num) {

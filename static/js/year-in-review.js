@@ -5,27 +5,27 @@
 
 // Insert top 10 repos
 function renderTopRepos(reposList) {
-    let topTenRepos = reposList.sort((a,b) => b.commitCount-a.commitCount).slice(0, 10);
-    var topTenReposTable = document.getElementById("top-10-repos");
-    var num = 1;
+    const topTenRepos = reposList.sort((a,b) => b.commitCount-a.commitCount).slice(0, 10);
+    const topTenReposTable = document.getElementById("top-10-repos");
+    let num = 1;
 
-    for (var repo of topTenRepos) {
+    topTenRepos.forEach(repo => {
         // Row
-        var row = document.createElement('tr');
+        const row = document.createElement('tr');
         row.className = "content";
 
         // Number
-        var numData = document.createElement('td');
+        const numData = document.createElement('td');
         numData.className = "num";
         numData.innerHTML = num;
         num++;
         row.appendChild(numData);
 
         // Repo name
-        var repoData = document.createElement('td');
+        const repoData = document.createElement('td');
         repoData.className = "repo";
 
-        var repoLink = document.createElement('a');
+        const repoLink = document.createElement('a');
         repoLink.innerHTML = repo.name;
         repoLink.href = "https://github.com/twitter/" + repo.name;
         repoLink.target = "_blank";
@@ -35,13 +35,13 @@ function renderTopRepos(reposList) {
         row.appendChild(repoData);
 
         // Commit count
-        var commitCountData = document.createElement('td');
+        const commitCountData = document.createElement('td');
         commitCountData.className = "commit-value";
         commitCountData.innerHTML = formatNum(repo.commitCount);
         row.appendChild(commitCountData);
 
         topTenReposTable.appendChild(row);
-    }
+    })
 }
 
 renderTopRepos(allRepos);

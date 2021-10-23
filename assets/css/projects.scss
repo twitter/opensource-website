@@ -18,6 +18,9 @@
   min-width: var(--project-card-min-width);
   max-width: var(--project-card-max-width);
 }
+.hide {
+  display: none;
+}
 
 .border {
   width: 150px;
@@ -87,7 +90,7 @@
   }
 }
 
-.search-box {
+#search-box {
   color: white;
   border: 0;
   min-width: 90%;
@@ -109,6 +112,9 @@
   flex-shrink: 0;
 }
 
-.no-results {
+#results {
   padding-top: var(--feather-grid-mega);
+  .count, .query {
+    font-weight: var(--feather-font-weight-bold);
+  }
 }

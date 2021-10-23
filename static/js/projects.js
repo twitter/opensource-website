@@ -3,164 +3,68 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
+var projectCards = Array.from(document.getElementsByClassName("project-card"))
+
+// parse cards to build project list
+var projects = []
+projectCards.forEach(card => {
+    projects.push({
+        id: card.id,
+        name: card.getElementsByClassName("project-name")[0].innerText,
+        description: card.getElementsByClassName("project-description")[0].innerText,
+        language: card.getElementsByClassName("project-language")[0].innerText,
+    })
+})
+
+// import fuse and initialize
+var fuse;
 import("https://cdnjs.cloudflare.com/ajax/libs/fuse.js/6.4.6/fuse.esm.min.js")
-    .then(module => { Fuse = module.default })
+    .then(module => {
+        Fuse = module.default
+        fuse = new Fuse(projects, {
+            findAllMatches: true,
+            isCaseSensitive: false,
+            threshold: 0.1,
+            ignoreLocation: true,
+            useExtendedSearch: true,
+            keys: [
+              "name",
+              "description",
+              "language",
+            ],
+        })
+    })
 
-/* Create project cards */
-var renderProjects = function(projectsList, searchString="") {
-    // Parent div to hold all the project cards
-    var mainDiv = document.getElementsByClassName("all-projects")[0]
+document.getElementById("search-box").addEventListener('keyup', function(event) {
+    let resultsBox = document.getElementById('results')
 
-    // Refer this for DOM manipulation with JS https://stackoverflow.com/questions/14094697/how-to-create-new-div-dynamically-change-it-move-it-modify-it-in-every-way-po
-    if (projectsList.length > 0) {
-        for (var project of projectsList) {
-            // Div for each project
-            var projectDiv = document.createElement('div')
-            projectDiv.className = "project-card"
-
-            // Project Name
-            var nameDiv = document.createElement('h1')
-            nameDiv.className = "project-name small-margin"
-            nameDiv.innerHTML = project.name
-            projectDiv.appendChild(nameDiv)
-
-            // Color-coded border
-            var colorDiv = document.createElement('div')
-            colorDiv.className = "border small-margin"
-            colorDiv.style.borderBottomColor = project.color
-            projectDiv.appendChild(colorDiv)
-
-            // Project Description (HTML version)
-            var descriptionDiv = document.createElement('div')
-            descriptionDiv.className = "project-description xsmall-margin"
-            descriptionDiv.innerHTML = project.description
-            projectDiv.appendChild(descriptionDiv)
-
-            // Primary Language
-            if (project.primaryLanguage) {
-                var languageDiv = document.createElement('p')
-                languageDiv.className = "project-language"
-                languageDiv.innerHTML = project.primaryLanguage
-                projectDiv.appendChild(languageDiv)
-            }
-
-            // Whitespace
-            var whitespaceDiv = document.createElement('div')
-            whitespaceDiv.className = "whitespace"
-            projectDiv.appendChild(whitespaceDiv)
-
-            // Project Links
-            var projectLinksDiv = document.createElement('div')
-            projectLinksDiv.className = "project-links"
-
-            // GitHub link
-            var githubLink = document.createElement('a')
-            githubLink.href = `https://github.com/${project.nameWithOwner}`
-            githubLink.innerHTML = "GitHub"
-            githubLink.target = "_blank"
-            githubLink.rel = "noopener"
-            projectLinksDiv.appendChild(githubLink)
-
-            // Website link (with clause)
-            var homepageURL = project.homepageURL
-            if (homepageURL != "") {
-                var websiteLink = document.createElement('a')
-                websiteLink.href = homepageURL
-                websiteLink.innerHTML = "Website"
-                websiteLink.target = "_blank"
-                websiteLink.rel = "noopener"
-                projectLinksDiv.appendChild(websiteLink)
-            }
-
-            projectDiv.appendChild(projectLinksDiv)
-
-            // Metrics button
-            var metricsButton = document.createElement('a')
-            metricsButton.setAttribute("href", "https://opensource.twitter.com/metrics/" + project.nameWithOwner + "/WEEKLY")
-            metricsButton.className = "Button Button--tertiary"
-            metricsButton.innerHTML = "Metrics"
-            projectDiv.appendChild(metricsButton)
-
-            /* Finally Add the project card to the page */
-            mainDiv.appendChild(projectDiv)
-        }
-    } else {
-        var noResultDiv = document.createElement('div')
-        noResultDiv.className = 'no-results'
-
-        var noResultPara = document.createElement('p')
-        noResultPara.innerText = "No results for " + searchString
-        noResultDiv.appendChild(noResultPara)
-
-        var noResultContainer = document.getElementsByClassName("no-results-container")[0]
-        noResultContainer.appendChild(noResultDiv)
+    let query = this.value.trim()
+    if (!query) {
+        // reset all cards
+        projectCards.forEach(card => {
+            card.classList.remove("hide")
+            card.style.removeProperty("order")
+        })
+        resultsBox.classList.add("hide")
+        return
     }
-}
+    let results = fuse.search(query)
 
-// Sort the projects
-var sortFunction = function(a, b) {
-    // Sort by recently pushedAt
-    var deltaA = (new Date) - Date.parse(a.pushedAt)
-    var deltaB = (new Date) - Date.parse(b.pushedAt)
-    return deltaA>=deltaB?1:-1
-}
-
-// Sort and Render
-allProjects.sort(sortFunction)
-renderProjects(allProjects)
+    // first, hide all the projects
+    projectCards.forEach(card => {
+        card.classList.add("hide")
+    })
 
 
-/* Search implementation starts */
-var searchResult = allProjects  // Search Result initialization
+    // then show results in relevance order
+    let order = 1
+    results.forEach(r => {
+        var card = document.getElementById(r.item.id)
+        card.classList.remove("hide")
+        card.style.setProperty("order", order++)
+    })
 
-function findMatches(query, repos) {
-  if (query === '') {
-      return repos
-  } else {
-      var options = {
-        findAllMatches: true,
-        threshold: 0.2,
-        location: 0,
-        distance: 50,
-        maxPatternLength: 50,
-        minMatchCharLength: 1,
-        keys: [
-          "name",
-          "languages",
-          "description"
-        ]
-      }
-      var fuse = new Fuse(repos, options)
-      var result = fuse.search(query).map(r => r.item)
-
-      // Sort
-      result.sort(sortFunction)
-
-      return result
-  }
-}
-
-var searchBox = document.getElementsByClassName('search-box')[0]
-
-document.addEventListener('keyup', function(event) {
-    /* Update the list of results with the search results */
-    var newProjectsList = []
-    var searchString = searchBox.value.trim()
-    searchResult = findMatches(searchString, allProjects)
-
-    // Remove all the projects
-    var mainDiv = document.getElementsByClassName("all-projects")[0]
-    while (mainDiv.firstChild) {
-        mainDiv.removeChild(mainDiv.firstChild)
-    }
-
-    var noResultContainer = document.getElementsByClassName("no-results-container")[0]
-    while (noResultContainer.firstChild) {
-        noResultContainer.removeChild(noResultContainer.firstChild)
-    }
-
-    for (var item of searchResult) {
-        newProjectsList.push(item)
-    }
-    renderProjects(newProjectsList, searchString=searchBox.value)
+    resultsBox.getElementsByClassName("count")[0].innerText = results.length
+    resultsBox.getElementsByClassName("query")[0].innerText = query
+    resultsBox.classList.remove("hide")
 })

@@ -3,49 +3,6 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
-// Insert top 10 repos
-function renderTopRepos(reposList) {
-    const topTenRepos = reposList.sort((a,b) => b.commitCount-a.commitCount).slice(0, 10);
-    const topTenReposTable = document.getElementById("top-10-repos");
-    let num = 1;
-
-    topTenRepos.forEach(repo => {
-        // Row
-        const row = document.createElement('tr');
-        row.className = "content";
-
-        // Number
-        const numData = document.createElement('td');
-        numData.className = "num";
-        numData.innerHTML = num;
-        num++;
-        row.appendChild(numData);
-
-        // Repo name
-        const repoData = document.createElement('td');
-        repoData.className = "repo";
-
-        const repoLink = document.createElement('a');
-        repoLink.innerHTML = repo.name;
-        repoLink.href = "https://github.com/twitter/" + repo.name;
-        repoLink.target = "_blank";
-        repoLink.rel = "noopener";
-        
-        repoData.appendChild(repoLink);
-        row.appendChild(repoData);
-
-        // Commit count
-        const commitCountData = document.createElement('td');
-        commitCountData.className = "commit-value";
-        commitCountData.innerHTML = repo.commitCount;
-        row.appendChild(commitCountData);
-
-        topTenReposTable.appendChild(row);
-    })
-}
-
-renderTopRepos(allRepos);
-
 // Svg triggers using intersection observer
 // https://alligator.io/js/intersection-observer/
 const config = {

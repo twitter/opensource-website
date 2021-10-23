@@ -151,7 +151,18 @@
             <th></th>
             <th>Total commits</th>
           </tr>
-          <!-- Table content added in year-in-review.js -->
+          {{/* put augur data into a slice that can be sorted and indexed */}}
+          {{- $repos := slice }}
+          {{- range $name, $data := $.Site.Data.augur.repo_commits -}}
+            {{ $repos = $repos | append (dict "name" $name "commit_count" $data.commit_count) }}
+          {{- end -}}
+          {{- range $i, $repo := first 10 (sort $repos "commit_count" "desc") }}
+          <tr class="content">
+            <td class="num">{{ add $i 1 }}</td>
+            <td class="repo"><a href="https://github.com/twitter/{{ .name }}" target="_blank" rel="noopener">{{ .name }}</a></td>
+            <td class="commit-value">{{ partial "formatNum" .commit_count }}</td>
+          </tr>
+          {{- end -}}
         </table>
       </div>
     </section>

@@ -18,9 +18,6 @@
   min-width: var(--project-card-min-width);
   max-width: var(--project-card-max-width);
 }
-.hide {
-  display: none;
-}
 
 .border {
   width: 150px;
@@ -73,7 +70,7 @@
 
 
 /* Search Bar */
-.search-bar {
+#search-bar {
   margin-top: var(--feather-grid-mega);
   border-radius: 1.6rem;
   border: 0;

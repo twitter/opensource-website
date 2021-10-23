@@ -69,7 +69,7 @@
     <div class="YIR-container">
       <div class="YIR-nav-wrapper" id="YIR-navbar">
         <ul class="nav">
-          <li class="active">
+          <li>
             <a href="#welcome">
               <span class="YIR-nav-title">Welcome</span>
               <p class="YIR-nav-body">This webpage updates weekly and provides a sliding window into the previous 12 months. Patches are always welcome.</p>
@@ -362,12 +362,9 @@
 
 <!-- Get all repos and commit counts -->
 <script type="text/javascript">
-  // Get all repos from repo_commits.json
-  let allRepos = [
-  {{- range $name, $data := $.Site.Data.augur.repo_commits -}}
-    { name: "{{ $name }}", commitCount: "{{ $data.commit_count }}", },
-  {{- end -}}
-  ];
+  for (element of document.getElementsByClassName("mobile-heading")) {
+    element.classList.add("hide")
+  };
 </script>
 
 <script src="{{ "js/main.js" | relURL }}"></script>

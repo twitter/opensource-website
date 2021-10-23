@@ -55,8 +55,9 @@ a {
   margin: 0 auto;
   height: inherit;
   display: flex;
-  justify-content: flex-end;
-  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-end;
 }
 
 p {
@@ -70,8 +71,7 @@ p {
 }
 
 .mobile-heading {
-  display: none;
-  padding-bottom: var(--feather-grid-large);
+  padding-bottom: var(--feather-grid-mega);
 }
 
 .mobile-heading h1 {
@@ -527,7 +527,7 @@ span.metric-name {
 
   .YIR-container-section {
     flex-direction: column;
-    justify-content: center;
+    align-items: center;
   }
 
   .YIR-header {

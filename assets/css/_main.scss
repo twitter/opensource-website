@@ -267,6 +267,10 @@ br {
   line-height: var(--feather-line-height-xlarge);
 }
 
+.hide {
+  display: none;
+}
+
 /* Media queries */
 
 /* Less than --feather-grid-page-width + (--feather-grid-mega * 2) */

@@ -94,8 +94,8 @@ document.querySelectorAll("#nav-menu a").forEach(e => {
 // polyfill smooth scrolling if needed
 if (!('scrollBehavior' in document.documentElement.style)) {
   Promise.all([
-    import('https://unpkg.com/smoothscroll-polyfill/dist/smoothscroll.min.js'),
-    import('https://unpkg.com/smoothscroll-anchor-polyfill')
+    import('https://unpkg.com/smoothscroll-polyfill@0.4.4/dist/smoothscroll.min.js'),
+    import('https://unpkg.com/smoothscroll-anchor-polyfill@1.3.2/dist/index.min.js')
   ])
   .then(([smoothscrollPolyfill]) => {
     smoothscrollPolyfill.polyfill();

@@ -82,31 +82,31 @@ section {
   height: 100vh;
 }
 
-section#section1 {
+section#welcome {
   background: var(--tw-color-blue-medium);
 }
 
-section#section2 {
+section#top10 {
   background: var(--tw-color-purple-medium);
 }
 
-section#section3 {
+section#locations {
   background: var(--tw-color-green-medium);
 }
 
-section#section4 {
+section#heat {
   background: var(--tw-color-orange-medium);
 }
 
-section#section5 {
+section#light {
   background: var(--tw-color-yellow-deep);
 }
 
-section#section6 {
+section#love {
   background: var(--tw-color-red-medium);
 }
 
-section#section7 {
+section#follow {
   background: var(--tw-color-blue-medium);
 }
 
@@ -468,7 +468,7 @@ span.metric-name {
 /* Hardcoded breakpoints for when window height is too small and causes content to overflow */
 /* Header - when content overflows section */
 @media (max-height: 544px) and (min-width: 1080px) {
-  section#section1 {
+  section#welcome {
     height: auto;
     padding: calc(var(--feather-grid-mega) * 1.5) 0;
   }
@@ -476,7 +476,7 @@ span.metric-name {
 
 /* Top 10 repos - when content overflows section */
 @media (max-height: 652px) and (min-width: 1080px) {
-  section#section2 {
+  section#top10 {
     height: auto;
     padding: calc(var(--feather-grid-mega) * 1.5) 0;
   }
@@ -484,7 +484,7 @@ span.metric-name {
 
 /* Locations - when content overflows section */
 @media (max-height: 772px) and (min-width: 1080px) {
-  section#section3 {
+  section#locations {
     height: auto;
     padding: calc(var(--feather-grid-mega) * 1.5) 0;
   }
@@ -492,7 +492,7 @@ span.metric-name {
 
 /* Metrics - when content overflows section */
 @media (max-height: 658px) and (min-width: 1080px) {
-  section#section4, section#section5, section#section6 {
+  section#heat, section#light, section#love {
     height: auto;
     padding: calc(var(--feather-grid-mega) * 1.5) 0;
   }
@@ -500,7 +500,7 @@ span.metric-name {
 
 /* Tweet - when content overflows section */
 @media (max-height: 721px) and (min-width: 1080px) {
-  section#section7 {
+  section#follow {
     height: auto;
     padding: calc(var(--feather-grid-mega) * 1.5) 0;
   }

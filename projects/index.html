@@ -29,7 +29,7 @@
     <title>Projects | Twitter Open Source</title>
     <link rel="shortcut icon" type="image/png" href="/assets/favicon.ico"/>
     <link rel="stylesheet" href="/css/style.min.b79c89d6cf0a2a0d87a34d9d33484410cf0cf593adc259befc3661ca1b56c236.css"/>
-    <link rel="stylesheet" href="/css/projects.min.a8c97ba368d89f159e0d1513f48799fd708749047addea3685cdbc1a55671298.css"/>
+    <link rel="stylesheet" href="/css/projects.min.8f6e04dbed9a6b902fe4c7c3c32a25caf348a4ef080ced7e9850a33fc9773cfb.css"/>
     
 
   </head>
@@ -63,7 +63,7 @@
             
 <h1 class="large-title">Projects</h1>
 <div class="search-bar">
-    <input class="search-box" type="text" name="search" placeholder="Search Projects" autocomplete="off" />
+    <input id="search-box" type="text" name="search" placeholder="Search Projects" autocomplete="off" autofocus />
     <svg id="search-icon" viewBox="0 0 24 24" aria-hidden="true" class="r-14j79pv r-4qtqp9 r-yyyyoo r-1xvli5t r-dnmrzs r-4wgw6l r-f727ji r-bnwqim r-1plcrui r-lrvibr"><g><path d="M21.53 20.47l-3.66-3.66C19.195 15.24 20 13.214 20 11c0-4.97-4.03-9-9-9s-9 4.03-9 9 4.03 9 9 9c2.215 0 4.24-.804 5.808-2.13l3.66 3.66c.147.146.34.22.53.22s.385-.073.53-.22c.295-.293.295-.767.002-1.06zM3.5 11c0-4.135 3.365-7.5 7.5-7.5s7.5 3.365 7.5 7.5-3.365 7.5-7.5 7.5-7.5-3.365-7.5-7.5z"></path></g></svg>
 </div>
 
@@ -73,1533 +73,1248 @@
       <div class="content">
         
 
-<div class="container no-results-container"></div>
+<div id="results" class="container hide">Found <span class="count"></span> results for <span class="query"></span></div>
 
-
-<div class="container all-projects"></div>
-
-
-<script type="text/javascript">
-    let allProjects = [];
-    
-        allProjects.push({
-            name: "pants",
-            nameWithOwner: "pantsbuild\/pants",
-            description: "\u003cdiv\u003eThe Pants Build System\u003c\/div\u003e",
-            color: "#3572A5",
-            primaryLanguage: "Python",
-            homepageURL: "https:\/\/www.pantsbuild.org",
-            pushedAt : "2021-10-17T21:57:45Z",
-            languages : "Python Rust",
-            forks : "419",
-            topics : "build-tool build-tools build-system monorepo python java scala golang javascript rust monorepos pants build",
-            stars : "1694",
-            watchers : "63",
-        })
-    
-        allProjects.push({
-            name: "pex",
-            nameWithOwner: "pantsbuild\/pex",
-            description: "\u003cdiv\u003eA library and tool for generating .pex (Python EXecutable) files\u003c\/div\u003e",
-            color: "#3572A5",
-            primaryLanguage: "Python",
-            homepageURL: "",
-            pushedAt : "2021-10-14T02:13:24Z",
-            languages : "Python",
-            forks : "206",
-            topics : "",
-            stars : "1970",
-            watchers : "53",
-        })
-    
-        allProjects.push({
-            name: ".github",
-            nameWithOwner: "twitter\/.github",
-            description: "\u003cdiv\u003eTwitter GitHub Organization-wide files\u003c\/div\u003e",homepageURL: "",
-            pushedAt : "2021-10-07T19:06:01Z",
-            languages : "",
-            forks : "10",
-            topics : "",
-            stars : "3",
-            watchers : "3",
-        })
-    
-        allProjects.push({
-            name: "AnomalyDetection",
-            nameWithOwner: "twitter\/AnomalyDetection",
-            description: "\u003cdiv\u003eAnomaly Detection with R\u003c\/div\u003e",
-            color: "#198CE7",
-            primaryLanguage: "R",
-            homepageURL: "",
-            pushedAt : "2019-08-30T19:49:16Z",
-            languages : "R",
-            forks : "752",
-            topics : "",
-            stars : "3381",
-            watchers : "331",
-        })
-    
-        allProjects.push({
-            name: "BreakoutDetection",
-            nameWithOwner: "twitter\/BreakoutDetection",
-            description: "\u003cdiv\u003eBreakout Detection via Robust E-Statistics\u003c\/div\u003e",
-            color: "#f34b7d",
-            primaryLanguage: "C\u002b\u002b",
-            homepageURL: "",
-            pushedAt : "2017-08-15T03:23:50Z",
-            languages : "R C\u002b\u002b",
-            forks : "171",
-            topics : "",
-            stars : "730",
-            watchers : "163",
-        })
-    
-        allProjects.push({
-            name: "CocoaSPDY",
-            nameWithOwner: "twitter\/CocoaSPDY",
-            description: "\u003cdiv\u003eSPDY for iOS and OS X\u003c\/div\u003e",
-            color: "#438eff",
-            primaryLanguage: "Objective-C",
-            homepageURL: "",
-            pushedAt : "2017-04-03T16:48:52Z",
-            languages : "Objective-C",
-            forks : "249",
-            topics : "",
-            stars : "2409",
-            watchers : "217",
-        })
-    
-        allProjects.push({
-            name: "GraphJet",
-            nameWithOwner: "twitter\/GraphJet",
-            description: "\u003cdiv\u003eGraphJet is a real-time graph processing library.\u003c\/div\u003e",
-            color: "#b07219",
-            primaryLanguage: "Java",
-            homepageURL: "",
-            pushedAt : "2021-06-23T20:46:01Z",
-            languages : "Java",
-            forks : "61",
-            topics : "",
-            stars : "496",
-            watchers : "36",
-        })
-    
-        allProjects.push({
-            name: "SentenTree",
-            nameWithOwner: "twitter\/SentenTree",
-            description: "\u003cdiv\u003eA novel text visualization technique\u003c\/div\u003e",
-            color: "#f1e05a",
-            primaryLanguage: "JavaScript",
-            homepageURL: "",
-            pushedAt : "2021-10-13T16:49:02Z",
-            languages : "Python JavaScript",
-            forks : "35",
-            topics : "",
-            stars : "171",
-            watchers : "16",
-        })
-    
-        allProjects.push({
-            name: "Serial",
-            nameWithOwner: "twitter\/Serial",
-            description: "\u003cdiv\u003eLight-weight, fast framework for object serialization in Java, with Android support.\u003c\/div\u003e",
-            color: "#b07219",
-            primaryLanguage: "Java",
-            homepageURL: "",
-            pushedAt : "2020-12-10T21:22:37Z",
-            languages : "Java",
-            forks : "67",
-            topics : "",
-            stars : "850",
-            watchers : "35",
-        })
-    
-        allProjects.push({
-            name: "TwitterTextEditor",
-            nameWithOwner: "twitter\/TwitterTextEditor",
-            description: "\u003cdiv\u003eA standalone, flexible API that provides a full-featured rich text editor for iOS applications.\u003c\/div\u003e",
-            color: "#F05138",
-            primaryLanguage: "Swift",
-            homepageURL: "",
-            pushedAt : "2021-08-22T06:19:00Z",
-            languages : "Swift",
-            forks : "96",
-            topics : "ios uikit swift textkit",
-            stars : "2608",
-            watchers : "46",
-        })
-    
-        allProjects.push({
-            name: "activerecord-reputation-system",
-            nameWithOwner: "twitter\/activerecord-reputation-system",
-            description: "\u003cdiv\u003eAn Active Record Reputation System for Rails\u003c\/div\u003e",
-            color: "#701516",
-            primaryLanguage: "Ruby",
-            homepageURL: "",
-            pushedAt : "2016-01-14T23:40:36Z",
-            languages : "Ruby",
-            forks : "126",
-            topics : "",
-            stars : "1342",
-            watchers : "145",
-        })
-    
-        allProjects.push({
-            name: "algebird",
-            nameWithOwner: "twitter\/algebird",
-            description: "\u003cdiv\u003eAbstract Algebra for Scala\u003c\/div\u003e",
-            color: "#c22d40",
-            primaryLanguage: "Scala",
-            homepageURL: "https:\/\/twitter.github.io\/algebird",
-            pushedAt : "2021-10-14T18:45:03Z",
-            languages : "Scala",
-            forks : "305",
-            topics : "",
-            stars : "2099",
-            watchers : "239",
-        })
-    
-        allProjects.push({
-            name: "analytics-infra-governance",
-            nameWithOwner: "twitter\/analytics-infra-governance",
-            description: "\u003cdiv\u003eDescription of the process for how to commit, review, and release code to the Scalding OSS family (Scalding, Summingbird, Algebird, Bijection, Storehaus, etc)\u003c\/div\u003e",homepageURL: "",
-            pushedAt : "2017-10-06T19:47:31Z",
-            languages : "",
-            forks : "4",
-            topics : "",
-            stars : "7",
-            watchers : "12",
-        })
-    
-        allProjects.push({
-            name: "bazel-multiversion",
-            nameWithOwner: "twitter\/bazel-multiversion",
-            description: "\u003cdiv\u003eBazel rules to resolve, fetch and manage 3rdparty JVM dependencies with support for multiple parallel versions of the same dependency. Powered by Coursier. \u003c\/div\u003e",
-            color: "#c22d40",
-            primaryLanguage: "Scala",
-            homepageURL: "",
-            pushedAt : "2021-10-10T22:41:22Z",
-            languages : "Scala Shell",
-            forks : "6",
-            topics : "bazel jvm dependency-manager coursier scala java kotlin bazel-rules bazel-build",
-            stars : "19",
-            watchers : "8",
-        })
-    
-        allProjects.push({
-            name: "bijection",
-            nameWithOwner: "twitter\/bijection",
-            description: "\u003cdiv\u003eReversible conversions between types\u003c\/div\u003e",
-            color: "#c22d40",
-            primaryLanguage: "Scala",
-            homepageURL: "",
-            pushedAt : "2021-10-14T18:44:38Z",
-            languages : "Scala Java",
-            forks : "103",
-            topics : "",
-            stars : "620",
-            watchers : "143",
-        })
-    
-        allProjects.push({
-            name: "birdwatch",
-            nameWithOwner: "twitter\/birdwatch",
-            description: "\u003cdiv\u003e\u003c\/div\u003e",
-            color: "#563d7c",
-            primaryLanguage: "CSS",
-            homepageURL: "https:\/\/twitter.github.io\/birdwatch",
-            pushedAt : "2021-08-24T20:56:33Z",
-            languages : "HTML CSS Scala",
-            forks : "7",
-            topics : "",
-            stars : "93",
-            watchers : "10",
-        })
-    
-        allProjects.push({
-            name: "cache-trace",
-            nameWithOwner: "twitter\/cache-trace",
-            description: "\u003cdiv\u003e\u003c\/div\u003e",
-            color: "#89e051",
-            primaryLanguage: "Shell",
-            homepageURL: "",
-            pushedAt : "2021-07-22T20:00:49Z",
-            languages : "Shell",
-            forks : "8",
-            topics : "",
-            stars : "76",
-            watchers : "7",
-        })
-    
-        allProjects.push({
-            name: "caladrius",
-            nameWithOwner: "twitter\/caladrius",
-            description: "\u003cdiv\u003ePerformance modelling system for Distributed Stream Processing Systems (DSPS) such as Apache Heron and Apache Storm\u003c\/div\u003e",
-            color: "#3572A5",
-            primaryLanguage: "Python",
-            homepageURL: "",
-            pushedAt : "2021-10-13T16:41:50Z",
-            languages : "Python",
-            forks : "5",
-            topics : "",
-            stars : "16",
-            watchers : "7",
-        })
-    
-        allProjects.push({
-            name: "cassovary",
-            nameWithOwner: "twitter\/cassovary",
-            description: "\u003cdiv\u003eCassovary is a simple big graph processing library for the JVM\u003c\/div\u003e",
-            color: "#c22d40",
-            primaryLanguage: "Scala",
-            homepageURL: "http:\/\/twitter.com\/cassovary",
-            pushedAt : "2021-10-08T21:22:29Z",
-            languages : "Scala",
-            forks : "137",
-            topics : "",
-            stars : "1003",
-            watchers : "164",
-        })
-    
-        allProjects.push({
-            name: "ccommon",
-            nameWithOwner: "twitter\/ccommon",
-            description: "\u003cdiv\u003eCache Commons\u003c\/div\u003e",
-            color: "#555555",
-            primaryLanguage: "C",
-            homepageURL: "",
-            pushedAt : "2021-10-11T23:03:17Z",
-            languages : "CMake C Rust",
-            forks : "28",
-            topics : "",
-            stars : "83",
-            watchers : "57",
-        })
-    
-        allProjects.push({
-            name: "check-my-repo",
-            nameWithOwner: "twitter\/check-my-repo",
-            description: "\u003cdiv\u003eAutomatically check repositories health and quality and build reports that help us understand the current state of Sauce Labs repositories\u003c\/div\u003e",
-            color: "#41b883",
-            primaryLanguage: "Vue",
-            homepageURL: "https:\/\/opensource.saucelabs.com\/check-my-repo\/",
-            pushedAt : "2021-09-23T00:18:08Z",
-            languages : "JavaScript Vue",
-            forks : "2",
-            topics : "",
-            stars : "2",
-            watchers : "1",
-        })
-    
-        allProjects.push({
-            name: "chill",
-            nameWithOwner: "twitter\/chill",
-            description: "\u003cdiv\u003eScala extensions for the Kryo serialization library\u003c\/div\u003e",
-            color: "#c22d40",
-            primaryLanguage: "Scala",
-            homepageURL: "https:\/\/twitter.com\/scalding",
-            pushedAt : "2021-10-17T07:28:25Z",
-            languages : "Scala Java",
-            forks : "117",
-            topics : "",
-            stars : "573",
-            watchers : "136",
-        })
-    
-        allProjects.push({
-            name: "cli-guide.js",
-            nameWithOwner: "twitter\/cli-guide.js",
-            description: "\u003cdiv\u003eCLI Guide JQuery Plugin\u003c\/div\u003e",
-            color: "#f1e05a",
-            primaryLanguage: "JavaScript",
-            homepageURL: "https:\/\/twitter.github.io\/cli-guide.js\/",
-            pushedAt : "2020-09-11T00:57:50Z",
-            languages : "CSS JavaScript",
-            forks : "12",
-            topics : "",
-            stars : "43",
-            watchers : "10",
-        })
-    
-        allProjects.push({
-            name: "cloudhopper-commons",
-            nameWithOwner: "twitter\/cloudhopper-commons",
-            description: "\u003cdiv\u003eCloudhopper Commons\u003c\/div\u003e",
-            color: "#b07219",
-            primaryLanguage: "Java",
-            homepageURL: "",
-            pushedAt : "2021-06-24T21:57:44Z",
-            languages : "Java",
-            forks : "46",
-            topics : "",
-            stars : "39",
-            watchers : "118",
-        })
-    
-        allProjects.push({
-            name: "curation-style-guide",
-            nameWithOwner: "twitter\/curation-style-guide",
-            description: "\u003cdiv\u003eDocument Repository for Twitter\u0027s Curation Style Guide\u003c\/div\u003e",homepageURL: "https:\/\/help.twitter.com\/en\/rules-and-policies\/curationstyleguide",
-            pushedAt : "2019-06-20T20:58:52Z",
-            languages : "",
-            forks : "3",
-            topics : "",
-            stars : "8",
-            watchers : "4",
-        })
-    
-        allProjects.push({
-            name: "d3kit",
-            nameWithOwner: "twitter\/d3kit",
-            description: "\u003cdiv\u003eD3Kit is a set tools to speed D3 related project development\u003c\/div\u003e",
-            color: "#f1e05a",
-            primaryLanguage: "JavaScript",
-            homepageURL: "",
-            pushedAt : "2021-08-04T06:45:44Z",
-            languages : "JavaScript",
-            forks : "42",
-            topics : "",
-            stars : "417",
-            watchers : "102",
-        })
-    
-        allProjects.push({
-            name: "dict_minimize",
-            nameWithOwner: "twitter\/dict_minimize",
-            description: "\u003cdiv\u003eAccess scipy optimizers from your favorite deep learning framework.\u003c\/div\u003e",
-            color: "#3572A5",
-            primaryLanguage: "Python",
-            homepageURL: "",
-            pushedAt : "2021-09-29T18:31:52Z",
-            languages : "Python Shell",
-            forks : "3",
-            topics : "scipy scipy-stack",
-            stars : "59",
-            watchers : "5",
-        })
-    
-        allProjects.push({
-            name: "dodo",
-            nameWithOwner: "twitter\/dodo",
-            description: "\u003cdiv\u003eThe Twitter OSS Project Builder\u003c\/div\u003e",
-            color: "#89e051",
-            primaryLanguage: "Shell",
-            homepageURL: "",
-            pushedAt : "2021-10-01T01:28:08Z",
-            languages : "Shell",
-            forks : "8",
-            topics : "finagle twitter-oss scrooge ostrich twitter-server finatra sbt util",
-            stars : "25",
-            watchers : "25",
-        })
-    
-        allProjects.push({
-            name: "dodo-build",
-            nameWithOwner: "twitter\/dodo-build",
-            description: "\u003cdiv\u003eA Github Action for running Dodo: The Twitter OSS Project Builder\u003c\/div\u003e",
-            color: "#2b7489",
-            primaryLanguage: "TypeScript",
-            homepageURL: "https:\/\/github.com\/twitter\/dodo",
-            pushedAt : "2021-02-09T18:16:56Z",
-            languages : "TypeScript JavaScript",
-            forks : "0",
-            topics : "",
-            stars : "1",
-            watchers : "1",
-        })
-    
-        allProjects.push({
-            name: "effectivescala",
-            nameWithOwner: "twitter\/effectivescala",
-            description: "\u003cdiv\u003eTwitter\u0027s Effective Scala Guide\u003c\/div\u003e",
-            color: "#e34c26",
-            primaryLanguage: "HTML",
-            homepageURL: "https:\/\/twitter.github.io\/effectivescala",
-            pushedAt : "2021-10-08T21:12:33Z",
-            languages : "Makefile Shell HTML",
-            forks : "619",
-            topics : "",
-            stars : "2196",
-            watchers : "265",
-        })
-    
-        allProjects.push({
-            name: "elephant-bird",
-            nameWithOwner: "twitter\/elephant-bird",
-            description: "\u003cdiv\u003eTwitter\u0027s collection of LZO and Protocol Buffer-related Hadoop, Pig, Hive, and HBase code.\u003c\/div\u003e",
-            color: "#b07219",
-            primaryLanguage: "Java",
-            homepageURL: "",
-            pushedAt : "2021-08-17T13:49:22Z",
-            languages : "Java",
-            forks : "385",
-            topics : "",
-            stars : "1126",
-            watchers : "192",
-        })
-    
-        allProjects.push({
-            name: "fatcache",
-            nameWithOwner: "twitter\/fatcache",
-            description: "\u003cdiv\u003eMemcache on SSD\u003c\/div\u003e",
-            color: "#555555",
-            primaryLanguage: "C",
-            homepageURL: "",
-            pushedAt : "2021-04-22T13:25:34Z",
-            languages : "C",
-            forks : "173",
-            topics : "",
-            stars : "1293",
-            watchers : "210",
-        })
-    
-        allProjects.push({
-            name: "finagle",
-            nameWithOwner: "twitter\/finagle",
-            description: "\u003cdiv\u003eA fault tolerant, protocol-agnostic RPC system\u003c\/div\u003e",
-            color: "#c22d40",
-            primaryLanguage: "Scala",
-            homepageURL: "https:\/\/twitter.github.io\/finagle",
-            pushedAt : "2021-10-15T21:19:59Z",
-            languages : "Scala",
-            forks : "1389",
-            topics : "rpc distributed-systems finagle http http2 thrift mysql memcached redis zipkin java scala",
-            stars : "8069",
-            watchers : "570",
-        })
-    
-        allProjects.push({
-            name: "finatra",
-            nameWithOwner: "twitter\/finatra",
-            description: "\u003cdiv\u003eFast, testable, Scala services built on TwitterServer and Finagle\u003c\/div\u003e",
-            color: "#c22d40",
-            primaryLanguage: "Scala",
-            homepageURL: "https:\/\/twitter.github.io\/finatra\/",
-            pushedAt : "2021-10-11T17:17:33Z",
-            languages : "Scala Starlark",
-            forks : "382",
-            topics : "scala finagle twitter-server http framework microservices thrift guice slf4j testing",
-            stars : "2113",
-            watchers : "220",
-        })
-    
-        allProjects.push({
-            name: "gatekeeper-service",
-            nameWithOwner: "twitter\/gatekeeper-service",
-            description: "\u003cdiv\u003eGateKeeper is a service built to automate the manual steps involved in onboarding, offboarding, and lost asset scenarios.\u003c\/div\u003e",
-            color: "#3572A5",
-            primaryLanguage: "Python",
-            homepageURL: "",
-            pushedAt : "2018-09-18T21:32:04Z",
-            languages : "Python HTML",
-            forks : "3",
-            topics : "",
-            stars : "19",
-            watchers : "10",
-        })
-    
-        allProjects.push({
-            name: "go-bindata",
-            nameWithOwner: "twitter\/go-bindata",
-            description: "\u003cdiv\u003e\u003c\/div\u003e",
-            color: "#00ADD8",
-            primaryLanguage: "Go",
-            homepageURL: "",
-            pushedAt : "2021-10-13T18:05:04Z",
-            languages : "Go",
-            forks : "12",
-            topics : "",
-            stars : "16",
-            watchers : "9",
-        })
-    
-        allProjects.push({
-            name: "gpl-commitment",
-            nameWithOwner: "twitter\/gpl-commitment",
-            description: "\u003cdiv\u003eTwitter\u0027s GPL Cooperation Commitment\u003c\/div\u003e",homepageURL: "",
-            pushedAt : "2021-07-13T18:48:10Z",
-            languages : "",
-            forks : "2",
-            topics : "",
-            stars : "2",
-            watchers : "5",
-        })
-    
-        allProjects.push({
-            name: "groupcache",
-            nameWithOwner: "twitter\/groupcache",
-            description: "\u003cdiv\u003egroupcache is a caching and cache-filling library, intended as a replacement for memcached in many cases.\u003c\/div\u003e",
-            color: "#00ADD8",
-            primaryLanguage: "Go",
-            homepageURL: "",
-            pushedAt : "2020-12-02T22:54:11Z",
-            languages : "Go",
-            forks : "1",
-            topics : "",
-            stars : "12",
-            watchers : "9",
-        })
-    
-        allProjects.push({
-            name: "hadoop-lzo",
-            nameWithOwner: "twitter\/hadoop-lzo",
-            description: "\u003cdiv\u003eRefactored version of code.google.com\/hadoop-gpl-compression for hadoop 0.20\u003c\/div\u003e",
-            color: "#89e051",
-            primaryLanguage: "Shell",
-            homepageURL: "",
-            pushedAt : "2021-08-02T17:00:22Z",
-            languages : "Shell Java C",
-            forks : "313",
-            topics : "",
-            stars : "525",
-            watchers : "146",
-        })
-    
-        allProjects.push({
-            name: "hbc",
-            nameWithOwner: "twitter\/hbc",
-            description: "\u003cdiv\u003eA Java HTTP client for consuming Twitter\u0027s realtime Streaming API\u003c\/div\u003e",
-            color: "#b07219",
-            primaryLanguage: "Java",
-            homepageURL: "https:\/\/developer.twitter.com\/en\/docs\/tweets\/filter-realtime\/overview",
-            pushedAt : "2021-06-04T00:58:46Z",
-            languages : "Java",
-            forks : "358",
-            topics : "twitter4j stream java realtime tweets",
-            stars : "927",
-            watchers : "197",
-        })
-    
-        allProjects.push({
-            name: "hogan.js",
-            nameWithOwner: "twitter\/hogan.js",
-            description: "\u003cdiv\u003eA compiler for the Mustache templating language\u003c\/div\u003e",
-            color: "#f1e05a",
-            primaryLanguage: "JavaScript",
-            homepageURL: "http:\/\/twitter.github.com\/hogan.js",
-            pushedAt : "2020-09-09T08:42:30Z",
-            languages : "JavaScript",
-            forks : "452",
-            topics : "",
-            stars : "5098",
-            watchers : "252",
-        })
-    
-        allProjects.push({
-            name: "hpack",
-            nameWithOwner: "twitter\/hpack",
-            description: "\u003cdiv\u003eHeader Compression for HTTP\/2\u003c\/div\u003e",
-            color: "#b07219",
-            primaryLanguage: "Java",
-            homepageURL: "https:\/\/twitter.com\/http_2",
-            pushedAt : "2020-10-13T08:14:36Z",
-            languages : "Java",
-            forks : "46",
-            topics : "",
-            stars : "178",
-            watchers : "125",
-        })
-    
-        allProjects.push({
-            name: "hraven",
-            nameWithOwner: "twitter\/hraven",
-            description: "\u003cdiv\u003ehRaven collects run time data and statistics from MapReduce jobs in an easily queryable format\u003c\/div\u003e",
-            color: "#b07219",
-            primaryLanguage: "Java",
-            homepageURL: "https:\/\/twitter.com\/twitterhadoop",
-            pushedAt : "2021-06-04T00:59:33Z",
-            languages : "Java",
-            forks : "66",
-            topics : "",
-            stars : "127",
-            watchers : "135",
-        })
-    
-        allProjects.push({
-            name: "iago2",
-            nameWithOwner: "twitter\/iago2",
-            description: "\u003cdiv\u003eA load generator, built for engineers\u003c\/div\u003e",
-            color: "#c22d40",
-            primaryLanguage: "Scala",
-            homepageURL: "",
-            pushedAt : "2019-12-20T16:32:47Z",
-            languages : "Scala",
-            forks : "1",
-            topics : "",
-            stars : "16",
-            watchers : "5",
-        })
-    
-        allProjects.push({
-            name: "innovators-patent-agreement",
-            nameWithOwner: "twitter\/innovators-patent-agreement",
-            description: "\u003cdiv\u003eInnovators Patent Agreement (IPA)\u003c\/div\u003e",homepageURL: "",
-            pushedAt : "2016-06-14T06:33:54Z",
-            languages : "",
-            forks : "128",
-            topics : "",
-            stars : "912",
-            watchers : "175",
-        })
-    
-        allProjects.push({
-            name: "interactive",
-            nameWithOwner: "twitter\/interactive",
-            description: "\u003cdiv\u003eTwitter interactive visualization\u003c\/div\u003e",
-            color: "#d12127",
-            primaryLanguage: "ApacheConf",
-            homepageURL: "http:\/\/twitter.github.io\/interactive",
-            pushedAt : "2019-06-06T18:01:08Z",
-            languages : "CSS HTML ApacheConf",
-            forks : "65",
-            topics : "",
-            stars : "207",
-            watchers : "151",
-        })
-    
-        allProjects.push({
-            name: "ios-twitter-image-pipeline",
-            nameWithOwner: "twitter\/ios-twitter-image-pipeline",
-            description: "\u003cdiv\u003eTwitter Image Pipeline is a robust and performant image loading and caching framework for iOS clients\u003c\/div\u003e",
-            color: "#555555",
-            primaryLanguage: "C",
-            homepageURL: "",
-            pushedAt : "2021-10-13T16:29:25Z",
-            languages : "Objective-C C Shell Makefile",
-            forks : "93",
-            topics : "",
-            stars : "1821",
-            watchers : "38",
-        })
-    
-        allProjects.push({
-            name: "ios-twitter-logging-service",
-            nameWithOwner: "twitter\/ios-twitter-logging-service",
-            description: "\u003cdiv\u003eTwitter Logging Service is a robust and performant logging framework for iOS clients\u003c\/div\u003e",
-            color: "#438eff",
-            primaryLanguage: "Objective-C",
-            homepageURL: "",
-            pushedAt : "2021-10-13T16:32:15Z",
-            languages : "Objective-C Swift",
-            forks : "31",
-            topics : "",
-            stars : "287",
-            watchers : "15",
-        })
-    
-        allProjects.push({
-            name: "ios-twitter-network-layer",
-            nameWithOwner: "twitter\/ios-twitter-network-layer",
-            description: "\u003cdiv\u003eTwitter Network Layer is a scalable and feature rich network layer built on top of NSURLSession for Apple platforms\u003c\/div\u003e",
-            color: "#438eff",
-            primaryLanguage: "Objective-C",
-            homepageURL: "",
-            pushedAt : "2021-10-13T16:33:05Z",
-            languages : "Objective-C",
-            forks : "22",
-            topics : "",
-            stars : "542",
-            watchers : "22",
-        })
-    
-        allProjects.push({
-            name: "joauth",
-            nameWithOwner: "twitter\/joauth",
-            description: "\u003cdiv\u003eA Java library for authenticating HTTP Requests using OAuth\u003c\/div\u003e",
-            color: "#b07219",
-            primaryLanguage: "Java",
-            homepageURL: "",
-            pushedAt : "2021-08-18T08:44:59Z",
-            languages : "Scala Java",
-            forks : "52",
-            topics : "",
-            stars : "197",
-            watchers : "129",
-        })
-    
-        allProjects.push({
-            name: "labella.js",
-            nameWithOwner: "twitter\/labella.js",
-            description: "\u003cdiv\u003ePlacing labels on a timeline without overlap.\u003c\/div\u003e",
-            color: "#f1e05a",
-            primaryLanguage: "JavaScript",
-            homepageURL: "http:\/\/twitter.github.io\/labella.js\/",
-            pushedAt : "2021-10-13T16:40:51Z",
-            languages : "JavaScript",
-            forks : "137",
-            topics : "",
-            stars : "3774",
-            watchers : "80",
-        })
-    
-        allProjects.push({
-            name: "libwatchman",
-            nameWithOwner: "twitter\/libwatchman",
-            description: "\u003cdiv\u003eA C interface to watchman\u003c\/div\u003e",
-            color: "#555555",
-            primaryLanguage: "C",
-            homepageURL: "",
-            pushedAt : "2019-06-07T00:45:31Z",
-            languages : "Shell C",
-            forks : "20",
-            topics : "",
-            stars : "40",
-            watchers : "121",
-        })
-    
-        allProjects.push({
-            name: "meta-learning-lstm",
-            nameWithOwner: "twitter\/meta-learning-lstm",
-            description: "\u003cdiv\u003eThis repo contains the source code accompanying a scientific paper with the same name.\u003c\/div\u003e",
-            color: "#000080",
-            primaryLanguage: "Lua",
-            homepageURL: "",
-            pushedAt : "2017-02-28T04:54:04Z",
-            languages : "Lua Python",
-            forks : "135",
-            topics : "",
-            stars : "316",
-            watchers : "19",
-        })
-    
-        allProjects.push({
-            name: "metrics",
-            nameWithOwner: "twitter\/metrics",
-            description: "\u003cdiv\u003e\u003c\/div\u003e",homepageURL: "https:\/\/twitter.github.io\/metrics",
-            pushedAt : "2021-10-18T02:43:51Z",
-            languages : "",
-            forks : "4",
-            topics : "",
-            stars : "19",
-            watchers : "4",
-        })
-    
-        allProjects.push({
-            name: "netty-http2",
-            nameWithOwner: "twitter\/netty-http2",
-            description: "\u003cdiv\u003eHTTP\/2 for Netty\u003c\/div\u003e",
-            color: "#b07219",
-            primaryLanguage: "Java",
-            homepageURL: "",
-            pushedAt : "2021-02-08T21:23:33Z",
-            languages : "Java",
-            forks : "48",
-            topics : "",
-            stars : "114",
-            watchers : "115",
-        })
-    
-        allProjects.push({
-            name: "nodes",
-            nameWithOwner: "twitter\/nodes",
-            description: "\u003cdiv\u003e A library to implement asynchronous dependency graphs for services in Java\u003c\/div\u003e",
-            color: "#b07219",
-            primaryLanguage: "Java",
-            homepageURL: "",
-            pushedAt : "2021-10-08T21:23:55Z",
-            languages : "Java",
-            forks : "32",
-            topics : "",
-            stars : "226",
-            watchers : "27",
-        })
-    
-        allProjects.push({
-            name: "opensource-website",
-            nameWithOwner: "twitter\/opensource-website",
-            description: "\u003cdiv\u003eA listing of open source efforts at Twitter on GitHub\u003c\/div\u003e",
-            color: "#c6538c",
-            primaryLanguage: "SCSS",
-            homepageURL: "https:\/\/opensource.twitter.dev",
-            pushedAt : "2021-10-12T20:50:08Z",
-            languages : "JavaScript HTML Python SCSS",
-            forks : "559",
-            topics : "",
-            stars : "1708",
-            watchers : "446",
-        })
-    
-        allProjects.push({
-            name: "ossdecks",
-            nameWithOwner: "twitter\/ossdecks",
-            description: "\u003cdiv\u003eRepository for Twitter Open Source Decks\u003c\/div\u003e",homepageURL: "",
-            pushedAt : "2019-04-18T15:29:53Z",
-            languages : "",
-            forks : "6",
-            topics : "",
-            stars : "10",
-            watchers : "227",
-        })
-    
-        allProjects.push({
-            name: "pelikan",
-            nameWithOwner: "twitter\/pelikan",
-            description: "\u003cdiv\u003ePelikan is Twitter\u0027s unified cache backend\u003c\/div\u003e",
-            color: "#555555",
-            primaryLanguage: "C",
-            homepageURL: "",
-            pushedAt : "2021-10-15T21:56:45Z",
-            languages : "C Rust",
-            forks : "85",
-            topics : "",
-            stars : "866",
-            watchers : "40",
-        })
-    
-        allProjects.push({
-            name: "repo-scaffolding",
-            nameWithOwner: "twitter\/repo-scaffolding",
-            description: "\u003cdiv\u003eTools for creating repos based on open source standards and best practices\u003c\/div\u003e",homepageURL: "",
-            pushedAt : "2021-08-17T17:58:52Z",
-            languages : "",
-            forks : "9",
-            topics : "",
-            stars : "25",
-            watchers : "5",
-        })
-    
-        allProjects.push({
-            name: "rezolus",
-            nameWithOwner: "twitter\/rezolus",
-            description: "\u003cdiv\u003eSystems performance telemetry\u003c\/div\u003e",
-            color: "#dea584",
-            primaryLanguage: "Rust",
-            homepageURL: "",
-            pushedAt : "2021-10-12T16:26:33Z",
-            languages : "Rust C",
-            forks : "58",
-            topics : "",
-            stars : "993",
-            watchers : "29",
-        })
-    
-        allProjects.push({
-            name: "rpc-perf",
-            nameWithOwner: "twitter\/rpc-perf",
-            description: "\u003cdiv\u003eA tool for benchmarking RPC services\u003c\/div\u003e",
-            color: "#dea584",
-            primaryLanguage: "Rust",
-            homepageURL: "",
-            pushedAt : "2021-10-12T21:36:34Z",
-            languages : "Rust",
-            forks : "51",
-            topics : "",
-            stars : "385",
-            watchers : "25",
-        })
-    
-        allProjects.push({
-            name: "rsc",
-            nameWithOwner: "twitter\/rsc",
-            description: "\u003cdiv\u003eExperimental Scala compiler focused on compilation speed\u003c\/div\u003e",
-            color: "#c22d40",
-            primaryLanguage: "Scala",
-            homepageURL: "",
-            pushedAt : "2021-10-13T16:34:33Z",
-            languages : "Scala",
-            forks : "41",
-            topics : "",
-            stars : "1247",
-            watchers : "87",
-        })
-    
-        allProjects.push({
-            name: "rustcommon",
-            nameWithOwner: "twitter\/rustcommon",
-            description: "\u003cdiv\u003eCommon Twitter Rust lib\u003c\/div\u003e",
-            color: "#dea584",
-            primaryLanguage: "Rust",
-            homepageURL: "",
-            pushedAt : "2021-10-04T20:48:45Z",
-            languages : "Rust",
-            forks : "17",
-            topics : "",
-            stars : "246",
-            watchers : "8",
-        })
-    
-        allProjects.push({
-            name: "sbf",
-            nameWithOwner: "twitter\/sbf",
-            description: "\u003cdiv\u003e\u003c\/div\u003e",
-            color: "#b07219",
-            primaryLanguage: "Java",
-            homepageURL: "",
-            pushedAt : "2020-10-13T19:30:11Z",
-            languages : "Java",
-            forks : "4",
-            topics : "",
-            stars : "22",
-            watchers : "3",
-        })
-    
-        allProjects.push({
-            name: "scala_school",
-            nameWithOwner: "twitter\/scala_school",
-            description: "\u003cdiv\u003eLessons in the Fundamentals of Scala\u003c\/div\u003e",
-            color: "#e34c26",
-            primaryLanguage: "HTML",
-            homepageURL: "https:\/\/twitter.github.io\/scala_school",
-            pushedAt : "2021-10-08T21:01:29Z",
-            languages : "Scala Java Shell HTML",
-            forks : "1127",
-            topics : "",
-            stars : "3628",
-            watchers : "334",
-        })
-    
-        allProjects.push({
-            name: "scala_school2",
-            nameWithOwner: "twitter\/scala_school2",
-            description: "\u003cdiv\u003eScala School 2\u003c\/div\u003e",
-            color: "#c22d40",
-            primaryLanguage: "Scala",
-            homepageURL: "",
-            pushedAt : "2021-10-08T21:12:10Z",
-            languages : "Scala CSS JavaScript HTML",
-            forks : "67",
-            topics : "",
-            stars : "334",
-            watchers : "154",
-        })
-    
-        allProjects.push({
-            name: "scalding",
-            nameWithOwner: "twitter\/scalding",
-            description: "\u003cdiv\u003eA Scala API for Cascading\u003c\/div\u003e",
-            color: "#c22d40",
-            primaryLanguage: "Scala",
-            homepageURL: "http:\/\/twitter.com\/scalding",
-            pushedAt : "2021-09-30T02:39:27Z",
-            languages : "Java Scala",
-            forks : "685",
-            topics : "",
-            stars : "3323",
-            watchers : "321",
-        })
-    
-        allProjects.push({
-            name: "scoot",
-            nameWithOwner: "twitter\/scoot",
-            description: "\u003cdiv\u003eScoot is a distributed task runner, supporting both a proprietary API and Bazel\u0027s Remote Execution.\u003c\/div\u003e",
-            color: "#00ADD8",
-            primaryLanguage: "Go",
-            homepageURL: "",
-            pushedAt : "2021-10-04T15:52:12Z",
-            languages : "Go",
-            forks : "19",
-            topics : "",
-            stars : "174",
-            watchers : "12",
-        })
-    
-        allProjects.push({
-            name: "scrooge",
-            nameWithOwner: "twitter\/scrooge",
-            description: "\u003cdiv\u003eA Thrift parser\/generator\u003c\/div\u003e",
-            color: "#c22d40",
-            primaryLanguage: "Scala",
-            homepageURL: "http:\/\/twitter.github.io\/scrooge\/",
-            pushedAt : "2021-10-08T16:21:20Z",
-            languages : "Scala Java Objective-C Mustache",
-            forks : "230",
-            topics : "finagle thrift code-generation lua java scala android cocoa",
-            stars : "741",
-            watchers : "174",
-        })
-    
-        allProjects.push({
-            name: "second-control-probability-distributions",
-            nameWithOwner: "twitter\/second-control-probability-distributions",
-            description: "\u003cdiv\u003e\u003c\/div\u003e",homepageURL: "",
-            pushedAt : "2021-05-06T00:36:46Z",
-            languages : "",
-            forks : "2",
-            topics : "",
-            stars : "2",
-            watchers : "7",
-        })
-    
-        allProjects.push({
-            name: "sqrl",
-            nameWithOwner: "twitter\/sqrl",
-            description: "\u003cdiv\u003eA Safe, Stateful Rules Language for Event Streams\u003c\/div\u003e",
-            color: "#2b7489",
-            primaryLanguage: "TypeScript",
-            homepageURL: "",
-            pushedAt : "2021-10-11T23:01:48Z",
-            languages : "TypeScript SCSS",
-            forks : "6",
-            topics : "",
-            stars : "55",
-            watchers : "8",
-        })
-    
-        allProjects.push({
-            name: "sslconfig",
-            nameWithOwner: "twitter\/sslconfig",
-            description: "\u003cdiv\u003eTwitter\u0027s OpenSSL Configuration\u003c\/div\u003e",homepageURL: "",
-            pushedAt : "2021-10-08T21:04:29Z",
-            languages : "",
-            forks : "16",
-            topics : "",
-            stars : "38",
-            watchers : "107",
-        })
-    
-        allProjects.push({
-            name: "storehaus",
-            nameWithOwner: "twitter\/storehaus",
-            description: "\u003cdiv\u003eStorehaus is a library that makes it easy to work with asynchronous key value stores\u003c\/div\u003e",
-            color: "#c22d40",
-            primaryLanguage: "Scala",
-            homepageURL: "",
-            pushedAt : "2020-07-17T18:18:03Z",
-            languages : "Scala",
-            forks : "79",
-            topics : "",
-            stars : "460",
-            watchers : "139",
-        })
-    
-        allProjects.push({
-            name: "summingbird",
-            nameWithOwner: "twitter\/summingbird",
-            description: "\u003cdiv\u003eStreaming MapReduce with Scalding and Storm\u003c\/div\u003e",
-            color: "#c22d40",
-            primaryLanguage: "Scala",
-            homepageURL: "https:\/\/twitter.com\/summingbird",
-            pushedAt : "2020-11-19T22:26:27Z",
-            languages : "Scala",
-            forks : "259",
-            topics : "",
-            stars : "2110",
-            watchers : "294",
-        })
-    
-        allProjects.push({
-            name: "thrift_client",
-            nameWithOwner: "twitter\/thrift_client",
-            description: "\u003cdiv\u003eA Thrift client wrapper that encapsulates some common failover behavior\u003c\/div\u003e",
-            color: "#701516",
-            primaryLanguage: "Ruby",
-            homepageURL: "http:\/\/github.com\/twitter\/thrift_client",
-            pushedAt : "2019-06-06T01:36:44Z",
-            languages : "Ruby",
-            forks : "74",
-            topics : "",
-            stars : "194",
-            watchers : "117",
-        })
-    
-        allProjects.push({
-            name: "torch-autograd",
-            nameWithOwner: "twitter\/torch-autograd",
-            description: "\u003cdiv\u003eAutograd automatically differentiates native Torch code\u003c\/div\u003e",
-            color: "#000080",
-            primaryLanguage: "Lua",
-            homepageURL: "",
-            pushedAt : "2021-10-13T16:50:50Z",
-            languages : "Lua",
-            forks : "115",
-            topics : "",
-            stars : "546",
-            watchers : "50",
-        })
-    
-        allProjects.push({
-            name: "torch-dataset",
-            nameWithOwner: "twitter\/torch-dataset",
-            description: "\u003cdiv\u003eAn extensible and high performance method of reading, sampling and processing data for Torch\u003c\/div\u003e",
-            color: "#000080",
-            primaryLanguage: "Lua",
-            homepageURL: "",
-            pushedAt : "2021-10-13T16:51:56Z",
-            languages : "Lua",
-            forks : "23",
-            topics : "",
-            stars : "74",
-            watchers : "23",
-        })
-    
-        allProjects.push({
-            name: "torch-decisiontree",
-            nameWithOwner: "twitter\/torch-decisiontree",
-            description: "\u003cdiv\u003eThis project implements random forests and gradient boosted decision trees (GBDT). The latter uses gradient tree boosting. Both use ensemble learning to produce ensembles of decision trees (that is, forests).\u003c\/div\u003e",
-            color: "#000080",
-            primaryLanguage: "Lua",
-            homepageURL: "",
-            pushedAt : "2018-05-07T14:36:55Z",
-            languages : "Lua C",
-            forks : "8",
-            topics : "",
-            stars : "117",
-            watchers : "6",
-        })
-    
-        allProjects.push({
-            name: "torch-distlearn",
-            nameWithOwner: "twitter\/torch-distlearn",
-            description: "\u003cdiv\u003eA set of distributed learning algorithms for Torch\u003c\/div\u003e",
-            color: "#000080",
-            primaryLanguage: "Lua",
-            homepageURL: "",
-            pushedAt : "2021-10-13T16:53:40Z",
-            languages : "Lua",
-            forks : "24",
-            topics : "",
-            stars : "91",
-            watchers : "22",
-        })
-    
-        allProjects.push({
-            name: "torch-ipc",
-            nameWithOwner: "twitter\/torch-ipc",
-            description: "\u003cdiv\u003eA set of primitives for parallel computation in Torch\u003c\/div\u003e",
-            color: "#555555",
-            primaryLanguage: "C",
-            homepageURL: "",
-            pushedAt : "2021-10-13T16:49:52Z",
-            languages : "Lua C",
-            forks : "28",
-            topics : "",
-            stars : "95",
-            watchers : "24",
-        })
-    
-        allProjects.push({
-            name: "torch-thrift",
-            nameWithOwner: "twitter\/torch-thrift",
-            description: "\u003cdiv\u003eA Thrift codec for Torch\u003c\/div\u003e",
-            color: "#555555",
-            primaryLanguage: "C",
-            homepageURL: "",
-            pushedAt : "2021-10-13T16:52:42Z",
-            languages : "C Lua",
-            forks : "8",
-            topics : "",
-            stars : "28",
-            watchers : "16",
-        })
-    
-        allProjects.push({
-            name: "torch-twrl",
-            nameWithOwner: "twitter\/torch-twrl",
-            description: "\u003cdiv\u003eTorch-twrl is a package that enables reinforcement learning in Torch.\u003c\/div\u003e",
-            color: "#000080",
-            primaryLanguage: "Lua",
-            homepageURL: "",
-            pushedAt : "2017-05-27T16:04:02Z",
-            languages : "Lua",
-            forks : "46",
-            topics : "",
-            stars : "254",
-            watchers : "36",
-        })
-    
-        allProjects.push({
-            name: "tormenta",
-            nameWithOwner: "twitter\/tormenta",
-            description: "\u003cdiv\u003eScala extensions for Storm\u003c\/div\u003e",
-            color: "#c22d40",
-            primaryLanguage: "Scala",
-            homepageURL: "",
-            pushedAt : "2019-06-07T01:01:52Z",
-            languages : "Scala Shell Java",
-            forks : "27",
-            topics : "",
-            stars : "132",
-            watchers : "133",
-        })
-    
-        allProjects.push({
-            name: "twemcache",
-            nameWithOwner: "twitter\/twemcache",
-            description: "\u003cdiv\u003eTwemcache is the Twitter Memcached\u003c\/div\u003e",
-            color: "#555555",
-            primaryLanguage: "C",
-            homepageURL: "https:\/\/twitter.com\/twemcache",
-            pushedAt : "2019-08-29T23:26:04Z",
-            languages : "Python Ruby C",
-            forks : "150",
-            topics : "",
-            stars : "913",
-            watchers : "225",
-        })
-    
-        allProjects.push({
-            name: "twemoji",
-            nameWithOwner: "twitter\/twemoji",
-            description: "\u003cdiv\u003eEmoji for everyone. \u003ca href=\u0022https:\/\/twemoji.twitter.com\/\u0022 rel=\u0022nofollow\u0022\u003ehttps:\/\/twemoji.twitter.com\/\u003c\/a\u003e\n\u003c\/div\u003e",
-            color: "#e34c26",
-            primaryLanguage: "HTML",
-            homepageURL: "",
-            pushedAt : "2021-10-13T19:28:41Z",
-            languages : "HTML JavaScript",
-            forks : "1525",
-            topics : "emoji twemoji",
-            stars : "13400",
-            watchers : "352",
-        })
-    
-        allProjects.push({
-            name: "twemoji-parser",
-            nameWithOwner: "twitter\/twemoji-parser",
-            description: "\u003cdiv\u003eA simple library for identifying emoji entities within a string in order to render them as Twemoji.\u003c\/div\u003e",
-            color: "#c22d40",
-            primaryLanguage: "Scala",
-            homepageURL: "",
-            pushedAt : "2021-09-21T01:47:33Z",
-            languages : "JavaScript Scala Shell",
-            forks : "23",
-            topics : "",
-            stars : "94",
-            watchers : "16",
-        })
-    
-        allProjects.push({
-            name: "twemproxy",
-            nameWithOwner: "twitter\/twemproxy",
-            description: "\u003cdiv\u003eA fast, light-weight proxy for memcached and redis\u003c\/div\u003e",
-            color: "#555555",
-            primaryLanguage: "C",
-            homepageURL: "",
-            pushedAt : "2021-10-05T10:05:44Z",
-            languages : "Python Shell C",
-            forks : "1939",
-            topics : "",
-            stars : "10989",
-            watchers : "826",
-        })
-    
-        allProjects.push({
-            name: "twitter-cldr-js",
-            nameWithOwner: "twitter\/twitter-cldr-js",
-            description: "\u003cdiv\u003eJavaScript implementation of the ICU (International Components for Unicode) that uses the Common Locale Data Repository to format dates, plurals, and more.  Based on twitter-cldr-rb.\u003c\/div\u003e",
-            color: "#f1e05a",
-            primaryLanguage: "JavaScript",
-            homepageURL: "",
-            pushedAt : "2021-03-12T19:17:36Z",
-            languages : "JavaScript",
-            forks : "44",
-            topics : "",
-            stars : "329",
-            watchers : "122",
-        })
-    
-        allProjects.push({
-            name: "twitter-cldr-npm",
-            nameWithOwner: "twitter\/twitter-cldr-npm",
-            description: "\u003cdiv\u003eTwitterCldr npm package\u003c\/div\u003e",
-            color: "#f1e05a",
-            primaryLanguage: "JavaScript",
-            homepageURL: "",
-            pushedAt : "2019-08-26T16:06:02Z",
-            languages : "JavaScript",
-            forks : "17",
-            topics : "",
-            stars : "38",
-            watchers : "113",
-        })
-    
-        allProjects.push({
-            name: "twitter-cldr-rb",
-            nameWithOwner: "twitter\/twitter-cldr-rb",
-            description: "\u003cdiv\u003eRuby implementation of the ICU (International Components for Unicode) that uses the Common Locale Data Repository to format dates, plurals, and more.\u003c\/div\u003e",
-            color: "#701516",
-            primaryLanguage: "Ruby",
-            homepageURL: "",
-            pushedAt : "2021-07-18T05:35:45Z",
-            languages : "Ruby",
-            forks : "74",
-            topics : "",
-            stars : "630",
-            watchers : "120",
-        })
-    
-        allProjects.push({
-            name: "twitter-korean-text",
-            nameWithOwner: "twitter\/twitter-korean-text",
-            description: "\u003cdiv\u003eKorean tokenizer\u003c\/div\u003e",
-            color: "#c22d40",
-            primaryLanguage: "Scala",
-            homepageURL: "",
-            pushedAt : "2021-08-24T17:24:39Z",
-            languages : "Java Scala",
-            forks : "159",
-            topics : "",
-            stars : "780",
-            watchers : "174",
-        })
-    
-        allProjects.push({
-            name: "twitter-server",
-            nameWithOwner: "twitter\/twitter-server",
-            description: "\u003cdiv\u003eTwitter-Server defines a template from which services at Twitter are built\u003c\/div\u003e",
-            color: "#c22d40",
-            primaryLanguage: "Scala",
-            homepageURL: "http:\/\/twitter.github.io\/twitter-server\/",
-            pushedAt : "2021-10-01T18:57:46Z",
-            languages : "Scala",
-            forks : "202",
-            topics : "finagle finatra",
-            stars : "1252",
-            watchers : "189",
-        })
-    
-        allProjects.push({
-            name: "twitter-text",
-            nameWithOwner: "twitter\/twitter-text",
-            description: "\u003cdiv\u003eTwitter Text Libraries. This code is used at Twitter to tokenize and parse text to meet the expectations for what can be used on the platform.\u003c\/div\u003e",
-            color: "#e34c26",
-            primaryLanguage: "HTML",
-            homepageURL: "https:\/\/developer.twitter.com\/en\/docs\/counting-characters",
-            pushedAt : "2021-10-13T16:31:22Z",
-            languages : "Ruby HTML Java JavaScript Objective-C",
-            forks : "422",
-            topics : "twitter-text tweet twitter unicode emoji",
-            stars : "2584",
-            watchers : "184",
-        })
-    
-        allProjects.push({
-            name: "twitter.github.io",
-            nameWithOwner: "twitter\/twitter.github.io",
-            description: "\u003cdiv\u003e\u003c\/div\u003e",
-            color: "#e34c26",
-            primaryLanguage: "HTML",
-            homepageURL: "",
-            pushedAt : "2021-10-11T21:40:05Z",
-            languages : "HTML",
-            forks : "0",
-            topics : "",
-            stars : "0",
-            watchers : "2",
-        })
-    
-        allProjects.push({
-            name: "twurl",
-            nameWithOwner: "twitter\/twurl",
-            description: "\u003cdiv\u003eOAuth-enabled curl for the Twitter API\u003c\/div\u003e",
-            color: "#701516",
-            primaryLanguage: "Ruby",
-            homepageURL: "https:\/\/developer.twitter.com",
-            pushedAt : "2021-04-01T07:34:05Z",
-            languages : "Ruby",
-            forks : "299",
-            topics : "twitter twitter-api ruby curl cli twurl",
-            stars : "1634",
-            watchers : "195",
-        })
-    
-        allProjects.push({
-            name: "typeahead.js",
-            nameWithOwner: "twitter\/typeahead.js",
-            description: "\u003cdiv\u003etypeahead.js is a fast and fully-featured autocomplete library\u003c\/div\u003e",
-            color: "#f1e05a",
-            primaryLanguage: "JavaScript",
-            homepageURL: "http:\/\/twitter.github.io\/typeahead.js\/",
-            pushedAt : "2021-09-11T02:57:58Z",
-            languages : "JavaScript",
-            forks : "3271",
-            topics : "",
-            stars : "16329",
-            watchers : "570",
-        })
-    
-        allProjects.push({
-            name: "util",
-            nameWithOwner: "twitter\/util",
-            description: "\u003cdiv\u003eWonderful reusable code from Twitter\u003c\/div\u003e",
-            color: "#c22d40",
-            primaryLanguage: "Scala",
-            homepageURL: "https:\/\/twitter.github.io\/util",
-            pushedAt : "2021-10-15T13:16:38Z",
-            languages : "Scala Java",
-            forks : "539",
-            topics : "finagle scala utility",
-            stars : "2481",
-            watchers : "227",
-        })
-    
-        allProjects.push({
-            name: "vireo",
-            nameWithOwner: "twitter\/vireo",
-            description: "\u003cdiv\u003eVireo is a lightweight and versatile video processing library written in C\u002b\u002b11\u003c\/div\u003e",
-            color: "#f34b7d",
-            primaryLanguage: "C\u002b\u002b",
-            homepageURL: "",
-            pushedAt : "2021-10-13T16:39:41Z",
-            languages : "Makefile Shell C\u002b\u002b",
-            forks : "75",
-            topics : "",
-            stars : "804",
-            watchers : "49",
-        })
-    
-        allProjects.push({
-            name: "whiskey",
-            nameWithOwner: "twitter\/whiskey",
-            description: "\u003cdiv\u003eHTTP library for Android (beta)\u003c\/div\u003e",
-            color: "#b07219",
-            primaryLanguage: "Java",
-            homepageURL: "",
-            pushedAt : "2020-10-13T09:45:40Z",
-            languages : "Java",
-            forks : "21",
-            topics : "",
-            stars : "128",
-            watchers : "87",
-        })
-    
-        allProjects.push({
-            name: "wordpress",
-            nameWithOwner: "twitter\/wordpress",
-            description: "\u003cdiv\u003eThe official Twitter plugin for WordPress. Embed Twitter content and grow your audience on Twitter.\u003c\/div\u003e",
-            color: "#4F5D95",
-            primaryLanguage: "PHP",
-            homepageURL: "https:\/\/github.com\/twitter\/wordpress\/wiki",
-            pushedAt : "2020-04-15T00:08:56Z",
-            languages : "PHP",
-            forks : "108",
-            topics : "twitter-plugin php wordpress twitter-cards",
-            stars : "268",
-            watchers : "122",
-        })
-    
-        allProjects.push({
-            name: "zktraffic",
-            nameWithOwner: "twitter\/zktraffic",
-            description: "\u003cdiv\u003eZooKeeper protocol analyzer and stats gathering daemon\u003c\/div\u003e",
-            color: "#3572A5",
-            primaryLanguage: "Python",
-            homepageURL: "",
-            pushedAt : "2020-07-23T00:51:26Z",
-            languages : "Python",
-            forks : "42",
-            topics : "",
-            stars : "155",
-            watchers : "117",
-        })
-    
-        allProjects.push({
-            name: "search-tweets-python",
-            nameWithOwner: "twitterdev\/search-tweets-python",
-            description: "\u003cdiv\u003ePython client for the Twitter \u0027search Tweets\u0027 and \u0027count Tweets\u0027 endpoints (v2\/Labs\/premium\/enterprise). Now supports Twitter API v2 \/recent and \/all search endpoints.\u003c\/div\u003e",
-            color: "#3572A5",
-            primaryLanguage: "Python",
-            homepageURL: "https:\/\/twitterdev.github.io\/search-tweets-python\/",
-            pushedAt : "2021-10-03T06:16:19Z",
-            languages : "Python",
-            forks : "179",
-            topics : "search twitter python twitter-api twitterapi enterprise premium twitter-api-v2",
-            stars : "524",
-            watchers : "37",
-        })
-    
-</script>
-
-<script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/3.0.4/fuse.min.js" async></script>
+<div class="container all-projects">
+    <div class="project-card" id="twitter/metrics">
+        <h1 class="project-name small-margin">metrics</h1>
+        <div class="border small-margin"></div>
+        <div class="project-description xsmall-margin"><div></div></div>
+        <p class="project-language"></p>
+        <div class="whitespace"></div>
+        <div class="project-links">
+            <a href="https://github.com/twitter/metrics" target="_blank" rel="noopener">GitHub</a>
+            <a href="https://twitter.github.io/metrics" target="_blank" rel="noopener">Website</a>
+        </div>
+        <a href="https://twitter.github.io/metrics/twitter/metrics/WEEKLY" class="Button Button--tertiary">Metrics</a>
+    </div>
+    <div class="project-card" id="pantsbuild/pants">
+        <h1 class="project-name small-margin">pants</h1>
+        <div class="border small-margin" style="border-bottom-color:#3572A5"></div>
+        <div class="project-description xsmall-margin"><div>The Pants Build System</div></div>
+        <p class="project-language">Python</p>
+        <div class="whitespace"></div>
+        <div class="project-links">
+            <a href="https://github.com/pantsbuild/pants" target="_blank" rel="noopener">GitHub</a>
+            <a href="https://www.pantsbuild.org" target="_blank" rel="noopener">Website</a>
+        </div>
+        <a href="https://twitter.github.io/metrics/pantsbuild/pants/WEEKLY" class="Button Button--tertiary">Metrics</a>
+    </div>
+    <div class="project-card" id="twitter/chill">
+        <h1 class="project-name small-margin">chill</h1>
+        <div class="border small-margin" style="border-bottom-color:#c22d40"></div>
+        <div class="project-description xsmall-margin"><div>Scala extensions for the Kryo serialization library</div></div>
+        <p class="project-language">Scala</p>
+        <div class="whitespace"></div>
+        <div class="project-links">
+            <a href="https://github.com/twitter/chill" target="_blank" rel="noopener">GitHub</a>
+            <a href="https://twitter.com/scalding" target="_blank" rel="noopener">Website</a>
+        </div>
+        <a href="https://twitter.github.io/metrics/twitter/chill/WEEKLY" class="Button Button--tertiary">Metrics</a>
+    </div>
+    <div class="project-card" id="twitter/pelikan">
+        <h1 class="project-name small-margin">pelikan</h1>
+        <div class="border small-margin" style="border-bottom-color:#555555"></div>
+        <div class="project-description xsmall-margin"><div>Pelikan is Twitter's unified cache backend</div></div>
+        <p class="project-language">C</p>
+        <div class="whitespace"></div>
+        <div class="project-links">
+            <a href="https://github.com/twitter/pelikan" target="_blank" rel="noopener">GitHub</a>
+            
+        </div>
+        <a href="https://twitter.github.io/metrics/twitter/pelikan/WEEKLY" class="Button Button--tertiary">Metrics</a>
+    </div>
+    <div class="project-card" id="twitter/finagle">
+        <h1 class="project-name small-margin">finagle</h1>
+        <div class="border small-margin" style="border-bottom-color:#c22d40"></div>
+        <div class="project-description xsmall-margin"><div>A fault tolerant, protocol-agnostic RPC system</div></div>
+        <p class="project-language">Scala</p>
+        <div class="whitespace"></div>
+        <div class="project-links">
+            <a href="https://github.com/twitter/finagle" target="_blank" rel="noopener">GitHub</a>
+            <a href="https://twitter.github.io/finagle" target="_blank" rel="noopener">Website</a>
+        </div>
+        <a href="https://twitter.github.io/metrics/twitter/finagle/WEEKLY" class="Button Button--tertiary">Metrics</a>
+    </div>
+    <div class="project-card" id="twitter/util">
+        <h1 class="project-name small-margin">util</h1>
+        <div class="border small-margin" style="border-bottom-color:#c22d40"></div>
+        <div class="project-description xsmall-margin"><div>Wonderful reusable code from Twitter</div></div>
+        <p class="project-language">Scala</p>
+        <div class="whitespace"></div>
+        <div class="project-links">
+            <a href="https://github.com/twitter/util" target="_blank" rel="noopener">GitHub</a>
+            <a href="https://twitter.github.io/util" target="_blank" rel="noopener">Website</a>
+        </div>
+        <a href="https://twitter.github.io/metrics/twitter/util/WEEKLY" class="Button Button--tertiary">Metrics</a>
+    </div>
+    <div class="project-card" id="twitter/algebird">
+        <h1 class="project-name small-margin">algebird</h1>
+        <div class="border small-margin" style="border-bottom-color:#c22d40"></div>
+        <div class="project-description xsmall-margin"><div>Abstract Algebra for Scala</div></div>
+        <p class="project-language">Scala</p>
+        <div class="whitespace"></div>
+        <div class="project-links">
+            <a href="https://github.com/twitter/algebird" target="_blank" rel="noopener">GitHub</a>
+            <a href="https://twitter.github.io/algebird" target="_blank" rel="noopener">Website</a>
+        </div>
+        <a href="https://twitter.github.io/metrics/twitter/algebird/WEEKLY" class="Button Button--tertiary">Metrics</a>
+    </div>
+    <div class="project-card" id="twitter/bijection">
+        <h1 class="project-name small-margin">bijection</h1>
+        <div class="border small-margin" style="border-bottom-color:#c22d40"></div>
+        <div class="project-description xsmall-margin"><div>Reversible conversions between types</div></div>
+        <p class="project-language">Scala</p>
+        <div class="whitespace"></div>
+        <div class="project-links">
+            <a href="https://github.com/twitter/bijection" target="_blank" rel="noopener">GitHub</a>
+            
+        </div>
+        <a href="https://twitter.github.io/metrics/twitter/bijection/WEEKLY" class="Button Button--tertiary">Metrics</a>
+    </div>
+    <div class="project-card" id="pantsbuild/pex">
+        <h1 class="project-name small-margin">pex</h1>
+        <div class="border small-margin" style="border-bottom-color:#3572A5"></div>
+        <div class="project-description xsmall-margin"><div>A library and tool for generating .pex (Python EXecutable) files</div></div>
+        <p class="project-language">Python</p>
+        <div class="whitespace"></div>
+        <div class="project-links">
+            <a href="https://github.com/pantsbuild/pex" target="_blank" rel="noopener">GitHub</a>
+            
+        </div>
+        <a href="https://twitter.github.io/metrics/pantsbuild/pex/WEEKLY" class="Button Button--tertiary">Metrics</a>
+    </div>
+    <div class="project-card" id="twitter/twemoji">
+        <h1 class="project-name small-margin">twemoji</h1>
+        <div class="border small-margin" style="border-bottom-color:#e34c26"></div>
+        <div class="project-description xsmall-margin"><div>Emoji for everyone. <a href="https://twemoji.twitter.com/" rel="nofollow">https://twemoji.twitter.com/</a>
+</div></div>
+        <p class="project-language">HTML</p>
+        <div class="whitespace"></div>
+        <div class="project-links">
+            <a href="https://github.com/twitter/twemoji" target="_blank" rel="noopener">GitHub</a>
+            
+        </div>
+        <a href="https://twitter.github.io/metrics/twitter/twemoji/WEEKLY" class="Button Button--tertiary">Metrics</a>
+    </div>
+    <div class="project-card" id="twitter/go-bindata">
+        <h1 class="project-name small-margin">go-bindata</h1>
+        <div class="border small-margin" style="border-bottom-color:#00ADD8"></div>
+        <div class="project-description xsmall-margin"><div></div></div>
+        <p class="project-language">Go</p>
+        <div class="whitespace"></div>
+        <div class="project-links">
+            <a href="https://github.com/twitter/go-bindata" target="_blank" rel="noopener">GitHub</a>
+            
+        </div>
+        <a href="https://twitter.github.io/metrics/twitter/go-bindata/WEEKLY" class="Button Button--tertiary">Metrics</a>
+    </div>
+    <div class="project-card" id="twitter/torch-distlearn">
+        <h1 class="project-name small-margin">torch-distlearn</h1>
+        <div class="border small-margin" style="border-bottom-color:#000080"></div>
+        <div class="project-description xsmall-margin"><div>A set of distributed learning algorithms for Torch</div></div>
+        <p class="project-language">Lua</p>
+        <div class="whitespace"></div>
+        <div class="project-links">
+            <a href="https://github.com/twitter/torch-distlearn" target="_blank" rel="noopener">GitHub</a>
+            
+        </div>
+        <a href="https://twitter.github.io/metrics/twitter/torch-distlearn/WEEKLY" class="Button Button--tertiary">Metrics</a>
+    </div>
+    <div class="project-card" id="twitter/torch-thrift">
+        <h1 class="project-name small-margin">torch-thrift</h1>
+        <div class="border small-margin" style="border-bottom-color:#555555"></div>
+        <div class="project-description xsmall-margin"><div>A Thrift codec for Torch</div></div>
+        <p class="project-language">C</p>
+        <div class="whitespace"></div>
+        <div class="project-links">
+            <a href="https://github.com/twitter/torch-thrift" target="_blank" rel="noopener">GitHub</a>
+            
+        </div>
+        <a href="https://twitter.github.io/metrics/twitter/torch-thrift/WEEKLY" class="Button Button--tertiary">Metrics</a>
+    </div>
+    <div class="project-card" id="twitter/torch-dataset">
+        <h1 class="project-name small-margin">torch-dataset</h1>
+        <div class="border small-margin" style="border-bottom-color:#000080"></div>
+        <div class="project-description xsmall-margin"><div>An extensible and high performance method of reading, sampling and processing data for Torch</div></div>
+        <p class="project-language">Lua</p>
+        <div class="whitespace"></div>
+        <div class="project-links">
+            <a href="https://github.com/twitter/torch-dataset" target="_blank" rel="noopener">GitHub</a>
+            
+        </div>
+        <a href="https://twitter.github.io/metrics/twitter/torch-dataset/WEEKLY" class="Button Button--tertiary">Metrics</a>
+    </div>
+    <div class="project-card" id="twitter/torch-autograd">
+        <h1 class="project-name small-margin">torch-autograd</h1>
+        <div class="border small-margin" style="border-bottom-color:#000080"></div>
+        <div class="project-description xsmall-margin"><div>Autograd automatically differentiates native Torch code</div></div>
+        <p class="project-language">Lua</p>
+        <div class="whitespace"></div>
+        <div class="project-links">
+            <a href="https://github.com/twitter/torch-autograd" target="_blank" rel="noopener">GitHub</a>
+            
+        </div>
+        <a href="https://twitter.github.io/metrics/twitter/torch-autograd/WEEKLY" class="Button Button--tertiary">Metrics</a>
+    </div>
+    <div class="project-card" id="twitter/torch-ipc">
+        <h1 class="project-name small-margin">torch-ipc</h1>
+        <div class="border small-margin" style="border-bottom-color:#555555"></div>
+        <div class="project-description xsmall-margin"><div>A set of primitives for parallel computation in Torch</div></div>
+        <p class="project-language">C</p>
+        <div class="whitespace"></div>
+        <div class="project-links">
+            <a href="https://github.com/twitter/torch-ipc" target="_blank" rel="noopener">GitHub</a>
+            
+        </div>
+        <a href="https://twitter.github.io/metrics/twitter/torch-ipc/WEEKLY" class="Button Button--tertiary">Metrics</a>
+    </div>
+    <div class="project-card" id="twitter/SentenTree">
+        <h1 class="project-name small-margin">SentenTree</h1>
+        <div class="border small-margin" style="border-bottom-color:#f1e05a"></div>
+        <div class="project-description xsmall-margin"><div>A novel text visualization technique</div></div>
+        <p class="project-language">JavaScript</p>
+        <div class="whitespace"></div>
+        <div class="project-links">
+            <a href="https://github.com/twitter/SentenTree" target="_blank" rel="noopener">GitHub</a>
+            
+        </div>
+        <a href="https://twitter.github.io/metrics/twitter/SentenTree/WEEKLY" class="Button Button--tertiary">Metrics</a>
+    </div>
+    <div class="project-card" id="twitter/caladrius">
+        <h1 class="project-name small-margin">caladrius</h1>
+        <div class="border small-margin" style="border-bottom-color:#3572A5"></div>
+        <div class="project-description xsmall-margin"><div>Performance modelling system for Distributed Stream Processing Systems (DSPS) such as Apache Heron and Apache Storm</div></div>
+        <p class="project-language">Python</p>
+        <div class="whitespace"></div>
+        <div class="project-links">
+            <a href="https://github.com/twitter/caladrius" target="_blank" rel="noopener">GitHub</a>
+            
+        </div>
+        <a href="https://twitter.github.io/metrics/twitter/caladrius/WEEKLY" class="Button Button--tertiary">Metrics</a>
+    </div>
+    <div class="project-card" id="twitter/labella.js">
+        <h1 class="project-name small-margin">labella.js</h1>
+        <div class="border small-margin" style="border-bottom-color:#f1e05a"></div>
+        <div class="project-description xsmall-margin"><div>Placing labels on a timeline without overlap.</div></div>
+        <p class="project-language">JavaScript</p>
+        <div class="whitespace"></div>
+        <div class="project-links">
+            <a href="https://github.com/twitter/labella.js" target="_blank" rel="noopener">GitHub</a>
+            <a href="http://twitter.github.io/labella.js/" target="_blank" rel="noopener">Website</a>
+        </div>
+        <a href="https://twitter.github.io/metrics/twitter/labella.js/WEEKLY" class="Button Button--tertiary">Metrics</a>
+    </div>
+    <div class="project-card" id="twitter/vireo">
+        <h1 class="project-name small-margin">vireo</h1>
+        <div class="border small-margin" style="border-bottom-color:#f34b7d"></div>
+        <div class="project-description xsmall-margin"><div>Vireo is a lightweight and versatile video processing library written in C++11</div></div>
+        <p class="project-language">C&#43;&#43;</p>
+        <div class="whitespace"></div>
+        <div class="project-links">
+            <a href="https://github.com/twitter/vireo" target="_blank" rel="noopener">GitHub</a>
+            
+        </div>
+        <a href="https://twitter.github.io/metrics/twitter/vireo/WEEKLY" class="Button Button--tertiary">Metrics</a>
+    </div>
+    <div class="project-card" id="twitter/rsc">
+        <h1 class="project-name small-margin">rsc</h1>
+        <div class="border small-margin" style="border-bottom-color:#c22d40"></div>
+        <div class="project-description xsmall-margin"><div>Experimental Scala compiler focused on compilation speed</div></div>
+        <p class="project-language">Scala</p>
+        <div class="whitespace"></div>
+        <div class="project-links">
+            <a href="https://github.com/twitter/rsc" target="_blank" rel="noopener">GitHub</a>
+            
+        </div>
+        <a href="https://twitter.github.io/metrics/twitter/rsc/WEEKLY" class="Button Button--tertiary">Metrics</a>
+    </div>
+    <div class="project-card" id="twitter/ios-twitter-network-layer">
+        <h1 class="project-name small-margin">ios-twitter-network-layer</h1>
+        <div class="border small-margin" style="border-bottom-color:#438eff"></div>
+        <div class="project-description xsmall-margin"><div>Twitter Network Layer is a scalable and feature rich network layer built on top of NSURLSession for Apple platforms</div></div>
+        <p class="project-language">Objective-C</p>
+        <div class="whitespace"></div>
+        <div class="project-links">
+            <a href="https://github.com/twitter/ios-twitter-network-layer" target="_blank" rel="noopener">GitHub</a>
+            
+        </div>
+        <a href="https://twitter.github.io/metrics/twitter/ios-twitter-network-layer/WEEKLY" class="Button Button--tertiary">Metrics</a>
+    </div>
+    <div class="project-card" id="twitter/ios-twitter-logging-service">
+        <h1 class="project-name small-margin">ios-twitter-logging-service</h1>
+        <div class="border small-margin" style="border-bottom-color:#438eff"></div>
+        <div class="project-description xsmall-margin"><div>Twitter Logging Service is a robust and performant logging framework for iOS clients</div></div>
+        <p class="project-language">Objective-C</p>
+        <div class="whitespace"></div>
+        <div class="project-links">
+            <a href="https://github.com/twitter/ios-twitter-logging-service" target="_blank" rel="noopener">GitHub</a>
+            
+        </div>
+        <a href="https://twitter.github.io/metrics/twitter/ios-twitter-logging-service/WEEKLY" class="Button Button--tertiary">Metrics</a>
+    </div>
+    <div class="project-card" id="twitter/twitter-text">
+        <h1 class="project-name small-margin">twitter-text</h1>
+        <div class="border small-margin" style="border-bottom-color:#e34c26"></div>
+        <div class="project-description xsmall-margin"><div>Twitter Text Libraries. This code is used at Twitter to tokenize and parse text to meet the expectations for what can be used on the platform.</div></div>
+        <p class="project-language">HTML</p>
+        <div class="whitespace"></div>
+        <div class="project-links">
+            <a href="https://github.com/twitter/twitter-text" target="_blank" rel="noopener">GitHub</a>
+            <a href="https://developer.twitter.com/en/docs/counting-characters" target="_blank" rel="noopener">Website</a>
+        </div>
+        <a href="https://twitter.github.io/metrics/twitter/twitter-text/WEEKLY" class="Button Button--tertiary">Metrics</a>
+    </div>
+    <div class="project-card" id="twitter/ios-twitter-image-pipeline">
+        <h1 class="project-name small-margin">ios-twitter-image-pipeline</h1>
+        <div class="border small-margin" style="border-bottom-color:#555555"></div>
+        <div class="project-description xsmall-margin"><div>Twitter Image Pipeline is a robust and performant image loading and caching framework for iOS clients</div></div>
+        <p class="project-language">C</p>
+        <div class="whitespace"></div>
+        <div class="project-links">
+            <a href="https://github.com/twitter/ios-twitter-image-pipeline" target="_blank" rel="noopener">GitHub</a>
+            
+        </div>
+        <a href="https://twitter.github.io/metrics/twitter/ios-twitter-image-pipeline/WEEKLY" class="Button Button--tertiary">Metrics</a>
+    </div>
+    <div class="project-card" id="twitter/rpc-perf">
+        <h1 class="project-name small-margin">rpc-perf</h1>
+        <div class="border small-margin" style="border-bottom-color:#dea584"></div>
+        <div class="project-description xsmall-margin"><div>A tool for benchmarking RPC services</div></div>
+        <p class="project-language">Rust</p>
+        <div class="whitespace"></div>
+        <div class="project-links">
+            <a href="https://github.com/twitter/rpc-perf" target="_blank" rel="noopener">GitHub</a>
+            
+        </div>
+        <a href="https://twitter.github.io/metrics/twitter/rpc-perf/WEEKLY" class="Button Button--tertiary">Metrics</a>
+    </div>
+    <div class="project-card" id="twitter/opensource-website">
+        <h1 class="project-name small-margin">opensource-website</h1>
+        <div class="border small-margin" style="border-bottom-color:#c6538c"></div>
+        <div class="project-description xsmall-margin"><div>A listing of open source efforts at Twitter on GitHub</div></div>
+        <p class="project-language">SCSS</p>
+        <div class="whitespace"></div>
+        <div class="project-links">
+            <a href="https://github.com/twitter/opensource-website" target="_blank" rel="noopener">GitHub</a>
+            <a href="https://opensource.twitter.dev" target="_blank" rel="noopener">Website</a>
+        </div>
+        <a href="https://twitter.github.io/metrics/twitter/opensource-website/WEEKLY" class="Button Button--tertiary">Metrics</a>
+    </div>
+    <div class="project-card" id="twitter/rezolus">
+        <h1 class="project-name small-margin">rezolus</h1>
+        <div class="border small-margin" style="border-bottom-color:#dea584"></div>
+        <div class="project-description xsmall-margin"><div>Systems performance telemetry</div></div>
+        <p class="project-language">Rust</p>
+        <div class="whitespace"></div>
+        <div class="project-links">
+            <a href="https://github.com/twitter/rezolus" target="_blank" rel="noopener">GitHub</a>
+            
+        </div>
+        <a href="https://twitter.github.io/metrics/twitter/rezolus/WEEKLY" class="Button Button--tertiary">Metrics</a>
+    </div>
+    <div class="project-card" id="twitter/ccommon">
+        <h1 class="project-name small-margin">ccommon</h1>
+        <div class="border small-margin" style="border-bottom-color:#555555"></div>
+        <div class="project-description xsmall-margin"><div>Cache Commons</div></div>
+        <p class="project-language">C</p>
+        <div class="whitespace"></div>
+        <div class="project-links">
+            <a href="https://github.com/twitter/ccommon" target="_blank" rel="noopener">GitHub</a>
+            
+        </div>
+        <a href="https://twitter.github.io/metrics/twitter/ccommon/WEEKLY" class="Button Button--tertiary">Metrics</a>
+    </div>
+    <div class="project-card" id="twitter/sqrl">
+        <h1 class="project-name small-margin">sqrl</h1>
+        <div class="border small-margin" style="border-bottom-color:#2b7489"></div>
+        <div class="project-description xsmall-margin"><div>A Safe, Stateful Rules Language for Event Streams</div></div>
+        <p class="project-language">TypeScript</p>
+        <div class="whitespace"></div>
+        <div class="project-links">
+            <a href="https://github.com/twitter/sqrl" target="_blank" rel="noopener">GitHub</a>
+            
+        </div>
+        <a href="https://twitter.github.io/metrics/twitter/sqrl/WEEKLY" class="Button Button--tertiary">Metrics</a>
+    </div>
+    <div class="project-card" id="twitter/twitter.github.io">
+        <h1 class="project-name small-margin">twitter.github.io</h1>
+        <div class="border small-margin" style="border-bottom-color:#e34c26"></div>
+        <div class="project-description xsmall-margin"><div></div></div>
+        <p class="project-language">HTML</p>
+        <div class="whitespace"></div>
+        <div class="project-links">
+            <a href="https://github.com/twitter/twitter.github.io" target="_blank" rel="noopener">GitHub</a>
+            
+        </div>
+        <a href="https://twitter.github.io/metrics/twitter/twitter.github.io/WEEKLY" class="Button Button--tertiary">Metrics</a>
+    </div>
+    <div class="project-card" id="twitter/finatra">
+        <h1 class="project-name small-margin">finatra</h1>
+        <div class="border small-margin" style="border-bottom-color:#c22d40"></div>
+        <div class="project-description xsmall-margin"><div>Fast, testable, Scala services built on TwitterServer and Finagle</div></div>
+        <p class="project-language">Scala</p>
+        <div class="whitespace"></div>
+        <div class="project-links">
+            <a href="https://github.com/twitter/finatra" target="_blank" rel="noopener">GitHub</a>
+            <a href="https://twitter.github.io/finatra/" target="_blank" rel="noopener">Website</a>
+        </div>
+        <a href="https://twitter.github.io/metrics/twitter/finatra/WEEKLY" class="Button Button--tertiary">Metrics</a>
+    </div>
+    <div class="project-card" id="twitter/bazel-multiversion">
+        <h1 class="project-name small-margin">bazel-multiversion</h1>
+        <div class="border small-margin" style="border-bottom-color:#c22d40"></div>
+        <div class="project-description xsmall-margin"><div>Bazel rules to resolve, fetch and manage 3rdparty JVM dependencies with support for multiple parallel versions of the same dependency. Powered by Coursier. </div></div>
+        <p class="project-language">Scala</p>
+        <div class="whitespace"></div>
+        <div class="project-links">
+            <a href="https://github.com/twitter/bazel-multiversion" target="_blank" rel="noopener">GitHub</a>
+            
+        </div>
+        <a href="https://twitter.github.io/metrics/twitter/bazel-multiversion/WEEKLY" class="Button Button--tertiary">Metrics</a>
+    </div>
+    <div class="project-card" id="twitter/nodes">
+        <h1 class="project-name small-margin">nodes</h1>
+        <div class="border small-margin" style="border-bottom-color:#b07219"></div>
+        <div class="project-description xsmall-margin"><div> A library to implement asynchronous dependency graphs for services in Java</div></div>
+        <p class="project-language">Java</p>
+        <div class="whitespace"></div>
+        <div class="project-links">
+            <a href="https://github.com/twitter/nodes" target="_blank" rel="noopener">GitHub</a>
+            
+        </div>
+        <a href="https://twitter.github.io/metrics/twitter/nodes/WEEKLY" class="Button Button--tertiary">Metrics</a>
+    </div>
+    <div class="project-card" id="twitter/cassovary">
+        <h1 class="project-name small-margin">cassovary</h1>
+        <div class="border small-margin" style="border-bottom-color:#c22d40"></div>
+        <div class="project-description xsmall-margin"><div>Cassovary is a simple big graph processing library for the JVM</div></div>
+        <p class="project-language">Scala</p>
+        <div class="whitespace"></div>
+        <div class="project-links">
+            <a href="https://github.com/twitter/cassovary" target="_blank" rel="noopener">GitHub</a>
+            <a href="http://twitter.com/cassovary" target="_blank" rel="noopener">Website</a>
+        </div>
+        <a href="https://twitter.github.io/metrics/twitter/cassovary/WEEKLY" class="Button Button--tertiary">Metrics</a>
+    </div>
+    <div class="project-card" id="twitter/effectivescala">
+        <h1 class="project-name small-margin">effectivescala</h1>
+        <div class="border small-margin" style="border-bottom-color:#e34c26"></div>
+        <div class="project-description xsmall-margin"><div>Twitter's Effective Scala Guide</div></div>
+        <p class="project-language">HTML</p>
+        <div class="whitespace"></div>
+        <div class="project-links">
+            <a href="https://github.com/twitter/effectivescala" target="_blank" rel="noopener">GitHub</a>
+            <a href="https://twitter.github.io/effectivescala" target="_blank" rel="noopener">Website</a>
+        </div>
+        <a href="https://twitter.github.io/metrics/twitter/effectivescala/WEEKLY" class="Button Button--tertiary">Metrics</a>
+    </div>
+    <div class="project-card" id="twitter/scala_school2">
+        <h1 class="project-name small-margin">scala_school2</h1>
+        <div class="border small-margin" style="border-bottom-color:#c22d40"></div>
+        <div class="project-description xsmall-margin"><div>Scala School 2</div></div>
+        <p class="project-language">Scala</p>
+        <div class="whitespace"></div>
+        <div class="project-links">
+            <a href="https://github.com/twitter/scala_school2" target="_blank" rel="noopener">GitHub</a>
+            
+        </div>
+        <a href="https://twitter.github.io/metrics/twitter/scala_school2/WEEKLY" class="Button Button--tertiary">Metrics</a>
+    </div>
+    <div class="project-card" id="twitter/sslconfig">
+        <h1 class="project-name small-margin">sslconfig</h1>
+        <div class="border small-margin"></div>
+        <div class="project-description xsmall-margin"><div>Twitter's OpenSSL Configuration</div></div>
+        <p class="project-language"></p>
+        <div class="whitespace"></div>
+        <div class="project-links">
+            <a href="https://github.com/twitter/sslconfig" target="_blank" rel="noopener">GitHub</a>
+            
+        </div>
+        <a href="https://twitter.github.io/metrics/twitter/sslconfig/WEEKLY" class="Button Button--tertiary">Metrics</a>
+    </div>
+    <div class="project-card" id="twitter/scala_school">
+        <h1 class="project-name small-margin">scala_school</h1>
+        <div class="border small-margin" style="border-bottom-color:#e34c26"></div>
+        <div class="project-description xsmall-margin"><div>Lessons in the Fundamentals of Scala</div></div>
+        <p class="project-language">HTML</p>
+        <div class="whitespace"></div>
+        <div class="project-links">
+            <a href="https://github.com/twitter/scala_school" target="_blank" rel="noopener">GitHub</a>
+            <a href="https://twitter.github.io/scala_school" target="_blank" rel="noopener">Website</a>
+        </div>
+        <a href="https://twitter.github.io/metrics/twitter/scala_school/WEEKLY" class="Button Button--tertiary">Metrics</a>
+    </div>
+    <div class="project-card" id="twitter/scrooge">
+        <h1 class="project-name small-margin">scrooge</h1>
+        <div class="border small-margin" style="border-bottom-color:#c22d40"></div>
+        <div class="project-description xsmall-margin"><div>A Thrift parser/generator</div></div>
+        <p class="project-language">Scala</p>
+        <div class="whitespace"></div>
+        <div class="project-links">
+            <a href="https://github.com/twitter/scrooge" target="_blank" rel="noopener">GitHub</a>
+            <a href="http://twitter.github.io/scrooge/" target="_blank" rel="noopener">Website</a>
+        </div>
+        <a href="https://twitter.github.io/metrics/twitter/scrooge/WEEKLY" class="Button Button--tertiary">Metrics</a>
+    </div>
+    <div class="project-card" id="twitter/.github">
+        <h1 class="project-name small-margin">.github</h1>
+        <div class="border small-margin"></div>
+        <div class="project-description xsmall-margin"><div>Twitter GitHub Organization-wide files</div></div>
+        <p class="project-language"></p>
+        <div class="whitespace"></div>
+        <div class="project-links">
+            <a href="https://github.com/twitter/.github" target="_blank" rel="noopener">GitHub</a>
+            
+        </div>
+        <a href="https://twitter.github.io/metrics/twitter/.github/WEEKLY" class="Button Button--tertiary">Metrics</a>
+    </div>
+    <div class="project-card" id="twitter/twemproxy">
+        <h1 class="project-name small-margin">twemproxy</h1>
+        <div class="border small-margin" style="border-bottom-color:#555555"></div>
+        <div class="project-description xsmall-margin"><div>A fast, light-weight proxy for memcached and redis</div></div>
+        <p class="project-language">C</p>
+        <div class="whitespace"></div>
+        <div class="project-links">
+            <a href="https://github.com/twitter/twemproxy" target="_blank" rel="noopener">GitHub</a>
+            
+        </div>
+        <a href="https://twitter.github.io/metrics/twitter/twemproxy/WEEKLY" class="Button Button--tertiary">Metrics</a>
+    </div>
+    <div class="project-card" id="twitter/rustcommon">
+        <h1 class="project-name small-margin">rustcommon</h1>
+        <div class="border small-margin" style="border-bottom-color:#dea584"></div>
+        <div class="project-description xsmall-margin"><div>Common Twitter Rust lib</div></div>
+        <p class="project-language">Rust</p>
+        <div class="whitespace"></div>
+        <div class="project-links">
+            <a href="https://github.com/twitter/rustcommon" target="_blank" rel="noopener">GitHub</a>
+            
+        </div>
+        <a href="https://twitter.github.io/metrics/twitter/rustcommon/WEEKLY" class="Button Button--tertiary">Metrics</a>
+    </div>
+    <div class="project-card" id="twitter/scoot">
+        <h1 class="project-name small-margin">scoot</h1>
+        <div class="border small-margin" style="border-bottom-color:#00ADD8"></div>
+        <div class="project-description xsmall-margin"><div>Scoot is a distributed task runner, supporting both a proprietary API and Bazel's Remote Execution.</div></div>
+        <p class="project-language">Go</p>
+        <div class="whitespace"></div>
+        <div class="project-links">
+            <a href="https://github.com/twitter/scoot" target="_blank" rel="noopener">GitHub</a>
+            
+        </div>
+        <a href="https://twitter.github.io/metrics/twitter/scoot/WEEKLY" class="Button Button--tertiary">Metrics</a>
+    </div>
+    <div class="project-card" id="twitterdev/search-tweets-python">
+        <h1 class="project-name small-margin">search-tweets-python</h1>
+        <div class="border small-margin" style="border-bottom-color:#3572A5"></div>
+        <div class="project-description xsmall-margin"><div>Python client for the Twitter 'search Tweets' and 'count Tweets' endpoints (v2/Labs/premium/enterprise). Now supports Twitter API v2 /recent and /all search endpoints.</div></div>
+        <p class="project-language">Python</p>
+        <div class="whitespace"></div>
+        <div class="project-links">
+            <a href="https://github.com/twitterdev/search-tweets-python" target="_blank" rel="noopener">GitHub</a>
+            <a href="https://twitterdev.github.io/search-tweets-python/" target="_blank" rel="noopener">Website</a>
+        </div>
+        <a href="https://twitter.github.io/metrics/twitterdev/search-tweets-python/WEEKLY" class="Button Button--tertiary">Metrics</a>
+    </div>
+    <div class="project-card" id="twitter/twitter-server">
+        <h1 class="project-name small-margin">twitter-server</h1>
+        <div class="border small-margin" style="border-bottom-color:#c22d40"></div>
+        <div class="project-description xsmall-margin"><div>Twitter-Server defines a template from which services at Twitter are built</div></div>
+        <p class="project-language">Scala</p>
+        <div class="whitespace"></div>
+        <div class="project-links">
+            <a href="https://github.com/twitter/twitter-server" target="_blank" rel="noopener">GitHub</a>
+            <a href="http://twitter.github.io/twitter-server/" target="_blank" rel="noopener">Website</a>
+        </div>
+        <a href="https://twitter.github.io/metrics/twitter/twitter-server/WEEKLY" class="Button Button--tertiary">Metrics</a>
+    </div>
+    <div class="project-card" id="twitter/dodo">
+        <h1 class="project-name small-margin">dodo</h1>
+        <div class="border small-margin" style="border-bottom-color:#89e051"></div>
+        <div class="project-description xsmall-margin"><div>The Twitter OSS Project Builder</div></div>
+        <p class="project-language">Shell</p>
+        <div class="whitespace"></div>
+        <div class="project-links">
+            <a href="https://github.com/twitter/dodo" target="_blank" rel="noopener">GitHub</a>
+            
+        </div>
+        <a href="https://twitter.github.io/metrics/twitter/dodo/WEEKLY" class="Button Button--tertiary">Metrics</a>
+    </div>
+    <div class="project-card" id="twitter/scalding">
+        <h1 class="project-name small-margin">scalding</h1>
+        <div class="border small-margin" style="border-bottom-color:#c22d40"></div>
+        <div class="project-description xsmall-margin"><div>A Scala API for Cascading</div></div>
+        <p class="project-language">Scala</p>
+        <div class="whitespace"></div>
+        <div class="project-links">
+            <a href="https://github.com/twitter/scalding" target="_blank" rel="noopener">GitHub</a>
+            <a href="http://twitter.com/scalding" target="_blank" rel="noopener">Website</a>
+        </div>
+        <a href="https://twitter.github.io/metrics/twitter/scalding/WEEKLY" class="Button Button--tertiary">Metrics</a>
+    </div>
+    <div class="project-card" id="twitter/dict_minimize">
+        <h1 class="project-name small-margin">dict_minimize</h1>
+        <div class="border small-margin" style="border-bottom-color:#3572A5"></div>
+        <div class="project-description xsmall-margin"><div>Access scipy optimizers from your favorite deep learning framework.</div></div>
+        <p class="project-language">Python</p>
+        <div class="whitespace"></div>
+        <div class="project-links">
+            <a href="https://github.com/twitter/dict_minimize" target="_blank" rel="noopener">GitHub</a>
+            
+        </div>
+        <a href="https://twitter.github.io/metrics/twitter/dict_minimize/WEEKLY" class="Button Button--tertiary">Metrics</a>
+    </div>
+    <div class="project-card" id="twitter/check-my-repo">
+        <h1 class="project-name small-margin">check-my-repo</h1>
+        <div class="border small-margin" style="border-bottom-color:#41b883"></div>
+        <div class="project-description xsmall-margin"><div>Automatically check repositories health and quality and build reports that help us understand the current state of Sauce Labs repositories</div></div>
+        <p class="project-language">Vue</p>
+        <div class="whitespace"></div>
+        <div class="project-links">
+            <a href="https://github.com/twitter/check-my-repo" target="_blank" rel="noopener">GitHub</a>
+            <a href="https://opensource.saucelabs.com/check-my-repo/" target="_blank" rel="noopener">Website</a>
+        </div>
+        <a href="https://twitter.github.io/metrics/twitter/check-my-repo/WEEKLY" class="Button Button--tertiary">Metrics</a>
+    </div>
+    <div class="project-card" id="twitter/twemoji-parser">
+        <h1 class="project-name small-margin">twemoji-parser</h1>
+        <div class="border small-margin" style="border-bottom-color:#c22d40"></div>
+        <div class="project-description xsmall-margin"><div>A simple library for identifying emoji entities within a string in order to render them as Twemoji.</div></div>
+        <p class="project-language">Scala</p>
+        <div class="whitespace"></div>
+        <div class="project-links">
+            <a href="https://github.com/twitter/twemoji-parser" target="_blank" rel="noopener">GitHub</a>
+            
+        </div>
+        <a href="https://twitter.github.io/metrics/twitter/twemoji-parser/WEEKLY" class="Button Button--tertiary">Metrics</a>
+    </div>
+    <div class="project-card" id="twitter/typeahead.js">
+        <h1 class="project-name small-margin">typeahead.js</h1>
+        <div class="border small-margin" style="border-bottom-color:#f1e05a"></div>
+        <div class="project-description xsmall-margin"><div>typeahead.js is a fast and fully-featured autocomplete library</div></div>
+        <p class="project-language">JavaScript</p>
+        <div class="whitespace"></div>
+        <div class="project-links">
+            <a href="https://github.com/twitter/typeahead.js" target="_blank" rel="noopener">GitHub</a>
+            <a href="http://twitter.github.io/typeahead.js/" target="_blank" rel="noopener">Website</a>
+        </div>
+        <a href="https://twitter.github.io/metrics/twitter/typeahead.js/WEEKLY" class="Button Button--tertiary">Metrics</a>
+    </div>
+    <div class="project-card" id="twitter/birdwatch">
+        <h1 class="project-name small-margin">birdwatch</h1>
+        <div class="border small-margin" style="border-bottom-color:#563d7c"></div>
+        <div class="project-description xsmall-margin"><div></div></div>
+        <p class="project-language">CSS</p>
+        <div class="whitespace"></div>
+        <div class="project-links">
+            <a href="https://github.com/twitter/birdwatch" target="_blank" rel="noopener">GitHub</a>
+            <a href="https://twitter.github.io/birdwatch" target="_blank" rel="noopener">Website</a>
+        </div>
+        <a href="https://twitter.github.io/metrics/twitter/birdwatch/WEEKLY" class="Button Button--tertiary">Metrics</a>
+    </div>
+    <div class="project-card" id="twitter/twitter-korean-text">
+        <h1 class="project-name small-margin">twitter-korean-text</h1>
+        <div class="border small-margin" style="border-bottom-color:#c22d40"></div>
+        <div class="project-description xsmall-margin"><div>Korean tokenizer</div></div>
+        <p class="project-language">Scala</p>
+        <div class="whitespace"></div>
+        <div class="project-links">
+            <a href="https://github.com/twitter/twitter-korean-text" target="_blank" rel="noopener">GitHub</a>
+            
+        </div>
+        <a href="https://twitter.github.io/metrics/twitter/twitter-korean-text/WEEKLY" class="Button Button--tertiary">Metrics</a>
+    </div>
+    <div class="project-card" id="twitter/TwitterTextEditor">
+        <h1 class="project-name small-margin">TwitterTextEditor</h1>
+        <div class="border small-margin" style="border-bottom-color:#F05138"></div>
+        <div class="project-description xsmall-margin"><div>A standalone, flexible API that provides a full-featured rich text editor for iOS applications.</div></div>
+        <p class="project-language">Swift</p>
+        <div class="whitespace"></div>
+        <div class="project-links">
+            <a href="https://github.com/twitter/TwitterTextEditor" target="_blank" rel="noopener">GitHub</a>
+            
+        </div>
+        <a href="https://twitter.github.io/metrics/twitter/TwitterTextEditor/WEEKLY" class="Button Button--tertiary">Metrics</a>
+    </div>
+    <div class="project-card" id="twitter/joauth">
+        <h1 class="project-name small-margin">joauth</h1>
+        <div class="border small-margin" style="border-bottom-color:#b07219"></div>
+        <div class="project-description xsmall-margin"><div>A Java library for authenticating HTTP Requests using OAuth</div></div>
+        <p class="project-language">Java</p>
+        <div class="whitespace"></div>
+        <div class="project-links">
+            <a href="https://github.com/twitter/joauth" target="_blank" rel="noopener">GitHub</a>
+            
+        </div>
+        <a href="https://twitter.github.io/metrics/twitter/joauth/WEEKLY" class="Button Button--tertiary">Metrics</a>
+    </div>
+    <div class="project-card" id="twitter/repo-scaffolding">
+        <h1 class="project-name small-margin">repo-scaffolding</h1>
+        <div class="border small-margin"></div>
+        <div class="project-description xsmall-margin"><div>Tools for creating repos based on open source standards and best practices</div></div>
+        <p class="project-language"></p>
+        <div class="whitespace"></div>
+        <div class="project-links">
+            <a href="https://github.com/twitter/repo-scaffolding" target="_blank" rel="noopener">GitHub</a>
+            
+        </div>
+        <a href="https://twitter.github.io/metrics/twitter/repo-scaffolding/WEEKLY" class="Button Button--tertiary">Metrics</a>
+    </div>
+    <div class="project-card" id="twitter/elephant-bird">
+        <h1 class="project-name small-margin">elephant-bird</h1>
+        <div class="border small-margin" style="border-bottom-color:#b07219"></div>
+        <div class="project-description xsmall-margin"><div>Twitter's collection of LZO and Protocol Buffer-related Hadoop, Pig, Hive, and HBase code.</div></div>
+        <p class="project-language">Java</p>
+        <div class="whitespace"></div>
+        <div class="project-links">
+            <a href="https://github.com/twitter/elephant-bird" target="_blank" rel="noopener">GitHub</a>
+            
+        </div>
+        <a href="https://twitter.github.io/metrics/twitter/elephant-bird/WEEKLY" class="Button Button--tertiary">Metrics</a>
+    </div>
+    <div class="project-card" id="twitter/d3kit">
+        <h1 class="project-name small-margin">d3kit</h1>
+        <div class="border small-margin" style="border-bottom-color:#f1e05a"></div>
+        <div class="project-description xsmall-margin"><div>D3Kit is a set tools to speed D3 related project development</div></div>
+        <p class="project-language">JavaScript</p>
+        <div class="whitespace"></div>
+        <div class="project-links">
+            <a href="https://github.com/twitter/d3kit" target="_blank" rel="noopener">GitHub</a>
+            
+        </div>
+        <a href="https://twitter.github.io/metrics/twitter/d3kit/WEEKLY" class="Button Button--tertiary">Metrics</a>
+    </div>
+    <div class="project-card" id="twitter/hadoop-lzo">
+        <h1 class="project-name small-margin">hadoop-lzo</h1>
+        <div class="border small-margin" style="border-bottom-color:#89e051"></div>
+        <div class="project-description xsmall-margin"><div>Refactored version of code.google.com/hadoop-gpl-compression for hadoop 0.20</div></div>
+        <p class="project-language">Shell</p>
+        <div class="whitespace"></div>
+        <div class="project-links">
+            <a href="https://github.com/twitter/hadoop-lzo" target="_blank" rel="noopener">GitHub</a>
+            
+        </div>
+        <a href="https://twitter.github.io/metrics/twitter/hadoop-lzo/WEEKLY" class="Button Button--tertiary">Metrics</a>
+    </div>
+    <div class="project-card" id="twitter/cache-trace">
+        <h1 class="project-name small-margin">cache-trace</h1>
+        <div class="border small-margin" style="border-bottom-color:#89e051"></div>
+        <div class="project-description xsmall-margin"><div></div></div>
+        <p class="project-language">Shell</p>
+        <div class="whitespace"></div>
+        <div class="project-links">
+            <a href="https://github.com/twitter/cache-trace" target="_blank" rel="noopener">GitHub</a>
+            
+        </div>
+        <a href="https://twitter.github.io/metrics/twitter/cache-trace/WEEKLY" class="Button Button--tertiary">Metrics</a>
+    </div>
+    <div class="project-card" id="twitter/twitter-cldr-rb">
+        <h1 class="project-name small-margin">twitter-cldr-rb</h1>
+        <div class="border small-margin" style="border-bottom-color:#701516"></div>
+        <div class="project-description xsmall-margin"><div>Ruby implementation of the ICU (International Components for Unicode) that uses the Common Locale Data Repository to format dates, plurals, and more.</div></div>
+        <p class="project-language">Ruby</p>
+        <div class="whitespace"></div>
+        <div class="project-links">
+            <a href="https://github.com/twitter/twitter-cldr-rb" target="_blank" rel="noopener">GitHub</a>
+            
+        </div>
+        <a href="https://twitter.github.io/metrics/twitter/twitter-cldr-rb/WEEKLY" class="Button Button--tertiary">Metrics</a>
+    </div>
+    <div class="project-card" id="twitter/gpl-commitment">
+        <h1 class="project-name small-margin">gpl-commitment</h1>
+        <div class="border small-margin"></div>
+        <div class="project-description xsmall-margin"><div>Twitter's GPL Cooperation Commitment</div></div>
+        <p class="project-language"></p>
+        <div class="whitespace"></div>
+        <div class="project-links">
+            <a href="https://github.com/twitter/gpl-commitment" target="_blank" rel="noopener">GitHub</a>
+            
+        </div>
+        <a href="https://twitter.github.io/metrics/twitter/gpl-commitment/WEEKLY" class="Button Button--tertiary">Metrics</a>
+    </div>
+    <div class="project-card" id="twitter/cloudhopper-commons">
+        <h1 class="project-name small-margin">cloudhopper-commons</h1>
+        <div class="border small-margin" style="border-bottom-color:#b07219"></div>
+        <div class="project-description xsmall-margin"><div>Cloudhopper Commons</div></div>
+        <p class="project-language">Java</p>
+        <div class="whitespace"></div>
+        <div class="project-links">
+            <a href="https://github.com/twitter/cloudhopper-commons" target="_blank" rel="noopener">GitHub</a>
+            
+        </div>
+        <a href="https://twitter.github.io/metrics/twitter/cloudhopper-commons/WEEKLY" class="Button Button--tertiary">Metrics</a>
+    </div>
+    <div class="project-card" id="twitter/GraphJet">
+        <h1 class="project-name small-margin">GraphJet</h1>
+        <div class="border small-margin" style="border-bottom-color:#b07219"></div>
+        <div class="project-description xsmall-margin"><div>GraphJet is a real-time graph processing library.</div></div>
+        <p class="project-language">Java</p>
+        <div class="whitespace"></div>
+        <div class="project-links">
+            <a href="https://github.com/twitter/GraphJet" target="_blank" rel="noopener">GitHub</a>
+            
+        </div>
+        <a href="https://twitter.github.io/metrics/twitter/GraphJet/WEEKLY" class="Button Button--tertiary">Metrics</a>
+    </div>
+    <div class="project-card" id="twitter/hraven">
+        <h1 class="project-name small-margin">hraven</h1>
+        <div class="border small-margin" style="border-bottom-color:#b07219"></div>
+        <div class="project-description xsmall-margin"><div>hRaven collects run time data and statistics from MapReduce jobs in an easily queryable format</div></div>
+        <p class="project-language">Java</p>
+        <div class="whitespace"></div>
+        <div class="project-links">
+            <a href="https://github.com/twitter/hraven" target="_blank" rel="noopener">GitHub</a>
+            <a href="https://twitter.com/twitterhadoop" target="_blank" rel="noopener">Website</a>
+        </div>
+        <a href="https://twitter.github.io/metrics/twitter/hraven/WEEKLY" class="Button Button--tertiary">Metrics</a>
+    </div>
+    <div class="project-card" id="twitter/hbc">
+        <h1 class="project-name small-margin">hbc</h1>
+        <div class="border small-margin" style="border-bottom-color:#b07219"></div>
+        <div class="project-description xsmall-margin"><div>A Java HTTP client for consuming Twitter's realtime Streaming API</div></div>
+        <p class="project-language">Java</p>
+        <div class="whitespace"></div>
+        <div class="project-links">
+            <a href="https://github.com/twitter/hbc" target="_blank" rel="noopener">GitHub</a>
+            <a href="https://developer.twitter.com/en/docs/tweets/filter-realtime/overview" target="_blank" rel="noopener">Website</a>
+        </div>
+        <a href="https://twitter.github.io/metrics/twitter/hbc/WEEKLY" class="Button Button--tertiary">Metrics</a>
+    </div>
+    <div class="project-card" id="twitter/second-control-probability-distributions">
+        <h1 class="project-name small-margin">second-control-probability-distributions</h1>
+        <div class="border small-margin"></div>
+        <div class="project-description xsmall-margin"><div></div></div>
+        <p class="project-language"></p>
+        <div class="whitespace"></div>
+        <div class="project-links">
+            <a href="https://github.com/twitter/second-control-probability-distributions" target="_blank" rel="noopener">GitHub</a>
+            
+        </div>
+        <a href="https://twitter.github.io/metrics/twitter/second-control-probability-distributions/WEEKLY" class="Button Button--tertiary">Metrics</a>
+    </div>
+    <div class="project-card" id="twitter/fatcache">
+        <h1 class="project-name small-margin">fatcache</h1>
+        <div class="border small-margin" style="border-bottom-color:#555555"></div>
+        <div class="project-description xsmall-margin"><div>Memcache on SSD</div></div>
+        <p class="project-language">C</p>
+        <div class="whitespace"></div>
+        <div class="project-links">
+            <a href="https://github.com/twitter/fatcache" target="_blank" rel="noopener">GitHub</a>
+            
+        </div>
+        <a href="https://twitter.github.io/metrics/twitter/fatcache/WEEKLY" class="Button Button--tertiary">Metrics</a>
+    </div>
+    <div class="project-card" id="twitter/twurl">
+        <h1 class="project-name small-margin">twurl</h1>
+        <div class="border small-margin" style="border-bottom-color:#701516"></div>
+        <div class="project-description xsmall-margin"><div>OAuth-enabled curl for the Twitter API</div></div>
+        <p class="project-language">Ruby</p>
+        <div class="whitespace"></div>
+        <div class="project-links">
+            <a href="https://github.com/twitter/twurl" target="_blank" rel="noopener">GitHub</a>
+            <a href="https://developer.twitter.com" target="_blank" rel="noopener">Website</a>
+        </div>
+        <a href="https://twitter.github.io/metrics/twitter/twurl/WEEKLY" class="Button Button--tertiary">Metrics</a>
+    </div>
+    <div class="project-card" id="twitter/twitter-cldr-js">
+        <h1 class="project-name small-margin">twitter-cldr-js</h1>
+        <div class="border small-margin" style="border-bottom-color:#f1e05a"></div>
+        <div class="project-description xsmall-margin"><div>JavaScript implementation of the ICU (International Components for Unicode) that uses the Common Locale Data Repository to format dates, plurals, and more.  Based on twitter-cldr-rb.</div></div>
+        <p class="project-language">JavaScript</p>
+        <div class="whitespace"></div>
+        <div class="project-links">
+            <a href="https://github.com/twitter/twitter-cldr-js" target="_blank" rel="noopener">GitHub</a>
+            
+        </div>
+        <a href="https://twitter.github.io/metrics/twitter/twitter-cldr-js/WEEKLY" class="Button Button--tertiary">Metrics</a>
+    </div>
+    <div class="project-card" id="twitter/dodo-build">
+        <h1 class="project-name small-margin">dodo-build</h1>
+        <div class="border small-margin" style="border-bottom-color:#2b7489"></div>
+        <div class="project-description xsmall-margin"><div>A Github Action for running Dodo: The Twitter OSS Project Builder</div></div>
+        <p class="project-language">TypeScript</p>
+        <div class="whitespace"></div>
+        <div class="project-links">
+            <a href="https://github.com/twitter/dodo-build" target="_blank" rel="noopener">GitHub</a>
+            <a href="https://github.com/twitter/dodo" target="_blank" rel="noopener">Website</a>
+        </div>
+        <a href="https://twitter.github.io/metrics/twitter/dodo-build/WEEKLY" class="Button Button--tertiary">Metrics</a>
+    </div>
+    <div class="project-card" id="twitter/netty-http2">
+        <h1 class="project-name small-margin">netty-http2</h1>
+        <div class="border small-margin" style="border-bottom-color:#b07219"></div>
+        <div class="project-description xsmall-margin"><div>HTTP/2 for Netty</div></div>
+        <p class="project-language">Java</p>
+        <div class="whitespace"></div>
+        <div class="project-links">
+            <a href="https://github.com/twitter/netty-http2" target="_blank" rel="noopener">GitHub</a>
+            
+        </div>
+        <a href="https://twitter.github.io/metrics/twitter/netty-http2/WEEKLY" class="Button Button--tertiary">Metrics</a>
+    </div>
+    <div class="project-card" id="twitter/Serial">
+        <h1 class="project-name small-margin">Serial</h1>
+        <div class="border small-margin" style="border-bottom-color:#b07219"></div>
+        <div class="project-description xsmall-margin"><div>Light-weight, fast framework for object serialization in Java, with Android support.</div></div>
+        <p class="project-language">Java</p>
+        <div class="whitespace"></div>
+        <div class="project-links">
+            <a href="https://github.com/twitter/Serial" target="_blank" rel="noopener">GitHub</a>
+            
+        </div>
+        <a href="https://twitter.github.io/metrics/twitter/Serial/WEEKLY" class="Button Button--tertiary">Metrics</a>
+    </div>
+    <div class="project-card" id="twitter/groupcache">
+        <h1 class="project-name small-margin">groupcache</h1>
+        <div class="border small-margin" style="border-bottom-color:#00ADD8"></div>
+        <div class="project-description xsmall-margin"><div>groupcache is a caching and cache-filling library, intended as a replacement for memcached in many cases.</div></div>
+        <p class="project-language">Go</p>
+        <div class="whitespace"></div>
+        <div class="project-links">
+            <a href="https://github.com/twitter/groupcache" target="_blank" rel="noopener">GitHub</a>
+            
+        </div>
+        <a href="https://twitter.github.io/metrics/twitter/groupcache/WEEKLY" class="Button Button--tertiary">Metrics</a>
+    </div>
+    <div class="project-card" id="twitter/summingbird">
+        <h1 class="project-name small-margin">summingbird</h1>
+        <div class="border small-margin" style="border-bottom-color:#c22d40"></div>
+        <div class="project-description xsmall-margin"><div>Streaming MapReduce with Scalding and Storm</div></div>
+        <p class="project-language">Scala</p>
+        <div class="whitespace"></div>
+        <div class="project-links">
+            <a href="https://github.com/twitter/summingbird" target="_blank" rel="noopener">GitHub</a>
+            <a href="https://twitter.com/summingbird" target="_blank" rel="noopener">Website</a>
+        </div>
+        <a href="https://twitter.github.io/metrics/twitter/summingbird/WEEKLY" class="Button Button--tertiary">Metrics</a>
+    </div>
+    <div class="project-card" id="twitter/sbf">
+        <h1 class="project-name small-margin">sbf</h1>
+        <div class="border small-margin" style="border-bottom-color:#b07219"></div>
+        <div class="project-description xsmall-margin"><div></div></div>
+        <p class="project-language">Java</p>
+        <div class="whitespace"></div>
+        <div class="project-links">
+            <a href="https://github.com/twitter/sbf" target="_blank" rel="noopener">GitHub</a>
+            
+        </div>
+        <a href="https://twitter.github.io/metrics/twitter/sbf/WEEKLY" class="Button Button--tertiary">Metrics</a>
+    </div>
+    <div class="project-card" id="twitter/whiskey">
+        <h1 class="project-name small-margin">whiskey</h1>
+        <div class="border small-margin" style="border-bottom-color:#b07219"></div>
+        <div class="project-description xsmall-margin"><div>HTTP library for Android (beta)</div></div>
+        <p class="project-language">Java</p>
+        <div class="whitespace"></div>
+        <div class="project-links">
+            <a href="https://github.com/twitter/whiskey" target="_blank" rel="noopener">GitHub</a>
+            
+        </div>
+        <a href="https://twitter.github.io/metrics/twitter/whiskey/WEEKLY" class="Button Button--tertiary">Metrics</a>
+    </div>
+    <div class="project-card" id="twitter/hpack">
+        <h1 class="project-name small-margin">hpack</h1>
+        <div class="border small-margin" style="border-bottom-color:#b07219"></div>
+        <div class="project-description xsmall-margin"><div>Header Compression for HTTP/2</div></div>
+        <p class="project-language">Java</p>
+        <div class="whitespace"></div>
+        <div class="project-links">
+            <a href="https://github.com/twitter/hpack" target="_blank" rel="noopener">GitHub</a>
+            <a href="https://twitter.com/http_2" target="_blank" rel="noopener">Website</a>
+        </div>
+        <a href="https://twitter.github.io/metrics/twitter/hpack/WEEKLY" class="Button Button--tertiary">Metrics</a>
+    </div>
+    <div class="project-card" id="twitter/cli-guide.js">
+        <h1 class="project-name small-margin">cli-guide.js</h1>
+        <div class="border small-margin" style="border-bottom-color:#f1e05a"></div>
+        <div class="project-description xsmall-margin"><div>CLI Guide JQuery Plugin</div></div>
+        <p class="project-language">JavaScript</p>
+        <div class="whitespace"></div>
+        <div class="project-links">
+            <a href="https://github.com/twitter/cli-guide.js" target="_blank" rel="noopener">GitHub</a>
+            <a href="https://twitter.github.io/cli-guide.js/" target="_blank" rel="noopener">Website</a>
+        </div>
+        <a href="https://twitter.github.io/metrics/twitter/cli-guide.js/WEEKLY" class="Button Button--tertiary">Metrics</a>
+    </div>
+    <div class="project-card" id="twitter/hogan.js">
+        <h1 class="project-name small-margin">hogan.js</h1>
+        <div class="border small-margin" style="border-bottom-color:#f1e05a"></div>
+        <div class="project-description xsmall-margin"><div>A compiler for the Mustache templating language</div></div>
+        <p class="project-language">JavaScript</p>
+        <div class="whitespace"></div>
+        <div class="project-links">
+            <a href="https://github.com/twitter/hogan.js" target="_blank" rel="noopener">GitHub</a>
+            <a href="http://twitter.github.com/hogan.js" target="_blank" rel="noopener">Website</a>
+        </div>
+        <a href="https://twitter.github.io/metrics/twitter/hogan.js/WEEKLY" class="Button Button--tertiary">Metrics</a>
+    </div>
+    <div class="project-card" id="twitter/zktraffic">
+        <h1 class="project-name small-margin">zktraffic</h1>
+        <div class="border small-margin" style="border-bottom-color:#3572A5"></div>
+        <div class="project-description xsmall-margin"><div>ZooKeeper protocol analyzer and stats gathering daemon</div></div>
+        <p class="project-language">Python</p>
+        <div class="whitespace"></div>
+        <div class="project-links">
+            <a href="https://github.com/twitter/zktraffic" target="_blank" rel="noopener">GitHub</a>
+            
+        </div>
+        <a href="https://twitter.github.io/metrics/twitter/zktraffic/WEEKLY" class="Button Button--tertiary">Metrics</a>
+    </div>
+    <div class="project-card" id="twitter/storehaus">
+        <h1 class="project-name small-margin">storehaus</h1>
+        <div class="border small-margin" style="border-bottom-color:#c22d40"></div>
+        <div class="project-description xsmall-margin"><div>Storehaus is a library that makes it easy to work with asynchronous key value stores</div></div>
+        <p class="project-language">Scala</p>
+        <div class="whitespace"></div>
+        <div class="project-links">
+            <a href="https://github.com/twitter/storehaus" target="_blank" rel="noopener">GitHub</a>
+            
+        </div>
+        <a href="https://twitter.github.io/metrics/twitter/storehaus/WEEKLY" class="Button Button--tertiary">Metrics</a>
+    </div>
+    <div class="project-card" id="twitter/wordpress">
+        <h1 class="project-name small-margin">wordpress</h1>
+        <div class="border small-margin" style="border-bottom-color:#4F5D95"></div>
+        <div class="project-description xsmall-margin"><div>The official Twitter plugin for WordPress. Embed Twitter content and grow your audience on Twitter.</div></div>
+        <p class="project-language">PHP</p>
+        <div class="whitespace"></div>
+        <div class="project-links">
+            <a href="https://github.com/twitter/wordpress" target="_blank" rel="noopener">GitHub</a>
+            <a href="https://github.com/twitter/wordpress/wiki" target="_blank" rel="noopener">Website</a>
+        </div>
+        <a href="https://twitter.github.io/metrics/twitter/wordpress/WEEKLY" class="Button Button--tertiary">Metrics</a>
+    </div>
+    <div class="project-card" id="twitter/iago2">
+        <h1 class="project-name small-margin">iago2</h1>
+        <div class="border small-margin" style="border-bottom-color:#c22d40"></div>
+        <div class="project-description xsmall-margin"><div>A load generator, built for engineers</div></div>
+        <p class="project-language">Scala</p>
+        <div class="whitespace"></div>
+        <div class="project-links">
+            <a href="https://github.com/twitter/iago2" target="_blank" rel="noopener">GitHub</a>
+            
+        </div>
+        <a href="https://twitter.github.io/metrics/twitter/iago2/WEEKLY" class="Button Button--tertiary">Metrics</a>
+    </div>
+    <div class="project-card" id="twitter/AnomalyDetection">
+        <h1 class="project-name small-margin">AnomalyDetection</h1>
+        <div class="border small-margin" style="border-bottom-color:#198CE7"></div>
+        <div class="project-description xsmall-margin"><div>Anomaly Detection with R</div></div>
+        <p class="project-language">R</p>
+        <div class="whitespace"></div>
+        <div class="project-links">
+            <a href="https://github.com/twitter/AnomalyDetection" target="_blank" rel="noopener">GitHub</a>
+            
+        </div>
+        <a href="https://twitter.github.io/metrics/twitter/AnomalyDetection/WEEKLY" class="Button Button--tertiary">Metrics</a>
+    </div>
+    <div class="project-card" id="twitter/twemcache">
+        <h1 class="project-name small-margin">twemcache</h1>
+        <div class="border small-margin" style="border-bottom-color:#555555"></div>
+        <div class="project-description xsmall-margin"><div>Twemcache is the Twitter Memcached</div></div>
+        <p class="project-language">C</p>
+        <div class="whitespace"></div>
+        <div class="project-links">
+            <a href="https://github.com/twitter/twemcache" target="_blank" rel="noopener">GitHub</a>
+            <a href="https://twitter.com/twemcache" target="_blank" rel="noopener">Website</a>
+        </div>
+        <a href="https://twitter.github.io/metrics/twitter/twemcache/WEEKLY" class="Button Button--tertiary">Metrics</a>
+    </div>
+    <div class="project-card" id="twitter/twitter-cldr-npm">
+        <h1 class="project-name small-margin">twitter-cldr-npm</h1>
+        <div class="border small-margin" style="border-bottom-color:#f1e05a"></div>
+        <div class="project-description xsmall-margin"><div>TwitterCldr npm package</div></div>
+        <p class="project-language">JavaScript</p>
+        <div class="whitespace"></div>
+        <div class="project-links">
+            <a href="https://github.com/twitter/twitter-cldr-npm" target="_blank" rel="noopener">GitHub</a>
+            
+        </div>
+        <a href="https://twitter.github.io/metrics/twitter/twitter-cldr-npm/WEEKLY" class="Button Button--tertiary">Metrics</a>
+    </div>
+    <div class="project-card" id="twitter/curation-style-guide">
+        <h1 class="project-name small-margin">curation-style-guide</h1>
+        <div class="border small-margin"></div>
+        <div class="project-description xsmall-margin"><div>Document Repository for Twitter's Curation Style Guide</div></div>
+        <p class="project-language"></p>
+        <div class="whitespace"></div>
+        <div class="project-links">
+            <a href="https://github.com/twitter/curation-style-guide" target="_blank" rel="noopener">GitHub</a>
+            <a href="https://help.twitter.com/en/rules-and-policies/curationstyleguide" target="_blank" rel="noopener">Website</a>
+        </div>
+        <a href="https://twitter.github.io/metrics/twitter/curation-style-guide/WEEKLY" class="Button Button--tertiary">Metrics</a>
+    </div>
+    <div class="project-card" id="twitter/tormenta">
+        <h1 class="project-name small-margin">tormenta</h1>
+        <div class="border small-margin" style="border-bottom-color:#c22d40"></div>
+        <div class="project-description xsmall-margin"><div>Scala extensions for Storm</div></div>
+        <p class="project-language">Scala</p>
+        <div class="whitespace"></div>
+        <div class="project-links">
+            <a href="https://github.com/twitter/tormenta" target="_blank" rel="noopener">GitHub</a>
+            
+        </div>
+        <a href="https://twitter.github.io/metrics/twitter/tormenta/WEEKLY" class="Button Button--tertiary">Metrics</a>
+    </div>
+    <div class="project-card" id="twitter/libwatchman">
+        <h1 class="project-name small-margin">libwatchman</h1>
+        <div class="border small-margin" style="border-bottom-color:#555555"></div>
+        <div class="project-description xsmall-margin"><div>A C interface to watchman</div></div>
+        <p class="project-language">C</p>
+        <div class="whitespace"></div>
+        <div class="project-links">
+            <a href="https://github.com/twitter/libwatchman" target="_blank" rel="noopener">GitHub</a>
+            
+        </div>
+        <a href="https://twitter.github.io/metrics/twitter/libwatchman/WEEKLY" class="Button Button--tertiary">Metrics</a>
+    </div>
+    <div class="project-card" id="twitter/interactive">
+        <h1 class="project-name small-margin">interactive</h1>
+        <div class="border small-margin" style="border-bottom-color:#d12127"></div>
+        <div class="project-description xsmall-margin"><div>Twitter interactive visualization</div></div>
+        <p class="project-language">ApacheConf</p>
+        <div class="whitespace"></div>
+        <div class="project-links">
+            <a href="https://github.com/twitter/interactive" target="_blank" rel="noopener">GitHub</a>
+            <a href="http://twitter.github.io/interactive" target="_blank" rel="noopener">Website</a>
+        </div>
+        <a href="https://twitter.github.io/metrics/twitter/interactive/WEEKLY" class="Button Button--tertiary">Metrics</a>
+    </div>
+    <div class="project-card" id="twitter/thrift_client">
+        <h1 class="project-name small-margin">thrift_client</h1>
+        <div class="border small-margin" style="border-bottom-color:#701516"></div>
+        <div class="project-description xsmall-margin"><div>A Thrift client wrapper that encapsulates some common failover behavior</div></div>
+        <p class="project-language">Ruby</p>
+        <div class="whitespace"></div>
+        <div class="project-links">
+            <a href="https://github.com/twitter/thrift_client" target="_blank" rel="noopener">GitHub</a>
+            <a href="http://github.com/twitter/thrift_client" target="_blank" rel="noopener">Website</a>
+        </div>
+        <a href="https://twitter.github.io/metrics/twitter/thrift_client/WEEKLY" class="Button Button--tertiary">Metrics</a>
+    </div>
+    <div class="project-card" id="twitter/ossdecks">
+        <h1 class="project-name small-margin">ossdecks</h1>
+        <div class="border small-margin"></div>
+        <div class="project-description xsmall-margin"><div>Repository for Twitter Open Source Decks</div></div>
+        <p class="project-language"></p>
+        <div class="whitespace"></div>
+        <div class="project-links">
+            <a href="https://github.com/twitter/ossdecks" target="_blank" rel="noopener">GitHub</a>
+            
+        </div>
+        <a href="https://twitter.github.io/metrics/twitter/ossdecks/WEEKLY" class="Button Button--tertiary">Metrics</a>
+    </div>
+    <div class="project-card" id="twitter/gatekeeper-service">
+        <h1 class="project-name small-margin">gatekeeper-service</h1>
+        <div class="border small-margin" style="border-bottom-color:#3572A5"></div>
+        <div class="project-description xsmall-margin"><div>GateKeeper is a service built to automate the manual steps involved in onboarding, offboarding, and lost asset scenarios.</div></div>
+        <p class="project-language">Python</p>
+        <div class="whitespace"></div>
+        <div class="project-links">
+            <a href="https://github.com/twitter/gatekeeper-service" target="_blank" rel="noopener">GitHub</a>
+            
+        </div>
+        <a href="https://twitter.github.io/metrics/twitter/gatekeeper-service/WEEKLY" class="Button Button--tertiary">Metrics</a>
+    </div>
+    <div class="project-card" id="twitter/torch-decisiontree">
+        <h1 class="project-name small-margin">torch-decisiontree</h1>
+        <div class="border small-margin" style="border-bottom-color:#000080"></div>
+        <div class="project-description xsmall-margin"><div>This project implements random forests and gradient boosted decision trees (GBDT). The latter uses gradient tree boosting. Both use ensemble learning to produce ensembles of decision trees (that is, forests).</div></div>
+        <p class="project-language">Lua</p>
+        <div class="whitespace"></div>
+        <div class="project-links">
+            <a href="https://github.com/twitter/torch-decisiontree" target="_blank" rel="noopener">GitHub</a>
+            
+        </div>
+        <a href="https://twitter.github.io/metrics/twitter/torch-decisiontree/WEEKLY" class="Button Button--tertiary">Metrics</a>
+    </div>
+    <div class="project-card" id="twitter/analytics-infra-governance">
+        <h1 class="project-name small-margin">analytics-infra-governance</h1>
+        <div class="border small-margin"></div>
+        <div class="project-description xsmall-margin"><div>Description of the process for how to commit, review, and release code to the Scalding OSS family (Scalding, Summingbird, Algebird, Bijection, Storehaus, etc)</div></div>
+        <p class="project-language"></p>
+        <div class="whitespace"></div>
+        <div class="project-links">
+            <a href="https://github.com/twitter/analytics-infra-governance" target="_blank" rel="noopener">GitHub</a>
+            
+        </div>
+        <a href="https://twitter.github.io/metrics/twitter/analytics-infra-governance/WEEKLY" class="Button Button--tertiary">Metrics</a>
+    </div>
+    <div class="project-card" id="twitter/BreakoutDetection">
+        <h1 class="project-name small-margin">BreakoutDetection</h1>
+        <div class="border small-margin" style="border-bottom-color:#f34b7d"></div>
+        <div class="project-description xsmall-margin"><div>Breakout Detection via Robust E-Statistics</div></div>
+        <p class="project-language">C&#43;&#43;</p>
+        <div class="whitespace"></div>
+        <div class="project-links">
+            <a href="https://github.com/twitter/BreakoutDetection" target="_blank" rel="noopener">GitHub</a>
+            
+        </div>
+        <a href="https://twitter.github.io/metrics/twitter/BreakoutDetection/WEEKLY" class="Button Button--tertiary">Metrics</a>
+    </div>
+    <div class="project-card" id="twitter/torch-twrl">
+        <h1 class="project-name small-margin">torch-twrl</h1>
+        <div class="border small-margin" style="border-bottom-color:#000080"></div>
+        <div class="project-description xsmall-margin"><div>Torch-twrl is a package that enables reinforcement learning in Torch.</div></div>
+        <p class="project-language">Lua</p>
+        <div class="whitespace"></div>
+        <div class="project-links">
+            <a href="https://github.com/twitter/torch-twrl" target="_blank" rel="noopener">GitHub</a>
+            
+        </div>
+        <a href="https://twitter.github.io/metrics/twitter/torch-twrl/WEEKLY" class="Button Button--tertiary">Metrics</a>
+    </div>
+    <div class="project-card" id="twitter/CocoaSPDY">
+        <h1 class="project-name small-margin">CocoaSPDY</h1>
+        <div class="border small-margin" style="border-bottom-color:#438eff"></div>
+        <div class="project-description xsmall-margin"><div>SPDY for iOS and OS X</div></div>
+        <p class="project-language">Objective-C</p>
+        <div class="whitespace"></div>
+        <div class="project-links">
+            <a href="https://github.com/twitter/CocoaSPDY" target="_blank" rel="noopener">GitHub</a>
+            
+        </div>
+        <a href="https://twitter.github.io/metrics/twitter/CocoaSPDY/WEEKLY" class="Button Button--tertiary">Metrics</a>
+    </div>
+    <div class="project-card" id="twitter/meta-learning-lstm">
+        <h1 class="project-name small-margin">meta-learning-lstm</h1>
+        <div class="border small-margin" style="border-bottom-color:#000080"></div>
+        <div class="project-description xsmall-margin"><div>This repo contains the source code accompanying a scientific paper with the same name.</div></div>
+        <p class="project-language">Lua</p>
+        <div class="whitespace"></div>
+        <div class="project-links">
+            <a href="https://github.com/twitter/meta-learning-lstm" target="_blank" rel="noopener">GitHub</a>
+            
+        </div>
+        <a href="https://twitter.github.io/metrics/twitter/meta-learning-lstm/WEEKLY" class="Button Button--tertiary">Metrics</a>
+    </div>
+    <div class="project-card" id="twitter/innovators-patent-agreement">
+        <h1 class="project-name small-margin">innovators-patent-agreement</h1>
+        <div class="border small-margin"></div>
+        <div class="project-description xsmall-margin"><div>Innovators Patent Agreement (IPA)</div></div>
+        <p class="project-language"></p>
+        <div class="whitespace"></div>
+        <div class="project-links">
+            <a href="https://github.com/twitter/innovators-patent-agreement" target="_blank" rel="noopener">GitHub</a>
+            
+        </div>
+        <a href="https://twitter.github.io/metrics/twitter/innovators-patent-agreement/WEEKLY" class="Button Button--tertiary">Metrics</a>
+    </div>
+    <div class="project-card" id="twitter/activerecord-reputation-system">
+        <h1 class="project-name small-margin">activerecord-reputation-system</h1>
+        <div class="border small-margin" style="border-bottom-color:#701516"></div>
+        <div class="project-description xsmall-margin"><div>An Active Record Reputation System for Rails</div></div>
+        <p class="project-language">Ruby</p>
+        <div class="whitespace"></div>
+        <div class="project-links">
+            <a href="https://github.com/twitter/activerecord-reputation-system" target="_blank" rel="noopener">GitHub</a>
+            
+        </div>
+        <a href="https://twitter.github.io/metrics/twitter/activerecord-reputation-system/WEEKLY" class="Button Button--tertiary">Metrics</a>
+    </div>
+    
+</div>
 
       </div>
     </main>

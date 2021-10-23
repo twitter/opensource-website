@@ -3,6 +3,9 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
+import("https://cdnjs.cloudflare.com/ajax/libs/fuse.js/6.4.6/fuse.esm.min.js")
+    .then(module => { Fuse = module.default })
+
 /* Create project cards */
 var renderProjects = function(projectsList, searchString="") {
     // Parent div to hold all the project cards
@@ -128,7 +131,7 @@ function findMatches(query, repos) {
         ]
       }
       var fuse = new Fuse(repos, options)
-      var result = fuse.search(query)
+      var result = fuse.search(query).map(r => r.item)
 
       // Sort
       result.sort(sortFunction)

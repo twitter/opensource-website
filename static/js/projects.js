@@ -4,6 +4,7 @@
  */
 
 var projectCards = Array.from(document.getElementsByClassName("project-card"))
+var searchBox = document.getElementById("search-box")
 
 // parse cards to build project list
 var projects = []
@@ -33,14 +34,59 @@ import("https://cdnjs.cloudflare.com/ajax/libs/fuse.js/6.4.6/fuse.esm.min.js")
               "language",
             ],
         })
+
+        // perform initial search with query parameter if present
+        if (q = new URL(window.location).searchParams.get("q")) {
+            search(q)
+        }
+        // respond to browser history navigation
+        window.addEventListener("popstate", () => {
+            q = new URL(window.location).searchParams.get("q")
+            search(q)
+        })
     })
 
-document.getElementById("search-box").addEventListener('keyup', function(event) {
+// perform search on search-box keyup and store in browser history.
+searchBox.addEventListener('keyup', function(event) {
+    let query = this.value
+    search(query)
+
+    // push new query onto history stack
+    const url = new URL(window.location)
+    if (url.searchParams.get('q') != query) {
+        if (query) {
+            url.searchParams.set('q', query)
+        } else {
+            url.searchParams.delete('q')
+        }
+        pushState(query, url)
+    }
+})
+
+// debounce wraps a function so that calls will be delayed to prevent repeated
+// calls within the specified time window.
+var debounce = (fn, timeout = 500) => {
+    let timer
+    return (...args) => {
+        clearTimeout(timer)
+        timer = setTimeout(() => { fn.apply(this, args); }, timeout);
+    }
+}
+
+// pushState pushes the new search query onto the browser history on a slight
+// delay. This is to prevent every individual keystroke from being pushed onto
+// the history stack.
+var pushState = debounce((query, url) => {
+    window.history.pushState({}, `Projects search: ${query}`, url)
+})
+
+// search the project list for the query string and display ranked results.
+var search = (query) => {
+    searchBox.value = query
     let resultsBox = document.getElementById('results')
 
-    let query = this.value.trim()
     if (!query) {
-        // reset all cards
+        // reset all project cards
         projectCards.forEach(card => {
             card.classList.remove("hide")
             card.style.removeProperty("order")
@@ -56,7 +102,7 @@ document.getElementById("search-box").addEventListener('keyup', function(event) 
     })
 
 
-    // then show results in relevance order
+    // show results in ranked order
     let order = 1
     results.forEach(r => {
         var card = document.getElementById(r.item.id)
@@ -67,4 +113,4 @@ document.getElementById("search-box").addEventListener('keyup', function(event) 
     resultsBox.getElementsByClassName("count")[0].innerText = results.length
     resultsBox.getElementsByClassName("query")[0].innerText = query
     resultsBox.classList.remove("hide")
-})
+}

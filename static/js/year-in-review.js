@@ -19,6 +19,7 @@ observer = new IntersectionObserver((entries) => {
   });
 }, config);
 document.querySelectorAll('.YIR-wrapper svg').forEach(image => {
+  image.classList.remove('in-view');
   observer.observe(image);
 });
 

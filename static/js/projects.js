@@ -3,25 +3,6 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
-// Put custom repo GitHub URLs in this object, keyed by nameWithOwner repo name.
-var customGithubURL = {
-    "twitter/pants": "https://github.com/pantsbuild/pants",
-}
-
-var getGithubURL = function(project) {
-    return customGithubURL[project.nameWithOwner] || 'https://github.com/' + project.nameWithOwner
-}
-
-
-// Put custom repo Website URLs in this object, keyed by nameWithOwner repo name
-var customWebsiteURL = {
-    "twitter/pants": "https://www.pantsbuild.org/",
-}
-
-var getHomepageURL = function(project) {
-    return customWebsiteURL[project.nameWithOwner] || project.homepageURL
-}
-
 /* Create project cards */
 var renderProjects = function(projectsList, searchString="") {
     // Parent div to hold all the project cards
@@ -71,14 +52,14 @@ var renderProjects = function(projectsList, searchString="") {
 
             // GitHub link
             var githubLink = document.createElement('a')
-            githubLink.href = getGithubURL(project)
+            githubLink.href = `https://github.com/${project.nameWithOwner}`
             githubLink.innerHTML = "GitHub"
             githubLink.target = "_blank"
             githubLink.rel = "noopener"
             projectLinksDiv.appendChild(githubLink)
 
             // Website link (with clause)
-            var homepageURL = getHomepageURL(project)
+            var homepageURL = project.homepageURL
             if (homepageURL != "") {
                 var websiteLink = document.createElement('a')
                 websiteLink.href = homepageURL

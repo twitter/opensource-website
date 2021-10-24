@@ -542,7 +542,7 @@ span.metric-name {
   }
 
   // Copied from main.css because mobile navigation is activated at a wider width on this page
-  #menu-toggle {
+  html:not(.no-js) #menu-toggle {
     display: block;
   }
 

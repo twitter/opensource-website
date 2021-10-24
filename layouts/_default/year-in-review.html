@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html class="no-js">
   <head>
     <meta charset="utf-8" />
     <meta name="title" content="{{ .Title }}">
@@ -367,6 +367,7 @@
   };
 </script>
 
+<script>document.getElementsByTagName("html")[0].classList.remove("no-js")</script>
 <script src="{{ "js/main.js" | relURL }}"></script>
 <script src="{{ printf "js/%s" .Params.custom_js | relURL }}"></script>
 {{ partial "ga.html" . }}

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html class="no-js">
   <head>
     <meta charset="utf-8" />
     <meta name="title" content="Year in Review">
@@ -28,10 +28,10 @@
     <link rel="shortcut icon" type="image/png" href="/assets/favicon.ico"/>
 
     
-    <link rel="stylesheet" href="/css/style.min.b79c89d6cf0a2a0d87a34d9d33484410cf0cf593adc259befc3661ca1b56c236.css"/>
+    <link rel="stylesheet" href="/css/style.min.71ec8e8a4f90fc0fc1af5044b23004bf72d5f7061681030aa41a9ad0a1a96dd4.css"/>
 
     
-    <link rel="stylesheet" href="/css/year-in-review.min.a9647b82c34af77aadea7bbb97a284539c3b6ad3450b0dbd204245562e5e2cde.css"/>
+    <link rel="stylesheet" href="/css/year-in-review.min.fc92d51b2d52fcfbe2e0dba3bf2e2a163ded1a39f9b886524bd473b82392ef58.css"/>
     
   </head>
 
@@ -66,7 +66,7 @@
     <div class="YIR-container">
       <div class="YIR-nav-wrapper" id="YIR-navbar">
         <ul class="nav">
-          <li class="active">
+          <li>
             <a href="#welcome">
               <span class="YIR-nav-title">Welcome</span>
               <p class="YIR-nav-body">This webpage updates weekly and provides a sliding window into the previous 12 months. Patches are always welcome.</p>
@@ -397,10 +397,12 @@
 
 
 <script type="text/javascript">
-  
-  let allRepos = [{ name: "AnomalyDetection", commitCount: "92", },{ name: "BreakoutDetection", commitCount: "19", },{ name: "CocoaSPDY", commitCount: "243", },{ name: "GraphJet", commitCount: "73", },{ name: "SentenTree", commitCount: "107", },{ name: "Serial", commitCount: "31", },{ name: "activerecord-reputation-system", commitCount: "141", },{ name: "algebird", commitCount: "1505", },{ name: "ambrose", commitCount: "642", },{ name: "analytics-infra-governance", commitCount: "1", },{ name: "bijection", commitCount: "691", },{ name: "bookkeeper", commitCount: "831", },{ name: "cassovary", commitCount: "501", },{ name: "ccommon", commitCount: "627", },{ name: "cdk", commitCount: "105", },{ name: "chill", commitCount: "591", },{ name: "cli-guide.js", commitCount: "332", },{ name: "cloudhopper-commons", commitCount: "424", },{ name: "code-of-conduct", commitCount: "10", },{ name: "commons", commitCount: "1656", },{ name: "css-flip", commitCount: "30", },{ name: "d3kit", commitCount: "291", },{ name: "diffy", commitCount: "78", },{ name: "distributedlog", commitCount: "91", },{ name: "dodo", commitCount: "57", },{ name: "effectivescala", commitCount: "364", },{ name: "elephant-bird", commitCount: "1374", },{ name: "fatcache", commitCount: "41", },{ name: "finagle", commitCount: "6781", },{ name: "finatra", commitCount: "1950", },{ name: "finatra-activator-http-seed", commitCount: "50", },{ name: "finatra-activator-thrift-seed", commitCount: "31", },{ name: "finatra-misc", commitCount: "6", },{ name: "go-bindata", commitCount: "195", },{ name: "hadoop-lzo", commitCount: "273", },{ name: "hbc", commitCount: "241", },{ name: "hdfs-du", commitCount: "5", },{ name: "hogan.js", commitCount: "244", },{ name: "hpack", commitCount: "63", },{ name: "hraven", commitCount: "338", },{ name: "innovators-patent-agreement", commitCount: "12", },{ name: "interactive", commitCount: "349", },{ name: "ios-twitter-image-pipeline", commitCount: "34", },{ name: "ios-twitter-logging-service", commitCount: "41", },{ name: "joauth", commitCount: "301", },{ name: "labella.js", commitCount: "173", },{ name: "libwatchman", commitCount: "95", },{ name: "meta-learning-lstm", commitCount: "50", },{ name: "netty-http2", commitCount: "59", },{ name: "nodes", commitCount: "31", },{ name: "ossdecks", commitCount: "10", },{ name: "ostrich", commitCount: "1270", },{ name: "pelikan", commitCount: "582", },{ name: "periscope-live-engagement-unity-sdk", commitCount: "4", },{ name: "pycascading", commitCount: "95", },{ name: "recess", commitCount: "88", },{ name: "rpc-perf", commitCount: "272", },{ name: "rsc", commitCount: "788", },{ name: "scala-json", commitCount: "103", },{ name: "scala_school", commitCount: "482", },{ name: "scala_school2", commitCount: "146", },{ name: "scalding", commitCount: "4148", },{ name: "scoot", commitCount: "434", },{ name: "scrooge", commitCount: "1465", },{ name: "second-control-probability-distributions", commitCount: "1", },{ name: "secure_headers", commitCount: "967", },{ name: "sekhmet", commitCount: "10", },{ name: "spitball", commitCount: "162", },{ name: "sslconfig", commitCount: "11", },{ name: "storehaus", commitCount: "960", },{ name: "summingbird", commitCount: "1792", },{ name: "thrift_client", commitCount: "268", },{ name: "torch-autograd", commitCount: "596", },{ name: "torch-dataset", commitCount: "28", },{ name: "torch-decisiontree", commitCount: "8", },{ name: "torch-distlearn", commitCount: "20", },{ name: "torch-ipc", commitCount: "98", },{ name: "torch-thrift", commitCount: "16", },{ name: "torch-twrl", commitCount: "38", },{ name: "tormenta", commitCount: "266", },{ name: "twemcache", commitCount: "42", },{ name: "twemoji", commitCount: "338", },{ name: "twemproxy", commitCount: "495", },{ name: "twitter-cldr-js", commitCount: "310", },{ name: "twitter-cldr-npm", commitCount: "41", },{ name: "twitter-cldr-rb", commitCount: "1283", },{ name: "twitter-korean-text", commitCount: "506", },{ name: "twitter-server", commitCount: "695", },{ name: "twitter-text", commitCount: "2277", },{ name: "twurl", commitCount: "173", },{ name: "typeahead.js", commitCount: "594", },{ name: "util", commitCount: "2533", },{ name: "vireo", commitCount: "10", },{ name: "whiskey", commitCount: "100", },{ name: "wordpress", commitCount: "131", },{ name: "zktraffic", commitCount: "216", },];
+  for (element of document.getElementsByClassName("mobile-heading")) {
+    element.classList.add("hide")
+  };
 </script>
 
+<script>document.getElementsByTagName("html")[0].class.remove("no-js")</script>
 <script src="/js/main.js"></script>
 <script src="/js/year-in-review.js"></script>
 

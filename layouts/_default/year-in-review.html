@@ -1,44 +1,4 @@
-<!DOCTYPE html>
-<html class="no-js">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="title" content="{{ .Title }}">
-    <meta name="description" content="{{ .Description }}">
-    <meta name="keywords" content="{{ .Params.keywords }}">
-
-    <meta name="og:title" content="{{ .Title }}">
-    <meta name="og:url" content="{{ .Permalink }}">
-    <!-- <meta name="og:image" content="{{ .Params.logo }}"> -->
-    <meta name="og:description" content="{{ .Description }}">
-
-    <meta name="twitter:card" content="summary" />
-    <meta name="twitter:site" content="{{ .Permalink }}" />
-    <meta name="twitter:title" content="{{ .Title }}" />
-    <meta name="twitter:description" content="{{ .Description }}" />
-    <!-- <meta name="twitter:image" content="{{ .Params.logo }}" /> -->
-
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-
-    <meta http-equiv='Expires' content='0'>
-    <meta http-equiv='Pragma' content='no-cache'>
-    <meta http-equiv='Cache-Control' content='no-cache'>
-    <meta http-equiv='imagetoolbar' content='no'>
-
-    <title>{{ .Title }}</title>
-    <link rel="shortcut icon" type="image/png" href="{{ "assets/favicon.ico" | relURL }}"/>
-
-    <!-- Main CSS -->
-    {{- $style := resources.Get "css/style.scss" | toCSS | minify | fingerprint }}
-    <link rel="stylesheet" href="{{ $style.RelPermalink }}"/>
-
-    <!-- Custom CSS -->
-    {{- with .Params.custom_css }}
-    {{- $style := resources.Get (printf "css/%s" .) | toCSS | minify | fingerprint }}
-    <link rel="stylesheet" href="{{ $style.RelPermalink }}"/>
-    {{ end }}
-  </head>
-
-<body data-spy="scroll" data-target="#YIR-navbar">
+{{ define "nav" }}
   <!-- Navigation Bar -->
     <nav>
     <div class="nav-title">
@@ -63,7 +23,9 @@
       <li><a href="#follow">@TwitterOSS</a></li>
     </ul>
   </nav>
+{{ end }}
 
+{{ define "main" }}
   <!-- Timeline navigation effect from https://codepen.io/nailaahmad/pen/MyZXVE -->
     <div class="YIR-wrapper">
     <div class="YIR-container">
@@ -323,18 +285,13 @@
     </section>
 
   </div> <!-- End of YIR-wrapper -->
+{{ end }}
 
-</body>
-
+{{ define "footer"}}
 <!-- Get all repos and commit counts -->
 <script type="text/javascript">
   for (element of document.getElementsByClassName("mobile-heading")) {
     element.classList.add("hide")
   };
 </script>
-
-<script>document.getElementsByTagName("html")[0].classList.remove("no-js")</script>
-<script src="{{ "js/main.js" | relURL }}"></script>
-<script src="{{ printf "js/%s" .Params.custom_js | relURL }}"></script>
-{{ partial "ga.html" . }}
-</html>
+{{ end }}

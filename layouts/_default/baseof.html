@@ -5,8 +5,9 @@
   </head>
 
   <body>
-    {{ partial "nav.html" . }}
+    {{ block "nav" . }}{{ partial "nav.html" . }}{{ end }}
 
+    {{ block "main" . }}
     <!-- Site wrapper -->
     <main>
       <div class="header">
@@ -23,8 +24,9 @@
         {{ block "content" . }}{{ end }}
       </div>
     </main>
+    {{ end }}
 
-    {{ partial "footer.html" . }}
+    {{ block "footer" . }}{{ partial "footer.html" . }}{{ end }}
   </body>
 
   <script>document.getElementsByTagName("html")[0].classList.remove("no-js")</script>

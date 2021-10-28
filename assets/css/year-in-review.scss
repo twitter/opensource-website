@@ -25,13 +25,10 @@
 
 html {
   scroll-padding-top: 0rem;
-  // smooth scrolling unless user has requested not to
-  --scroll-behavior: smooth;
-  scroll-behavior: smooth;
 
-  @media (prefers-reduced-motion: reduce) {
-      --scroll-behavior: auto;
-      scroll-behavior: auto;
+  @media (prefers-reduced-motion: no-preference) {
+    --scroll-behavior: smooth;
+    scroll-behavior: smooth;
   }
 }
 
@@ -172,9 +169,8 @@ a.YIRnav-YIR-link:hover {
 .YIR-nav-title {
   font-size: var(--feather-font-size-jumbo);
   font-weight: var(--feather-font-weight-bold);
-  transition: all 0.15s ease-out;
-  @media (prefers-reduced-motion: reduce) {
-    transition: none !important;
+  @media (prefers-reduced-motion: no-preference) {
+    transition: all 0.15s ease-out;
   }
 }
 
@@ -183,19 +179,17 @@ a.YIRnav-YIR-link:hover {
   height: 0;
   overflow: hidden;
   opacity: 0;
-  transition: height 0.3s ease-out, opacity 0.2s ease-out;
-  @media (prefers-reduced-motion: reduce) {
-    transition: none !important;
+  @media (prefers-reduced-motion: no-preference) {
+    transition: height 0.3s ease-out, opacity 0.2s ease-out;
   }
 }
 
 .nav li {
   list-style: none;
   position: relative;
-  transition: all 0.3s ease-out;
   margin-bottom: var(--feather-grid-medium);
-  @media (prefers-reduced-motion: reduce) {
-    transition: none !important;
+  @media (prefers-reduced-motion: no-preference) {
+    transition: all 0.3s ease-out;
   }
 }
 
@@ -216,17 +210,15 @@ a.YIRnav-YIR-link:hover {
   display: block;
   padding: 0;
   color: white;
-  transition: all 0.15s ease-out;
-  @media (prefers-reduced-motion: reduce) {
-    transition: none !important;
+  @media (prefers-reduced-motion: no-preference) {
+    transition: all 0.15s ease-out;
   }
 }
 
 .nav li a:hover {
   background-color: transparent;
-  padding-left: 1em;
-  @media (prefers-reduced-motion: reduce) {
-    padding: 0;
+  @media (prefers-reduced-motion: no-preference) {
+    padding-left: 1em;
   }
 }
 
@@ -280,9 +272,8 @@ h1#YIR-heading-text {
 }
 
 h1#YIR-heading-text, .YIR-subheading {
-  animation: fadein 1s;
-  @media (prefers-reduced-motion: reduce) {
-    animation: none;
+  @media (prefers-reduced-motion: no-preference) {
+    animation: fadein 1s;
   }
 }
 
@@ -460,9 +451,9 @@ span.metric-name {
 }
 
 .in-view path {
-  animation: stroke 2s ease-in-out forwards;
-  @media (prefers-reduced-motion: reduce) {
-    animation: stroke 0s forwards;
+  animation: stroke 0s forwards;
+  @media (prefers-reduced-motion: no-preference) {
+    animation: stroke 2s ease-in-out forwards;
   }
 }
 
@@ -566,9 +557,8 @@ span.metric-name {
     width: 100%;
     margin: 0;
     margin-top: calc(var(--feather-grid-mega) * 2);
-    animation: fadein 1.5s;
-    @media (prefers-reduced-motion: reduce) {
-      animation: none;
+    @media (prefers-reduced-motion: no-preference) {
+      animation: fadein 1.5s;
     }
 
     li {

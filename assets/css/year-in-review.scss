@@ -173,6 +173,9 @@ a.YIRnav-YIR-link:hover {
   font-size: var(--feather-font-size-jumbo);
   font-weight: var(--feather-font-weight-bold);
   transition: all 0.15s ease-out;
+  @media (prefers-reduced-motion: reduce) {
+    transition: none !important;
+  }
 }
 
 .YIR-nav-body {
@@ -181,6 +184,9 @@ a.YIRnav-YIR-link:hover {
   overflow: hidden;
   opacity: 0;
   transition: height 0.3s ease-out, opacity 0.2s ease-out;
+  @media (prefers-reduced-motion: reduce) {
+    transition: none !important;
+  }
 }
 
 .nav li {
@@ -188,6 +194,9 @@ a.YIRnav-YIR-link:hover {
   position: relative;
   transition: all 0.3s ease-out;
   margin-bottom: var(--feather-grid-medium);
+  @media (prefers-reduced-motion: reduce) {
+    transition: none !important;
+  }
 }
 
 /* Shorter white lines */
@@ -208,11 +217,17 @@ a.YIRnav-YIR-link:hover {
   padding: 0;
   color: white;
   transition: all 0.15s ease-out;
+  @media (prefers-reduced-motion: reduce) {
+    transition: none !important;
+  }
 }
 
 .nav li a:hover {
   background-color: transparent;
   padding-left: 1em;
+  @media (prefers-reduced-motion: reduce) {
+    padding: 0;
+  }
 }
 
 .nav li a:focus {
@@ -265,11 +280,10 @@ h1#YIR-heading-text {
 }
 
 h1#YIR-heading-text, .YIR-subheading {
-  -webkit-animation: fadein 1s;
-  -moz-animation: fadein 1s;
-  -ms-animation: fadein 1s;
-  -o-animation: fadein 1s;
   animation: fadein 1s;
+  @media (prefers-reduced-motion: reduce) {
+    animation: none;
+  }
 }
 
 #YIR-header-mobile-heading {
@@ -447,9 +461,9 @@ span.metric-name {
 
 .in-view path {
   animation: stroke 2s ease-in-out forwards;
-  -webkit-animation: stroke 2s ease-in-out forwards;
-  -o-animation: stroke 2s ease-in-out forwards;
-  -moz-animation: stroke 2s ease-in-out forwards;
+  @media (prefers-reduced-motion: reduce) {
+    animation: stroke 0s forwards;
+  }
 }
 
 @keyframes stroke {
@@ -553,6 +567,9 @@ span.metric-name {
     margin: 0;
     margin-top: calc(var(--feather-grid-mega) * 2);
     animation: fadein 1.5s;
+    @media (prefers-reduced-motion: reduce) {
+      animation: none;
+    }
 
     li {
       display: block;

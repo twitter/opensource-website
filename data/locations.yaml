@@ -1,0 +1,29 @@
+- name: United States
+  flag: united_states_1f1fa-1f1f8.svg
+
+- name: Greece
+  flag: greece_1f1ec-1f1f7.svg
+
+- name: Germany
+  flag: germany_1f1e9-1f1ea.svg
+
+- name: United Kingdom
+  flag: united_kingdom_1f1ec-1f1e7.svg
+
+- name: Singapore
+  flag: singapore_1f1f8-1f1ec.svg
+
+- name: China
+  flag: china_1f1e8-1f1f3.svg
+
+- name: Belgium
+  flag: belgium_1f1e7-1f1ea.svg
+
+- name: Austria
+  flag: austria_1f1e6-1f1f9.svg
+
+- name: Peru
+  flag: peru_1f1f5-1f1ea.svg
+
+- name: Australia
+  flag: australia_1f1e6-1f1fa.svg

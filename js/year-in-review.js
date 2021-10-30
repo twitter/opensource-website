@@ -46,8 +46,10 @@ if (window.matchMedia("(prefers-reduced-motion: no-preference)").matches) {
   }, {rootMargin: "-50% 0px"})
   document.querySelectorAll('section').forEach(e => {
     observer.observe(e);
+
+    // copy section description to main nav
     if (description = e.querySelector('.section-description')) {
-      document.querySelector(`.nav a[href="#${e.id}"]`).appendChild(description)
+      document.querySelector(`.nav a[href="#${e.id}"]`).appendChild(description.cloneNode(true))
     }
   })
 

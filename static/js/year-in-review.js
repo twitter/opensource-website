@@ -25,7 +25,7 @@ if (window.matchMedia("(prefers-reduced-motion: no-preference)").matches) {
   });
 
   // hide inline headings
-  for (element of document.getElementsByClassName("mobile-heading")) {
+  for (element of document.getElementsByClassName("inline-heading")) {
     element.classList.add("hide")
   }
 

@@ -63,15 +63,15 @@ p {
 
 
 /* All content */
-.mobile-heading, .YIR-header, table, .locations, .metric-wrapper, .YIR-tweet-wrapper {
+.inline-heading, .YIR-header, table, .locations, .metric-wrapper, .YIR-tweet-wrapper {
   width: var(--content-width);
 }
 
-.mobile-heading {
+.inline-heading {
   padding-bottom: var(--feather-grid-mega);
 }
 
-.mobile-heading h1 {
+.inline-heading h1 {
   font-size: var(--font-size-xxjumbo);
   line-height: var(--line-height-xxjumbo);
   padding-bottom: var(--feather-grid-xsmall);
@@ -277,11 +277,11 @@ h1#YIR-heading-text, .YIR-subheading {
   }
 }
 
-#YIR-header-mobile-heading {
+#YIR-header-inline-heading {
   padding: 0;
 }
 
-#YIR-header-mobile-heading p {
+#YIR-header-inline-heading p {
   padding: 0;
   padding-top: var(--feather-grid-large);
 }
@@ -521,7 +521,7 @@ span.metric-name {
     display: none;
   }
 
-  .mobile-heading {
+  .inline-heading {
     display: block;
   }
 
@@ -581,7 +581,7 @@ span.metric-name {
 
 /* Less than content-width + 2 * feather-grid-large */
 @media (max-width: 568px) {
-  .mobile-heading, .YIR-header, table, .locations, .metric-wrapper, .YIR-tweet-wrapper {
+  .inline-heading, .YIR-header, table, .locations, .metric-wrapper, .YIR-tweet-wrapper {
     width: 100%;
   }
 
@@ -590,7 +590,7 @@ span.metric-name {
   }
 
   /* Decrease font sizes */
-  .mobile-heading h1 {
+  .inline-heading h1 {
     font-size: var(--font-size-mini-jumbo);
     line-height: var(--line-height-mini-jumbo);
   }

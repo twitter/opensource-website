@@ -18,7 +18,7 @@
 	.st12{fill:#97E3FF;}
 	.st13{fill:#71C9F8;}
 	.st14{fill:#005FD1;}
-	.st15{font-family:'HelveticaNeue-Bold';}
+	.st15{font-family:HelveticaNeue-Bold, system-ui, sans-serif; font-weight:bold;}
 	.st16{font-size:11.5px;}
 </style>
 <g id="guides" class="st0">

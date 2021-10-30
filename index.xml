@@ -7,11 +7,29 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language><atom:link href="https://opensource.twitter.dev/index.xml" rel="self" type="application/rss+xml" />
     <item>
+      <title>Projects</title>
+      <link>https://opensource.twitter.dev/projects/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://opensource.twitter.dev/projects/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>Memberships</title>
       <link>https://opensource.twitter.dev/memberships/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://opensource.twitter.dev/memberships/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Year in Review</title>
+      <link>https://opensource.twitter.dev/year-in-review/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://opensource.twitter.dev/year-in-review/</guid>
       <description></description>
     </item>
     
@@ -23,24 +41,6 @@
       <guid>https://opensource.twitter.dev/status/</guid>
       <description>Open source projects come in all shapes and sizes, and Twitter&amp;rsquo;s projects are no exception. Sometimes we publish projects that are highly experimental or are in very early stages of development. Other times we publish some of the core infrastructure that is used to serve hundreds of millions of tweets every day.
 These project status labels, which you&amp;rsquo;ll find attached to various Twitter projects, are designed to help indicate how stable a project is and where it is in its development lifecycle.</description>
-    </item>
-    
-    <item>
-      <title>Projects</title>
-      <link>https://opensource.twitter.dev/projects/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://opensource.twitter.dev/projects/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Year in Review</title>
-      <link>https://opensource.twitter.dev/year-in-review/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://opensource.twitter.dev/year-in-review/</guid>
-      <description></description>
     </item>
     
   </channel>

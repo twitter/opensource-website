@@ -29,7 +29,7 @@
     <title>Year in Review | Twitter Open Source</title>
     <link rel="shortcut icon" type="image/png" href="/assets/favicon.ico"/>
     <link rel="stylesheet" href="/css/style.min.71ec8e8a4f90fc0fc1af5044b23004bf72d5f7061681030aa41a9ad0a1a96dd4.css"/>
-    <link rel="stylesheet" href="/css/year-in-review.min.6a46a68cfe50890ac44ac4763210e84b626668b7e05ffba92bf744185abbccba.css"/>
+    <link rel="stylesheet" href="/css/year-in-review.min.f64255824a3e07e2af4354ad478b164164d08445f7c3e34fcbef56b355b4a423.css"/>
     
 
   </head>
@@ -39,10 +39,10 @@
   
     <nav>
     <div class="nav-title">
-        <a class="home-link" href="https://opensource.twitter.dev/">
+        <a class="home-link" href="/">
             <img src="/assets/twitter-logo.svg" alt="Twitter">
             Open Source
-            <a class="YIRnav-YIR-link" href="/year-in-review">Year in Review</a>
+            <a class="YIRnav-YIR-link" href="#">Year in Review</a>
         </a>
     </div>
     <a id="menu-toggle" href="#" onclick="document.getElementById('nav-menu').classList.toggle('active'); return false;">
@@ -68,80 +68,36 @@
     <div class="YIR-container">
       <div class="YIR-nav-wrapper" id="YIR-navbar">
         <ul class="nav">
-          <li>
-            <a href="#welcome">
-              <span class="YIR-nav-title">Welcome</span>
-              <p class="YIR-nav-body">This webpage updates weekly and provides a sliding window into the previous 12 months. Patches are always welcome.</p>
-            </a>
-          </li>
-
-          <li>
-            <a href="#top10">
-              <span class="YIR-nav-title">Top 10 repos</span>
-              <p class="YIR-nav-body">These are our top 10 GitHub repositories, ranked by total commit counts.</p>
-            </a>
-          </li>
-
-          <li>
-            <a href="#locations">
-              <span class="YIR-nav-title">Locations</span>
-              <p class="YIR-nav-body">Our contributors are located all around the world. This list is based on self reported locations from our contributors’ GitHub profiles.</p>
-            </a>
-          </li>
-
-          <li>
-            <a href="#heat">
-              <span class="YIR-nav-title">Heat metrics</span>
-              <p class="YIR-nav-body">Heat means work. We measure heat by the number and frequency of commits and committers across our repos.</p>
-            </a>
-          </li>
-
-          <li>
-            <a href="#light">
-              <span class="YIR-nav-title">Light metrics</span>
-              <p class="YIR-nav-body">Light means visibility. We measure visibility by number of watchers subscribed to updates, and number of people who have favorited our projects.</p>
-            </a>
-          </li>
-
-          <li>
-            <a href="#love">
-              <span class="YIR-nav-title">Love metrics</span>
-              <p class="YIR-nav-body">Love means culture and support. We measure love by the number of users who have copied our projects and contributed changes back upstream.</p>
-            </a>
-          </li>
-
-          <li>
-            <a href="#follow">
-              <span class="YIR-nav-title">@TwitterOSS</span>
-              <p class="YIR-nav-body">Making it simple to trust, ship, and grow Open Source at Twitter and beyond. Follow @TwitterOSS to stay updated!</p>
-            </a>
-          </li>
+          <li><a href="#welcome"><span class="YIR-nav-title">Welcome</span></a></li>
+          <li><a href="#top10"><span class="YIR-nav-title">Top 10 repos</span></a></li>
+          <li><a href="#locations"><span class="YIR-nav-title">Locations</span></a></li>
+          <li><a href="#heat"><span class="YIR-nav-title">Heat metrics</span></a></li>
+          <li><a href="#light"><span class="YIR-nav-title">Light metrics</span></a></li>
+          <li><a href="#love"><span class="YIR-nav-title">Love metrics</span></a></li>
+          <li><a href="#follow"><span class="YIR-nav-title">@TwitterOSS</span></a></li>
         </ul>
-      </div> 
-    </div> 
+      </div>
+    </div>
 
     <section id="welcome">
       <div class="YIR-container-section">
         <div class="YIR-header">
-          
           <h1 class="YIR-subheading" id="date-range">Oct 2020 - Oct 2021</h1>
           <h1 id="YIR-heading-text">Year in Review</h1>
           <h1 class="YIR-subheading" id="type">An overview of the past 12 months of activity on Twitter’s Open Source projects.</h1>
         </div>
 
-        
-        <div class="mobile-heading" id="YIR-header-mobile-heading">
-          <p>This webpage updates weekly and provides a sliding window into the previous 12 months. Patches are always welcome.</p>
+        <div class="inline-heading" id="YIR-header-inline-heading">
+          <p class="section-description">This webpage updates weekly and provides a sliding window into the previous 12 months. Patches are always welcome.</p>
         </div>
       </div>
     </section>
 
     <section id="top10">
       <div class="YIR-container-section">
-        
-        <div class="mobile-heading">
+        <div class="inline-heading">
           <h1>Top 10 repos</h1>
-          <p>These are our top 10 GitHub repositories, ranked by total commit counts.</p>
+          <p class="section-description">These are our top 10 GitHub repositories, ranked by total commit counts.</p>
         </div>
 
         <table id="top-10-repos">
@@ -206,10 +162,9 @@
 
     <section id="locations">
       <div class="YIR-container-section">
-        
-        <div class="mobile-heading">
+        <div class="inline-heading">
           <h1 class="large-title">Locations</h1>
-          <p>Our contributors are located all around the world. This list is based on self reported locations from our contributors’ GitHub profiles.</p>
+          <p class="section-description">Our contributors are located all around the world. This list is based on self reported locations from our contributors’ GitHub profiles.</p>
         </div>
 
         <div class="locations"><div class="location-item">
@@ -249,10 +204,9 @@
 
     <section id="heat">
       <div class="YIR-container-section">
-        
-        <div class="mobile-heading">
+        <div class="inline-heading">
           <h1>Heat metrics</h1>
-          <p>Heat means work. We measure heat by the number and frequency of commits and committers across our repos.</p>
+          <p class="section-description">Heat means work. We measure heat by the number and frequency of commits and committers across our repos.</p>
         </div>
 
         <div class="metric-wrapper">
@@ -288,10 +242,9 @@
 
     <section id="light">
       <div class="YIR-container-section">
-        
-        <div class="mobile-heading">
+        <div class="inline-heading">
           <h1>Light metrics</h1>
-          <p>Light means visibility. We measure visibility by number of watchers subscribed to updates, and number of people who have favorited our projects.</p>
+          <p class="section-description">Light means visibility. We measure visibility by number of watchers subscribed to updates, and number of people who have favorited our projects.</p>
         </div>
 
         <div class="metric-wrapper">
@@ -330,10 +283,9 @@
 
     <section id="love">
       <div class="YIR-container-section">
-        
-        <div class="mobile-heading">
+        <div class="inline-heading">
           <h1>Love metrics</h1>
-          <p>Love means culture and support. We measure love by the number of users who have copied our projects and contributed changes back upstream.</p>
+          <p class="section-description">Love means culture and support. We measure love by the number of users who have copied our projects and contributed changes back upstream.</p>
         </div>
 
         <div class="metric-wrapper">
@@ -370,10 +322,9 @@
 
     <section id="follow">
       <div class="YIR-container-section">
-        
-        <div class="mobile-heading">
+        <div class="inline-heading">
           <h1>@TwitterOSS</h1>
-          <p>Making it simple to trust, ship, and grow Open Source at Twitter and beyond. Follow @TwitterOSS to stay updated!</p>
+          <p class="section-description">Making it simple to trust, ship, and grow Open Source at Twitter and beyond. Follow @TwitterOSS to stay updated!</p>
         </div>
 
         <div class="YIR-tweet-wrapper">

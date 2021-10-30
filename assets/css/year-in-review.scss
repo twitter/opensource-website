@@ -50,11 +50,12 @@ a {
 .YIR-container-section {
   max-width: var(--YIR-page-width);
   margin: 0 auto;
-  height: inherit;
+  min-height: inherit;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: flex-end;
+  padding: var(--feather-grid-large) 0;
 }
 
 p {
@@ -80,7 +81,7 @@ p {
 /* Sections */
 
 section {
-  height: 100vh;
+  min-height: 100vh;
 }
 
 section#welcome {

@@ -31,55 +31,20 @@
     <div class="YIR-container">
       <div class="YIR-nav-wrapper" id="YIR-navbar">
         <ul class="nav">
-          <li>
-            <a href="#welcome">
-              <span class="YIR-nav-title">Welcome</span>
-            </a>
-          </li>
-
-          <li>
-            <a href="#top10">
-              <span class="YIR-nav-title">Top 10 repos</span>
-            </a>
-          </li>
-
-          <li>
-            <a href="#locations">
-              <span class="YIR-nav-title">Locations</span>
-            </a>
-          </li>
-
-          <li>
-            <a href="#heat">
-              <span class="YIR-nav-title">Heat metrics</span>
-            </a>
-          </li>
-
-          <li>
-            <a href="#light">
-              <span class="YIR-nav-title">Light metrics</span>
-            </a>
-          </li>
-
-          <li>
-            <a href="#love">
-              <span class="YIR-nav-title">Love metrics</span>
-            </a>
-          </li>
-
-          <li>
-            <a href="#follow">
-              <span class="YIR-nav-title">@TwitterOSS</span>
-            </a>
-          </li>
+          <li><a href="#welcome"><span class="YIR-nav-title">Welcome</span></a></li>
+          <li><a href="#top10"><span class="YIR-nav-title">Top 10 repos</span></a></li>
+          <li><a href="#locations"><span class="YIR-nav-title">Locations</span></a></li>
+          <li><a href="#heat"><span class="YIR-nav-title">Heat metrics</span></a></li>
+          <li><a href="#light"><span class="YIR-nav-title">Light metrics</span></a></li>
+          <li><a href="#love"><span class="YIR-nav-title">Love metrics</span></a></li>
+          <li><a href="#follow"><span class="YIR-nav-title">@TwitterOSS</span></a></li>
         </ul>
-      </div> <!-- End of YIR-nav-wrapper -->
-    </div> <!-- End of YIR-container -->
+      </div>
+    </div>
 
     <section id="welcome">
       <div class="YIR-container-section">
         <div class="YIR-header">
-          <!-- id="type" -->
           <h1 class="YIR-subheading" id="date-range">{{ (now.AddDate -1 0 0).Format "Jan 2006" }} - {{ now.Format "Jan 2006" }}</h1>
           <h1 id="YIR-heading-text">Year in Review</h1>
           <h1 class="YIR-subheading" id="type">An overview of the past 12 months of activity on Twitter’s Open Source projects.</h1>

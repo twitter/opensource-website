@@ -2,10 +2,10 @@
   <!-- Navigation Bar -->
     <nav>
     <div class="nav-title">
-        <a class="home-link" href="{{ .Site.BaseURL }}">
+        <a class="home-link" href="{{ "" | relURL }}">
             <img src="/assets/twitter-logo.svg" alt="Twitter">
             Open Source
-            <a class="YIRnav-YIR-link" href="{{ "year-in-review" | relURL }}">Year in Review</a>
+            <a class="YIRnav-YIR-link" href="#">Year in Review</a>
         </a>
     </div>
     <a id="menu-toggle" href="#" onclick="document.getElementById('nav-menu').classList.toggle('active'); return false;">

@@ -174,7 +174,7 @@ a.YIRnav-YIR-link:hover {
   }
 }
 
-.YIR-nav-body {
+.nav .section-description {
   width: var(--timeline-active-text-width);
   height: 0;
   overflow: hidden;
@@ -245,7 +245,7 @@ a.YIRnav-YIR-link:hover {
   line-height: var(--line-height-xxjumbo);
 }
 
-.nav li.active .YIR-nav-body {
+.nav li.active .section-description {
   margin: 0;
   margin-top: var(--feather-grid-xsmall);
   height: var(--nav-body-text-height);

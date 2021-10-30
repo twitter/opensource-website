@@ -46,6 +46,9 @@ if (window.matchMedia("(prefers-reduced-motion: no-preference)").matches) {
   }, {rootMargin: "-50% 0px"})
   document.querySelectorAll('section').forEach(e => {
     observer.observe(e);
+    if (description = e.querySelector('.section-description')) {
+      document.querySelector(`.nav a[href="#${e.id}"]`).appendChild(description)
+    }
   })
 
   // polyfill smooth scrolling if needed

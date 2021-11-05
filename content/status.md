@@ -3,13 +3,19 @@ title: Project Status
 ---
 
 Open source projects come in all shapes and sizes, and Twitter's projects are no
-exception.  Sometimes we publish projects that are highly experimental or are in
-very early stages of development.  Other times we publish some of the core
+exception. Sometimes we publish projects that are highly experimental or are in
+very early stages of development. Other times we publish some of the core
 infrastructure that is used to serve hundreds of millions of tweets every day.
 
 These project status labels, which you'll find attached to various Twitter
 projects, are designed to help indicate how stable a project is and where it is
-in its development lifecycle.
+in its development lifecycle. These are neither statements of value nor
+guarantees of support or future development. They are merely designed to provide
+transparency.
+
+Questions about the status of individual projects are generally best directed to
+the project discussion forum or issue tracker. If those are unavailable, you can
+also email opensource@twitter.com.
 
 
 **Project Statuses:**

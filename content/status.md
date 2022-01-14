@@ -28,7 +28,8 @@ also email opensource@twitter.com.
  - [Retired](#retired)
  - [Static](#static)
 
-## Idea
+Idea
+----
 
 ![status: idea](idea.svg)
 
@@ -43,7 +44,14 @@ This code is in the scoping or specification phase and may be accepting feedback
 - Typically hosted in the [Twitter Incubator](https://github.com/twitter-incubator) GitHub org
 - (Optional) Issues at the project owner's discretion
 
-## Experimental
+### Markdown
+
+```markdown
+[![status: idea](https://opensource.twitter.dev/status/idea.svg)](https://opensource.twitter.dev/status/#idea)
+````
+
+Experimental
+------------
 
 ![status: experimental](experimental.svg)
 
@@ -58,7 +66,14 @@ This code is not yet ready for prime time and may be actively seeking feedback. 
 - Typically hosted in the Twitter Incubator GitHub org
 - (Optional) Issues at the project owner's discretion
 
-## Active
+### Markdown
+
+```markdown
+[![status: experimental](https://opensource.twitter.dev/status/experimental.svg)](https://opensource.twitter.dev/status/#experimental)
+````
+
+Active
+------
 
 ![status: active](active.svg)
 
@@ -75,7 +90,14 @@ This code is actively maintained and supported.
 - For additional details on support options, see the Open Source Support Policy
 - An automated release pipeline
 
-## Stable
+### Markdown
+
+```markdown
+[![status: active](https://opensource.twitter.dev/status/active.svg)](https://opensource.twitter.dev/status/#active)
+````
+
+Stable
+------
 
 ![status: stable](stable.svg)
 
@@ -92,7 +114,14 @@ This code is stable and not necessarily open to new features or functionality. I
 - For additional details on support options, see the Open Source Support Policy
 - An automated release pipeline
 
-## Unmaintained
+### Markdown
+
+```markdown
+[![status: stable](https://opensource.twitter.dev/status/stable.svg)](https://opensource.twitter.dev/status/#stable)
+````
+
+Unmaintained
+------------
 
 ![status: unmaintained](unmaintained.svg)
 
@@ -108,7 +137,14 @@ This code is no longer actively maintained nor supported. Possibly actively sear
 - May be transitioned to new maintainers
 - (Optional) Issues and PR's at the project owner's discretion
 
-## Deprecated
+### Markdown
+
+```markdown
+[![status: unmaintained](https://opensource.twitter.dev/status/unmaintained.svg)](https://opensource.twitter.dev/status/#unmaintained)
+````
+
+Deprecated
+----------
 
 ![status: deprecated](deprecated.svg)
 
@@ -124,7 +160,14 @@ This code has been identified to transition to RETIRED at some point in the futu
 - Will be transitioned to RETIRED in the future
 - (Optional) Issues and PR's at the project owner's discretion
 
-## Retired
+### Markdown
+
+```markdown
+[![status: deprecated](https://opensource.twitter.dev/status/deprecated.svg)](https://opensource.twitter.dev/status/#deprecated)
+````
+
+Retired
+-------
 
 ![status: retired](retired.svg)
 
@@ -139,7 +182,14 @@ This code is read-only. There is neither a maintainer nor any support.
 - Previous references to Support should be modified or removed from the README
 - Project is read-only and available for cloning only
 
-## Static
+### Markdown
+
+```markdown
+[![status: retired](https://opensource.twitter.dev/status/retired.svg)](https://opensource.twitter.dev/status/#retired)
+````
+
+Static
+------
 
 ![status: static](static.svg)
 
@@ -155,6 +205,12 @@ purposes.
 - Contains the appropriate Twitter open source category header in the repository's README file
 - (Optional) Issues at the project owner's discretion
 - (Optional) Project may be archived as read-only and only available for cloning
+
+### Markdown
+
+```markdown
+[![status: static](https://opensource.twitter.dev/status/static.svg)](https://opensource.twitter.dev/status/#static)
+````
 
 ---
 Thanks to [repostatus.org](https://www.repostatus.org/) and [New

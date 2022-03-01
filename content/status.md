@@ -31,7 +31,7 @@ also email opensource@twitter.com.
 Idea
 ----
 
-![status: idea](idea.svg)
+[![status: idea](https://opensource.twitter.dev/status/idea.svg)](https://opensource.twitter.dev/status/#idea)
 
 ### Expectations
 
@@ -53,7 +53,7 @@ This code is in the scoping or specification phase and may be accepting feedback
 Experimental
 ------------
 
-![status: experimental](experimental.svg)
+[![status: experimental](https://opensource.twitter.dev/status/experimental.svg)](https://opensource.twitter.dev/status/#experimental)
 
 ### Expectations
 
@@ -75,7 +75,7 @@ This code is not yet ready for prime time and may be actively seeking feedback. 
 Active
 ------
 
-![status: active](active.svg)
+[![status: active](https://opensource.twitter.dev/status/active.svg)](https://opensource.twitter.dev/status/#active)
 
 ### Expectations
 
@@ -99,7 +99,7 @@ This code is actively maintained and supported.
 Stable
 ------
 
-![status: stable](stable.svg)
+[![status: stable](https://opensource.twitter.dev/status/stable.svg)](https://opensource.twitter.dev/status/#stable)
 
 ### Expectations
 
@@ -123,7 +123,7 @@ This code is stable and not necessarily open to new features or functionality. I
 Unmaintained
 ------------
 
-![status: unmaintained](unmaintained.svg)
+[![status: unmaintained](https://opensource.twitter.dev/status/unmaintained.svg)](https://opensource.twitter.dev/status/#unmaintained)
 
 ### Expectations
 
@@ -146,7 +146,7 @@ This code is no longer actively maintained nor supported. Possibly actively sear
 Deprecated
 ----------
 
-![status: deprecated](deprecated.svg)
+[![status: deprecated](https://opensource.twitter.dev/status/deprecated.svg)](https://opensource.twitter.dev/status/#deprecated)
 
 ### Expectations
 
@@ -169,7 +169,7 @@ This code has been identified to transition to RETIRED at some point in the futu
 Retired
 -------
 
-![status: retired](retired.svg)
+[![status: retired](https://opensource.twitter.dev/status/retired.svg)](https://opensource.twitter.dev/status/#retired)
 
 ### Expectations
 
@@ -191,7 +191,7 @@ This code is read-only. There is neither a maintainer nor any support.
 Static
 ------
 
-![status: static](static.svg)
+[![status: static](https://opensource.twitter.dev/status/static.svg)](https://opensource.twitter.dev/status/#static)
 
 ### Expectations
 

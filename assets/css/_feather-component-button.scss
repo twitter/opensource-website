@@ -25,14 +25,14 @@
 }
 .ButtonGroup > .Button.is-selected,
 .ButtonGroup > .Button.is-selected:visited {
-  background-color: #1DA1F2;
-  border: 1px solid #1DA1F2;
+  background-color: #137ab9;
+  border: 1px solid #137ab9;
   color: white;
 }
 .ButtonGroup > .Button.is-selected:focus,
 .ButtonGroup > .Button.is-selected.is-focus {
-  background: #1DA1F2;
-  border-color: #1DA1F2;
+  background: #137ab9;
+  border-color: #137ab9;
   color: white;
 }
 .ButtonGroup > .Button.is-selected:focus:not(.is-mouseFocus),
@@ -45,13 +45,13 @@
 }
 .ButtonGroup > .Button.is-selected:hover,
 .ButtonGroup > .Button.is-selected.is-hover {
-  background-color: #0c85d0;
+  background-color: #137ab9;
   border-color: #0c85d0;
   color: white;
 }
 .ButtonGroup > .Button.is-selected:active,
 .ButtonGroup > .Button.is-selected.is-active {
-  background-color: #0967a0;
+  background-color: #137ab9;
   border-color: #0967a0;
   color: white;
 }
@@ -66,8 +66,8 @@
 .ButtonGroup > .Button.is-selected[disabled],
 .ButtonGroup > .Button.is-selected.is-disabled,
 fieldset[disabled] .ButtonGroup > .Button.is-selected {
-  background-color: #1DA1F2;
-  border-color: #1DA1F2;
+  background-color: #137ab9;
+  border-color: #137ab9;
   box-shadow: none;
 }
 .ButtonGroup > .Button:focus,
@@ -267,7 +267,7 @@ html[dir='rtl'] .Button:not([dir='ltr']) .Button-adornment:last-child,
 }
 .Button:active:focus:not(.is-mouseFocus),
 .Button.is-active.is-focus {
-  box-shadow: 0 0 0 2px white, 0 0 0 4px #1DA1F2;
+  box-shadow: 0 0 0 2px white, 0 0 0 4px #137ab9;
 }
 .Button[disabled],
 .Button.is-disabled,
@@ -289,14 +289,14 @@ fieldset[disabled] a.Button {
 .Button,
 .Button:visited {
   background-color: white;
-  border: 1px solid #1DA1F2;
-  color: #1DA1F2;
+  border: 1px solid #137ab9;
+  color: #137ab9;
 }
 .Button:focus,
 .Button.is-focus {
   background: white;
-  border-color: #1DA1F2;
-  color: #1DA1F2;
+  border-color: #137ab9;
+  color: #137ab9;
 }
 .Button:focus:not(.is-mouseFocus),
 .Button.is-focus:not(.is-mouseFocus) {
@@ -309,44 +309,44 @@ fieldset[disabled] a.Button {
 .Button:hover,
 .Button.is-hover {
   background-color: #e8f6fe;
-  border-color: #1DA1F2;
-  color: #1DA1F2;
+  border-color: #137ab9;
+  color: #137ab9;
 }
 .Button:active,
 .Button.is-active {
   background-color: #d2ecfc;
-  border-color: #1DA1F2;
-  color: #1DA1F2;
+  border-color: #137ab9;
+  color: #137ab9;
 }
 .Button:active:focus:not(.is-mouseFocus),
 .Button.is-active.is-focus:not(.is-mouseFocus) {
-  box-shadow: 0 0 0 2px white, 0 0 0 4px #1DA1F2;
+  box-shadow: 0 0 0 2px white, 0 0 0 4px #137ab9;
 }
 .u-featherBackgroundDark .Button:active:focus:not(.is-mouseFocus),
 .u-featherBackgroundDark .Button.is-active.is-focus:not(.is-mouseFocus) {
-  box-shadow: 0 0 0 2px black, 0 0 0 4px #1DA1F2;
+  box-shadow: 0 0 0 2px black, 0 0 0 4px #137ab9;
 }
 .Button[disabled],
 .Button.is-disabled,
 fieldset[disabled] .Button {
   background-color: white;
-  border-color: #1DA1F2;
+  border-color: #137ab9;
   box-shadow: none;
 }
 .Button.Button--primary,
 .Button.Button--primary:visited,
 .ButtonGroup--primary > .Button,
 .ButtonGroup--primary > .Button:visited {
-  background-color: #1DA1F2;
-  border: 1px solid #1DA1F2;
+  background-color: #137ab9;
+  border: 1px solid #137ab9;
   color: white;
 }
 .Button.Button--primary:focus,
 .Button.Button--primary.is-focus,
 .ButtonGroup--primary > .Button:focus,
 .ButtonGroup--primary > .Button.is-focus {
-  background: #1DA1F2;
-  border-color: #1DA1F2;
+  background: #137ab9;
+  border-color: #137ab9;
   color: white;
 }
 .Button.Button--primary:focus:not(.is-mouseFocus),
@@ -395,8 +395,8 @@ fieldset[disabled] .Button.Button--primary,
 .ButtonGroup--primary > .Button[disabled],
 .ButtonGroup--primary > .Button.is-disabled,
 fieldset[disabled] .ButtonGroup--primary > .Button {
-  background-color: #1DA1F2;
-  border-color: #1DA1F2;
+  background-color: #137ab9;
+  border-color: #137ab9;
   box-shadow: none;
 }
 .Button.Button--tertiary,

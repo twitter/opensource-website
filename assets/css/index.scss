@@ -19,10 +19,7 @@
 }
 
 .twitter-timeline, .timeline-cell {
-  height: 450px;
-  @media (min-width: 600px) {
-    height: 700px !important;
-  }
+  height: 500px;
 }
 
 
@@ -65,7 +62,7 @@
   }
   #career-text {
     text-align: left;
-    margin-top: 230px;
+    margin-top: 100px;
   }
 }
 

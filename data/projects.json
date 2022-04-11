@@ -1,7 +1,7 @@
 {
   "pantsbuild/pants": {
     "descriptionHTML": "<div>The Pantsbuild developer workflow system</div>",
-    "forkCount": 441,
+    "forkCount": 442,
     "homepageUrl": "https://www.pantsbuild.org",
     "isPrivate": false,
     "languages": "Python Rust",
@@ -11,9 +11,9 @@
       "color": "#3572A5",
       "name": "Python"
     },
-    "pushedAt": "2022-04-03T19:52:25Z",
+    "pushedAt": "2022-04-11T03:07:02Z",
     "repositoryTopics": "build-tool build-tools build-system monorepo python java scala golang javascript rust monorepos pants build protobuf shell docker aws-lambda pex pantsbuild",
-    "stargazers": 1947,
+    "stargazers": 1962,
     "watchers": 66
   },
   "pantsbuild/pex": {
@@ -28,9 +28,9 @@
       "color": "#3572A5",
       "name": "Python"
     },
-    "pushedAt": "2022-04-03T14:41:05Z",
+    "pushedAt": "2022-04-09T18:51:40Z",
     "repositoryTopics": "",
-    "stargazers": 2059,
+    "stargazers": 2063,
     "watchers": 54
   },
   "twitter/.github": {
@@ -44,7 +44,7 @@
     "primaryLanguage": null,
     "pushedAt": "2022-01-26T16:42:01Z",
     "repositoryTopics": "",
-    "stargazers": 9,
+    "stargazers": 10,
     "watchers": 3
   },
   "twitter/AnomalyDetection": {
@@ -61,7 +61,7 @@
     },
     "pushedAt": "2019-08-30T19:49:16Z",
     "repositoryTopics": "",
-    "stargazers": 3435,
+    "stargazers": 3437,
     "watchers": 331
   },
   "twitter/BreakoutDetection": {
@@ -144,9 +144,9 @@
       "color": "#F05138",
       "name": "Swift"
     },
-    "pushedAt": "2021-12-19T00:47:30Z",
+    "pushedAt": "2022-04-05T22:26:57Z",
     "repositoryTopics": "ios uikit swift textkit",
-    "stargazers": 2677,
+    "stargazers": 2681,
     "watchers": 46
   },
   "twitter/activerecord-reputation-system": {
@@ -178,9 +178,9 @@
       "color": "#c22d40",
       "name": "Scala"
     },
-    "pushedAt": "2022-03-28T00:21:34Z",
+    "pushedAt": "2022-04-09T04:52:06Z",
     "repositoryTopics": "",
-    "stargazers": 2113,
+    "stargazers": 2115,
     "watchers": 238
   },
   "twitter/analytics-infra-governance": {
@@ -211,7 +211,7 @@
     },
     "pushedAt": "2021-12-09T04:13:01Z",
     "repositoryTopics": "bazel jvm dependency-manager coursier scala java kotlin bazel-rules bazel-build",
-    "stargazers": 29,
+    "stargazers": 30,
     "watchers": 9
   },
   "twitter/bijection": {
@@ -226,7 +226,7 @@
       "color": "#c22d40",
       "name": "Scala"
     },
-    "pushedAt": "2022-04-02T16:43:25Z",
+    "pushedAt": "2022-04-07T15:16:33Z",
     "repositoryTopics": "",
     "stargazers": 620,
     "watchers": 144
@@ -245,7 +245,7 @@
     },
     "pushedAt": "2022-03-11T18:56:33Z",
     "repositoryTopics": "",
-    "stargazers": 99,
+    "stargazers": 103,
     "watchers": 10
   },
   "twitter/cache-trace": {
@@ -296,7 +296,7 @@
     },
     "pushedAt": "2021-10-08T21:22:29Z",
     "repositoryTopics": "",
-    "stargazers": 1006,
+    "stargazers": 1005,
     "watchers": 162
   },
   "twitter/ccommon": {
@@ -345,9 +345,9 @@
       "color": "#c22d40",
       "name": "Scala"
     },
-    "pushedAt": "2022-04-02T16:42:25Z",
+    "pushedAt": "2022-04-09T04:51:41Z",
     "repositoryTopics": "",
-    "stargazers": 573,
+    "stargazers": 572,
     "watchers": 135
   },
   "twitter/cloudhopper-commons": {
@@ -427,10 +427,10 @@
       "color": "#89e051",
       "name": "Shell"
     },
-    "pushedAt": "2022-03-29T20:17:31Z",
+    "pushedAt": "2022-04-06T09:17:27Z",
     "repositoryTopics": "finagle twitter-oss scrooge ostrich twitter-server finatra sbt util",
     "stargazers": 26,
-    "watchers": 27
+    "watchers": 26
   },
   "twitter/dodo-build": {
     "descriptionHTML": "<div>A Github Action for running Dodo: The Twitter OSS Project Builder</div>",
@@ -451,7 +451,7 @@
   },
   "twitter/effectivescala": {
     "descriptionHTML": "<div>Twitter's Effective Scala Guide</div>",
-    "forkCount": 626,
+    "forkCount": 625,
     "homepageUrl": "https://twitter.github.io/effectivescala",
     "isPrivate": false,
     "languages": "Makefile Shell HTML",
@@ -502,7 +502,7 @@
   },
   "twitter/finagle": {
     "descriptionHTML": "<div>A fault tolerant, protocol-agnostic RPC system</div>",
-    "forkCount": 1393,
+    "forkCount": 1394,
     "homepageUrl": "https://twitter.github.io/finagle",
     "isPrivate": false,
     "languages": "Scala",
@@ -512,10 +512,10 @@
       "color": "#c22d40",
       "name": "Scala"
     },
-    "pushedAt": "2022-04-01T00:17:47Z",
+    "pushedAt": "2022-04-09T23:16:51Z",
     "repositoryTopics": "rpc distributed-systems finagle http http2 thrift mysql memcached redis zipkin java scala",
-    "stargazers": 8181,
-    "watchers": 567
+    "stargazers": 8183,
+    "watchers": 566
   },
   "twitter/finatra": {
     "descriptionHTML": "<div>Fast, testable, Scala services built on TwitterServer and Finagle</div>",
@@ -532,7 +532,7 @@
     "pushedAt": "2022-03-31T01:17:34Z",
     "repositoryTopics": "scala finagle twitter-server http framework microservices thrift guice slf4j testing",
     "stargazers": 2149,
-    "watchers": 223
+    "watchers": 222
   },
   "twitter/gatekeeper-service": {
     "descriptionHTML": "<div>GateKeeper is a service built to automate the manual steps involved in onboarding, offboarding, and lost asset scenarios.</div>",
@@ -565,7 +565,7 @@
     },
     "pushedAt": "2022-01-16T00:18:51Z",
     "repositoryTopics": "",
-    "stargazers": 17,
+    "stargazers": 18,
     "watchers": 9
   },
   "twitter/gpl-commitment": {
@@ -613,7 +613,7 @@
     },
     "pushedAt": "2022-03-08T15:27:23Z",
     "repositoryTopics": "",
-    "stargazers": 532,
+    "stargazers": 533,
     "watchers": 146
   },
   "twitter/hbc": {
@@ -628,7 +628,7 @@
       "color": "#b07219",
       "name": "Java"
     },
-    "pushedAt": "2022-02-22T10:07:49Z",
+    "pushedAt": "2022-04-06T19:20:25Z",
     "repositoryTopics": "twitter4j stream java realtime tweets",
     "stargazers": 941,
     "watchers": 193
@@ -647,7 +647,7 @@
     },
     "pushedAt": "2022-03-22T15:30:52Z",
     "repositoryTopics": "",
-    "stargazers": 5103,
+    "stargazers": 5102,
     "watchers": 250
   },
   "twitter/hpack": {
@@ -746,7 +746,7 @@
     },
     "pushedAt": "2022-02-04T22:44:49Z",
     "repositoryTopics": "",
-    "stargazers": 13,
+    "stargazers": 14,
     "watchers": 3
   },
   "twitter/ios-twitter-image-pipeline": {
@@ -763,7 +763,7 @@
     },
     "pushedAt": "2022-03-31T11:23:54Z",
     "repositoryTopics": "image-pipeline ios swift objective-c twitter cache",
-    "stargazers": 1825,
+    "stargazers": 1826,
     "watchers": 38
   },
   "twitter/ios-twitter-logging-service": {
@@ -860,14 +860,14 @@
     "name": "metrics",
     "nameWithOwner": "twitter/metrics",
     "primaryLanguage": null,
-    "pushedAt": "2022-04-04T02:52:12Z",
+    "pushedAt": "2022-04-11T02:53:21Z",
     "repositoryTopics": "",
     "stargazers": 20,
     "watchers": 4
   },
   "twitter/netty-http2": {
     "descriptionHTML": "<div>HTTP/2 for Netty</div>",
-    "forkCount": 49,
+    "forkCount": 50,
     "homepageUrl": "",
     "isPrivate": false,
     "languages": "Java",
@@ -901,7 +901,7 @@
   },
   "twitter/opensource-website": {
     "descriptionHTML": "<div>Twitter's open source website, identifying projects we've released, organizations we support, and the work we do to support open source.</div>",
-    "forkCount": 580,
+    "forkCount": 579,
     "homepageUrl": "https://opensource.twitter.dev",
     "isPrivate": false,
     "languages": "HTML Python SCSS",
@@ -911,9 +911,9 @@
       "color": "#c6538c",
       "name": "SCSS"
     },
-    "pushedAt": "2022-03-29T18:36:08Z",
+    "pushedAt": "2022-04-04T03:17:42Z",
     "repositoryTopics": "ospo",
-    "stargazers": 1769,
+    "stargazers": 1774,
     "watchers": 440
   },
   "twitter/ossdecks": {
@@ -942,9 +942,9 @@
       "color": "#555555",
       "name": "C"
     },
-    "pushedAt": "2022-03-24T20:09:12Z",
+    "pushedAt": "2022-04-05T18:26:08Z",
     "repositoryTopics": "",
-    "stargazers": 1071,
+    "stargazers": 1078,
     "watchers": 42
   },
   "twitter/repo-scaffolding": {
@@ -975,12 +975,12 @@
     },
     "pushedAt": "2022-03-22T23:10:20Z",
     "repositoryTopics": "",
-    "stargazers": 1104,
+    "stargazers": 1106,
     "watchers": 30
   },
   "twitter/rpc-perf": {
     "descriptionHTML": "<div>A tool for benchmarking RPC services</div>",
-    "forkCount": 53,
+    "forkCount": 54,
     "homepageUrl": null,
     "isPrivate": false,
     "languages": "Rust",
@@ -1014,7 +1014,7 @@
   },
   "twitter/rustcommon": {
     "descriptionHTML": "<div>Common Twitter Rust lib</div>",
-    "forkCount": 19,
+    "forkCount": 20,
     "homepageUrl": null,
     "isPrivate": false,
     "languages": "Rust",
@@ -1026,7 +1026,7 @@
     },
     "pushedAt": "2022-01-28T19:48:06Z",
     "repositoryTopics": "",
-    "stargazers": 264,
+    "stargazers": 265,
     "watchers": 9
   },
   "twitter/sbf": {
@@ -1048,7 +1048,7 @@
   },
   "twitter/scala_school": {
     "descriptionHTML": "<div>Lessons in the Fundamentals of Scala</div>",
-    "forkCount": 1128,
+    "forkCount": 1129,
     "homepageUrl": "https://twitter.github.io/scala_school",
     "isPrivate": false,
     "languages": "Scala Java Shell HTML",
@@ -1060,7 +1060,7 @@
     },
     "pushedAt": "2021-10-08T21:01:29Z",
     "repositoryTopics": "",
-    "stargazers": 3638,
+    "stargazers": 3639,
     "watchers": 332
   },
   "twitter/scala_school2": {
@@ -1092,7 +1092,7 @@
       "color": "#c22d40",
       "name": "Scala"
     },
-    "pushedAt": "2022-04-02T05:25:41Z",
+    "pushedAt": "2022-04-11T02:55:39Z",
     "repositoryTopics": "",
     "stargazers": 3345,
     "watchers": 322
@@ -1126,10 +1126,10 @@
       "color": "#c22d40",
       "name": "Scala"
     },
-    "pushedAt": "2022-04-01T00:17:55Z",
+    "pushedAt": "2022-04-08T20:17:50Z",
     "repositoryTopics": "finagle thrift code-generation lua java scala android cocoa",
     "stargazers": 750,
-    "watchers": 177
+    "watchers": 176
   },
   "twitter/second-control-probability-distributions": {
     "descriptionHTML": "<div></div>",
@@ -1159,7 +1159,7 @@
     },
     "pushedAt": "2022-02-25T19:46:29Z",
     "repositoryTopics": "",
-    "stargazers": 78,
+    "stargazers": 79,
     "watchers": 8
   },
   "twitter/sslconfig": {
@@ -1263,7 +1263,7 @@
   },
   "twitter/twemoji": {
     "descriptionHTML": "<div>Emoji for everyone. <a href=\"https://twemoji.twitter.com/\" rel=\"nofollow\">https://twemoji.twitter.com/</a>\n</div>",
-    "forkCount": 1608,
+    "forkCount": 1612,
     "homepageUrl": "",
     "isPrivate": false,
     "languages": "HTML JavaScript",
@@ -1275,7 +1275,7 @@
     },
     "pushedAt": "2022-03-31T03:25:55Z",
     "repositoryTopics": "emoji twemoji",
-    "stargazers": 13989,
+    "stargazers": 14026,
     "watchers": 346
   },
   "twitter/twemoji-parser": {
@@ -1292,12 +1292,12 @@
     },
     "pushedAt": "2022-03-11T07:35:18Z",
     "repositoryTopics": "",
-    "stargazers": 107,
+    "stargazers": 108,
     "watchers": 16
   },
   "twitter/twemproxy": {
     "descriptionHTML": "<div>A fast, light-weight proxy for memcached and redis</div>",
-    "forkCount": 1979,
+    "forkCount": 1980,
     "homepageUrl": "",
     "isPrivate": false,
     "languages": "Python Shell C",
@@ -1309,7 +1309,7 @@
     },
     "pushedAt": "2021-12-09T03:40:32Z",
     "repositoryTopics": "",
-    "stargazers": 11303,
+    "stargazers": 11319,
     "watchers": 824
   },
   "twitter/twitter-cldr-js": {
@@ -1377,7 +1377,7 @@
     },
     "pushedAt": "2021-08-24T17:24:39Z",
     "repositoryTopics": "",
-    "stargazers": 789,
+    "stargazers": 790,
     "watchers": 174
   },
   "twitter/twitter-server": {
@@ -1394,12 +1394,12 @@
     },
     "pushedAt": "2022-04-02T01:20:22Z",
     "repositoryTopics": "finagle finatra",
-    "stargazers": 1290,
+    "stargazers": 1291,
     "watchers": 192
   },
   "twitter/twitter-text": {
     "descriptionHTML": "<div>Twitter Text Libraries. This code is used at Twitter to tokenize and parse text to meet the expectations for what can be used on the platform.</div>",
-    "forkCount": 442,
+    "forkCount": 441,
     "homepageUrl": "https://developer.twitter.com/en/docs/counting-characters",
     "isPrivate": false,
     "languages": "Ruby HTML Java JavaScript Objective-C",
@@ -1411,7 +1411,7 @@
     },
     "pushedAt": "2022-02-26T03:34:33Z",
     "repositoryTopics": "twitter-text tweet twitter unicode emoji java ruby nodejs objective-c",
-    "stargazers": 2698,
+    "stargazers": 2700,
     "watchers": 186
   },
   "twitter/twitter.github.io": {
@@ -1428,7 +1428,7 @@
     },
     "pushedAt": "2021-10-11T21:40:05Z",
     "repositoryTopics": "",
-    "stargazers": 36,
+    "stargazers": 38,
     "watchers": 2
   },
   "twitter/twurl": {
@@ -1445,12 +1445,12 @@
     },
     "pushedAt": "2021-12-31T22:30:22Z",
     "repositoryTopics": "twitter twitter-api ruby curl cli twurl",
-    "stargazers": 1659,
+    "stargazers": 1662,
     "watchers": 193
   },
   "twitter/typeahead.js": {
     "descriptionHTML": "<div>typeahead.js is a fast and fully-featured autocomplete library</div>",
-    "forkCount": 3284,
+    "forkCount": 3283,
     "homepageUrl": "http://twitter.github.io/typeahead.js/",
     "isPrivate": false,
     "languages": "JavaScript",
@@ -1462,7 +1462,7 @@
     },
     "pushedAt": "2022-03-09T12:16:12Z",
     "repositoryTopics": "",
-    "stargazers": 16382,
+    "stargazers": 16388,
     "watchers": 563
   },
   "twitter/util": {
@@ -1477,10 +1477,10 @@
       "color": "#c22d40",
       "name": "Scala"
     },
-    "pushedAt": "2022-04-01T01:16:55Z",
+    "pushedAt": "2022-04-07T05:17:30Z",
     "repositoryTopics": "finagle scala utility",
     "stargazers": 2514,
-    "watchers": 230
+    "watchers": 229
   },
   "twitter/vireo": {
     "descriptionHTML": "<div>Vireo is a lightweight and versatile video processing library written in C++11</div>",
@@ -1496,7 +1496,7 @@
     },
     "pushedAt": "2021-10-21T17:26:15Z",
     "repositoryTopics": "",
-    "stargazers": 841,
+    "stargazers": 844,
     "watchers": 48
   },
   "twitter/whiskey": {
@@ -1528,7 +1528,7 @@
       "color": "#4F5D95",
       "name": "PHP"
     },
-    "pushedAt": "2020-04-15T00:08:56Z",
+    "pushedAt": "2022-04-06T19:15:29Z",
     "repositoryTopics": "twitter-plugin php wordpress twitter-cards",
     "stargazers": 279,
     "watchers": 123
@@ -1564,7 +1564,7 @@
     },
     "pushedAt": "2022-02-25T17:05:27Z",
     "repositoryTopics": "search twitter python twitter-api twitterapi enterprise premium twitter-api-v2",
-    "stargazers": 620,
+    "stargazers": 621,
     "watchers": 38
   }
 }

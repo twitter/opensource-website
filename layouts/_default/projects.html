@@ -13,7 +13,7 @@
 
 <div class="container all-projects">
     {{ range sort $.Site.Data.projects "pushedAt" "desc" -}}
-    <div class="project-card" id="{{ .nameWithOwner }}">
+    <div class="project-card" id="{{ .nameWithOwner }}" style="border: 1px solid; border-color: aliceblue;">
         <h1 class="project-name small-margin">{{ .name }}</h1>
         <div class="border small-margin"{{ with .primaryLanguage }} style="border-bottom-color:{{ .color }}"{{ end }}></div>
         <div class="project-description xsmall-margin">{{ .descriptionHTML | safeHTML }}</div>

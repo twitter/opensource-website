@@ -59,3 +59,5 @@ commits.
 
 2. [Open a Pull Request](http://help.github.com/send-pull-requests/) with a
    clear title and description. One for your changes in `main`.
+   
+3.Once the pull request is made the contributor have to sign the CLA.   

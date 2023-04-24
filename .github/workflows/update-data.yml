@@ -1,41 +1,40 @@
 name: Update data
 
 on:
-  workflow_dispatch: {}
-  schedule:
-    # Run Mondays at 2:45 am
-    - cron: "45 2 * * 1"
+    workflow_dispatch: {}
+    schedule:
+        # Run Mondays at 2:45 am
+        - cron: "45 2 * * 1"
 
 jobs:
-  update:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v2
+    update:
+        runs-on: ubuntu-latest
+        steps:
+            - uses: actions/checkout@v2
 
-      # update stats
-      - uses: actions/setup-python@v2
-        with:
-          python-version: '3.9'
-      - name: cache pip
-        uses: actions/cache@v2
-        with:
-          path: ~/.cache/pip
-          key: ${{ runner.os }}-pip-${{ hashFiles('requirements.txt') }}
-          restore-keys: |
-            ${{ runner.os }}-pip-
-      - run: pip install -r requirements.txt
+            # update stats
+            - uses: actions/setup-python@v2
+              with:
+                  python-version: "3.9"
+            - name: cache pip
+              uses: actions/cache@v2
+              with:
+                  path: ~/.cache/pip
+                  key: ${{ runner.os }}-pip-${{ hashFiles('requirements.txt') }}
+                  restore-keys: |
+                      ${{ runner.os }}-pip-
+            - run: pip install -r requirements.txt
+            # Eventually call scripts/fetch_augur_metrics.py and
+            # scripts/fetch_year_in_review.py as well when possible
+            - run: python scripts/fetch_projects.py
+              env:
+                  OAUTH_TOKEN: ${{ secrets.GH_API_TOKEN }}
+                  GH_USERNAME: ${{ secrets.GH_USERNAME }}
 
-      # Eventually call scripts/fetch_augur_metrics.py and
-      # scripts/fetch_year_in_review.py as well when possible
-      - run: python scripts/fetch_projects.py
-        env:
-          OAUTH_TOKEN: ${{ secrets.GH_API_TOKEN }}
-          GH_USERNAME: ${{ secrets.GH_USERNAME }}
-
-      - run: |
-          git config user.name 'GitHub Actions'
-          git config user.email 'actions@users.noreply.github.com'
-          git add -A
-          timestamp=$(date -u)
-          git commit -m "update data: ${timestamp}" || exit 0
-          git push
+            - run: |
+                  git config user.name 'GitHub Actions'
+                  git config user.email 'actions@users.noreply.github.com'
+                  git add -A
+                  timestamp=$(date -u)
+                  git commit -m "update data: ${timestamp}" || exit 0
+                  git push

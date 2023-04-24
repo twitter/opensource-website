@@ -6,27 +6,27 @@ title: Twitter Open Source
 taxonomies: []
 
 permalinks:
-  posts: /:year/:month/:title/
+    posts: /:year/:month/:title/
 
 markup:
-  goldmark:
-    renderer:
-      unsafe: true
-  tableOfContents:
-    startLevel: 1
-    endLevel: 9
-  highlight:
-    style: friendly
+    goldmark:
+        renderer:
+            unsafe: true
+    tableOfContents:
+        startLevel: 1
+        endLevel: 9
+    highlight:
+        style: friendly
 
 menu:
-  main:
-  # individual pages are added to menu in their front matter
-  - identifier: blog
-    name: Blog
-    url: https://blog.twitter.com/engineering/en_us/topics/open-source
-    rel: noopener
-    weight: 10
-  - identifier: github
-    name: GitHub
-    url: https://github.com/twitter
-    weight: 20
+    main:
+        # individual pages are added to menu in their front matter
+        - identifier: blog
+          name: Blog
+          url: https://blog.twitter.com/engineering/en_us/topics/open-source
+          rel: noopener
+          weight: 10
+        - identifier: github
+          name: GitHub
+          url: https://github.com/twitter
+          weight: 20

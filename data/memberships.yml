@@ -1,41 +1,41 @@
 - id: asf
   name: Apache Software Foundation
-  description: 'The all-volunteer ASF develops, stewards, and incubates more than 350 Open Source projects and initiatives that cover a wide range of technologies.'
+  description: "The all-volunteer ASF develops, stewards, and incubates more than 350 Open Source projects and initiatives that cover a wide range of technologies."
   logo: /assets/memberships/apache.png
   website: https://www.apache.org/
   twitter: TheASF
 
 - id: lf
   name: Linux Foundation
-  description: 'A nonprofit organization enabling mass innovation through open source. Updates on our events at @eventsLF #Linux #OpenSource #learnLinux'
+  description: "A nonprofit organization enabling mass innovation through open source. Updates on our events at @eventsLF #Linux #OpenSource #learnLinux"
   logo: /assets/memberships/linux-foundation.svg
   website: https://linuxfoundation.org
   twitter: linuxfoundation
 
 - id: osi
   name: Open Source Initiative
-  description: 'Global non-profit: promotes and protects open source software, development & communities through education and advocacy. Yes, we coined the term!'
+  description: "Global non-profit: promotes and protects open source software, development & communities through education and advocacy. Yes, we coined the term!"
   logo: /assets/memberships/osi.jpg
   website: https://www.opensource.org
   twitter: OpenSourceOrg
 
 - id: psf
   name: Python Software Foundation
-  description: 'The Python Software Foundation is an organization devoted to advancing open source technology related to the Python programming language.'
+  description: "The Python Software Foundation is an organization devoted to advancing open source technology related to the Python programming language."
   logo: /assets/memberships/psf.png
   website: https://www.python.org/psf-landing/
   twitter: ThePSF
 
 - id: scala
   name: Scala Center
-  description: 'The Scala Center brings together a coalition of individuals and organizations working together to contribute to Scala. All of our members, individual and corporate, are actively involved in the Scala project.'
+  description: "The Scala Center brings together a coalition of individuals and organizations working together to contribute to Scala. All of our members, individual and corporate, are actively involved in the Scala project."
   logo: /assets/memberships/scala-center.png
   website: https://scala.epfl.ch/
   twitter: scala_lang
 
 - id: unicode
   name: Unicode Consortium
-  description: 'The Unicode Consortium enables people around the world to use computers in any language. #Unicode11'
+  description: "The Unicode Consortium enables people around the world to use computers in any language. #Unicode11"
   logo: /assets/memberships/unicode.svg
   website: https://unicode.org
   twitter: unicode

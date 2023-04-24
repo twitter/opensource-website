@@ -1,31 +1,35 @@
 {{ define "content" }}
-	<div class="membership-container container">
-		{{ range $.Site.Data.memberships }}
-		<div class="sizeFull membership" id="{{ .id }}">
-			<!-- Logo -->
-			<img src="{{ .logo }}" class="membership-logo">
+<div class="membership-container container">
+    {{ range $.Site.Data.memberships }}
+    <div class="sizeFull membership" id="{{ .id }}">
+        <!-- Logo -->
+        <img src="{{ .logo }}" class="membership-logo" />
 
-			<div class="name-handle">
-				<!-- Name -->
-				<h2>{{ .name }}</h2>
+        <div class="name-handle">
+            <!-- Name -->
+            <h2>{{ .name }}</h2>
 
-				<!-- Twitter handle -->
-				{{ with .twitter }}
-				<a href="https://twitter.com/{{ . }}" target="_blank" rel="noopener" class="membership-handle">
-					@{{ . }}
-				</a>
-				{{ end }}
-			</div>
+            <!-- Twitter handle -->
+            {{ with .twitter }}
+            <a
+                href="https://twitter.com/{{ . }}"
+                target="_blank"
+                rel="noopener"
+                class="membership-handle"
+            >
+                @{{ . }}
+            </a>
+            {{ end }}
+        </div>
 
-			<!-- Description -->
-			<p>{{ .description }}</p>
+        <!-- Description -->
+        <p>{{ .description }}</p>
 
-		    <!-- Visit website -->
-		    {{ with .website }}
-				<a href="{{ . }}" class="Button">Visit</a>
-		    {{ end }}
-
-		</div>
-		{{ end }}
-	</div>
+        <!-- Visit website -->
+        {{ with .website }}
+        <a href="{{ . }}" class="Button">Visit</a>
+        {{ end }}
+    </div>
+    {{ end }}
+</div>
 {{ end }}

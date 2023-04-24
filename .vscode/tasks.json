@@ -8,7 +8,7 @@
             "type": "shell",
             "command": "hugo serve",
             "group": "build",
-            "isBackground": true,
+            "isBackground": true
         }
     ]
 }

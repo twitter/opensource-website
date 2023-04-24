@@ -7,6 +7,6 @@ issueTracker: https://github.com/twitter/opensource-website/issues
 name: opensource.twitter.dev
 developmentStatus: active
 author:
-- "@type": Organization
-  identifier: OSS
-  name: Twitter Open Source Programs Office
+    - "@type": Organization
+      identifier: OSS
+      name: Twitter Open Source Programs Office

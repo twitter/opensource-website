@@ -98,35 +98,7 @@ cd  opensource-website
 hugo  server
 
 ``` 
-
  
-
-## GIT AND GITHUB
-
-  
-
-Before continuing we want to clarify the difference between Git and Github. Git is a version control system(VCS) which is a tool to manage the history of our Source Code. GitHub is a hosting service for Git projects.
-
-  
-
-We assume you have created an account on Github and installed Git on your System.
-
-  
-
-Now tell Git your name and E-mail (used on Github) address.
-
-  
-```bash
-git config --global user.name "YOUR NAME"
-
-git config --global user.email "YOUR EMAIL ADDRESS"
-
-```  
-  
-
-This is an important step to mark your commits to your name and email.
-
-  
 
 ### FORK A PROJECT -
 

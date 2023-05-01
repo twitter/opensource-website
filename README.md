@@ -1,8 +1,8 @@
-# opensource.twitter.dev
+# Twitter Open Source Website
 
 [![status: active](https://opensource.twitter.dev/status/active.svg)](https://opensource.twitter.dev/status/#active)
 
-This is the Twitter Open Source website at https://opensource.twitter.dev.
+Welcome to the Twitter Open Source Website repository! This is the source code for the [opensource.twitter.dev](https://opensource.twitter.dev) website, which showcases the open source projects developed by Twitter.
 
 This site is built with [hugo], using a custom built-in theme.  Follow the
 standard instructions on the hugo website to [install] and [run] hugo.  Just
@@ -11,6 +11,9 @@ stylesheets.
 
 There are also some python scripts that run periodically to [update some repo
 data].
+
+# Contributing
+We welcome contributions to all of our open source projects. If you would like to contribute, please fork the repository and submit a pull request. Before submitting a pull request, please review our [contribution guidelines](https://github.com/twitter/opensource-website/blob/main/CONTRIBUTING.md).
 
 [hugo]: https://gohugo.io/
 [install]: https://gohugo.io/getting-started/installing/

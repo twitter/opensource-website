@@ -2,6 +2,8 @@
 <html lang="en" class="no-js">
   <head>
     {{ partial "head.html" . }}
+    <script defer src="{{ "js/main.js" | relURL }}"></script>
+    {{ with .Params.custom_js }}<script defer src="{{ printf "js/%s" . | relURL }}"></script>{{ end }}
   </head>
 
   <body>
@@ -30,7 +32,5 @@
   </body>
 
   <script>document.getElementsByTagName("html")[0].classList.remove("no-js")</script>
-  <script src="{{ "js/main.js" | relURL }}"></script>
-  {{ with .Params.custom_js }}<script src="{{ printf "js/%s" . | relURL }}"></script>{{ end }}
   {{ if hugo.IsProduction }}{{ partial "ga.html" . }}{{ end }}
 </html>

@@ -9,6 +9,8 @@ standard instructions on the hugo website to [install] and [run] hugo.  Just
 make sure to use hugo-extended, which has added support for Sass/SCSS
 stylesheets.
 
+It contains few .html and .js file extensions alongside a Dockerfile that displays the content of the webpage
+
 There are also some python scripts that run periodically to [update some repo
 data].
 

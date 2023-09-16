@@ -18,7 +18,7 @@
 	.st12{fill:#97E3FF;}
 	.st13{fill:#71C9F8;}
 	.st14{fill:#005FD1;}
-	.st15{font-family:'HelveticaNeue-Bold';}
+	.st15{font-family:HelveticaNeue-Bold, system-ui, sans-serif; font-weight:bold;}
 	.st16{font-size:11.5px;}
 </style>
 <g id="guides" class="st0">
@@ -113,7 +113,7 @@
 	<circle class="st11" cx="7.2" cy="162.1" r="3.3"/>
 </g>
 <g id="text">
-	<text transform="matrix(0.75 -0.433 0 1 90.5106 161.479)" class="st14 st15 st16">39 public members</text>
-	<text transform="matrix(0.75 -0.433 0 1 82.1912 108.8037)" class="st11 st15 st16">108 public repos</text>
+	<text transform="matrix(0.75 -0.433 0 1 90.5106 161.479)" class="st14 st15 st16">2 public members</text>
+	<text transform="matrix(0.75 -0.433 0 1 82.1912 108.8037)" class="st11 st15 st16">103 public repos</text>
 </g>
 </svg>

@@ -1,17 +1,19 @@
     <meta charset="utf-8" />
     <meta name="title" content="{{ .Title }}">
-    <meta name="description" content="{{ .Description }}">
-    <meta name="keywords" content="{{ .Params.keywords }}">
+    <meta name="theme-color" content="#1DA1F2" media="(prefers-color-scheme: light)">
+    <meta name="theme-color" content="#0f1419" media="(prefers-color-scheme: dark)">
+    <meta name="description" content="{{ .Description | default .Site.Title }}">
+    {{ with .Params.keywords }}<meta name="keywords" content="{{ . }}">{{ end }}
 
     <meta name="og:title" content="{{ .Title }}">
     <meta name="og:url" content="{{ .Permalink }}">
     <!-- <meta name="og:image" content="{{ .Params.logo }}"> -->
-    <meta name="og:description" content="{{ .Description }}">
+    {{ with .Description }}<meta name="og:description" content="{{ . }}">{{ end }}
 
     <meta name="twitter:card" content="summary" />
     <meta name="twitter:site" content="{{ .Permalink }}" />
     <meta name="twitter:title" content="{{ .Title }}" />
-    <meta name="twitter:description" content="{{ .Description }}" />
+    {{ with .Description }}<meta name="twitter:description" content="{{ . }}" />{{ end }}
     <!-- <meta name="twitter:image" content="{{ .Params.logo }}" /> -->
 
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -21,18 +23,13 @@
     <meta http-equiv='Cache-Control' content='no-cache'>
     <meta http-equiv='imagetoolbar' content='no'>
 
-    <title>{{ .Title }}</title>
+    <title>{{ .Title }}{{ if not .IsHome }} | {{ site.Title }}{{ end }}</title>
     <link rel="shortcut icon" type="image/png" href="{{ "assets/favicon.ico" | relURL }}"/>
 
-    <!-- Feather CSS -->
-    <link rel="stylesheet" href="{{ "css/feather-core.css" | relURL }}"/>
-    <link rel="stylesheet" href="{{ "css/feather-component-grid.css" | relURL }}"/>
-    <link rel="stylesheet" href="{{ "css/feather-component-button.css" | relURL }}"/>
-
-    <!-- Main CSS -->
-    <link rel="stylesheet" href="{{ "css/main.css" | relURL }}"/>
+    {{- $style := resources.Get "css/style.scss" | toCSS | minify | fingerprint }}
+    <link rel="stylesheet" href="{{ $style.RelPermalink }}"/>
 
     {{- with .Params.custom_css }}
-    <!-- Custom CSS -->
-    <link rel="stylesheet" href="{{ printf "css/%s" . | relURL }}"/>
+    {{- $style := resources.Get (printf "css/%s" .) | toCSS | minify | fingerprint }}
+    <link rel="stylesheet" href="{{ $style.RelPermalink }}"/>
     {{ end }}

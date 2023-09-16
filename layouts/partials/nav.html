@@ -1,40 +1,17 @@
     <!-- Navigation Bar -->
     <nav>
         <div class="nav-title">
-            <span class="Icon Icon--logo Icon--large"></span>
-
-            <!-- Link in web -->
-            <a class="home-link" href="{{ .Site.BaseURL }}">Twitter Open Source</a>
-
-            <!-- Text in mobile -->
-            <p class="home-text">Twitter Open Source</p>
-            <span id="caret" class="Icon Icon--caretDown"></span>
+            <a class="home-link" href="{{ "" | relURL }}">
+                <img src="/assets/twitter-logo.svg" alt="Twitter">
+                Open Source
+            </a>
         </div>
-        <ul class="nav-menu">
-            <!-- This link only exists in mobile -->
-            <li id="extra-mobile-link" class="nav-list-item">
-                <a class="nav-link" href="{{ .Site.BaseURL }}">Twitter Open Source</a>
-            </li>
-
-            <li class="nav-list-item">
-                <a class="nav-link" href="{{ "projects" | relURL }}">Projects</a>
-            </li>
-
-            <li class="nav-list-item">
-                <a class="nav-link" href="{{ "memberships" | relURL }}">#Squad</a>
-            </li>
-
-            <li class="nav-list-item">
-              <a class="nav-link" href="{{ "year-in-review" | relURL }}">Year in Review</a>
-            </li>
-
-            <li class="nav-list-item">
-                <a class="nav-link" href="https://blog.twitter.com/engineering/en_us/topics/open-source.html" target="_blank">Blog</a>
-            </li>
-
-            <li class="nav-list-item list-end">
-                <a class="nav-link" href="https://github.com/twitter" target="_blank">GitHub</a>
-            </li>
+        <a id="menu-toggle" href="#" onclick="document.getElementById('nav-menu').classList.toggle('active'); return false;">
+            <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px" fill="#ffffff"><path d="M0 0h24v24H0z" fill="none"/><path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"/></svg>
+        </a>
+        <ul id="nav-menu">
+            {{ range .Site.Menus.main }}
+                <li><a href="{{ .URL }}"{{ if not (hasPrefix .URL "/") }} target="_blank" rel="noopener"{{ end }}>{{ .Name }}</a></li>
+            {{ end }}
         </ul>
     </nav>
-

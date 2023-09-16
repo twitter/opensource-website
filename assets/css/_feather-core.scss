@@ -1,0 +1,1971 @@
+/*! @twitter/feather-core v6.2.0 */
+/*! Copyright 2022 Twitter Inc. All rights reserved. */
+/* @generated */
+/*! normalize.css v7.0.0 | MIT License | github.com/necolas/normalize.css */
+/* Document
+   ========================================================================== */
+/**
+ * 1. Correct the line height in all browsers.
+ * 2. Prevent adjustments of font size after orientation changes in
+ *    IE on Windows Phone and in iOS.
+ */
+html {
+  line-height: 1.15;
+  /* 1 */
+  -ms-text-size-adjust: 100%;
+  /* 2 */
+  -webkit-text-size-adjust: 100%;
+  /* 2 */
+}
+/* Sections
+   ========================================================================== */
+/**
+ * Remove the margin in all browsers (opinionated).
+ */
+body {
+  margin: 0;
+}
+/**
+ * Add the correct display in IE 9-.
+ */
+article,
+aside,
+footer,
+header,
+nav,
+section {
+  display: block;
+}
+/**
+ * Correct the font size and margin on `h1` elements within `section` and
+ * `article` contexts in Chrome, Firefox, and Safari.
+ */
+h1 {
+  font-size: 2em;
+  margin: 0.67em 0;
+}
+/* Grouping content
+   ========================================================================== */
+/**
+ * Add the correct display in IE 9-.
+ * 1. Add the correct display in IE.
+ */
+figcaption,
+figure,
+main {
+  /* 1 */
+  display: block;
+}
+/**
+ * Add the correct margin in IE 8.
+ */
+figure {
+  margin: 1em 40px;
+}
+/**
+ * 1. Add the correct box sizing in Firefox.
+ * 2. Show the overflow in Edge and IE.
+ */
+hr {
+  box-sizing: content-box;
+  /* 1 */
+  height: 0;
+  /* 1 */
+  overflow: visible;
+  /* 2 */
+}
+/**
+ * 1. Correct the inheritance and scaling of font size in all browsers.
+ * 2. Correct the odd `em` font sizing in all browsers.
+ */
+pre {
+  font-family: monospace, monospace;
+  /* 1 */
+  font-size: 1em;
+  /* 2 */
+}
+/* Text-level semantics
+   ========================================================================== */
+/**
+ * 1. Remove the gray background on active links in IE 10.
+ * 2. Remove gaps in links underline in iOS 8+ and Safari 8+.
+ */
+a {
+  background-color: transparent;
+  /* 1 */
+  -webkit-text-decoration-skip: objects;
+  /* 2 */
+}
+/**
+ * 1. Remove the bottom border in Chrome 57- and Firefox 39-.
+ * 2. Add the correct text decoration in Chrome, Edge, IE, Opera, and Safari.
+ */
+abbr[title] {
+  border-bottom: none;
+  /* 1 */
+  text-decoration: underline;
+  /* 2 */
+  -webkit-text-decoration: underline dotted;
+          text-decoration: underline dotted;
+  /* 2 */
+}
+/**
+ * Prevent the duplicate application of `bolder` by the next rule in Safari 6.
+ */
+b,
+strong {
+  font-weight: inherit;
+}
+/**
+ * Add the correct font weight in Chrome, Edge, and Safari.
+ */
+b,
+strong {
+  font-weight: bolder;
+}
+/**
+ * 1. Correct the inheritance and scaling of font size in all browsers.
+ * 2. Correct the odd `em` font sizing in all browsers.
+ */
+code,
+kbd,
+samp {
+  font-family: monospace, monospace;
+  /* 1 */
+  font-size: 1em;
+  /* 2 */
+}
+/**
+ * Add the correct font style in Android 4.3-.
+ */
+dfn {
+  font-style: italic;
+}
+/**
+ * Add the correct background and color in IE 9-.
+ */
+mark {
+  background-color: #ff0;
+  color: #000;
+}
+/**
+ * Add the correct font size in all browsers.
+ */
+small {
+  font-size: 80%;
+}
+/**
+ * Prevent `sub` and `sup` elements from affecting the line height in
+ * all browsers.
+ */
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+sub {
+  bottom: -0.25em;
+}
+sup {
+  top: -0.5em;
+}
+/* Embedded content
+   ========================================================================== */
+/**
+ * Add the correct display in IE 9-.
+ */
+audio,
+video {
+  display: inline-block;
+}
+/**
+ * Add the correct display in iOS 4-7.
+ */
+audio:not([controls]) {
+  display: none;
+  height: 0;
+}
+/**
+ * Remove the border on images inside links in IE 10-.
+ */
+img {
+  border-style: none;
+}
+/**
+ * Hide the overflow in IE.
+ */
+svg:not(:root) {
+  overflow: hidden;
+}
+/* Forms
+   ========================================================================== */
+/**
+ * 1. Change the font styles in all browsers (opinionated).
+ * 2. Remove the margin in Firefox and Safari.
+ */
+button,
+input,
+optgroup,
+select,
+textarea {
+  font-family: sans-serif;
+  /* 1 */
+  font-size: 100%;
+  /* 1 */
+  line-height: 1.15;
+  /* 1 */
+  margin: 0;
+  /* 2 */
+}
+/**
+ * Show the overflow in IE.
+ * 1. Show the overflow in Edge.
+ */
+button,
+input {
+  /* 1 */
+  overflow: visible;
+}
+/**
+ * Remove the inheritance of text transform in Edge, Firefox, and IE.
+ * 1. Remove the inheritance of text transform in Firefox.
+ */
+button,
+select {
+  /* 1 */
+  text-transform: none;
+}
+/**
+ * 1. Prevent a WebKit bug where (2) destroys native `audio` and `video`
+ *    controls in Android 4.
+ * 2. Correct the inability to style clickable types in iOS and Safari.
+ */
+button,
+html [type="button"],
+[type="reset"],
+[type="submit"] {
+  -webkit-appearance: button;
+  /* 2 */
+}
+/**
+ * Remove the inner border and padding in Firefox.
+ */
+button::-moz-focus-inner,
+[type="button"]::-moz-focus-inner,
+[type="reset"]::-moz-focus-inner,
+[type="submit"]::-moz-focus-inner {
+  border-style: none;
+  padding: 0;
+}
+/**
+ * Restore the focus styles unset by the previous rule.
+ */
+button:-moz-focusring,
+[type="button"]:-moz-focusring,
+[type="reset"]:-moz-focusring,
+[type="submit"]:-moz-focusring {
+  outline: 1px dotted ButtonText;
+}
+/**
+ * Correct the padding in Firefox.
+ */
+fieldset {
+  padding: 0.35em 0.75em 0.625em;
+}
+/**
+ * 1. Correct the text wrapping in Edge and IE.
+ * 2. Correct the color inheritance from `fieldset` elements in IE.
+ * 3. Remove the padding so developers are not caught out when they zero out
+ *    `fieldset` elements in all browsers.
+ */
+legend {
+  box-sizing: border-box;
+  /* 1 */
+  color: inherit;
+  /* 2 */
+  display: table;
+  /* 1 */
+  max-width: 100%;
+  /* 1 */
+  padding: 0;
+  /* 3 */
+  white-space: normal;
+  /* 1 */
+}
+/**
+ * 1. Add the correct display in IE 9-.
+ * 2. Add the correct vertical alignment in Chrome, Firefox, and Opera.
+ */
+progress {
+  display: inline-block;
+  /* 1 */
+  vertical-align: baseline;
+  /* 2 */
+}
+/**
+ * Remove the default vertical scrollbar in IE.
+ */
+textarea {
+  overflow: auto;
+}
+/**
+ * 1. Add the correct box sizing in IE 10-.
+ * 2. Remove the padding in IE 10-.
+ */
+[type="checkbox"],
+[type="radio"] {
+  box-sizing: border-box;
+  /* 1 */
+  padding: 0;
+  /* 2 */
+}
+/**
+ * Correct the cursor style of increment and decrement buttons in Chrome.
+ */
+[type="number"]::-webkit-inner-spin-button,
+[type="number"]::-webkit-outer-spin-button {
+  height: auto;
+}
+/**
+ * 1. Correct the odd appearance in Chrome and Safari.
+ * 2. Correct the outline style in Safari.
+ */
+[type="search"] {
+  -webkit-appearance: textfield;
+  /* 1 */
+  outline-offset: -2px;
+  /* 2 */
+}
+/**
+ * Remove the inner padding and cancel buttons in Chrome and Safari on macOS.
+ */
+[type="search"]::-webkit-search-cancel-button,
+[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+/**
+ * 1. Correct the inability to style clickable types in iOS and Safari.
+ * 2. Change font properties to `inherit` in Safari.
+ */
+::-webkit-file-upload-button {
+  -webkit-appearance: button;
+  /* 1 */
+  font: inherit;
+  /* 2 */
+}
+/* Interactive
+   ========================================================================== */
+/*
+ * Add the correct display in IE 9-.
+ * 1. Add the correct display in Edge, IE, and Firefox.
+ */
+details,
+menu {
+  display: block;
+}
+/*
+ * Add the correct display in all browsers.
+ */
+summary {
+  display: list-item;
+}
+/* Scripting
+   ========================================================================== */
+/**
+ * Add the correct display in IE 9-.
+ */
+canvas {
+  display: inline-block;
+}
+/**
+ * Add the correct display in IE.
+ */
+template {
+  display: none;
+}
+/* Hidden
+   ========================================================================== */
+/**
+ * Add the correct display in IE 10-.
+ */
+[hidden] {
+  display: none;
+}
+/**
+ * A thin layer on top of normalize.css that provides a starting point more
+ * suitable for web applications.
+ */
+/**
+ * 1. Prevent padding and border from affecting element width
+ * https://goo.gl/pYtbK7
+ * 2. Change the default font family in all browsers
+ */
+html {
+  box-sizing: border-box;
+  /* 1 */
+  font-family: sans-serif;
+  /* 2 */
+}
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+/**
+ * Removes the default spacing and border for appropriate elements.
+ */
+body,
+blockquote,
+dl,
+dd,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+figure,
+p,
+pre {
+  margin: 0;
+}
+button {
+  background: transparent;
+  border: 0;
+  padding: 0;
+}
+/**
+ * Work around a Firefox/IE bug where the transparent `button` background
+ * results in a loss of the default `button` focus styles.
+ */
+button:focus {
+  outline: 1px dotted;
+  outline: 5px auto -webkit-focus-ring-color;
+}
+fieldset {
+  border: 0;
+  margin: 0;
+  padding: 0;
+}
+iframe {
+  border: 0;
+}
+ol,
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+/**
+ * Suppress the focus outline on elements that cannot be accessed via keyboard.
+ * This prevents an unwanted focus outline from appearing around elements that
+ * might still respond to pointer events.
+ */
+[tabindex="-1"]:focus {
+  outline: none !important;
+}
+/**
+ * Remove the outline on focused links when they are also active or hovered
+ * in all browsers.
+ */
+a:active,
+a:hover {
+  outline-width: 0;
+}
+/**
+ * Change the font styles in all browsers.
+ */
+button,
+input,
+optgroup,
+select,
+textarea {
+  font-family: sans-serif;
+  font-size: 100%;
+  line-height: 1.15;
+}
+/**
+ * Change the border, margin, and padding in all browsers.
+ */
+fieldset {
+  border: 1px solid #c0c0c0;
+  margin: 0 2px;
+  padding: 0.35em 0.625em 0.75em;
+}
+* {
+  box-sizing: border-box;
+}
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+button:not([disabled]) {
+  cursor: pointer;
+}
+fieldset {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+.u-featherHiddenVisually {
+  border: 0 !important;
+  clip: rect(1px, 1px, 1px, 1px) !important;
+  height: 1px !important;
+  overflow: hidden !important;
+  padding: 0 !important;
+  position: absolute !important;
+  width: 1px !important;
+}
+/*
+DO NOT EDIT.
+You can rebuild this file by running `yarn dist-js` in `feather-source`.
+The content of this file is derived from feather-core.
+*/
+:root {
+  /* Border radii */
+  --feather-border-radius-none-experimental: 0px;
+  --feather-border-radius-xsmall-experimental: 2px;
+  --feather-border-radius-small-experimental: 4px;
+  --feather-border-radius-medium-experimental: 8px;
+  --feather-border-radius-large-experimental: 12px;
+  --feather-border-radius-xlarge-experimental: 16px;
+  --feather-border-radius-infinite-experimental: 9999px;
+  /* Border widths */
+  --feather-border-width-none-experimental: 0px;
+  --feather-border-width-small-experimental: 1px;
+  --feather-border-width-medium-experimental: 2px;
+  --feather-border-width-large-experimental: 4px;
+  /* Breakpoints (private variables for internal Feather use only) */
+  --feather-breakpoint-xsmall-experimental: 0px;
+  --feather-breakpoint-small-experimental: 600px;
+  --feather-breakpoint-medium-experimental: 1024px;
+  --feather-breakpoint-large-experimental: 1280px;
+  --feather-breakpoint-xlarge-experimental: 1920px;
+  /* Colors */
+  --tw-color-gray-deep: #536471;
+  --tw-color-gray-medium: #B9CAD3;
+  --tw-color-gray-light: #CFD9DE;
+  --tw-color-gray-faded: #EFF3F4;
+  --tw-color-gray-faint: #F7F9F9;
+  --tw-color-red-deep: #D11A28;
+  --tw-color-red-medium: #F4212E;
+  --tw-color-red-light: #F87580;
+  --tw-color-red-faded: #FB9FA8;
+  --tw-color-orange-deep: #D86000;
+  --tw-color-orange-medium: #FF7A00;
+  --tw-color-orange-light: #FFAD61;
+  --tw-color-orange-faded: #FFC692;
+  --tw-color-yellow-deep: #DCAB00;
+  --tw-color-yellow-medium: #FFD400;
+  --tw-color-yellow-light: #FFEB6B;
+  --tw-color-yellow-faded: #FFF595;
+  --tw-color-green-deep: #009C64;
+  --tw-color-green-medium: #00BA7C;
+  --tw-color-green-light: #61D6A3;
+  --tw-color-green-faded: #92E3BF;
+  --tw-color-blue-deep: #0083EB;
+  --tw-color-blue-medium: #1D9BF0;
+  --tw-color-blue-light: #6BC9FB;
+  --tw-color-blue-faded: #97E3FF;
+  --tw-color-blue-faint: #EAFAFF;
+  --tw-color-purple-deep: #6545DB;
+  --tw-color-purple-medium: #7856FF;
+  --tw-color-purple-light: #AC97FF;
+  --tw-color-purple-faded: #C5B7FF;
+  --tw-color-blue-0: #EAFAFF;
+  --tw-color-blue-50: #D7F6FF;
+  --tw-color-blue-100: #BFF2FF;
+  --tw-color-blue-200: #97E3FF;
+  --tw-color-blue-300: #6BC9FB;
+  --tw-color-blue-500: #1D9BF0;
+  --tw-color-blue-600: #0083EB;
+  --tw-color-blue-900: #003886;
+  --tw-color-gray-0: #F7F9F9;
+  --tw-color-gray-50: #EFF3F4;
+  --tw-color-gray-100: #E5EAEC;
+  --tw-color-gray-200: #CFD9DE;
+  --tw-color-gray-300: #B9CAD3;
+  --tw-color-gray-500: #829AAB;
+  --tw-color-gray-700: #536471;
+  --tw-color-gray-900: #37434D;
+  --tw-color-gray-1100: #0F1419;
+  --tw-color-green-0: #EDFFF9;
+  --tw-color-green-50: #DBF8EB;
+  --tw-color-green-100: #C2F1DC;
+  --tw-color-green-200: #92E3BF;
+  --tw-color-green-300: #61D6A3;
+  --tw-color-green-500: #00BA7C;
+  --tw-color-green-600: #009C64;
+  --tw-color-green-900: #004329;
+  --tw-color-magenta-0: #FFF1F8;
+  --tw-color-magenta-50: #FFDDED;
+  --tw-color-magenta-100: #FEC7E1;
+  --tw-color-magenta-200: #FD9BC9;
+  --tw-color-magenta-300: #FB70B0;
+  --tw-color-magenta-500: #F91880;
+  --tw-color-magenta-600: #D4136D;
+  --tw-color-magenta-900: #640533;
+  --tw-color-orange-0: #FEF5EC;
+  --tw-color-orange-50: #FFEDDB;
+  --tw-color-orange-100: #FFE0C2;
+  --tw-color-orange-200: #FFC692;
+  --tw-color-orange-300: #FFAD61;
+  --tw-color-orange-500: #FF7A00;
+  --tw-color-orange-600: #D86000;
+  --tw-color-orange-900: #692100;
+  --tw-color-plum-0: #FFEFFF;
+  --tw-color-plum-50: #FAE0FA;
+  --tw-color-plum-100: #F4CDF5;
+  --tw-color-plum-200: #E9A7EB;
+  --tw-color-plum-300: #DF82E0;
+  --tw-color-plum-500: #C936CC;
+  --tw-color-plum-600: #AB2BAE;
+  --tw-color-plum-900: #520B53;
+  --tw-color-purple-0: #F5F3FF;
+  --tw-color-purple-50: #ECE8FF;
+  --tw-color-purple-100: #DFD8FF;
+  --tw-color-purple-200: #C5B7FF;
+  --tw-color-purple-300: #AC97FF;
+  --tw-color-purple-500: #7856FF;
+  --tw-color-purple-600: #6545DB;
+  --tw-color-purple-900: #2C116E;
+  --tw-color-red-0: #FFF0F1;
+  --tw-color-red-50: #FEDEE3;
+  --tw-color-red-100: #FDC9CE;
+  --tw-color-red-200: #FB9FA8;
+  --tw-color-red-300: #F87580;
+  --tw-color-red-500: #F4212E;
+  --tw-color-red-600: #D11A28;
+  --tw-color-red-900: #67070F;
+  --tw-color-teal-0: #E9FEFF;
+  --tw-color-teal-50: #D1F8FA;
+  --tw-color-teal-100: #B3F1F4;
+  --tw-color-teal-200: #78E4E8;
+  --tw-color-teal-300: #3CD6DD;
+  --tw-color-teal-500: #00AFB6;
+  --tw-color-teal-600: #009399;
+  --tw-color-teal-900: #003E42;
+  --tw-color-yellow-0: #FFFDEA;
+  --tw-color-yellow-50: #FFFED7;
+  --tw-color-yellow-100: #FFFEC0;
+  --tw-color-yellow-200: #FFF595;
+  --tw-color-yellow-300: #FFEB6B;
+  --tw-color-yellow-500: #FFD400;
+  --tw-color-yellow-600: #DCAB00;
+  --tw-color-yellow-900: #6F3E00;
+  --tw-color-blue-primary: #1D9BF0;
+  --tw-color-text-primary: #0F1419;
+  --tw-color-text-link: #0083EB;
+  /* Form controls */
+  --feather-form-control-xsmall-font-size: 0.65rem;
+  --feather-form-control-xsmall-height: 1.2rem;
+  --feather-form-control-xsmall-border-radius: 8px;
+  --feather-form-control-xsmall-padding-x: 0.4rem;
+  --feather-form-control-xsmall-adornment-margin: 0.2rem;
+  --feather-form-control-small-font-size: 0.65rem;
+  --feather-form-control-small-height: 1.6rem;
+  --feather-form-control-small-border-radius: 8px;
+  --feather-form-control-small-padding-x: 0.6rem;
+  --feather-form-control-small-adornment-margin: 0.2rem;
+  --feather-form-control-default-font-size: 0.75rem;
+  --feather-form-control-default-height: 1.8rem;
+  --feather-form-control-default-border-radius: 8px;
+  --feather-form-control-default-padding-x: 0.6rem;
+  --feather-form-control-default-adornment-margin: 0.4rem;
+  --feather-form-control-large-font-size: 0.85rem;
+  --feather-form-control-large-height: 2.2rem;
+  --feather-form-control-large-border-radius: 8px;
+  --feather-form-control-large-padding-x: 0.6rem;
+  --feather-form-control-large-adornment-margin: 0.4rem;
+  /* Grid */
+  --feather-grid-micro: 0.2rem;
+  --feather-grid-xxsmall: 0.4rem;
+  --feather-grid-xsmall: 0.6rem;
+  --feather-grid-small: 0.8rem;
+  --feather-grid-medium: 1rem;
+  --feather-grid-large: 1.2rem;
+  --feather-grid-mega: 2rem;
+  --feather-grid-baseline-gap: 8px;
+  --feather-grid-column-gap: 20px;
+  --feather-grid-column-width: 78px;
+  --feather-grid-page-width: 1156px;
+  /* Layout */
+  --feather-layout-container-padding-x: 1.2rem;
+  --feather-layout-navigation-bar-height-experimental: 2.8rem;
+  --feather-layout-navigation-sidebar-width-experimental: 14rem;
+  /* Spaces */
+  --feather-space-1: 1px;
+  --feather-space-2: 0.1rem;
+  --feather-space-4: 0.2rem;
+  --feather-space-6: 0.3rem;
+  --feather-space-8: 0.4rem;
+  --feather-space-12: 0.6rem;
+  --feather-space-16: 0.8rem;
+  --feather-space-20: 1rem;
+  --feather-space-24: 1.2rem;
+  --feather-space-28: 1.4rem;
+  --feather-space-32: 1.6rem;
+  --feather-space-36: 1.8rem;
+  --feather-space-40: 2rem;
+  --feather-space-48: 2.4rem;
+  --feather-space-64: 3.2rem;
+  --feather-space-80: 4rem;
+  /* Typography */
+  --feather-font-family-base: TwitterChirp, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen-Sans, Ubuntu, Cantarell, 'Helvetica Neue', sans-serif;
+  --feather-font-family-monospace: Menlo, Monaco, Consolas, 'Courier New', monospace;
+  --feather-font-size-root: 20px;
+  --feather-font-size-title-3: 1.3rem;
+  --feather-line-height-title-3: 1.6rem;
+  --feather-font-size-title-4: 1.15rem;
+  --feather-line-height-title-4: 1.4rem;
+  --feather-font-size-headline-1: 1rem;
+  --feather-line-height-headline-1: 1.2rem;
+  --feather-font-size-headline-2: 0.85rem;
+  --feather-line-height-headline-2: 1rem;
+  --feather-font-size-body: 0.75rem;
+  --feather-line-height-body: 1rem;
+  --feather-font-size-subtext-1: 0.7rem;
+  --feather-line-height-subtext-1: 0.8rem;
+  --feather-font-size-subtext-2: 0.65rem;
+  --feather-line-height-subtext-2: 0.8rem;
+  --feather-font-size-subtext-3: 0.55rem;
+  --feather-line-height-subtext-3: 0.6rem;
+  --feather-font-size-jumbo: 1.3rem;
+  --feather-line-height-jumbo: 1.6rem;
+  --feather-font-size-xlarge: 1.15rem;
+  --feather-line-height-xlarge: 1.4rem;
+  --feather-font-size-large: 1rem;
+  --feather-line-height-large: 1.2rem;
+  --feather-font-size-normal: 0.75rem;
+  --feather-line-height-normal: 1rem;
+  --feather-font-size-small: 0.65rem;
+  --feather-line-height-small: 0.8rem;
+  --feather-font-weight-normal: 400;
+  --feather-font-weight-medium: 500;
+  --feather-font-weight-bold: 700;
+  --feather-font-weight-heavy-experimental: 800;
+}
+/* Typography class names */
+.feather-text-title-3 {
+  font-size: var(--feather-font-size-title-3);
+  line-height: var(--feather-line-height-title-3);
+}
+.feather-text-title-4 {
+  font-size: var(--feather-font-size-title-4);
+  line-height: var(--feather-line-height-title-4);
+}
+.feather-text-headline-1 {
+  font-size: var(--feather-font-size-headline-1);
+  line-height: var(--feather-line-height-headline-1);
+}
+.feather-text-headline-2 {
+  font-size: var(--feather-font-size-headline-2);
+  line-height: var(--feather-line-height-headline-2);
+}
+.feather-text-body {
+  font-size: var(--feather-font-size-body);
+  line-height: var(--feather-line-height-body);
+}
+.feather-text-subtext-1 {
+  font-size: var(--feather-font-size-subtext-1);
+  line-height: var(--feather-line-height-subtext-1);
+}
+.feather-text-subtext-2 {
+  font-size: var(--feather-font-size-subtext-2);
+  line-height: var(--feather-line-height-subtext-2);
+}
+.feather-text-subtext-3 {
+  font-size: var(--feather-font-size-subtext-3);
+  line-height: var(--feather-line-height-subtext-3);
+}
+.feather-text-jumbo {
+  font-size: var(--feather-font-size-jumbo);
+  line-height: var(--feather-line-height-jumbo);
+}
+.feather-text-xlarge {
+  font-size: var(--feather-font-size-xlarge);
+  line-height: var(--feather-line-height-xlarge);
+}
+.feather-text-large {
+  font-size: var(--feather-font-size-large);
+  line-height: var(--feather-line-height-large);
+}
+.feather-text-normal {
+  font-size: var(--feather-font-size-normal);
+  line-height: var(--feather-line-height-normal);
+}
+.feather-text-small {
+  font-size: var(--feather-font-size-small);
+  line-height: var(--feather-line-height-small);
+}
+.feather-text-small-caps {
+  font-weight: var(--feather-font-weight-bold);
+  letter-spacing: 0.025rem;
+  text-transform: uppercase;
+  font-size: var(--feather-font-size-small);
+  line-height: var(--feather-line-height-small);
+}
+.feather-h1 {
+  font-weight: var(--feather-font-weight-bold);
+  font-size: var(--feather-font-size-title-3);
+  line-height: var(--feather-line-height-title-3);
+}
+.feather-h2 {
+  font-weight: var(--feather-font-weight-bold);
+  font-size: var(--feather-font-size-title-4);
+  line-height: var(--feather-line-height-title-4);
+}
+.feather-h3 {
+  font-weight: var(--feather-font-weight-bold);
+  font-size: var(--feather-font-size-headline-1);
+  line-height: var(--feather-line-height-headline-1);
+}
+/*
+DO NOT EDIT.
+You can rebuild this file by running `yarn dist-js` in `feather-source`.
+The content of this file is derived from feather-core.
+*/
+.feather-text-title-3 {
+  font-size: var(--feather-font-size-title-3);
+  line-height: var(--feather-line-height-title-3);
+}
+.feather-text-title-4 {
+  font-size: var(--feather-font-size-title-4);
+  line-height: var(--feather-line-height-title-4);
+}
+.feather-text-headline-1 {
+  font-size: var(--feather-font-size-headline-1);
+  line-height: var(--feather-line-height-headline-1);
+}
+.feather-text-headline-2 {
+  font-size: var(--feather-font-size-headline-2);
+  line-height: var(--feather-line-height-headline-2);
+}
+.feather-text-body {
+  font-size: var(--feather-font-size-body);
+  line-height: var(--feather-line-height-body);
+}
+.feather-text-subtext-1 {
+  font-size: var(--feather-font-size-subtext-1);
+  line-height: var(--feather-line-height-subtext-1);
+}
+.feather-text-subtext-2 {
+  font-size: var(--feather-font-size-subtext-2);
+  line-height: var(--feather-line-height-subtext-2);
+}
+.feather-text-subtext-3 {
+  font-size: var(--feather-font-size-subtext-3);
+  line-height: var(--feather-line-height-subtext-3);
+}
+.feather-text-jumbo {
+  font-size: var(--feather-font-size-jumbo);
+  line-height: var(--feather-line-height-jumbo);
+}
+.feather-text-xlarge {
+  font-size: var(--feather-font-size-xlarge);
+  line-height: var(--feather-line-height-xlarge);
+}
+.feather-text-large {
+  font-size: var(--feather-font-size-large);
+  line-height: var(--feather-line-height-large);
+}
+.feather-text-normal {
+  font-size: var(--feather-font-size-normal);
+  line-height: var(--feather-line-height-normal);
+}
+.feather-text-small {
+  font-size: var(--feather-font-size-small);
+  line-height: var(--feather-line-height-small);
+}
+.feather-text-small-caps {
+  font-weight: var(--feather-font-weight-bold);
+  letter-spacing: 0.025rem;
+  text-transform: uppercase;
+  font-size: var(--feather-font-size-small);
+  line-height: var(--feather-line-height-small);
+}
+@font-face {
+  font-family: 'TwitterChirp';
+  src: url('https://abs.twimg.com/fonts/v2/chirp-regular-web.woff2') format('woff2'), url('https://abs.twimg.com/fonts/v2/chirp-regular-web.woff') format('woff');
+  font-style: normal;
+  font-weight: 400;
+}
+@font-face {
+  font-family: 'TwitterChirp';
+  src: url('https://abs.twimg.com/fonts/v2/chirp-medium-web.woff2') format('woff2'), url('https://abs.twimg.com/fonts/v2/chirp-medium-web.woff') format('woff');
+  font-style: normal;
+  font-weight: 500;
+}
+@font-face {
+  font-family: 'TwitterChirp';
+  src: url('https://abs.twimg.com/fonts/v2/chirp-bold-web.woff2') format('woff2'), url('https://abs.twimg.com/fonts/v2/chirp-bold-web.woff') format('woff');
+  font-style: normal;
+  font-weight: 700;
+}
+@font-face {
+  font-family: 'TwitterChirp';
+  src: url('https://abs.twimg.com/fonts/v2/chirp-heavy-web.woff2') format('woff2'), url('https://abs.twimg.com/fonts/v2/chirp-heavy-web.woff') format('woff');
+  font-style: normal;
+  font-weight: 800;
+}
+/* Feather-specific icons */
+.Icon--arrowRight:before {
+  content: '\f114';
+}
+.Icon--featherAd:before {
+  content: '\f407';
+}
+.Icon--featherAdCampaign:before {
+  content: '\f405';
+}
+.Icon--featherAdGroup:before {
+  content: '\f406';
+}
+.Icon--featherAudience:before {
+  content: '\f408';
+}
+.Icon--featherCard:before {
+  content: '\f204';
+}
+.Icon--featherCircleCheck:before {
+  content: '\f043';
+}
+.Icon--featherCircleCheckFilled:before {
+  content: '\f220';
+}
+.Icon--featherCircleFail:before {
+  content: '\f044';
+}
+.Icon--featherCircleFailFilled:before {
+  content: "\f222";
+}
+.Icon--featherClone:before {
+  content: '\f214';
+}
+.Icon--featherCode:before {
+  content: '\f410';
+}
+.Icon--featherCurrency:before {
+  content: '\f403';
+}
+.Icon--featherDownload:before {
+  content: '\f186';
+}
+.Icon--featherDraggableGrip:before {
+  content: '\f206';
+}
+.Icon--featherFail:before {
+  content: '\f221';
+}
+.Icon--featherFilm:before {
+  content: '\f211';
+}
+.Icon--featherHistory:before {
+  content: '\f404';
+}
+.Icon--featherMegaphoneStroke:before {
+  content: '\f070';
+}
+.Icon--featherPhotoAlbum:before {
+  content: '\f109';
+}
+.Icon--featherPreview:before {
+  content: '\f216';
+}
+.Icon--featherReload:before {
+  content: '\f303';
+}
+.Icon--featherSignal:before {
+  content: '\f212';
+}
+.Icon--featherWarning:before {
+  content: '\f182';
+}
+.Icon--featherWebsiteVisit:before {
+  content: '\f213';
+}
+/* DEPRECATED Feather-specific icons */
+/* Colors */
+.Icon--featherWarning {
+  color: var(--tw-color-orange-500);
+}
+.Icon--featherFail {
+  color: var(--tw-color-red-500);
+}
+.Icon.Icon--featherTooltipCue {
+  position: relative;
+  width: 0.7rem;
+  height: 0.7rem;
+  background-color: var(--tw-color-blue-300);
+  border-radius: 50%;
+  vertical-align: middle;
+}
+h1 .Icon.Icon--featherTooltipCue,
+h2 .Icon.Icon--featherTooltipCue {
+  vertical-align: super;
+}
+.Icon.Icon--featherTooltipCue::before {
+  position: absolute;
+  top: 0.35rem;
+  width: 100%;
+  color: white;
+  content: '?';
+  font-family: var(--feather-font-family-base);
+  font-size: 0.5rem;
+  font-weight: 700;
+  line-height: 0;
+}
+.Icon.Icon--featherTooltipCue:hover,
+.Icon.Icon--featherTooltipCue:focus {
+  background-color: var(--tw-color-blue-500);
+  cursor: pointer;
+}
+.Icon.Icon--loadingSmall {
+  width: 0.7rem;
+  height: 0.7rem;
+  background: url(../images/spinner-rosetta-blue-14x14@2x.gif) 0 0 no-repeat;
+  background-size: 0.7rem 0.7rem;
+}
+.Icon.Icon--loadingMedium {
+  width: 1.3rem;
+  height: 1.3rem;
+  background: url(../images/spinner-rosetta-blue-26x26@2x.gif) 0 0 no-repeat;
+  background-size: 1.3rem 1.3rem;
+}
+.Icon.Icon--loadingLarge {
+  width: 1.6rem;
+  height: 1.6rem;
+  background: url(../images/spinner-rosetta-blue-32x32@2x.gif) 0 0 no-repeat;
+  background-size: 1.6rem 1.6rem;
+}
+/* Font-based icons */
+@font-face {
+  font-family: "edgeicons";
+  src: url(../fonts/edge-icons-Regular.eot);
+  /* IE9 Compat Modes */
+  src: url(../fonts/edge-icons-Regular.eot?#iefix) format("embedded-opentype"), /* IE8 */ url(../fonts/edge-icons-Regular.woff) format("woff"), /* Modern Browsers */ url(../fonts/edge-icons-Regular.ttf) format("truetype");
+  /* Safari, Android, iOS */
+}
+/*
+ * Reset styles for any element that may be used to display an icon (including
+ * overrides of legacy CSS).
+ */
+.Icon {
+  background: transparent;
+  display: inline-block;
+  font-style: normal;
+  vertical-align: baseline;
+  position: relative;
+}
+/**
+ * A pseudo-element is used to display the icon's glyph. If an icon needs to be
+ * "stacked" to achieve multiple colors you may use both :before and :after
+ * psuedo-elements.
+ */
+.Icon:after,
+.Icon:before {
+  display: block;
+  font-family: 'edgeicons';
+  font-weight: normal;
+  font-style: normal;
+  text-align: center;
+  /* Make sure we get the best rendering for the icons on webkit */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+/**
+ * Icon sizes & spacing
+ */
+.Icon--smallest {
+  font-size: 0.6rem;
+  line-height: 0.6rem;
+}
+.Icon--small {
+  font-size: 0.8rem;
+  line-height: 0.75rem;
+}
+.Icon--medium {
+  font-size: 0.9rem;
+  line-height: 0.9rem;
+}
+.Icon--large {
+  font-size: 1.05rem;
+  line-height: 1;
+}
+.Icon--extraLarge {
+  font-size: 1.6rem;
+  line-height: 1;
+}
+/**
+ * Individual icons
+ * Keep this list alphabetized
+ */
+.Icon--add:before {
+  content: "\f183";
+}
+.Icon--addLight:before {
+  content: "\f198";
+}
+/* Lighter version of the add icon */
+.Icon--analytics:before {
+  content: "\f200";
+}
+.Icon--arrowDown:before {
+  content: "\f174";
+}
+.Icon--arrowLeft:before {
+  content: "\f114";
+  /*@replace: initial*/
+  transform: scaleX(-1);
+}
+.Icon--arrowUp:before {
+  content: "\f188";
+}
+.Icon--atSymbol:before {
+  content: "\f050";
+}
+.Icon--attachFile:before {
+  content: "\f088";
+}
+.Icon--audioBadge:before {
+  content: "\f311";
+}
+.Icon--audioMuted:before {
+  content: "\f306";
+}
+.Icon--audioUnmuted:before {
+  content: "\f305";
+}
+.Icon--balloon:before {
+  content: "\f092";
+}
+.Icon--bird:before {
+  content: "\f179";
+}
+/* TODO: combine with Icon--logo */
+.Icon--bookmark:before {
+  content: "\f155";
+}
+.Icon--calendar:before {
+  content: "\f203";
+}
+.Icon--camera:before {
+  content: "\f027";
+}
+.Icon--cameraPlus:before {
+  content: "\f111";
+}
+.Icon--cameraVideo:before {
+  content: "\f030";
+}
+.Icon--cards:before {
+  content: "\f402";
+}
+.Icon--caretDown:before {
+  content: "\f181";
+}
+.Icon--caretLeft:before {
+  /*@replace: "\f173"*/
+  content: "\f172";
+}
+.Icon--caretLeftLight:before {
+  content: "\f193";
+}
+.Icon--caretRight:before {
+  /*@replace: "\f172"*/
+  content: "\f173";
+}
+.Icon--caretRightLight:before {
+  content: "\f194";
+}
+.Icon--caretUp:before {
+  content: "\f181";
+  transform: scaleY(-1);
+}
+.Icon--cart:before {
+  content: "\f095";
+}
+.Icon--check:before {
+  content: "\f170";
+}
+.Icon--checkLight:before {
+  content: "\f197";
+}
+/* Lighter version of the check icon */
+.Icon--chevronDown:before {
+  content: "\f202";
+}
+.Icon--chevronUp:before {
+  content: "\f201";
+}
+.Icon--circleActiveAnalytics:before {
+  content: "\f516";
+}
+.Icon--circleActiveBird:before {
+  content: "\f520";
+}
+.Icon--circleActiveDm:before {
+  content: "\f517";
+}
+.Icon--circleActiveHeart:before {
+  content: "\f514";
+}
+.Icon--circleActiveList:before {
+  content: "\f518";
+}
+.Icon--circleActiveMe:before {
+  content: "\f519";
+}
+.Icon--circleActiveMore:before {
+  content: "\f515";
+}
+.Icon--circleActiveRetweet:before {
+  content: "\f512";
+}
+.Icon--circleActiveStar:before {
+  content: "\f513";
+}
+.Icon--circleError:before {
+  content: "\f042";
+}
+.Icon--circleMe:before {
+  content: "\f519";
+}
+.Icon--circleReply:before {
+  content: "\f511";
+}
+.Icon--clock:before {
+  content: "\f177";
+}
+.Icon--close:before {
+  content: "\f045";
+}
+.Icon--cog:before {
+  content: "\f059";
+}
+.Icon--cogWithCaret:before {
+  content: "\f124";
+}
+.Icon--collapseTweets:before {
+  content: "\f051";
+}
+.Icon--collections:before {
+  content: "\f008";
+}
+.Icon--conversation:before {
+  content: "\f157";
+}
+.Icon--cover:before {
+  content: "\f163";
+}
+.Icon--createMoment:before {
+  content: "\f162";
+}
+.Icon--creditCard:before {
+  content: "\f401";
+}
+.Icon--crescent:before {
+  content: "\f066";
+}
+.Icon--crescentFilled:before {
+  content: "\f567";
+}
+.Icon--crop:before {
+  content: "\f190";
+}
+.Icon--cvv:before {
+  content: "\f402";
+}
+.Icon--delete:before {
+  content: "\f154";
+}
+.Icon--deskBell:before {
+  content: "\f090";
+}
+.Icon--desktop:before {
+  content: "\f087";
+}
+.Icon--device:before {
+  content: "\f085";
+}
+.Icon--discover:before {
+  content: "\f052";
+}
+/* TODO: rename to Icon--hashtag */
+.Icon--dm:before {
+  content: "\f054";
+}
+.Icon--dmCompose:before {
+  content: "\f035";
+}
+.Icon--dots:before {
+  content: "\f150";
+}
+.Icon--dotsVertical:before {
+  content: "\f149";
+}
+.Icon--download:before {
+  content: "\f186";
+}
+.Icon--editPencil:before {
+  content: "\f112";
+}
+.Icon--envelope:before {
+  content: "\f187";
+}
+.Icon--fail:before {
+  content: "\f000";
+}
+/* TODO: DESIGN-993 – create a dedicated fail icon */
+.Icon--filter:before {
+  content: "\f138";
+}
+.Icon--follow:before {
+  content: "\f175";
+}
+.Icon--follower:before {
+  content: "\f002";
+}
+/* TODO: rename to Icon--followBadge */
+.Icon--following:before {
+  content: "\f176";
+}
+.Icon--geo:before {
+  content: "\f031";
+}
+.Icon--geoBadge:before {
+  content: "\f010";
+}
+.Icon--gif:before {
+  content: "\f028";
+}
+.Icon--gifBadge:before {
+  content: "\f309";
+}
+.Icon--grid:before {
+  content: "\f046";
+}
+.Icon--handset:before {
+  content: "\f091";
+}
+.Icon--heart:before {
+  content: "\f148";
+}
+.Icon--heartBadge:before {
+  content: "\f015";
+}
+.Icon--home:before {
+  content: "\f053";
+}
+.Icon--homeFilled:before {
+  content: "\f553";
+}
+.Icon--horizontalBarChart:before {
+  content: "\f048";
+}
+.Icon--info:before {
+  content: "\f209";
+}
+.Icon--infoFilled:before {
+  content: "\f217";
+}
+.Icon--imageCrop:before {
+  content: "\f158";
+}
+.Icon--laptop:before {
+  content: "\f084";
+}
+.Icon--lifeline:before {
+  content: "\f026";
+}
+.Icon--lifelineBadge:before {
+  content: "\f000";
+}
+.Icon--lightBulbOn:before {
+  content: "\f066";
+}
+.Icon--lightBulbOff:before {
+  content: "\f567";
+}
+.Icon--lightning:before {
+  content: "\f160";
+}
+.Icon--lightningBadge:before {
+  content: "\f161";
+}
+.Icon--lightningFilled:before {
+  content: "\f017";
+}
+.Icon--list:before {
+  content: "\f094";
+}
+.Icon--listBadge:before {
+  content: "\f012";
+}
+.Icon--logo:before {
+  content: "\f179";
+}
+/* TODO: combine with Icon--bird */
+.Icon--magicrecs:before {
+  content: "\f014";
+}
+.Icon--markAllRead:before {
+  content: "\f036";
+}
+.Icon--me:before {
+  content: "\f056";
+}
+/* TODO: rename to Icon--profile */
+.Icon--meFilled:before {
+  content: "\f002";
+}
+/* TODO: rename to Icon--profileFilled */
+.Icon--media:before {
+  content: "\f109";
+}
+.Icon--mediaCollapse:before {
+  content: "\f335";
+}
+.Icon--mediaDocking:before {
+  content: "\f336";
+}
+.Icon--mediaExpand:before {
+  content: "\f334";
+}
+.Icon--menu:before {
+  content: "\f093";
+}
+.Icon--message:before {
+  content: "\f054";
+}
+/* TODO: combine with Icon--dm */
+.Icon--moderator:before {
+  content: "\f089";
+}
+.Icon--muted:before {
+  content: "\f101";
+}
+.Icon--newsBadge:before {
+  content: "\f009";
+}
+.Icon--notifications:before {
+  content: "\f055";
+}
+.Icon--notificationsFilled:before {
+  content: "\f019";
+}
+.Icon--notificationsDisabled:before {
+  content: "\f037";
+}
+.Icon--paintbrush:before {
+  content: "\f159";
+}
+.Icon--pause:before {
+  content: "\f302";
+}
+.Icon--periscopeBadge:before {
+  content: "\f320";
+}
+.Icon--person:before {
+  content: "\f056";
+}
+.Icon--people:before {
+  content: "\f178";
+}
+.Icon--pinned:before {
+  content: "\f003";
+}
+.Icon--play:before {
+  content: "\f301";
+}
+.Icon--poll:before {
+  content: "\f034";
+}
+.Icon--pollBar:before {
+  content: "\f199";
+}
+.Icon--promoted:before {
+  content: "\f004";
+}
+.Icon--promotedStroked:before {
+  content: "\f504";
+}
+.Icon--promotedTrend:before {
+  content: "\f011";
+}
+.Icon--promoteMode:before {
+  content: "\f409";
+}
+.Icon--protected:before {
+  content: "\f096";
+}
+.Icon--refresh:before {
+  content: "\f189";
+}
+.Icon--reply:before {
+  content: "\f151";
+}
+.Icon--report:before {
+  content: "\e609";
+}
+.Icon--retweet:before {
+  content: "\f152";
+}
+.Icon--retweeted:before {
+  content: "\f006";
+}
+/* TODO: rename to Icon--retweetBadge */
+.Icon--search:before {
+  content: "\f058";
+}
+.Icon--share:before {
+  content: "\f185";
+}
+.Icon--smileRating1:before {
+  content: "\f430";
+}
+.Icon--smileRating1Fill:before {
+  content: "\f431";
+}
+.Icon--smileRating2:before {
+  content: "\f432";
+}
+.Icon--smileRating2Fill:before {
+  content: "\f433";
+}
+.Icon--smileRating3:before {
+  content: "\f434";
+}
+.Icon--smileRating3Fill:before {
+  content: "\f435";
+}
+.Icon--smileRating4:before {
+  content: "\f436";
+}
+.Icon--smileRating4Fill:before {
+  content: "\f437";
+}
+.Icon--smileRating5:before {
+  content: "\f438";
+}
+.Icon--smileRating5Fill:before {
+  content: "\f439";
+}
+.Icon--smiley:before {
+  content: "\f033";
+}
+.Icon--snapReelBadge:before {
+  content: "\f312";
+}
+.Icon--soundOff:before {
+  content: "\f306";
+}
+.Icon--soundOn:before {
+  content: "\f305";
+}
+.Icon--stickerBadge:before {
+  content: "\f047";
+}
+.Icon--summary:before {
+  content: "\f156";
+}
+.Icon--tablet:before {
+  content: "\f086";
+}
+.Icon--top:before {
+  content: "\f007";
+}
+.Icon--translator:before {
+  content: "\f089";
+}
+.Icon--truck:before {
+  content: "\f400";
+}
+.Icon--tweet:before {
+  content: "\f029";
+}
+/* TODO: rename to Icon--compose */
+.Icon--unfollow:before {
+  content: "\f097";
+}
+.Icon--unmuted:before {
+  content: "\f101";
+}
+.Icon--url:before {
+  content: "\f098";
+}
+.Icon--vineBadge:before {
+  content: "\f310";
+}
+.Icon--visibilityFollowers:before {
+  content: "\f103";
+}
+.Icon--visibilityFollowing:before {
+  content: "\f105";
+}
+.Icon--visibilityMutual:before {
+  content: "\f104";
+}
+.Icon--visibilityOnlyMe:before {
+  content: "\f106";
+}
+.Icon--visibilityPublic:before {
+  content: "\f102";
+}
+.Icon--warning:before {
+  content: "\f182";
+}
+/**
+ * Design token icons
+ *
+ * These aren't available in macaw-swift. As of March 2022, see
+ * http://go/icon-svg and the `design-tokens` Git repository for the
+ * latest Twitter-wide icons.
+ */
+.Icon--app:before {
+  content: "\f413";
+}
+.Icon--areaChart:before {
+  content: "\f422";
+}
+.Icon--cloud:before {
+  content: "\f442";
+}
+.Icon--codeBlock:before {
+  content: "\f411";
+}
+.Icon--cube:before {
+  content: "\f450";
+}
+.Icon--database:before {
+  content: "\f412";
+}
+.Icon--dataCenter:before {
+  content: "\f414";
+}
+.Icon--directedAcyclicGraph:before {
+  content: "\f419";
+}
+.Icon--eyeOff:before {
+  content: "\f456";
+}
+.Icon--flowChart:before {
+  content: "\f418";
+}
+.Icon--folderClosed:before {
+  content: "\f444";
+}
+.Icon--folderOpen:before {
+  content: "\f445";
+}
+.Icon--heatMap:before {
+  content: "\f420";
+}
+.Icon--helpCircle:before {
+  content: "\f039";
+}
+.Icon--helpCircleFilled:before {
+  content: "\f208";
+}
+.Icon--histogram:before {
+  content: "\f417";
+}
+.Icon--lineChart:before {
+  content: "\f423";
+}
+.Icon--network:before {
+  content: "\f443";
+}
+.Icon--pyramid:before {
+  content: "\f451";
+}
+.Icon--replyOff:before {
+  content: "\f457";
+}
+.Icon--sankeyChart:before {
+  content: "\f415";
+}
+.Icon--scatterPlot:before {
+  content: "\f416";
+}
+.Icon--stackedAreaChart:before {
+  content: "\f424";
+}
+.Icon--stackedLineChart:before {
+  content: "\f425";
+}
+.Icon--tetrahedron:before {
+  content: "\f452";
+}
+.Icon--thumbsDown:before {
+  content: "\f441";
+}
+.Icon--thumbsUp:before {
+  content: "\f440";
+}
+.Icon--treeHierarchy:before {
+  content: "\f421";
+}
+/**
+ * Stacked verified icon
+ *
+ * The :before pseudo-element is the white fill that ensures the tick mark
+ * remains white. The :after pseudo-element is the actual verified icon. The
+ * reason why the white fill is positioned absolutely is because we want the
+ * verified icon to be what gives the element width and height, not the fill.
+ */
+.Icon--verified:before {
+  content: "\f032";
+  font-size: 0.6em;
+  left: 20%;
+  line-height: 1;
+  position: absolute;
+  top: 25%;
+}
+.Icon--verified:after {
+  content: "\f099";
+  line-height: 1;
+  position: relative;
+}
+/**
+ * Stacked play icon
+ *
+ * The :before pseudo-element is the background fill color of the button. The
+ * :after pseudo-element is the play icon with ring. The reason why the
+ * background fill is positioned absolutely is because we want the play icon to
+ * be what gives the element width and height.
+ */
+.Icon--playButton:before {
+  content: "\f032";
+  line-height: 1;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  opacity: 0.8;
+}
+.Icon--playButton:after {
+  content: "\f040";
+  line-height: 1;
+  position: relative;
+}
+/**
+ * 1. The protected glyph is a bit small relative to the verified glyph. Resize
+ *    so that they take up the same visual space when placed next to each other.
+ */
+.Icon--protected {
+  font-size: 1.1em;
+  /* 1 */
+  padding-left: 1px;
+  /* 1 */
+}
+/* Colors */
+.Icon--fail {
+  color: var(--tw-color-red-500);
+}
+.Icon--follower,
+.Icon--magicrecs,
+.Icon--colorLightning,
+.Icon--colorFollower {
+  color: var(--tw-color-blue-primary);
+}
+.Icon--lifelineBadge {
+  color: var(--tw-color-orange-600);
+}
+.Icon--listBadge:before {
+  color: var(--tw-color-gray-700);
+}
+.Icon--muted {
+  color: var(--tw-color-red-500);
+}
+.Icon--promoted {
+  color: var(--tw-color-gray-700);
+}
+.Icon--promotedTrend {
+  color: var(--tw-color-yellow-500);
+}
+.Icon--protected {
+  color: var(--tw-color-text-primary);
+}
+.Icon--retweeted,
+.Icon--colorRetweeted {
+  color: var(--tw-color-green-500);
+}
+.Icon--smiley {
+  color: var(--tw-color-gray-300);
+}
+.Icon--top {
+  color: var(--tw-color-blue-primary);
+}
+.Icon--translator {
+  color: var(--tw-color-blue-primary);
+}
+.Icon--moderator {
+  color: var(--tw-color-yellow-500);
+}
+.Icon--unmuted {
+  color: var(--tw-color-gray-200);
+}
+.Icon--verified {
+  color: var(--tw-color-blue-primary);
+}
+.Icon--verified:before {
+  color: white;
+}
+.Icon--circleActiveMe,
+.Icon--circleActiveBird {
+  color: var(--tw-color-blue-primary);
+}
+.Icon--colorHeart,
+.Icon--circleActiveHeart,
+.Icon--heartBadge {
+  color: var(--tw-color-red-500);
+}
+.Icon--circleActiveRetweet {
+  color: var(--tw-color-green-500);
+}
+.Icon--circleActiveList {
+  color: var(--tw-color-gray-700);
+}
+.Icon--playButton {
+  color: var(--tw-color-blue-primary);
+}
+.Icon--playButton:after {
+  color: white;
+}
+.Icon--white {
+  color: white;
+}
+/**
+ * Inverted Color Scheme
+ *
+ * Icon colors for placement on dark backgrounds
+ */
+.Icon--inverted.Icon--verified {
+  color: white;
+}
+.Icon--inverted.Icon--verified:before {
+  color: var(--tw-color-text-primary);
+}
+:root {
+  --feather-font-size-jumbo: var(--feather-font-size-title-3);
+  --feather-font-size-large: var(--feather-font-size-headline-1);
+  --feather-font-size-normal: var(--feather-font-size-body);
+  --feather-font-size-small: var(--feather-font-size-subtext-2);
+  --feather-font-size-xlarge: var(--feather-font-size-title-4);
+  --feather-line-height-jumbo: var(--feather-line-height-title-3);
+  --feather-line-height-large: var(--feather-line-height-headline-1);
+  --feather-line-height-normal: var(--feather-line-height-body);
+  --feather-line-height-small: var(--feather-line-height-subtext-2);
+  --feather-line-height-xlarge: var(--feather-line-height-title-4);
+}
+/* Body text */
+html {
+  font-size: 20px;
+}
+body {
+  color: var(--tw-color-text-primary);
+  font-family: var(--feather-font-family-base);
+  font-size: var(--feather-font-size-body);
+  line-height: var(--feather-line-height-body);
+}
+a {
+  color: var(--tw-color-text-link);
+  text-decoration: none;
+}
+a:hover,
+a:focus {
+  color: var(--tw-color-text-link);
+  text-decoration: underline;
+}
+p {
+  margin: 0 0 var(--feather-space-8);
+}
+ol,
+ul {
+  margin: var(--feather-space-8) 0;
+  padding-left: var(--feather-space-24);
+}
+ol {
+  list-style: decimal;
+}
+ol ol {
+  list-style: lower-alpha;
+}
+ol ol ol {
+  list-style: lower-roman;
+}
+ul {
+  list-style: disc;
+}
+ul ul {
+  list-style: circle;
+}
+ul ul ul {
+  list-style: square;
+}
+code,
+kbd,
+pre,
+samp {
+  font-family: Menlo, Monaco, Consolas, 'Courier New', monospace;
+}
+button {
+  font-family: var(--feather-font-family-base);
+  line-height: inherit;
+}
+/* Headings */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--feather-font-family-base);
+}
+h1 {
+  font-weight: var(--feather-font-weight-bold);
+  font-size: var(--feather-font-size-title-3);
+  line-height: var(--feather-line-height-title-3);
+}
+h2 {
+  font-weight: var(--feather-font-weight-bold);
+  font-size: var(--feather-font-size-title-4);
+  line-height: var(--feather-line-height-title-4);
+}
+h3 {
+  font-weight: var(--feather-font-weight-bold);
+  font-size: var(--feather-font-size-headline-1);
+  line-height: var(--feather-line-height-headline-1);
+}
+h4,
+h5,
+h6 {
+  font-size: var(--feather-font-size-body);
+  line-height: var(--feather-line-height-body);
+  font-weight: 700;
+}
+/* Icons */
+.Icon::after,
+.Icon::before {
+  -moz-osx-font-smoothing: auto;
+  -webkit-font-smoothing: subpixel-antialiased;
+}
+.Icon.Icon--medium::after,
+.Icon.Icon--large::after,
+.Icon.Icon--extraLarge::after,
+.Icon.Icon--medium::before,
+.Icon.Icon--large::before,
+.Icon.Icon--extraLarge::before {
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+}
+.Icon.Icon--verified::after,
+.Icon.Icon--verified::before {
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+}
+

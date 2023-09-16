@@ -1,229 +1,116 @@
-// Put custom repo GitHub URLs in this object, keyed by nameWithOwner repo name.
-var customGithubURL = {
-    "twitter/pants": "https://github.com/pantsbuild/pants",
-}
+/**
+ * Copyright 2018 Twitter, Inc.
+ * SPDX-License-Identifier: Apache-2.0
+ */
 
-var getGithubURL = function(project) {
-    return customGithubURL[project.nameWithOwner] || 'https://github.com/' + project.nameWithOwner
-}
+const projectCards = Array.from(document.getElementsByClassName("project-card"))
+const searchBox = document.getElementById("search-box")
 
-
-// Put custom repo Website URLs in this object, keyed by nameWithOwner repo name
-var customWebsiteURL = {
-    "twitter/pants": "https://www.pantsbuild.org/",
-}
-
-var getHomepageURL = function(project) {
-    return customWebsiteURL[project.nameWithOwner] || project.homepageURL
-}
-
-/* Create project cards */
-var renderProjects = function(projectsList, searchString="") {
-    // Parent div to hold all the project cards
-    var mainDiv = document.getElementsByClassName("all-projects")[0]
-
-    // Refer this for DOM manipulation with JS https://stackoverflow.com/questions/14094697/how-to-create-new-div-dynamically-change-it-move-it-modify-it-in-every-way-po
-    if (projectsList.length > 0) {
-        for (var project of projectsList) {
-            // Div for each project
-            var projectDiv = document.createElement('div')
-            projectDiv.className = "Grid-cell u-size1of3 project-card"
-
-            // Project Name
-            var nameDiv = document.createElement('h1')
-            nameDiv.className = "project-name small-margin"
-            nameDiv.innerHTML = project.name
-            projectDiv.appendChild(nameDiv)
-
-            // Color-coded border
-            var colorDiv = document.createElement('div')
-            colorDiv.className = "border small-margin"
-            colorDiv.style = "border-bottom-color: " + project.color
-            projectDiv.appendChild(colorDiv)
-
-            // Project Description (HTML version)
-            var descriptionDiv = document.createElement('div')
-            descriptionDiv.className = "project-description xsmall-margin"
-            descriptionDiv.innerHTML = project.description
-            projectDiv.appendChild(descriptionDiv)
-
-            // Primary Language
-            var languageDiv = document.createElement('p')
-            languageDiv.className = "project-language"
-            languageDiv.innerHTML = project.primaryLanguage
-            projectDiv.appendChild(languageDiv)
-
-            // Whitespace
-            var whitespaceDiv = document.createElement('div')
-            whitespaceDiv.className = "whitespace"
-            projectDiv.appendChild(whitespaceDiv)
-
-            // Project Links
-            var projectLinksDiv = document.createElement('div')
-            projectLinksDiv.className = "project-links"
-
-            // GitHub link
-            var githubLink = document.createElement('a')
-            githubLink.href = getGithubURL(project)
-            githubLink.innerHTML = "GitHub"
-            githubLink.target = "_blank"
-            projectLinksDiv.appendChild(githubLink)
-
-            // Website link (with clause)
-            var homepageURL = getHomepageURL(project)
-            if (homepageURL != "") {
-                var websiteLink = document.createElement('a')
-                websiteLink.href = homepageURL
-                websiteLink.innerHTML = "Website"
-                websiteLink.target = "_blank"
-                projectLinksDiv.appendChild(websiteLink)
-            }
-
-            projectDiv.appendChild(projectLinksDiv)
-
-            // Metrics button
-            var metricsButton = document.createElement('button')
-            metricsButton.setAttribute("onclick", "window.open('https://opensource.twitter.com/metrics/" + project.nameWithOwner + "/WEEKLY')")
-            metricsButton.type = "button"
-            metricsButton.className = "Button Button--tertiary"
-            metricsButton.innerHTML = "Metrics"
-            projectDiv.appendChild(metricsButton)
-
-            /* Finally Add the project card to the page */
-            mainDiv.appendChild(projectDiv)
-        }
-    } else {
-        var noResultDiv = document.createElement('div')
-        noResultDiv.className = 'no-results'
-
-        var noResultPara = document.createElement('p')
-        noResultPara.innerHTML = "No results for " + '<b>' + searchString + '</b>'
-        noResultDiv.appendChild(noResultPara)
-
-        var noResultContainer = document.getElementsByClassName("no-results-container")[0]
-        noResultContainer.appendChild(noResultDiv)
-    }
-    // Apply functions that determine how many columns
-    if (matchMedia) {
-        var mq3 = window.matchMedia("(min-width: 1236px)")
-        var mq2 = window.matchMedia("(max-width: 1236px) and (min-width: 850px)")
-        var mq1 = window.matchMedia("(max-width: 850px)")
-        threeColumn(mq3)
-        twoColumn(mq2)
-        oneColumn(mq1)
-    }
-}
-
-// Sort the projects
-var sortFunction = function(a, b) {
-    // Sort by recently pushedAt
-    var deltaA = (new Date) - Date.parse(a.pushedAt)
-    var deltaB = (new Date) - Date.parse(b.pushedAt)
-    return deltaA>=deltaB?1:-1
-}
-
-// Sort and Render
-allProjects.sort(sortFunction)
-renderProjects(allProjects)
-
-
-/* Search implementation starts */
-var searchResult = allProjects  // Search Result initialization
-
-function findMatches(query, repos) {
-  if (query === '') {
-      return repos
-  } else {
-      var options = {
-        findAllMatches: true,
-        threshold: 0.2,
-        location: 0,
-        distance: 50,
-        maxPatternLength: 50,
-        minMatchCharLength: 1,
-        keys: [
-          "name",
-          "languages",
-          "description"
-        ]
-      }
-      var fuse = new Fuse(repos, options)
-      var result = fuse.search(query)
-
-      // Sort
-      result.sort(sortFunction)
-
-      return result
-  }
-}
-
-var searchBox = document.getElementsByClassName('search-box')[0]
-
-document.addEventListener('keyup', function(event) {
-    /* Update the list of results with the search results */
-    var newProjectsList = []
-    var searchString = searchBox.value.trim()
-    searchResult = findMatches(searchString, allProjects)
-
-    // Remove all the projects
-    var mainDiv = document.getElementsByClassName("all-projects")[0]
-    while (mainDiv.firstChild) {
-        mainDiv.removeChild(mainDiv.firstChild)
-    }
-
-    var noResultContainer = document.getElementsByClassName("no-results-container")[0]
-    while (noResultContainer.firstChild) {
-        noResultContainer.removeChild(noResultContainer.firstChild)
-    }
-
-    for (var item of searchResult) {
-        newProjectsList.push(item)
-    }
-    renderProjects(newProjectsList, searchString=searchBox.value)
+// parse cards to build project list
+const projects = []
+projectCards.forEach(card => {
+    projects.push({
+        id: card.id,
+        name: card.getElementsByClassName("project-name")[0].innerText,
+        description: card.getElementsByClassName("project-description")[0].innerText,
+        language: card.getElementsByClassName("project-language")[0].innerText,
+    })
 })
 
-/* Search implementation ends */
+// import fuse and initialize
+let fuse;
+import("https://cdnjs.cloudflare.com/ajax/libs/fuse.js/6.4.6/fuse.esm.min.js")
+    .then(module => {
+        Fuse = module.default
+        fuse = new Fuse(projects, {
+            findAllMatches: true,
+            isCaseSensitive: false,
+            threshold: 0.1,
+            ignoreLocation: true,
+            useExtendedSearch: true,
+            keys: [
+              "name",
+              "description",
+              "language",
+            ],
+        })
 
-// Media queries for projects grid
-if (matchMedia) {
-    var mediaQueryThreeColumn = window.matchMedia("(min-width: 1236px)")
-    threeColumn(mediaQueryThreeColumn)
-    mediaQueryThreeColumn.addListener(threeColumn)
+        // perform initial search with query parameter if present
+        if (q = new URL(window.location).searchParams.get("q")) {
+            search(q)
+        }
+        // respond to browser history navigation
+        window.addEventListener("popstate", () => {
+            q = new URL(window.location).searchParams.get("q")
+            search(q)
+        })
+    })
 
-    var mediaQueryTwoColumn = window.matchMedia("(max-width: 1236px) and (min-width: 850px)")
-    twoColumn(mediaQueryTwoColumn)
-    mediaQueryTwoColumn.addListener(twoColumn)
+// perform search on search-box keyup and store in browser history.
+searchBox.addEventListener('keyup', function(event) {
+    const query = this.value
+    search(query)
 
-    var mediaQueryOneColumn = window.matchMedia("(max-width: 850px)")
-    oneColumn(mediaQueryOneColumn)
-    mediaQueryOneColumn.addListener(oneColumn)
-}
+    // push new query onto history stack
+    const url = new URL(window.location)
+    if (url.searchParams.get('q') != query) {
+        if (query) {
+            url.searchParams.set('q', query)
+        } else {
+            url.searchParams.delete('q')
+        }
+        pushState(query, url)
+    }
+})
 
-// 3 columns
-function threeColumn(mediaQuery) {
-    if (mediaQuery.matches) {
-        addClassByClass("project-card", "u-size1of3")
-        removeClassByClass("project-card", "u-size1of2")
-    } else {
-        removeClassByClass("project-card", "u-size1of3")
+// debounce wraps a function so that calls will be delayed to prevent repeated
+// calls within the specified time window.
+const debounce = (fn, timeout = 500) => {
+    let timer
+    return (...args) => {
+        clearTimeout(timer)
+        timer = setTimeout(() => { fn.apply(this, args); }, timeout);
     }
 }
 
-// 2 columns
-function twoColumn(mediaQuery) {
-    if (mediaQuery.matches) {
-        addClassByClass("project-card", "u-size1of2")
-        removeClassByClass("project-card", "u-size1of3")
-    } else {
-        removeClassByClass("project-card", "u-size1of2")
-    }
-}
+// pushState pushes the new search query onto the browser history on a slight
+// delay. This is to prevent every individual keystroke from being pushed onto
+// the history stack.
+const pushState = debounce((query, url) => {
+    window.history.pushState({}, `Projects search: ${query}`, url)
+})
 
-// 1 column
-function oneColumn(mediaQuery) {
-    if (mediaQuery.matches) {
-        removeClassByClass("project-card", "u-size1of3")
-        removeClassByClass("project-card", "u-size1of2")
-    }
-}
+// search the project list for the query string and display ranked results.
+const search = (query) => {
+    searchBox.value = query
+    const resultsBox = document.getElementById('results')
 
+    if (!query) {
+        // reset all project cards
+        projectCards.forEach(card => {
+            card.classList.remove("hide")
+            card.style.removeProperty("order")
+        })
+        resultsBox.classList.add("hide")
+        return
+    }
+    const results = fuse.search(query)
+
+    // first, hide all the projects
+    projectCards.forEach(card => {
+        card.classList.add("hide")
+    })
+
+
+    // show results in ranked order
+    let order = 1
+    results.forEach(r => {
+        const card = document.getElementById(r.item.id)
+        card.classList.remove("hide")
+        card.style.setProperty("order", order++)
+    })
+
+    resultsBox.getElementsByClassName("count")[0].innerText = results.length
+    resultsBox.getElementsByClassName("query")[0].innerText = query
+    resultsBox.classList.remove("hide")
+}

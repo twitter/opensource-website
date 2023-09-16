@@ -1,18 +1,7 @@
-{{ define "main" }}
-
-<div class="header squad-header">
-	<div class="Grid container">
-		<div id="header-text" class="Grid-cell">
-			<h1 class="large-title">#Squad</h1>
-			<h1 class="squad-subheading">Our upstream and downstream partners who make open source happen</h1>
-		</div>
-	</div>
-</div>
-
-<div class="section">
-	<div class="Grid membership-container container">
+{{ define "content" }}
+	<div class="membership-container container">
 		{{ range $.Site.Data.memberships }}
-		<div class="Grid-cell sizeFull membership">
+		<div class="sizeFull membership" id="{{ .id }}">
 			<!-- Logo -->
 			<img src="{{ .logo }}" class="membership-logo">
 
@@ -22,7 +11,7 @@
 
 				<!-- Twitter handle -->
 				{{ with .twitter }}
-				<a href="https://twitter.com/{{ . }}" target="_blank" class="membership-handle">
+				<a href="https://twitter.com/{{ . }}" target="_blank" rel="noopener" class="membership-handle">
 					@{{ . }}
 				</a>
 				{{ end }}
@@ -33,11 +22,10 @@
 
 		    <!-- Visit website -->
 		    {{ with .website }}
-		    <button onclick="window.open('{{ . }}')" type="button" class="Button">Visit</button>
+				<a href="{{ . }}" class="Button">Visit</a>
 		    {{ end }}
 
 		</div>
 		{{ end }}
 	</div>
-</div>
 {{ end }}

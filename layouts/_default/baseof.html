@@ -1,21 +1,36 @@
 <!DOCTYPE html>
-<html>
+<html lang="en" class="no-js">
   <head>
     {{ partial "head.html" . }}
   </head>
 
   <body>
-    {{ partial "nav.html" . }}
+    {{ block "nav" . }}{{ partial "nav.html" . }}{{ end }}
 
+    {{ block "main" . }}
     <!-- Site wrapper -->
-    <div class="site">
-        {{ block "main" . }}{{ end }}
-    </div>
+    <main>
+      <div class="header">
+        <div class="container">
+          <div id="header-text">
+            {{ block "header" . }}
+              {{ with .Title }}<h1 class="large-title">{{ . }}</h1>{{ end }}
+              {{ with .Params.subtitle }}<h1 class="subtitle">{{ . }}</h1>{{ end }}
+            {{ end }}
+          </div>
+        </div>
+      </div>
+      <div class="content">
+        {{ block "content" . }}{{ end }}
+      </div>
+    </main>
+    {{ end }}
 
-    {{ partial "footer.html" . }}
+    {{ block "footer" . }}{{ partial "footer.html" . }}{{ end }}
   </body>
 
+  <script>document.getElementsByTagName("html")[0].classList.remove("no-js")</script>
   <script src="{{ "js/main.js" | relURL }}"></script>
-  <script src="{{ printf "js/%s" .Params.custom_js | relURL }}"></script>
-  {{ partial "ga.html" . }}
+  {{ with .Params.custom_js }}<script src="{{ printf "js/%s" . | relURL }}"></script>{{ end }}
+  {{ if hugo.IsProduction }}{{ partial "ga.html" . }}{{ end }}
 </html>

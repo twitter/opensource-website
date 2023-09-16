@@ -1,0 +1,16 @@
+@media (prefers-color-scheme: dark) {
+  // very basic support for dark mode until Feather supports this natively
+  :root {
+    --tw-color-text-primary: var(--tw-color-gray-0);
+  }
+  .Button {
+    --feather-button-background-color: var(--tw-color-gray-1100);
+    --feather-button-background-color-hover: var(--tw-color-gray-900);
+    --feather-button-border-color: var(--tw-color-gray-700);
+
+    --feather-button-primary-background-color-active: var(--tw-color-gray-200);
+    --feather-button-primary-background-color: var(--tw-color-gray-0);
+    --feather-button-primary-background-color-hover: var(--tw-color-gray-100);
+    --feather-button-primary-color: var(--tw-color-gray-1100);
+  }
+}

@@ -1,175 +1,66 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8" />
-    <meta name="title" content="{{ .Title }}">
-    <meta name="description" content="{{ .Description }}">
-    <meta name="keywords" content="{{ .Params.keywords }}">
-
-    <meta name="og:title" content="{{ .Title }}">
-    <meta name="og:url" content="{{ .Permalink }}">
-    <!-- <meta name="og:image" content="{{ .Params.logo }}"> -->
-    <meta name="og:description" content="{{ .Description }}">
-
-    <meta name="twitter:card" content="summary" />
-    <meta name="twitter:site" content="{{ .Permalink }}" />
-    <meta name="twitter:title" content="{{ .Title }}" />
-    <meta name="twitter:description" content="{{ .Description }}" />
-    <!-- <meta name="twitter:image" content="{{ .Params.logo }}" /> -->
-
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-
-    <meta http-equiv='Expires' content='0'>
-    <meta http-equiv='Pragma' content='no-cache'>
-    <meta http-equiv='Cache-Control' content='no-cache'>
-    <meta http-equiv='imagetoolbar' content='no'>
-
-    <title>{{ .Title }}</title>
-    <link rel="shortcut icon" type="image/png" href="{{ "assets/favicon.ico" | relURL }}"/>
-
-    <!-- Year in Review timeline effect CSS -->
-    <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css'>
-    <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css'>
-
-    <!-- Feather CSS -->
-    <link rel="stylesheet" href="{{ "css/feather-core.css" | relURL }}"/>
-    <link rel="stylesheet" href="{{ "css/feather-component-grid.css" | relURL }}"/>
-    <link rel="stylesheet" href="{{ "css/feather-component-button.css" | relURL }}"/>
-
-    <!-- Main CSS -->
-    <link rel="stylesheet" href="{{ "css/main.css" | relURL }}"/>
-
-    {{- with .Params.custom_css }}
-    <!-- Custom CSS -->
-    <link rel="stylesheet" href="{{ printf "css/%s" . | relURL }}"/>
-    {{ end }}
-  </head>
-
-<body data-spy="scroll" data-target="#YIR-navbar">
+{{ define "nav" }}
   <!-- Navigation Bar -->
     <nav>
     <div class="nav-title">
-      <span class="Icon Icon--logo Icon--large"></span>
-      <!-- Link in web -->
-      <a class="YIRnav-home-link" href="{{ "" | relURL }}">Twitter Open Source</a>
-      <a class="YIRnav-YIR-link" href="{{ "year-in-review" | relURL }}">Year in Review</a>
-      
-      <!-- Only in mobile -->
-      <p class="home-text">Twitter Open Source</p>
-      <span id="caret" class="Icon Icon--caretDown"></span>
+        <a class="home-link" href="{{ "" | relURL }}">
+            <img src="/assets/twitter-logo.svg" alt="Twitter">
+            Open Source
+            <a class="YIRnav-YIR-link" href="#">Year in Review</a>
+        </a>
     </div>
+    <a id="menu-toggle" href="#" onclick="document.getElementById('nav-menu').classList.toggle('active'); return false;">
+        <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px" fill="#ffffff"><path d="M0 0h24v24H0z" fill="none"/><path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"/></svg>
+    </a>
 
     <!-- Only in mobile -->
-    <ul class="nav-menu">
-      <li class="nav-list-item">
-        <a class="nav-link" href="#section1">Welcome</a>
-      </li>
-
-      <li class="nav-list-item">
-        <a class="nav-link" href="#section2">Top 10 repos</a>
-      </li>
-
-      <li class="nav-list-item">
-        <a class="nav-link" href="#section3">Locations</a>
-      </li>
-
-      <li class="nav-list-item">
-        <a class="nav-link" href="#section4">Heat metrics</a>
-      </li>
-
-      <li class="nav-list-item">
-        <a class="nav-link" href="#section5">Light metrics</a>
-      </li>
-
-      <li class="nav-list-item">
-        <a class="nav-link" href="#section6">Love metrics</a>
-      </li>
-
-      <li class="nav-list-item list-end">
-        <a class="nav-link" href="#section7">@TwitterOSS</a>
-      </li>
+    <ul id="nav-menu">
+      <li><a href="#welcome">Welcome</a></li>
+      <li><a href="#top10">Top 10 repos</a></li>
+      <li><a href="#locations">Locations</a></li>
+      <li><a href="#heat">Heat metrics</a></li>
+      <li><a href="#light">Light metrics</a></li>
+      <li><a href="#love">Love metrics</a></li>
+      <li><a href="#follow">@TwitterOSS</a></li>
     </ul>
   </nav>
-    
+{{ end }}
+
+{{ define "main" }}
   <!-- Timeline navigation effect from https://codepen.io/nailaahmad/pen/MyZXVE -->
     <div class="YIR-wrapper">
     <div class="YIR-container">
       <div class="YIR-nav-wrapper" id="YIR-navbar">
         <ul class="nav">
-          <li class="active">
-            <a href="#section1">
-              <span class="YIR-nav-title">Welcome</span>
-              <p class="YIR-nav-body">This webpage updates weekly and provides a sliding window into the previous 12 months. Patches are always welcome.</p>
-            </a>
-          </li>
-
-          <li>
-            <a href="#section2">
-              <span class="YIR-nav-title">Top 10 repos</span>
-              <p class="YIR-nav-body">These are our top 10 GitHub repositories, ranked by total commit counts.</p>
-            </a>
-          </li>
-
-          <li>
-            <a href="#section3">
-              <span class="YIR-nav-title">Locations</span>
-              <p class="YIR-nav-body">Our contributors are located all around the world. This list is based on self reported locations from our contributors’ GitHub profiles.</p>
-            </a>
-          </li>
-      
-          <li>
-            <a href="#section4">
-              <span class="YIR-nav-title">Heat metrics</span>
-              <p class="YIR-nav-body">Heat means work. We measure heat by the number and frequency of commits and committers across our repos.</p>
-            </a>
-          </li>
-          
-          <li>
-            <a href="#section5">
-              <span class="YIR-nav-title">Light metrics</span>
-              <p class="YIR-nav-body">Light means visibility. We measure visibility by number of watchers subscribed to updates, and number of people who have favorited our projects.</p>
-            </a>
-          </li>
-          
-          <li>
-            <a href="#section6">
-              <span class="YIR-nav-title">Love metrics</span>
-              <p class="YIR-nav-body">Love means culture and support. We measure love by the number of users who have copied our projects and contributed changes back upstream.</p>
-            </a>
-          </li>
-
-          <li>
-            <a href="#section7">
-              <span class="YIR-nav-title">@TwitterOSS</span>
-              <p class="YIR-nav-body">Making it simple to trust, ship, and grow Open Source at Twitter and beyond. Follow @TwitterOSS to stay updated!</p>
-            </a>
-          </li>
+          <li><a href="#welcome"><span class="YIR-nav-title">Welcome</span></a></li>
+          <li><a href="#top10"><span class="YIR-nav-title">Top 10 repos</span></a></li>
+          <li><a href="#locations"><span class="YIR-nav-title">Locations</span></a></li>
+          <li><a href="#heat"><span class="YIR-nav-title">Heat metrics</span></a></li>
+          <li><a href="#light"><span class="YIR-nav-title">Light metrics</span></a></li>
+          <li><a href="#love"><span class="YIR-nav-title">Love metrics</span></a></li>
+          <li><a href="#follow"><span class="YIR-nav-title">@TwitterOSS</span></a></li>
         </ul>
-      </div> <!-- End of YIR-nav-wrapper -->
-    </div> <!-- End of YIR-container -->
+      </div>
+    </div>
 
-    <section class="section1" id="section1">
+    <section id="welcome">
       <div class="YIR-container-section">
         <div class="YIR-header">
-          <!-- id="type" -->
-          <h1 class="YIR-subheading" id="date-range"></h1>
+          <h1 class="YIR-subheading" id="date-range">{{ (now.AddDate -1 0 0).Format "Jan 2006" }} - {{ now.Format "Jan 2006" }}</h1>
           <h1 id="YIR-heading-text">Year in Review</h1>
           <h1 class="YIR-subheading" id="type">An overview of the past 12 months of activity on Twitter’s Open Source projects.</h1>
         </div>
 
-        <!-- Only visible in mobile -->
-        <div class="mobile-heading" id="YIR-header-mobile-heading">
-          <p>This webpage updates weekly and provides a sliding window into the previous 12 months. Patches are always welcome.</p>
+        <div class="inline-heading" id="YIR-header-inline-heading">
+          <p class="section-description">This webpage updates weekly and provides a sliding window into the previous 12 months. Patches are always welcome.</p>
         </div>
       </div>
     </section>
 
-    <section class="section2" id="section2">
+    <section id="top10">
       <div class="YIR-container-section">
-        <!-- Only visible in mobile -->
-        <div class="mobile-heading">
+        <div class="inline-heading">
           <h1>Top 10 repos</h1>
-          <p>These are our top 10 GitHub repositories, ranked by total commit counts.</p>
+          <p class="section-description">These are our top 10 GitHub repositories, ranked by total commit counts.</p>
         </div>
 
         <table id="top-10-repos">
@@ -178,75 +69,50 @@
             <th></th>
             <th>Total commits</th>
           </tr>
-          <!-- Table content added in year-in-review.js -->
+          {{/* put augur data into a slice that can be sorted and indexed */}}
+          {{- $repos := slice }}
+          {{- range $name, $data := $.Site.Data.augur.repo_commits -}}
+            {{ $repos = $repos | append (dict "name" $name "commit_count" $data.commit_count) }}
+          {{- end -}}
+          {{- range $i, $repo := first 10 (sort $repos "commit_count" "desc") }}
+          <tr class="content">
+            <td class="num">{{ add $i 1 }}</td>
+            <td class="repo"><a href="https://github.com/twitter/{{ .name }}" target="_blank" rel="noopener">{{ .name }}</a></td>
+            <td class="commit-value">{{ partial "formatNum" .commit_count }}</td>
+          </tr>
+          {{- end -}}
         </table>
       </div>
     </section>
 
-    <section class="section3" id="section3">
+    <section id="locations">
       <div class="YIR-container-section">
-        <!-- Only visible in mobile -->
-        <div class="mobile-heading">
+        <div class="inline-heading">
           <h1 class="large-title">Locations</h1>
-          <p>Our contributors are located all around the world. This list is based on self reported locations from our contributors’ GitHub profiles.</p>
+          <p class="section-description">Our contributors are located all around the world. This list is based on self reported locations from our contributors’ GitHub profiles.</p>
         </div>
 
         <div class="locations">
-          <div class="location-item">
-            <img src="/assets/year-in-review/flags/united_states_1f1fa-1f1f8.svg" alt="United States flag"> 
-            United States 
-          </div>
-          <div class="location-item">
-            <img src="/assets/year-in-review/flags/greece_1f1ec-1f1f7.svg" alt="Greece flag"> 
-            Greece 
-          </div>
-          <div class="location-item">
-            <img src="/assets/year-in-review/flags/germany_1f1e9-1f1ea.svg" alt="Germany flag"> 
-            Germany 
-          </div>
-          <div class="location-item">
-            <img src="/assets/year-in-review/flags/united_kingdom_1f1ec-1f1e7.svg" alt="United Kingdom flag"> 
-            United Kingdom 
-          </div>
-           <div class="location-item">
-            <img src="/assets/year-in-review/flags/singapore_1f1f8-1f1ec.svg" alt="Singapore flag"> 
-            Singapore 
-          </div>
-          <div class="location-item">
-            <img src="/assets/year-in-review/flags/china_1f1e8-1f1f3.svg" alt="China flag"> 
-            China 
-          </div>
-          <div class="location-item">
-            <img src="/assets/year-in-review/flags/belgium_1f1e7-1f1ea.svg" alt="Belgium flag"> 
-            Belgium 
-          </div>
-          <div class="location-item">
-            <img src="/assets/year-in-review/flags/austria_1f1e6-1f1f9.svg" alt="Austria flag"> 
-            Austria 
-          </div>
-          <div class="location-item">
-            <img src="/assets/year-in-review/flags/peru_1f1f5-1f1ea.svg" alt="Peru flag"> 
-            Peru 
+          {{- range $.Site.Data.locations -}}
+            <div class="location-item">
+              <img src="/assets/year-in-review/flags/{{ .flag }}" alt="{{ .name }} flag">
+              {{ .name }}
             </div>
-          <div class="location-item">
-            <img src="/assets/year-in-review/flags/australia_1f1e6-1f1fa.svg" alt="Australia flag"> 
-            Australia 
-          </div>
+          {{- end -}}
           <p class="locations-disclaimer">*Top 10 locations ranked by commits, accurate as of Aug 2019</p>
         </div>
       </div>
     </section>
 
-    <section class="section4" id="section4">
+    <section id="heat">
       <div class="YIR-container-section">
-        <!-- Only visible in mobile -->
-        <div class="mobile-heading">
+        <div class="inline-heading">
           <h1>Heat metrics</h1>
-          <p>Heat means work. We measure heat by the number and frequency of commits and committers across our repos.</p>
+          <p class="section-description">Heat means work. We measure heat by the number and frequency of commits and committers across our repos.</p>
         </div>
 
         <div class="metric-wrapper">
-          <svg class="fire-svg" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+          <svg class="fire-svg in-view" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
             width='220px' height ='220px' viewBox="-1 -1 38 38" xml:space="preserve" >
             <path class="fire-st0" d="M35,19c0-2.1-0.4-4-1-5.9c-0.5,5.4-3.3,8.2-6.3,6.9c-2.8-1.2-0.9-5.9-0.8-8.2c0.2-3.8,0-8.2-6.9-11.8
               c2.9,5.5,0.3,8.9-2.3,9.1c-3,0.2-5.7-2.5-4.7-7c-3.2,2.4-3.3,6.4-2.3,9c1,2.7,0,5-2.6,5.2c-2.8,0.3-4.4-3-3-8.3c-2.5,3-4,6.8-4,11
@@ -256,9 +122,9 @@
               C30,27.8,29.4,25.8,28.4,24z"/>
           </svg>
           <!-- <img src="/assets/year-in-review/fire_outline.svg" alt="Fire emoji" class="emoji-outline"> -->
-          
+
           <div class="metric">
-            <span class="metric-count" id="commit-count"></span>
+            <span class="metric-count" id="commit-count">{{ partial "formatNum" (index $.Site.Data.augur.aggregate_summary 0).commit_count }}</span>
             <span class="metric-name">commits</span>
             <div class="description">
               Commits reflect the amount of activity across our repositories.
@@ -266,26 +132,25 @@
           </div>
 
           <div class="metric">
-            <span class="metric-count" id="committer-count"></span>
+            <span class="metric-count" id="committer-count">{{ partial "formatNum" (index $.Site.Data.augur.aggregate_summary 0).committer_count }}</span>
             <span class="metric-name">committers</span>
             <div class="description">
-              Committers are the unique individuals that drive change in our repositories. 
+              Committers are the unique individuals that drive change in our repositories.
             </div>
-          </div>  
+          </div>
         </div>
       </div>
     </section>
 
-    <section class="section5" id="section5">
+    <section id="light">
       <div class="YIR-container-section">
-        <!-- Only visible in mobile -->
-        <div class="mobile-heading">
+        <div class="inline-heading">
           <h1>Light metrics</h1>
-          <p>Light means visibility. We measure visibility by number of watchers subscribed to updates, and number of people who have favorited our projects.</p>
+          <p class="section-description">Light means visibility. We measure visibility by number of watchers subscribed to updates, and number of people who have favorited our projects.</p>
         </div>
 
         <div class="metric-wrapper">
-          <svg class="sun-svg" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+          <svg class="sun-svg in-view" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
             width='220px' height ='220px' viewBox="-1 -1 38 38" xml:space="preserve">
             <path class="sun-st0" d="M8,18a10,10 0 1,0 20,0a10,10 0 1,0 -20,0"/>
             <path class="sun-st1" d="M16,2c0,0,0-2,2-2s2,2,2,2v2c0,0,0,2-2,2s-2-2-2-2V2z"/>
@@ -296,11 +161,11 @@
             <path class="sun-st6" d="M29.7,10.1c0,0-1.4,1.4-2.8,0s0-2.8,0-2.8l1.4-1.4c0,0,1.4-1.4,2.8,0s0,2.8,0,2.8S29.7,10.1,29.7,10.1z"/>
             <path class="sun-st7" d="M8.7,31.1c0,0-1.4,1.4-2.8,0s0-2.8,0-2.8l1.4-1.4c0,0,1.4-1.4,2.8,0s0,2.8,0,2.8S8.7,31.1,8.7,31.1z"/>
             <path class="sun-st8" d="M16,32c0,0,0-2,2-2s2,2,2,2v2c0,0,0,2-2,2s-2-2-2-2V32z"/>
-          </svg>  
+          </svg>
           <!-- <img src="/assets/year-in-review/sun_outline.svg" alt="Fire emoji" class="emoji-outline"> -->
-          
+
           <div class="metric">
-            <span class="metric-count" id="watcher-count"></span>
+            <span class="metric-count" id="watcher-count">{{ partial "formatNum" (index $.Site.Data.augur.aggregate_summary 0).watcher_count }}</span>
             <span class="metric-name">watchers</span>
             <div class="description">
               Watchers receive notifications for some or all changes to our codebases.
@@ -308,26 +173,25 @@
           </div>
 
           <div class="metric">
-            <span class="metric-count" id="star-count"></span>
+            <span class="metric-count" id="star-count">{{ partial "formatNum" (index $.Site.Data.augur.aggregate_summary 0).stars_count }}</span>
             <span class="metric-name">stars</span>
             <div class="description">
               Stars show preference for a repository, like a bookmark.
             </div>
-          </div>  
+          </div>
         </div>
       </div>
     </section>
 
-    <section class="section6" id="section6">
+    <section id="love">
       <div class="YIR-container-section">
-        <!-- Only visible in mobile -->
-        <div class="mobile-heading">
+        <div class="inline-heading">
           <h1>Love metrics</h1>
-          <p>Love means culture and support. We measure love by the number of users who have copied our projects and contributed changes back upstream.</p>
+          <p class="section-description">Love means culture and support. We measure love by the number of users who have copied our projects and contributed changes back upstream.</p>
         </div>
 
         <div class="metric-wrapper">
-          <svg class="heart-svg" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+          <svg class="heart-svg in-view" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
             width='220px' height ='220px' viewBox="-1 -1 38 38" xml:space="preserve">
             <path class="heart-st0" d="M31.6,22.9c2-2.8,3.5-5.8,4-8.8c0.2-0.7,0.3-1.5,0.3-2.2C35.9,6.4,31.5,2,26,2c-3.3,0-6.2,1.6-8,4.1
               C16.2,3.6,13.3,2,10,2c-5.4,0-9.9,4.4-9.9,9.9c0,0.8,0.1,1.5,0.3,2.2C1.8,22.6,11.2,31.6,18,34c2.6-0.9,5.6-2.8,8.4-5.3"/>
@@ -338,9 +202,9 @@
               C11.7,9.6,12,9.2,12,8.8C12,8.4,11.7,8,11.3,7.9z"/>
             </svg>
           <!-- <img src="/assets/year-in-review/heart_outline.svg" alt="Fire emoji" class="emoji-outline"> -->
-          
+
           <div class="metric">
-            <span class="metric-count" id="fork-count"></span>
+            <span class="metric-count" id="fork-count">{{ partial "formatNum" (index $.Site.Data.augur.aggregate_summary 0).fork_count }}</span>
             <span class="metric-name">forks</span>
             <div class="description">
               Forks represent full-copies of our repositories, usually for development and testing.
@@ -348,22 +212,21 @@
           </div>
 
           <div class="metric">
-            <span class="metric-count" id="merged-count"></span>
+            <span class="metric-count" id="merged-count">{{ partial "formatNum" (index $.Site.Data.augur.aggregate_summary 0).merged_count }}</span>
             <span class="metric-name">PRs merged</span>
             <div class="description">
               Our users contribute pull requests (PRs) directly back to us.
             </div>
-          </div>  
+          </div>
         </div>
       </div>
     </section>
 
-    <section class="section7" id="section7">
+    <section id="follow">
       <div class="YIR-container-section">
-        <!-- Only visible in mobile -->
-        <div class="mobile-heading">
+        <div class="inline-heading">
           <h1>@TwitterOSS</h1>
-          <p>Making it simple to trust, ship, and grow Open Source at Twitter and beyond. Follow @TwitterOSS to stay updated!</p>
+          <p class="section-description">Making it simple to trust, ship, and grow Open Source at Twitter and beyond. Follow @TwitterOSS to stay updated!</p>
         </div>
 
         <div class="YIR-tweet-wrapper">
@@ -371,69 +234,8 @@
         </div>
       </div>
     </section>
-    
+
   </div> <!-- End of YIR-wrapper -->
+{{ end }}
 
-</body>
-
-<!-- Get all repos and commit counts -->
-<script type="text/javascript">
-  // Get all repos from repo_commits.json
-  let allRepos = [];
-  {{ range $name, $data := $.Site.Data.augur.repo_commits }}
-    allRepos.push({
-      name: "{{ $name }}",
-      commitCount: "{{ $data.commit_count }}",
-    })
-  {{ end }}
-
-  // Convert numbers greater than 1 million to m, and numbers greater than 10,000 to k
-  function formatNum(num) {
-    if (num >= 1000000) {
-      num = Math.floor(num / 1000000);
-      return num.toString() + "m";
-    } else if (num >= 10000) {
-      num = Math.floor(num / 1000);
-      return num.toString() + "k";
-    } else {
-      return Math.floor(num).toString();
-    }
-  }
-
-  // Insert metric counts
-  {{ range $.Site.Data.augur.aggregate_summary }}
-    var commitCountSpan = document.getElementById("commit-count");
-    commitCountSpan.innerText = formatNum("{{ .commit_count }}");
-
-    var committerCountSpan = document.getElementById("committer-count");
-    committerCountSpan.innerText = formatNum("{{ .committer_count }}");
-
-    var watcherCountSpan = document.getElementById("watcher-count");
-    watcherCountSpan.innerText = formatNum("{{ .watcher_count }}");
-
-    var starCountSpan = document.getElementById("star-count");
-    starCountSpan.innerText = formatNum("{{ .stars_count }}");
-
-    var forkCountSpan = document.getElementById("fork-count");
-    forkCountSpan.innerText = formatNum("{{ .fork_count }}");
-
-    var mergedCountSpan = document.getElementById("merged-count");
-    mergedCountSpan.innerText = formatNum("{{ .merged_count }}");   
-  {{ end }}
-
-</script>
-
-<!-- TypeIt JS for typing header effect -->
-<script src="https://cdn.jsdelivr.net/npm/typeit@6.0.3/dist/typeit.min.js"></script>
-
-<!-- Year in Review timeline effect JS -->
-<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
-<script src='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js'></script>
-
-<!-- Twemoji -->
-<!-- <script src="https://twemoji.maxcdn.com/v/latest/twemoji.min.js" crossorigin="anonymous"></script> -->
-
-<script src="{{ "js/main.js" | relURL }}"></script> 
-<script src="{{ printf "js/%s" .Params.custom_js | relURL }}"></script>
-{{ partial "ga.html" . }}
-</html>
+{{ define "footer"}}<!-- no footer -->{{ end }}

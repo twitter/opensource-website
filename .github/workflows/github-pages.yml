@@ -1,0 +1,39 @@
+name: github-pages
+
+on:
+  workflow_dispatch: {}
+  schedule:
+    # Run Mondays at 3:00 am (15 minutes after Update data)
+    # Ideally, this shouldn't need a schedule at all, but
+    # workflows (like Update data) can't trigger other workflows.
+    - cron: "00 3 * * 1"
+  push:
+    branches:
+      - main
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          submodules: true
+          fetch-depth: 0
+
+      - name: setup hugo
+        uses: peaceiris/actions-hugo@2e89aa66d0093e4cd14751b3028fc1a179452c2e # v2.4.13
+        with:
+          hugo-version: '0.78.0'
+          extended: true
+
+      - name: build
+        run: hugo
+
+      - name: deploy
+        uses: peaceiris/actions-gh-pages@bbdfb200618d235585ad98e965f4aafc39b4c501 # v3.7.3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          user_name: twitter-service
+          user_email: <twitter-service@users.noreply.github.com>
+          publish_dir: ./public
+          cname: opensource.twitter.dev

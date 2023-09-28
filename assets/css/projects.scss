@@ -9,14 +9,20 @@
 
 .all-projects {
   display: flex;
+  justify-content: space-evenly;
   flex-wrap: wrap;
 }
 .project-card {
   position: relative;
   flex: 1 1;
-  padding: var(--feather-grid-mega) calc(var(--feather-grid-mega) * 1.5);
+  padding: var(--feather-grid-mega) calc(2rem * 1.5);
   min-width: var(--project-card-min-width);
   max-width: var(--project-card-max-width);
+  border: 1px solid rgb(53, 53, 53);
+  border-radius: 15px;
+  margin: 5px;
+  margin-bottom: 2vw;
+  box-sizing: border-box;
 }
 
 .border {

@@ -2,7 +2,12 @@
 
 [![status: active](https://opensource.twitter.dev/status/active.svg)](https://opensource.twitter.dev/status/#active)
 
-This is the Twitter Open Source website at https://opensource.twitter.dev.
+Forked Twitter Open Source Website - Huy Nguyen
+This repository contains a fork of the Twitter Open Source website (https://opensource.twitter.dev) built with Hugo. I'm collaborating on this project to contribute...
+
+Current Status:
+
+Forked from official repository on February 20th, 2024.
 
 This site is built with [hugo], using a custom built-in theme.  Follow the
 standard instructions on the hugo website to [install] and [run] hugo.  Just
@@ -16,3 +21,7 @@ data].
 [install]: https://gohugo.io/getting-started/installing/
 [run]: https://gohugo.io/getting-started/usage/
 [update some repo data]: ./.github/workflows/update-data.yml
+
+Disclaimer:
+
+This is a personal fork and not an official Twitter project.

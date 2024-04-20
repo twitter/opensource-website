@@ -19,6 +19,11 @@
   max-width: var(--project-card-max-width);
 }
 
+.proj-card-bground {
+  background-color: rgb(54, 47, 148);
+  padding: 2%;
+}
+
 .border {
   width: 150px;
   border-bottom-style: solid;

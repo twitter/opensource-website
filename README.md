@@ -26,3 +26,21 @@ data].
 Disclaimer:
 
 This is a personal fork and not an official Twitter project.
+
+
+## Development/Contributions:
+### Andrew T. Pipo
+
+4/19/2024 - 3 hours
+
+Started on Update to reflect name change - Twitter to X #5
+
+- Started on removing all instances of Twitter and replace with X within the text - content of the main, projects, and memberships pages
+- Replaced the logo with the X logo in the header of the main, projects, and memberships pages
+- Removed instances of @TwitterOSS twitter handle as that is no longer an active twitter/X account
+- Changed instances of Twitter to X in the footer of the main, projects, and memberships pages
+
+Started on Projects: Improve outlook of each project section #4
+
+- Experimented with SCSS
+- Implemented background color to each Project card, discovering inconsistencies with the layout

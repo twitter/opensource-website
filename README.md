@@ -28,10 +28,9 @@ Disclaimer:
 This is a personal fork and not an official Twitter project.
 
 
-## Development/Contributions:
-### Andrew T. Pipo
-
-4/19/2024 - 3 hours
+# Development/Contributions:
+## Andrew T. Pipo
+### 4/19/2024 - 3 hours
 
 Started on Update to reflect name change - Twitter to X #5
 
@@ -44,3 +43,12 @@ Started on Projects: Improve outlook of each project section #4
 
 - Experimented with SCSS
 - Implemented background color to each Project card, discovering inconsistencies with the layout
+
+---
+
+### 4/20/2024 - 1 hour
+Continued on Update to reflect name change - Twitter to X #5
+
+- Replace the twitter logo with the X logo in the Year In Review Page
+- Continued to remove instances of @TwitterOSS twitter handle as that is no longer an active twitter/X account
+- Replaced the .ico file from the twitter logo to the X logo

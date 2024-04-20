@@ -30,6 +30,12 @@ This is a personal fork and not an official Twitter project.
 
 # Development/Contributions:
 ## Andrew T. Pipo
+### Prior to 4/19/2024 - 2 hours
+- Brainstorming/Researching Project Selection and Issues
+- Establishing Local Environment
+
+---
+
 ### 4/19/2024 - 3 hours
 
 Started on Update to reflect name change - Twitter to X #5
@@ -62,3 +68,9 @@ Implemented Projects: Display project counts next to Projects title #8
 
 - Added counted below the title of the projects page
 - Implemented JavaScript to count the number of project-cards to indicate total projects on page
+
+### 4/20/2024 - 0.5 hours
+Working on Final Report
+
+---
+

@@ -46,9 +46,19 @@ Started on Projects: Improve outlook of each project section #4
 
 ---
 
-### 4/20/2024 - 1 hour
+### 4/20/2024 - 2 hours
 Continued on Update to reflect name change - Twitter to X #5
 
 - Replace the twitter logo with the X logo in the Year In Review Page
 - Continued to remove instances of @TwitterOSS twitter handle as that is no longer an active twitter/X account
 - Replaced the .ico file from the twitter logo to the X logo
+
+Continued on Projects: Improve outlook of each project section #4
+
+- Adjusted layout of card to be more consistent
+- Applied same style to all buttons/links within card
+
+Implemented Projects: Display project counts next to Projects title #8
+
+- Added counted below the title of the projects page
+- Implemented JavaScript to count the number of project-cards to indicate total projects on page

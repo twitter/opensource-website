@@ -91,4 +91,9 @@ Implemented Add Navigation Bar to Year in Review Page #6
 Implemented Main: Improve the 3 icons in Our Philosophy section #13
 - Added animations to the icons on the main page under the Philosophy section
 
+
+### 4/21/2024 - 0.5 hours
+Reviewed proposed changes to Projects: Improve outlook of each project section #4
+- Accepted incoming changes and proposed aligning everything to the center
+
 ---

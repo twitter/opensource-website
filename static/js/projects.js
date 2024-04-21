@@ -86,31 +86,35 @@ const search = (query) => {
     const resultsBox = document.getElementById('results')
 
     if (!query) {
-        // reset all project cards
+        // Reset all project cards
         projectCards.forEach(card => {
             card.classList.remove("hide")
             card.style.removeProperty("order")
         })
-        resultsBox.classList.add("hide")
-        return
+        // Display total number of projects
+        const totalProjects = projectCards.length;
+        resultsBox.getElementsByClassName("count")[0].innerText = totalProjects;
+        resultsBox.getElementsByClassName("query")[0].innerText = "All Projects";
+        resultsBox.classList.remove("hide");
+        return;
     }
-    const results = fuse.search(query)
+    const results = fuse.search(query);
 
-    // first, hide all the projects
+    // First, hide all the projects
     projectCards.forEach(card => {
         card.classList.add("hide")
-    })
+    });
 
-
-    // show results in ranked order
-    let order = 1
+    // Show results in ranked order
+    let order = 1;
     results.forEach(r => {
-        const card = document.getElementById(r.item.id)
-        card.classList.remove("hide")
-        card.style.setProperty("order", order++)
-    })
+        const card = document.getElementById(r.item.id);
+        card.classList.remove("hide");
+        card.style.setProperty("order", order++);
+    });
 
-    resultsBox.getElementsByClassName("count")[0].innerText = results.length
-    resultsBox.getElementsByClassName("query")[0].innerText = query
-    resultsBox.classList.remove("hide")
+    resultsBox.getElementsByClassName("count")[0].innerText = results.length;
+    resultsBox.getElementsByClassName("query")[0].innerText = query;
+    resultsBox.classList.remove("hide");
 }
+

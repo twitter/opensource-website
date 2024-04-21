@@ -2,6 +2,7 @@
 
 .content {
   padding: 0;
+  text-align: center;
 }
 
 .grey {
@@ -55,18 +56,13 @@
 #career-text {
   text-align: center;
 }
-@media (min-width: 600px) {
-  #career .container {
-    display: flex;
-    > div {
-      flex: 1 1 50%;
-    }
-  }
-  #career-text {
-    text-align: left;
-    margin-top: 100px;
-  }
+
+#career .container {
+
+  text-align: center;
+
 }
+
 
 /* Our Philosophy - images */
 

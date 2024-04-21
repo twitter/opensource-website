@@ -17,104 +17,24 @@ projectCards.forEach(card => {
     })
 })
 
-// import fuse and initialize
-let fuse;
-import("https://cdnjs.cloudflare.com/ajax/libs/fuse.js/6.4.6/fuse.esm.min.js")
-    .then(module => {
-        Fuse = module.default
-        fuse = new Fuse(projects, {
-            findAllMatches: true,
-            isCaseSensitive: false,
-            threshold: 0.1,
-            ignoreLocation: true,
-            useExtendedSearch: true,
-            keys: [
-              "name",
-              "description",
-              "language",
-            ],
-        })
+// Get the necessary elements
+const countElement = document.querySelector('#results .count');
+const searchBar = document.getElementById('search-bar');
 
-        // perform initial search with query parameter if present
-        if (q = new URL(window.location).searchParams.get("q")) {
-            search(q)
-        }
-        // respond to browser history navigation
-        window.addEventListener("popstate", () => {
-            q = new URL(window.location).searchParams.get("q")
-            search(q)
-        })
-    })
-
-// perform search on search-box keyup and store in browser history.
-searchBox.addEventListener('keyup', function(event) {
-    const query = this.value
-    search(query)
-
-    // push new query onto history stack
-    const url = new URL(window.location)
-    if (url.searchParams.get('q') != query) {
-        if (query) {
-            url.searchParams.set('q', query)
-        } else {
-            url.searchParams.delete('q')
-        }
-        pushState(query, url)
-    }
-})
-
-// debounce wraps a function so that calls will be delayed to prevent repeated
-// calls within the specified time window.
-const debounce = (fn, timeout = 500) => {
-    let timer
-    return (...args) => {
-        clearTimeout(timer)
-        timer = setTimeout(() => { fn.apply(this, args); }, timeout);
-    }
+// Function to perform the search and update the count
+function performSearch() {
+    const searchTerm = searchBox.value.trim().toLowerCase(); // Get the search term
+    // Here you would perform your search logic, for demonstration, let's assume you have a list of projects
+    const projects = ["Project 1", "Project 2", "Project 3"]; // Example list of projects
+    const filteredProjects = projects.filter(project => project.toLowerCase().includes(searchTerm)); // Filter projects based on search term
+    const count = filteredProjects.length; // Get the count of filtered projects
+    countElement.textContent = count; // Update the count element with the count
 }
 
-// pushState pushes the new search query onto the browser history on a slight
-// delay. This is to prevent every individual keystroke from being pushed onto
-// the history stack.
-const pushState = debounce((query, url) => {
-    window.history.pushState({}, `Projects search: ${query}`, url)
-})
+// Event listener for input in the search box
+searchBox.addEventListener('input', () => {
+    performSearch(); // Perform search whenever there's an input
+});
 
-// search the project list for the query string and display ranked results.
-const search = (query) => {
-    searchBox.value = query
-    const resultsBox = document.getElementById('results')
-
-    if (!query) {
-        // Reset all project cards
-        projectCards.forEach(card => {
-            card.classList.remove("hide")
-            card.style.removeProperty("order")
-        })
-        // Display total number of projects
-        const totalProjects = projectCards.length;
-        resultsBox.getElementsByClassName("count")[0].innerText = totalProjects;
-        resultsBox.getElementsByClassName("query")[0].innerText = "All Projects";
-        resultsBox.classList.remove("hide");
-        return;
-    }
-    const results = fuse.search(query);
-
-    // First, hide all the projects
-    projectCards.forEach(card => {
-        card.classList.add("hide")
-    });
-
-    // Show results in ranked order
-    let order = 1;
-    results.forEach(r => {
-        const card = document.getElementById(r.item.id);
-        card.classList.remove("hide");
-        card.style.setProperty("order", order++);
-    });
-
-    resultsBox.getElementsByClassName("count")[0].innerText = results.length;
-    resultsBox.getElementsByClassName("query")[0].innerText = query;
-    resultsBox.classList.remove("hide");
-}
-
+// Initial search on page load
+performSearch();

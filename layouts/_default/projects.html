@@ -1,7 +1,7 @@
 {{ define "header" }}
 <h1 class="large-title">Projects</h1>
 <br>
-<h3 ><div id="results" class="container hide">Found <span class="count"></span> results for <span class="query"></span></div>
+<h3><div id="results" class="container">Found <span class="count"></span> results for <span class="query"></span></div>
 </h3>
 <div id="search-bar" style="display: none;">
     <input id="search-box" type="text" name="search" placeholder="Search Projects" autocomplete="off" autofocus />
@@ -34,30 +34,4 @@
     </div>
     {{ end }}
 </div>
-<script>
-    // JavaScript code to count the number of project cards
-    document.addEventListener('DOMContentLoaded', function() {
-        updateProjectCount();
-    });
-
-    function updateProjectCount() {
-        var projectCount = document.querySelectorAll('.project-card').length;
-        document.getElementById('project-count').textContent = projectCount;
-    }
-
-    // Update project count after search
-    document.getElementById('search-box').addEventListener('input', function() {
-        var query = this.value.trim().toLowerCase();
-        var cards = document.querySelectorAll('.project-card');
-        var visibleCards = 0;
-
-        cards.forEach(function(card) {
-            if (card.textContent.toLowerCase().includes(query)) {
-                visibleCards++;
-            }
-        });
-
-        document.getElementById('project-count').textContent = visibleCards;
-    });
-</script>
 {{ end }}

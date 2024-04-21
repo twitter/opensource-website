@@ -20,11 +20,15 @@
 }
 
 .proj-card-bground {
-  background-color: rgb(54, 47, 148);
-  padding: 2%;
+  border-radius: 10px;
+  background: linear-gradient(45deg, #9996dc, #471bca);
+  padding: 3%;
+  animation: pulse 2s infinite alternate;
+  // animation-timing-function: linear; // Smooth color transition
 }
 
 .proj-links {
+  border: solid black 2px;
   display: inline-block;
   padding: 10px 20px;
   background-color: #007bff; /* Change to your desired background color */

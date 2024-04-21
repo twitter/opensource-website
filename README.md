@@ -74,12 +74,12 @@ Working on Final Report
 
 ---
 
-### 4/21/2024 - 2.5 hours
+### 4/21/2024 - 4 hours
 Started on Projects: Project counts should be updated and associate to search bar #9
 
 - Investigated current search bar integration on Project page
 - Removed original counter and replaced with existing counter that displayed the number results after a search inquiry
-- Aiming to have it display total projects if search bar query is blank
+- Currently developing to have it display total projects if search bar query is blank
 
 Aided in Alignment/layout adjustments throughout website #7
 - Fixed the home page layout to remove unneccesary spacing and remove dead links

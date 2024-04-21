@@ -83,6 +83,7 @@ Started on Projects: Project counts should be updated and associate to search ba
 
 Aided in Alignment/layout adjustments throughout website #7
 - Fixed the home page layout to remove unneccesary spacing and remove dead links
+- Centered the title/subtitles in the projects and membership pages
 
 Implemented Add Navigation Bar to Year in Review Page #6
 - Implemented the navigation bar that is found on the other pages to be consistent with the rest of the website

@@ -8,7 +8,9 @@
   background-color: var(--tw-color-gray-faint);
 
   @media (prefers-color-scheme: dark) {
-    background-color: var(--tw-color-gray-1100);
+    background-color: var(--bg-color);
+    color: var(--font-color);
+    // background-color: var(--tw-color-gray-1100);
     color: white;
   }
 }

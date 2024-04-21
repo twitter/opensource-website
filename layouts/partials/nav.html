@@ -10,6 +10,7 @@
                     <input type="checkbox" id="checkbox" />
                     <div class="slider round"></div>
               </label>
+              <span class="theme-label">Dark Mode</span>
             </div>
             
         </div>
@@ -23,6 +24,7 @@
         </ul>
     </nav>
     <script>
+        // Start logic to implement light-dark mode.
         const toggleSwitch = document.querySelector('.theme-switch input[type="checkbox"]');
         function switchTheme(e) {
             if (e.target.checked) {
@@ -33,4 +35,6 @@
             }    
         }
         toggleSwitch.addEventListener('change', switchTheme, false);
+        // document.documentElement.setAttribute('data-theme', 'dark'); // Set default theme to dark
+        // End light-dark mode logic.
     </script>

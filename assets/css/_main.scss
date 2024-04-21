@@ -96,7 +96,6 @@ nav, .header, .footer {
   }
 
   a:not(.Button) {
-    color: white;
     text-decoration: none;
 
     &:hover, &:active {
@@ -296,6 +295,8 @@ input:checked + .slider:before {
 }
 
 a.foot-link {
+  background-color: var(--bg-color);
+  color: var(--font-color);
   display: block;
   line-height: var(--feather-line-height-xlarge);
 }

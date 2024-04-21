@@ -13,6 +13,7 @@
 }
 .project-card {
   position: relative;
+  text-align: center;
   flex: 1 1;
   padding: var(--feather-grid-mega) calc(var(--feather-grid-mega) * 1.5);
   min-width: var(--project-card-min-width);

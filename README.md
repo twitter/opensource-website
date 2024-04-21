@@ -74,7 +74,7 @@ Working on Final Report
 
 ---
 
-### 4/21/2024 - 1.5 hours
+### 4/21/2024 - 2.5 hours
 Started on Projects: Project counts should be updated and associate to search bar #9
 
 - Investigated current search bar integration on Project page
@@ -86,3 +86,8 @@ Aided in Alignment/layout adjustments throughout website #7
 
 Implemented Add Navigation Bar to Year in Review Page #6
 - Implemented the navigation bar that is found on the other pages to be consistent with the rest of the website
+
+Implemented Main: Improve the 3 icons in Our Philosophy section #13
+- Added animations to the icons on the main page under the Philosophy section
+
+---

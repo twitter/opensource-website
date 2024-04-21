@@ -2,9 +2,17 @@
     <nav>
         <div class="nav-title">
             <a class="home-link" href="{{ "" | relURL }}">
-                <img src="/assets/twitter-logo.svg" alt="Twitter">
+                <img src="/assets/logo.svg" alt="Twitter">
                 Open Source
             </a>
+            <div class="theme-switch-wrapper">
+                <label class="theme-switch" for="checkbox">
+                    <input type="checkbox" id="checkbox" />
+                    <div class="slider round"></div>
+              </label>
+              <span class="theme-label">Dark Mode</span>
+            </div>
+            
         </div>
         <a id="menu-toggle" href="#" onclick="document.getElementById('nav-menu').classList.toggle('active'); return false;">
             <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px" fill="#ffffff"><path d="M0 0h24v24H0z" fill="none"/><path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"/></svg>
@@ -15,3 +23,18 @@
             {{ end }}
         </ul>
     </nav>
+    <script>
+        // Start logic to implement light-dark mode.
+        const toggleSwitch = document.querySelector('.theme-switch input[type="checkbox"]');
+        function switchTheme(e) {
+            if (e.target.checked) {
+                document.documentElement.setAttribute('data-theme', 'dark');
+            }
+            else {
+                document.documentElement.setAttribute('data-theme', 'light');
+            }    
+        }
+        toggleSwitch.addEventListener('change', switchTheme, false);
+        // document.documentElement.setAttribute('data-theme', 'dark'); // Set default theme to dark
+        // End light-dark mode logic.
+    </script>

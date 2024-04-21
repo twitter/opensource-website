@@ -19,6 +19,30 @@
   max-width: var(--project-card-max-width);
 }
 
+.proj-card-bground {
+  background-color: rgb(54, 47, 148);
+  padding: 2%;
+}
+
+.proj-links {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #007bff; /* Change to your desired background color */
+  color: #fff; /* Change to your desired text color */
+  border-radius: 20px; /* Adjust the border radius to make it more or less rounded */
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+.proj-links:hover {
+  background-color: #0056b3; /* Change to a darker shade for hover effect */
+}
+
+
+.project-card a {
+  color: #ffffff;
+}
+
 .border {
   width: 150px;
   border-bottom-style: solid;
@@ -33,12 +57,6 @@
   @media (prefers-color-scheme: dark) {
     color: var(--tw-color-gray-faded);
   }
-}
-
-.project-links a {
-  display: block;
-  font-weight: var(--feather-font-weight-bold);
-  text-decoration: none;
 }
 
 .project-links a:link, .project-links a:visited {
@@ -81,6 +99,8 @@
   background-color: var(--tw-color-blue-light);
   display: flex;
   justify-content: space-between;
+  margin-left: auto;
+  margin-right: auto; /* Center horizontally */
 
   @media (prefers-color-scheme: dark) {
     background-color: var(--tw-color-gray-deep);

@@ -4,9 +4,9 @@
 
 Forked Twitter Open Source Website - Huy Nguyen
 
-This repository contains a fork of the Twitter Open Source website (https://opensource.twitter.dev) built with Hugo. I'm collaborating on this project to contribute...
+This repository contains a fork of the Twitter Open Source website (https://opensource.twitter.dev) built with Hugo. I'm collaborating with Andrew Pipo and Sam Winkelmann to work on this project to improve front-end/back-end functionalities, and animations throughout the web pages.
 
-Current Status:
+Current Status: Under development
 
 Forked from official repository on February 20th, 2024.
 

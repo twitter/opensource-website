@@ -74,7 +74,7 @@ Working on Final Report
 
 ---
 
-### 4/21/2024 - 1 hour
+### 4/21/2024 - 1.5 hours
 Started on Projects: Project counts should be updated and associate to search bar #9
 
 - Investigated current search bar integration on Project page
@@ -83,3 +83,6 @@ Started on Projects: Project counts should be updated and associate to search ba
 
 Aided in Alignment/layout adjustments throughout website #7
 - Fixed the home page layout to remove unneccesary spacing and remove dead links
+
+Implemented Add Navigation Bar to Year in Review Page #6
+- Implemented the navigation bar that is found on the other pages to be consistent with the rest of the website

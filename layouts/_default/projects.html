@@ -1,7 +1,7 @@
 {{ define "header" }}
 <h1 class="large-title">Projects</h1>
-<br>
-<h3><div id="results" class="container">Found <span class="count"></span> results for <span class="query"></span></div>
+
+<h3><div id="results" class="container hide">Found <span class="count"></span> results for <span class="query"></span></div>
 </h3>
 <div id="search-bar" style="display: none;">
     <input id="search-box" type="text" name="search" placeholder="Search Projects" autocomplete="off" autofocus />
@@ -42,23 +42,13 @@
     {{ end }}
 </div>
 <script>
-    document.getElementById("search-bar").style.display="flex";
-    // Get all projects
-    const projects = Array.from(document.querySelectorAll('.project-card'));
+    document.getElementById("search-bar").style.display = "flex";
 
-    // Initialize an empty object to store language colors
-    const languageColors = {};
-
-    // Iterate over each project to collect language colors
-    projects.forEach(project => {
-        const languageElement = project.querySelector('.project-language');
-        const language = languageElement.textContent.trim().split(':')[1].trim();
-        const borderColor = project.querySelector('.border').style.borderBottomColor;
-        if (language && borderColor) {
-            languageColors[language] = borderColor;
-        }
-    });
-
+    const projectCard = Array.from(document.getElementsByClassName("project-card"));
+    const searchBOX = document.getElementById("search-box");
+    const filterProjects = [];
+    const languageColors = {}; // Initialize an empty object to store language colors
+    const languageButtons = document.querySelectorAll('.language-button');
     // Get the total count of programming languages
     const totalLanguages = Object.keys(languageColors).length;
 
@@ -66,9 +56,35 @@
     const languageButtonsContainer = document.getElementById('language-buttons');
     // Create an "All" button
     const allButton = document.getElementById('all-button');
+    // parse cards to build project list
+    const project = []
+    projectCard.forEach(card => {
+        project.push({
+            id: card.id,
+            name: card.getElementsByClassName("project-name")[0].innerText,
+            description: card.getElementsByClassName("project-description")[0].innerText,
+            language: card.getElementsByClassName("project-language")[0].innerText,
+        })
+    });
+
+    // Start filter by programming languages logic.
+    projectCard.forEach(project => { // Iterate over each project to collect language colors
+        const languageElement = project.querySelector('.project-language');
+        const language = languageElement.textContent.trim().split(':')[1].trim();
+        const borderColor = project.querySelector('.border').style.borderBottomColor;
+        if (language && borderColor) {
+            languageColors[language] = borderColor;
+        }
+        filterProjects.push({
+            id: project.id,
+            name: project.getElementsByClassName("project-name")[0].innerText,
+            description: project.getElementsByClassName("project-description")[0].innerText,
+            language: language,
+        });
+    });
     allButton.addEventListener('click', () => {
         // Show all projects
-        projects.forEach(project => {
+        projectCard.forEach(project => {
             project.style.display = 'block';
         });
     });
@@ -82,7 +98,7 @@
         button.classList.add('language-button');
         button.addEventListener('click', () => {
             // Filter projects based on the selected language
-            projects.forEach(project => {
+            projectCard.forEach(project => {
                 const languageElement = project.querySelector('.project-language');
                 const projectLanguage = languageElement.textContent.trim().split(':')[1].trim();
                 project.style.display = projectLanguage === language ? 'block' : 'none';
@@ -90,10 +106,41 @@
         });
         languageButtonsContainer.appendChild(button);
     });
+    // Get the necessary elements
+    const countElement = document.querySelector('#results .count');
+    const searchBar = document.getElementById('search-bar');
 
-    // Display the total count of programming languages
-    const totalLanguagesElement = document.createElement('div');
-    totalLanguagesElement.textContent = `Total Programming Languages: ${totalLanguages}`;
-    document.querySelector('.language-filters').appendChild(totalLanguagesElement);
+    // Function to perform the search and update the count
+    function performSearch() {
+        const searchTerm = searchBOX.value.trim().toLowerCase(); // Get the search term
+        const activeLanguageButtons = Array.from(languageButtons).filter(button => button.classList.contains('active')); // Get active language buttons
+        let filteredProjects = project; // Initialize filtered projects with all projects
+        // Here you would perform your search logic, for demonstration, let's assume you have a list of projects
+        if (activeLanguageButtons.length > 0) {
+            const activeLanguages = activeLanguageButtons.map(button => button.textContent.trim()); // Get names of active languages
+            filteredProjects = project.filter(project => activeLanguages.includes(project.language)); // Filter projects based on active languages
+        }
+
+        // Filter projects based on search term
+        filteredProjects = filteredProjects.filter(project => project.name.toLowerCase().includes(searchTerm)); // Filter projects based on search term
+
+        // const filteredProjects = project.filter(proj => proj.name.toLowerCase().includes(searchTerm)); // Filter projects based on search term
+        const count = filteredProjects.length; // Get the count of filtered projects
+        countElement.textContent = count; // Update the count element with the count
+    }
+
+    // Event listener for input in the search box
+    searchBOX.addEventListener('input', () => {
+        performSearch(); // Perform search whenever there's an input
+    });
+
+    languageButtons.forEach(button => {
+        button.addEventListener('click', () => {
+            button.classList.toggle('active'); // Toggle active class on button click
+            performSearch(); // Perform search whenever a language filter button is clicked
+        });
+    });
+
+    performSearch();
 </script>
 {{ end }}

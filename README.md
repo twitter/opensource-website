@@ -29,6 +29,10 @@ This is a personal fork and not an official Twitter project.
 
 
 # Development/Contributions:
+## Contributor A
+---
+## Contributor B
+---
 ## Andrew T. Pipo
 ### Prior to 4/19/2024 - 2 hours
 - Brainstorming/Researching Project Selection and Issues
@@ -95,5 +99,8 @@ Implemented Main: Improve the 3 icons in Our Philosophy section #13
 ### 4/21/2024 - 0.5 hours
 Reviewed proposed changes to Projects: Improve outlook of each project section #4
 - Accepted incoming changes and proposed aligning everything to the center
+
+### 4/21/2024 - 0.5 hours
+Worked on Final Report
 
 ---

@@ -10,8 +10,9 @@
 <br>
 <!-- Programming Languages Filter -->
 <div class="language-filters">
-    Filter by Programming Languages:
+    <h1>Filter by Programming Languages</h1>
     <div id="language-buttons"></div>
+    <button id="all-button" class="all-button">All Languages</button>
 </div>
 
 {{ end }}
@@ -63,10 +64,22 @@
 
     // Display language filter buttons with corresponding colors
     const languageButtonsContainer = document.getElementById('language-buttons');
+    // Create an "All" button
+    const allButton = document.getElementById('all-button');
+    allButton.addEventListener('click', () => {
+        // Show all projects
+        projects.forEach(project => {
+            project.style.display = 'block';
+        });
+    });
+
+    // Append the "All" button to the container
+    languageButtonsContainer.appendChild(allButton);
     Object.entries(languageColors).forEach(([language, color]) => {
         const button = document.createElement('button');
         button.textContent = language;
         button.style.backgroundColor = color;
+        button.classList.add('language-button');
         button.addEventListener('click', () => {
             // Filter projects based on the selected language
             projects.forEach(project => {
@@ -82,6 +95,5 @@
     const totalLanguagesElement = document.createElement('div');
     totalLanguagesElement.textContent = `Total Programming Languages: ${totalLanguages}`;
     document.querySelector('.language-filters').appendChild(totalLanguagesElement);
-
 </script>
 {{ end }}

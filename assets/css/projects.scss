@@ -28,10 +28,28 @@
 .proj-card-bground {
   border: outset black 2px;
   border-radius: 10px;
-  background: linear-gradient(45deg, #9996dc, #471bca);
+  background: linear-gradient(45deg, #aa96dc, #471bca);
   padding: 3%;
   animation: pulse 2s infinite alternate;
   // animation-timing-function: linear; // Smooth color transition
+}
+
+.language-button {
+  padding: 3px;
+  margin: 5px 10px 5px 0px;
+  border: solid black 2px;
+  border-radius: 8px;
+  font-family: cursive;
+}
+
+.all-button {
+  width: 112px;
+  padding: 3px;
+  margin: 0px 10px 0px 0px;
+  font-family: cursive;
+  border: solid black 2px;
+  border-radius: 5px;
+  background: linear-gradient(45deg, #70d1a5, #0b9b75);
 }
 
 .proj-links {

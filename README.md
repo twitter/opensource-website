@@ -1,15 +1,20 @@
-# opensource.twitter.dev
+# Welcome to opensource.twitter.dev
 
 [![status: active](https://opensource.twitter.dev/status/active.svg)](https://opensource.twitter.dev/status/#active)
 
-This is the Twitter Open Source website at https://opensource.twitter.dev.
+## Discover Twitter's Open Source Projects
 
-This site is built with [hugo], using a custom built-in theme. Follow the standard instructions on the hugo website to [install] and [run] hugo. Just make sure to use hugo-extended, which has added support for Sass/SCSS stylesheets.
+Explore the vibrant world of Twitter Open Source at [opensource.twitter.dev](https://opensource.twitter.dev). From innovative tools to impactful contributions, dive into our community-driven projects.
 
-There are also some python scripts that run periodically to [update some repo data].
+### Built with Hugo
 
-[![Twitter Logo](https://upload.wikimedia.org/wikipedia/en/thumb/9/9f/Twitter_bird_logo_2012.svg/1200px-Twitter_bird_logo_2012.svg.png)](https://twitter.com/TwitterOpen)
-[hugo]: https://gohugo.io/
-[install]: https://gohugo.io/getting-started/installing/
-[run]: https://gohugo.io/getting-started/usage/
-[update some repo data]: ./.github/workflows/update-data.yml
+Our website is powered by [Hugo](https://gohugo.io/), utilizing a custom theme. Follow the simple steps to [install](https://gohugo.io/getting-started/installing/) and [run](https://gohugo.io/getting-started/usage/) Hugo. Don't forget to use the extended version for Sass/SCSS support!
+
+### Stay Updated
+
+We keep our repositories fresh with periodic updates using Python scripts. Learn more about how we [update some repo data](./.github/workflows/update-data.yml).
+
+### Connect with Us
+
+Explore our latest updates and connect with our community on Twitter!
+ 

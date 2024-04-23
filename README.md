@@ -31,7 +31,45 @@ This is a personal fork and not an official Twitter project.
 # Development/Contributions:
 ## Contributor A
 ---
-## Contributor B
+## Huy Nguyen
+### Project searching: 2 hours
+
+- Spent time in class and outside of class to search open-source project that could be good for our team to develop.
+
+### Brainstorming: 3 hours
+
+- Spent time brainstorm issues/tasks we could address for this open-source website.
+
+### Local environment Set up: 1.5 hours
+
+- Spent time installing, setting up local development environment.
+
+- Identify which packages to install, applying YAGNI concept into practice (not to install unnecessary software/packages).
+
+- Document installing progress in .txt file to help teammates install in the same progress.
+
+### Development: 12 hours - Issues contributed: #1 #4 #9 #10 #12 #14 #15 #17 #18
+
+- Handled the light-dark switch and added local storage to improve the website's appearance.
+
+- Pair-programming with Andrew to address the navigation bar on "Year in review" page.
+
+- Collaborated with the team to improve the outlook for Projects page including Project's search bar, project count when search bar is applied, and implement a filter board to display the specific projects that the programming language button applies.
+
+- Collaborated with the team to implement a Home button on the navigation bar for each page.
+
+### Reflection: 1.5 hours
+
+- Reflecting the work that we've implemented for this project and consider any issues we could address.
+
+- Communicate back and forth on issues we developed to make sure we handled all the problems within.
+
+### Final Report: 4 hours
+
+- Document everything we did including github links, tasks descriptions, build evidence, etc. for this open source projects.
+
+- Work with team to check if there are anything we missed along the way and specify what we need to put in for each report section.
+
 ---
 ## Andrew T. Pipo
 ### Prior to 4/19/2024 - 2 hours

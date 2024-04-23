@@ -142,3 +142,21 @@ Reviewed proposed changes to Projects: Improve outlook of each project section #
 Worked on Final Report
 
 ---
+
+### 4/22/2024 - 0.5 hours
+Started Main: Implement an animation for the .svg file in Explore Project section #16
+- Testing animation to ensure understanding of what file is accepting the .svg file in question
+- In progress: Developing the correct animation to ensure that the content is still visible next to the image
+
+### 4/22/2024 - 0.25 hours
+Reviewed proposed changes to Projects: Filter categories by border colors #15
+- Approved incoming changes with suggestion to display the programming language associated with the color/border
+- Suggestion to add an "All" button to revert the filtering and to adjust the spacing and style of the button to match more of the project cards
+
+---
+
+### 4/23/2024 - 1 hour
+Worked on Final Report
+Updated Personal Contributions
+
+---

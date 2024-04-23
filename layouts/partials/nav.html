@@ -18,6 +18,7 @@
             <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px" fill="#ffffff"><path d="M0 0h24v24H0z" fill="none"/><path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"/></svg>
         </a>
         <ul id="nav-menu">
+            <li><a href="/">Home</a></li>
             {{ range .Site.Menus.main }}
                 <li><a href="{{ .URL }}"{{ if not (hasPrefix .URL "/") }} target="_blank" rel="noopener"{{ end }}>{{ .Name }}</a></li>
             {{ end }}
@@ -29,12 +30,24 @@
         function switchTheme(e) {
             if (e.target.checked) {
                 document.documentElement.setAttribute('data-theme', 'dark');
+                localStorage.setItem('theme', 'dark');
             }
             else {
                 document.documentElement.setAttribute('data-theme', 'light');
+                localStorage.setItem('theme', 'light');
             }    
         }
         toggleSwitch.addEventListener('change', switchTheme, false);
-        // document.documentElement.setAttribute('data-theme', 'dark'); // Set default theme to dark
         // End light-dark mode logic.
+
+        //Local Storage Logic
+        const currentTheme = localStorage.getItem('theme') ? localStorage.getItem('theme') : null;
+
+        if (currentTheme) {
+            document.documentElement.setAttribute('data-theme', currentTheme);
+
+            if (currentTheme === 'dark') {
+                toggleSwitch.checked = true;
+            }
+        }
     </script>

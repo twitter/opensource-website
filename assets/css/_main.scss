@@ -54,7 +54,7 @@ html {
 /* Containers */
 
 body {
-  background-color: white;
+  // background-color: white;
   display: flex;
   min-height: 100vh;
   flex-direction: column;
@@ -74,13 +74,11 @@ main {
 }
 .section {
   background-color: var(--bg-color);
-    color: var(--font-color);
+  color: var(--font-color);
   padding: calc(var(--feather-grid-mega) * 2) 0;
 }
 
 .container {
-  // background-color: var(--bg-color);
-  color: var(--font-color);
   max-width: var(--feather-grid-page-width);
   margin: 0 auto;
 }
@@ -340,7 +338,7 @@ a.foot-link {
 
 body {
   background-color: var(--bg-color);
-  color: var(--font-color);
+  // color: var(--font-color);
   font-size: 0.8rem; // 16px
   line-height: 1.5;  // 24px
 }

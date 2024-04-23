@@ -4,9 +4,9 @@
 
 Forked Twitter Open Source Website - Huy Nguyen
 
-This repository contains a fork of the Twitter Open Source website (https://opensource.twitter.dev) built with Hugo. I'm collaborating on this project to contribute...
+This repository contains a fork of the Twitter Open Source website (https://opensource.twitter.dev) built with Hugo. I'm collaborating with Andrew Pipo and Sam Winkelmann to work on this project to improve front-end/back-end functionalities, and animations throughout the web pages.
 
-Current Status:
+Current Status: Under development
 
 Forked from official repository on February 20th, 2024.
 
@@ -29,6 +29,10 @@ This is a personal fork and not an official Twitter project.
 
 
 # Development/Contributions:
+## Contributor A
+---
+## Contributor B
+---
 ## Andrew T. Pipo
 ### Prior to 4/19/2024 - 2 hours
 - Brainstorming/Researching Project Selection and Issues
@@ -74,15 +78,29 @@ Working on Final Report
 
 ---
 
-### 4/21/2024 - 1.5 hours
+### 4/21/2024 - 4 hours
 Started on Projects: Project counts should be updated and associate to search bar #9
 
 - Investigated current search bar integration on Project page
 - Removed original counter and replaced with existing counter that displayed the number results after a search inquiry
-- Aiming to have it display total projects if search bar query is blank
+- Currently developing to have it display total projects if search bar query is blank
 
 Aided in Alignment/layout adjustments throughout website #7
 - Fixed the home page layout to remove unneccesary spacing and remove dead links
+- Centered the title/subtitles in the projects and membership pages
 
 Implemented Add Navigation Bar to Year in Review Page #6
 - Implemented the navigation bar that is found on the other pages to be consistent with the rest of the website
+
+Implemented Main: Improve the 3 icons in Our Philosophy section #13
+- Added animations to the icons on the main page under the Philosophy section
+
+
+### 4/21/2024 - 0.5 hours
+Reviewed proposed changes to Projects: Improve outlook of each project section #4
+- Accepted incoming changes and proposed aligning everything to the center
+
+### 4/21/2024 - 0.5 hours
+Worked on Final Report
+
+---

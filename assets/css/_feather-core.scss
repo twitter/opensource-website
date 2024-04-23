@@ -1873,7 +1873,8 @@ body {
   line-height: var(--feather-line-height-body);
 }
 a {
-  color: var(--tw-color-text-link);
+  color: white;
+  // color: var(--tw-color-text-link);
   text-decoration: none;
 }
 a:hover,

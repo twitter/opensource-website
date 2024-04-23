@@ -29,7 +29,30 @@ This is a personal fork and not an official Twitter project.
 
 
 # Development/Contributions:
-## Contributor A
+## Sam Winkelmann
+
+### Project Brainstorming/Setup/Context - 6 hours
+- Searching for an open source project to work on
+- Understanding the project we chose
+- Setting up project details on GitHub
+
+### Environment Setup - 2 hours
+- Setting up development environment (had issues)
+
+### Home button implementation investigation - 2 hours
+- Looking into the way to implement 'Home' button on top bar
+
+### Investigation: Visual fixes accross the site - 2 hours
+- Searching for alignment/visual issues on various pages, including the projects and home tabs
+
+### Implementation of visual updates - 3 hours
+- Fixing alignment/size of project cards
+
+### Milestones/final report/final organization - 3 hours
+- Finished up the organization aspects of the project
+
+### Reflection - 2 hours
+- Discussion with the group about the project/final thoughts
 ---
 ## Huy Nguyen
 ### Project searching: 2 hours

@@ -115,9 +115,10 @@ nav {
 
   img { 
     height: 1.3em;
-    width: 1.3em;
+    width: 2.3em;
     vertical-align: bottom;
     margin-right: var(--feather-grid-xxsmall);
+    filter: invert(1);
   }
 }
 

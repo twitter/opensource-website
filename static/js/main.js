@@ -10,3 +10,4 @@ if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
         e.setAttribute('data-theme','dark');
     }
 }
+console.log("hjdfgudfghsd")

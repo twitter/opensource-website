@@ -17,4 +17,4 @@ data].
 [run]: https://gohugo.io/getting-started/usage/
 [update some repo data]: ./.github/workflows/update-data.yml
 
-hello everyone this is a comment
+hello everyone this is a comment.

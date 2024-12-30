@@ -12,7 +12,10 @@ stylesheets.
 There are also some python scripts that run periodically to [update some repo
 data].
 
+Abhinandan Mandal has been forked this project
+
+
 [hugo]: https://gohugo.io/
 [install]: https://gohugo.io/getting-started/installing/
 [run]: https://gohugo.io/getting-started/usage/
-[update some repo data]: ./.github/workflows/update-data.yml
+[update some repo data]: ./.github/workflows/updarf-data.yml

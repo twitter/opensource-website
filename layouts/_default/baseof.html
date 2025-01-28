@@ -12,7 +12,7 @@
     <main>
       <div class="header">
         <div class="container">
-          <div id="header-text">
+          <div id="header-text" style="text-align: center;">
             {{ block "header" . }}
               {{ with .Title }}<h1 class="large-title">{{ . }}</h1>{{ end }}
               {{ with .Params.subtitle }}<h1 class="subtitle">{{ . }}</h1>{{ end }}

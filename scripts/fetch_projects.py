@@ -17,7 +17,7 @@ print("LOG: Assuming the current path to be the root of the metrics repository."
 
 SVG_NO_OF_MEMBERS = 'N/A'
 SVG_NO_OF_REPOS = 'N/A'
-
+print("rafal")
 def fetch_one_page(query_string, variables):
     """
     Request the GitHub GraphQL API

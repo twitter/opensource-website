@@ -1,18 +1,46 @@
-# opensource.twitter.dev
+ # 🚀 Twitter Open Source
 
 [![status: active](https://opensource.twitter.dev/status/active.svg)](https://opensource.twitter.dev/status/#active)
 
-This is the Twitter Open Source website at https://opensource.twitter.dev.
+Welcome to **Twitter Open Source**—where innovation meets collaboration! 🌍✨
 
-This site is built with [hugo], using a custom built-in theme.  Follow the
-standard instructions on the hugo website to [install] and [run] hugo.  Just
-make sure to use hugo-extended, which has added support for Sass/SCSS
-stylesheets.
+## 🔹 About
+This is the **official open-source hub** of Twitter, accessible at [opensource.twitter.dev](https://opensource.twitter.dev). Here, we contribute to the developer community by sharing powerful tools, libraries, and frameworks that drive modern web applications.
 
-There are also some python scripts that run periodically to [update some repo
-data].
+## 🏗 Built With
+- **Framework:** [Hugo](https://gohugo.io/) 🏗
+- **Theme:** Custom-built for sleek performance 🎨
+- **Styling:** Supports **Sass/SCSS** (requires **hugo-extended**) ✨
+- **Automation:** Python scripts for dynamic repo data updates 📊
 
-[hugo]: https://gohugo.io/
-[install]: https://gohugo.io/getting-started/installing/
-[run]: https://gohugo.io/getting-started/usage/
-[update some repo data]: ./.github/workflows/update-data.yml
+## 🚀 Getting Started
+### 📌 Prerequisites
+Ensure you have **Hugo-Extended** installed for full SCSS support. Follow the [official installation guide](https://gohugo.io/getting-started/installing/).
+
+### 🔧 Installation & Setup
+#### Clone the Repository
+```sh
+git clone https://github.com/twitter/opensource-twitter.git
+cd opensource-twitter
+```
+#### Run the Project
+```sh
+hugo server -D
+```
+Visit `http://localhost:1313/` in your browser to see it in action! 🚀
+
+## 🔄 Automated Repo Updates
+We use scheduled **Python scripts** to dynamically update repository data, ensuring you always have the latest insights.
+
+📂 **Workflow File:** [update-data.yml](.github/workflows/update-data.yml)
+
+## 🤝 Contribute
+We welcome contributions! Submit an issue or a pull request to make Twitter Open Source even better. 💙
+
+📌 **Useful Links:**  
+- 🌐 [Official Website](https://opensource.twitter.dev)  
+- 📖 [Hugo Documentation](https://gohugo.io/)  
+- 🛠 [Installation Guide](https://gohugo.io/getting-started/installing/)  
+
+🚀 *Join us in shaping the future of open-source development!*
+

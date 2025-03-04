@@ -69,6 +69,8 @@ a.membership-handle:hover, a.membership-handle:active {
 }
 
 .membership p {
+  background-color: var(--bg-color);
+  color: var(--font-color);
   padding-top: var(--feather-grid-xsmall);
   margin-bottom: 0;
 }

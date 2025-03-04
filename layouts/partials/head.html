@@ -24,7 +24,7 @@
     <meta http-equiv='imagetoolbar' content='no'>
 
     <title>{{ .Title }}{{ if not .IsHome }} | {{ site.Title }}{{ end }}</title>
-    <link rel="shortcut icon" type="image/png" href="{{ "assets/favicon.ico" | relURL }}"/>
+    <link rel="shortcut icon" type="image/png" href="{{ "assets/twitter.ico" | relURL }}"/>
 
     {{- $style := resources.Get "css/style.scss" | toCSS | minify | fingerprint }}
     <link rel="stylesheet" href="{{ $style.RelPermalink }}"/>
